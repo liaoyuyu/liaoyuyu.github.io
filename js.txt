@@ -1,0 +1,324 @@
+console.log();	测试
+
+
+防止选择拖拽
+window.getSelection ? window.getSelection().removeAllRanges() : document.selection.empty();
+
+
+
+*****************************************************
+轮播：
+appendChild(对象)   	    把对象插入到最后
+insertBefore(对象1,对象2)   把对象1插入到对象2前面
+
+setTimeout(方法（一般都是function(){方法}）,时间)   一次定时器
+
+*********************************************************
+
+
+
+
+insertBefore(对象，插入位置的对象)	向列表指定对象前面插入一项（数组前面插入对象）
+appendChild()	向列表后面插入一项（数组后面插入对象）		
+innerHtml	代表对象里面的东西
+
+
+跳转
+window.location.href = ”http://www.itcast.cn” ; 
+
+
+
+获取两个数之间的随机整数
+Math.floor(Math.random()*(数1-数2+1))+（数2）;
+
+列：Math.floor(Math.random()*(100-15+1))+15;     获取100-15之间的随机整数
+
+
+
+添加对象和删除对象
+
+b.appendChild(a);	将一个对象a放入某个对象b
+b.removeChild(a);	从一个对象b中删除一个他的子对象a（父级中的子对象）
+
+
+.parentNode	上一级
+
+列：点击一个a标签，删除整个div
+	obj.parentNode.parentNode.removeChilde(obj.parentNode);	
+
+	obj     .parentNode      .parentNode       .removeChilde(obj.parentNode);
+	a标签  a标签的上一级div   div的上一级body      删除          div
+
+
+
+
+
+document.getElementById("");	获取对象ID
+document.createElement("");    	创建对象
+document.body.clientWidth;	获取网页宽度
+document.body.clientHeight;	获取网页高度
+
+offsetWidth	获取自己总宽度（包括border  padding）
+offsetHeight	获取自己总高度（包括border  padding）
+offsetLeft	获取左边到上级盒子的距离
+offsetTop	获取上边到上级盒子的距离
+
+
+
+
+判断浏览器的方法
+window.event
+
+
+
+
+window对象的定时器
+	var  定时器名字  window.setInterval("要执行的程序",间隔时间毫秒);
+
+	列：常用：
+	var i=0; window.setInterval("fn1();",1000);
+
+	function fn1(){
+	   i++;
+	   alert(i);
+	}
+
+
+	window.clearInterval(定时器名字);	停止定时器
+
+
+
+
+
+
+window对象的常用方法（都可以省略window这个词）
+    弹出对话框方法：
+	window.alert("字符串");
+	window.prompt("一个文字性问题","默认值");	默认值：输入框默认的字
+	window.confirm("一个是否性问题");  ——向用户提出一个可以进行“是否”回答的问题。
+    
+    弹出窗口的方法（）
+	window.open("新窗口中要打开的网页","新窗口的名字","新窗口的外观设置项");
+			外观设置项包括：
+				宽，高，位置
+				toolbar=yes/no,	是否出现工具栏
+				menubar=1/0,	是否出现菜单栏
+				resizable=1/0,	是否可以改变大小
+				scrollbars=1/0,	是否出现滚动条
+				fullscreen=1/0,	是否全屏(就不能设置宽高)
+				location=yes/no	时候出现地址栏(现在没用了)
+
+
+
+事件：
+
+
+鼠标事件：
+onclick    	点击
+ondblclick	双击
+onmouseover  	鼠标放上去
+onmouseleave	鼠标离开(影响子级)
+onmouseout      鼠标离开（会影响子级）
+onmousemove  	鼠标移动的时候发现
+onmousedown	鼠标按下（还没抬起来）
+onmouseup	鼠标抬起来
+
+
+键盘事件：
+onkeypress	一个按键按下又抬起来——按键一次
+onkeydown	一个按键按下去（没抬起来）
+onkeyup		一个按键还没抬起来
+
+
+表单事件：
+onsubmit	提交表单的时候发生
+onfocus		一个对象(表单项)获得焦点的时候发生
+onblur		一个对象失去焦点的时候发生
+onchange	一个表单项内容改变时候发生（通常用于select选项改变时）
+
+
+页面事件（重要）：
+onload		页面加载完成的时候发生
+
+
+时间对象：
+event		表示任何一个时间发生的时候的“现场信息”，通常包括：时间发生的对象，
+		事件发生的时候鼠标的位置（x，y坐标），键盘事件发生的时候的键值（键盘上每个键都有一个值code）
+
+event(event是函数调用时写的形参).clientX	鼠标X坐标值，是一个整数，相对网页
+event(event是函数调用时写的形参).clientY	鼠标Y坐标值
+
+
+event.keyCode;     按键值
+
+
+event.target;	   事件源=火狐浏览器中（列：表示你单击的这个对象）
+event.srcElement;  事件源=IE浏览器中
+
+
+
+
+.lenght    获取对象的长度
+.value     获得对象上的值  
+
+
+
+定义并赋值
+	var 变量名 = 某个值;
+
+
+	alert（""）;  弹出框
+
+转换符
+    var s = '234';
+
+　　　/********** 字符串在运算操作中会被当做数字类型来处理 ***************/　
+
+　　　s *= 1;  
+
+　　　/******* string的两个转换函数，只对string有效 ********/
+
+　　　 parseInt(s); // 234  (整数)
+
+　　　 parseFloat(s); //234  （小数）
+
+　　　/************ 强制类型转换 *********************/
+
+　　　 Number(s); // 234
+
+
+保留几位小数
+
+     .toFixed()
+
+
+
+截取字符串
+
+  	-1表示最后一个，-2倒数第二个
+	var a="abcdefg"
+
+slice(“起始下标”, [结束下标]);—不写结束，表示最后
+
+  列：a.slice(2,5)  返回cdef
+
+
+substr(起始位置,[取的个数])—取多少个
+
+  列:a.substr(2,4) 返回cdef  
+
+
+
+
+
+分割字符串
+	split()   使用一个指定分隔符分割字符串存储到数组
+    
+     列：str="abc|def|hij|klm";
+	arr=str.split("|")
+
+      结果：arr=["abc","def","hij","klm"];
+
+
+组合字符
+	join()    使用指定分隔符将一个数组组合成一个字符串
+    
+     列：arr=["abc","def","hij","klm"];
+	a1=a1.join("|");
+      
+     结果：a1="abc|def|hij|klm";
+
+
+
+
+
+数组
+
+定义数组：
+    （1）
+	var mycars=new Array()
+	mycars[0]="Saab"
+	mycars[1]="Volvo"
+	mycars[2]="BMW"
+    （2）
+	var mycars=new Array("Saab","Volvo","BMW")
+    （3）
+	var mycars=["Saab","Volvo","BMW"]
+	
+
+
+
+delete 数组名(位置)   删除数组指定项
+
+
+a=[1,3,5,7];
+b=[2,4,6,8];
+
+数组相连
+    concat(参数)   两个数组组合起来成为一个数组
+
+   列a concat(b)    成为：[1,3,5,7,2,4,6,8]
+      
+
+组成字符串
+    join() （把前面数组每项加上字符串成字符串）
+   
+  列：a.join("abc");    成为1abc3abc5abc7
+
+将数组最后一个删除，并返回该值，数组长度少一个
+   pop()
+
+  列：s=a.opo();     变成:  s=7    a=[1,3,5]
+
+
+将一个或多个数据放入数组最后位置
+    push()
+
+    列：a.push(9,11,13);    成为：a=[1,3,5,7,9,11,13]
+
+移除数组第一项，并返回该值
+   shift()
+
+   列：s=a.shift();     成为：s=1;    a=[3,5,7];
+
+
+将一个或多个数据加入数组第一个位置
+    unshift()
+
+   列：s=a.unshitf(100);    成为：s=5     a=[100,1,3,5,7];
+
+
+将数组的所有项前后反转位置
+     reverse()
+    
+     列：a.reverse();    成为：a[7,5,3,1]
+
+
+
+
+	.split("")转换字符数组
+
+
+
+	换  ClassName
+
+	var playobj = document.getElementsByClassName("playimg")[0];    获取对象
+	playobj.onclick=function(){	单击事件
+		
+		if(hasClass(this,"player")){		判断（函数（当前对象，CSS另外写的类名））
+			this.classList.remove("player")	   真就删除player类
+		}else{
+			this.classList.add("player")	   假就添加类player(把当前的类改成player)
+		}
+
+	}
+		function hasClass(el,className){	函数（参数）
+		var nameList = el.className.split(" ")	  定义    el=当前对象.参数的值.split("")
+		
+		for (var i = 0; i < nameList.length; i++) {   for循环
+			if(nameList[i] == className){		判断当前对象的类名和你给的类名是否一样
+				return true;
+			}	
+		};
+		return false
+	}

@@ -1,0 +1,33 @@
+手机端适配
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+
+
+
+
+<script type="text/javascript">
+	(function(doc, win) {
+		var docEl = doc.documentElement,
+			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			recalc = function() {
+				var clientWidth = docEl.clientWidth;
+				if(!clientWidth) return;
+				docEl.style.fontSize = 50 * clientWidth / 375 + 'px';
+			};
+		if(!doc.addEventListener) return;
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+</script>
+
+
+
+CSS
+
+box-sizing: border-box;  使宽度不变，在里面进行padding
+
+
+
+事件
+touchstart //手指触碰屏幕
+touchmove //手指在屏幕上滑动
+touchend //手指离开屏幕
