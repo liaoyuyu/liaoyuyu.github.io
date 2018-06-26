@@ -1,0 +1,55 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+	float: left;
+	width: 1000px;
+	height: 438px;
+}
+ul{
+	width: 7000px;
+	height: 438px;
+}
+ul.animate{
+	transition:all 1s;
+}
+
+.bannerbox{
+	width: 1000px;
+	height: 438px;
+	margin: 50px auto;
+	overflow: hidden;
+	position: relative;
+	transtion:all 1s;
+}
+.bannerbox:hover .btn{
+	background: rgba(0,0,0,0.5);
+	opacity: 1;
+}
+.btn{
+	width: 100px;
+	height: 438px;
+	opacity: 0;
+	background: #000;
+	position: absolute;
+	top: 0px;
+	line-height: 438px;
+	font-size: 50px;
+	text-align: center;
+	cursor: pointer;
+    background: rgba(0,0,0,0);
+	transition:all 1s;
+}
+.btn:hover{
+	background:  rgba(0,0,0,.8);
+	color: #fff;
+}
+.btn.rt{
+	right: 0;
+}
+.btn.lf{
+	left: 0;
+}
+	

@@ -1,0 +1,235 @@
+/*nav*/
+	.nav-ul li:nth-of-type(4){
+		background: url(../img/nav-li-biankuang.png) no-repeat center;
+		background-size: 100% 100%；
+	}
+
+/*内容  顶部*/
+	.rongyuzizhi-content-tit{
+		width: 1200px;
+		border-bottom: 1px solid #aa0e25;
+		padding-bottom: 8px;
+		margin-bottom: 20px;
+	}
+	.rongyuzizhi-content-tit p{
+		float: left;
+		color: #222;
+		font-size: 14px;
+		font-family: "宋体";
+	}
+	.rongyuzizhi-content-tit a{
+		float: right;
+		text-decoration: none;
+	}
+	.rongyuzizhi-content-tit a p{
+		color: #222;
+		font-size: 14px;
+		font-family: "宋体";
+		float: right;
+		margin-top: 4px;
+		margin-left: 5px;
+	}
+	.rongyuzizhi-content-tit a img{
+		float: left;
+	}
+
+		/*返回按钮*/
+	.rongyuzizhi-content-tit a{
+		float: right;
+		text-decoration: none;
+	}
+	.rongyuzizhi-content-tit a p{
+		color: #222;
+		font-size: 14px;
+		font-family: "宋体";
+		float: right;
+		margin-top: 4px;
+		margin-left: 5px;
+	}
+	.rongyuzizhi-content-tit a img{
+		float: left;
+	}
+	/*内容  左边的菜单*/
+	.rongyuzizhi-content-left{
+		float: left;
+	}
+	.rongyuzizhi-content-left{
+		width: 254px;
+		border: 1px solid #c69961;
+		border-radius: 5px;
+	}
+	.rongyu-left-tit{
+		width: 254px;
+		height: 38px;
+		background: #790000;
+		border-bottom: 1px solid #a40000;
+		text-align: center;
+		line-height: 38px;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+	}
+	.rongyu-left-tit p{
+		color: #fff;
+		font-size: 20px;
+	}
+	.rongyu-left-content{
+		width: 253px;
+		background: url(../img/rongyu-left-content-back.png) no-repeat center;
+		background-size: 100% 100%;
+		padding-bottom: 20px;
+	}
+	.rongyu-left-content ul{
+		padding-top: 25px;
+	}
+	.rongyu-left-content ul li{
+		text-align: center;
+		height: 40px;
+		line-height: 40px;
+		margin-bottom:20px; 
+		background: url(../img/rongyu-left-content-li-back.png) no-repeat center;
+	}
+	.rongyu-left-content ul li:nth-of-type(1){
+		background: url(../img/rongyu-left-li-back-red.png) no-repeat center;
+	}
+	.rongyu-left-content ul li:nth-of-type(1) a{
+		color: #fff;
+	}
+	.rongyu-left-content ul li:last-child{
+		margin-bottom: 0px;
+	}
+	.rongyu-left-content ul li:hover{
+		background: url(../img/rongyu-left-li-back-red.png) no-repeat center;
+	}
+	.rongyu-left-content ul li:hover a{
+		color: #fff;
+	}
+	.rongyu-left-content ul li a{
+		text-decoration: none;
+		color: #333333;
+		font-size: 18px;
+	}
+
+	/*康复科  右边内容*/
+	.rongyuzizhi-content-right{
+		width: 915px;
+		min-height: 950px;
+		float: right;
+		margin-bottom: 40px;
+		border: 1px solid #790000;
+		border-radius: 4px;
+		position: relative;
+	}
+	.xinnaoxueguan-tit{
+		width: 915px;
+		height: 57px;
+		background: url(../img/yiyuanxinwen-right-tit-back.png) no-repeat center;
+		background-size: 100% 100%;
+		position: relative;
+	}
+	.xinnaoxueguan-tit-biankuang{
+		width: 147px;
+		height: 46px;
+		background: #930303;
+		border-radius: 5px;
+		text-align: center;
+		line-height: 46px;
+		color: #fff;
+		font-size: 16px;
+		position: absolute;
+		top:50%;
+		margin-top: -23px;
+		margin-left: 13px;
+	}
+	.xinnaoxueguan-content{
+		padding-top: 25px;
+	}
+	.gerenjiesao-tit{
+		padding-left: 20px;
+		padding-bottom: 40px;
+	}
+	.gerenjiesao-img{
+		float: left;
+		width: 138px;
+		height: 165px;
+	}
+	.gerenjiesao-jiesao{
+		float: left;
+		padding-left: 20px;
+		height: 165px;
+		width: 200px;
+		position: relative;
+	}
+	.gerenjiesao-p{
+		position: absolute;
+		bottom: 10px;
+	}
+	.gerenjiesao-p p:first-child{
+		font-size: 16px;
+		color: #333;
+		font-family: "微软雅黑";
+		line-height: 34px;
+	}
+	.gerenjiesao-p p{
+		font-size: 14px;
+		color: #333;
+		line-height: 20px;
+	}
+/*个人简介*/
+	.keshijianjie{
+		padding-bottom: 15px;
+	}
+	.keshijianjie-tit{
+		width: 875px;
+		height: 25px;
+		margin-left: 20px;
+		margin-bottom: 15px;
+		border-bottom: 1px solid #444;
+	}
+	.keshijianjie-tit p{
+		float: left;
+		font-size: 16px;
+		color: #790000;
+		border-bottom: 4px solid #790000;
+	}
+	.keshijianjie-tit span{
+		float: right;
+		font-size: 14px;
+		color: #555;
+	}
+	.gerenjianjie-content{
+		width: 875px;
+		padding: 0 20px;
+	}
+	.gerenjianjie-content p{
+		color: #333;
+		font-size: 14px;
+		text-indent: 2em;
+	}
+
+
+	/*底部  上一页  下一页*/
+	.bottom-a{
+		width: 865px;
+		padding: 0 25px;
+		position: absolute;
+		bottom: 20px;
+	}
+	.bottom-a a{
+		width: 55px;
+		height: 20px;
+		text-align: center;
+		color: #790000;
+		font-size: 14px;
+		text-decoration: none;
+		border: 1px solid #790000;
+	}
+	.bottom-a a:hover{
+		background: #790000;
+		color: #fff;
+	}
+	.bottom-a a:first-child{
+		float: left;
+	}
+	.bottom-a a:last-child{
+		float: right;
+	}

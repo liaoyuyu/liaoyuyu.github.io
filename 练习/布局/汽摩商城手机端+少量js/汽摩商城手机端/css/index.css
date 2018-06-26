@@ -1,0 +1,233 @@
+/*内容区*/
+/*轮播*/
+.banner{
+	width: 100%;
+	height: 3rem;
+	overflow: hidden;
+	position: relative;
+}
+.banner-ul{
+	width: 22.5rem;
+	height: 3rem;
+}
+.animate{
+	transition:all 1s;
+}
+.banner li{
+	width: 7.5rem;
+	height: 3rem;
+	float: left;
+}
+.banner img{
+	width: 100%;
+	height: 3rem;
+}
+
+
+/*banner  小圆点*/
+.banner-circular{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	bottom: 0.06rem;
+	display: flex;
+	flex-direction:row;
+	justify-content:center;
+}
+.banner-circular li{
+	width: .12rem;
+	height: .12rem;
+	border-radius: 50%;
+	margin: 0rem .1rem;
+	background: #f6f6f6;
+}
+
+/*nav*/
+.nav{
+	padding: 0.21rem 0.24rem 0rem 0.24rem;
+	box-sizing: border-box;
+	background: #f9f9f9;
+}
+.nav ul{
+	overflow: hidden;
+}
+.nav li{
+	width: 25%;
+	color: #7b7b7b;
+	font-size: .24rem;
+	float: left;
+	display: flex;
+	flex-direction:column ;
+	justify-content:center;
+	align-items:center; 
+	padding-bottom: 0.26rem;
+	box-sizing: border-box; 
+}
+.nav img{
+	width: .86rem;
+	height: .86rem;
+}
+
+
+/*活动优惠*/
+.discount{
+	width: 100%;
+	display: flex;
+	flex-direction:column;
+}
+.discount-tit{
+	width: 7.3rem;
+	height: 0.8rem;
+	margin: 0.2rem 0.1rem;
+}
+.discount-con{
+	width: 100%;
+	padding:0rem .24rem .0rem .24rem;
+	box-sizing: border-box; 
+}
+.discount-con img{
+	width: 1.88rem;
+	height: 1.2rem;
+}
+.discount-con ul{
+	width: 100%;
+	display: flex;
+	flex-direction:row;
+	justify-content:space-between;
+}
+.discount-con ul li{
+	width: 2.18rem;
+	height:2.65rem;
+	background: #fff;
+	padding: 0rem 0.1rem;
+	box-sizing: border-box; 
+	display: flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:space-around;
+	position: relative;
+}
+.discount-con ul li p{
+	font-size: .22rem;
+}
+.discount-con-span{
+	font-size: .24rem;
+	color: #ff5200;
+}
+.discount-con-span span:last-child{
+	font-size: .2rem;
+	color: #a0a0a0;
+	text-decoration:line-through
+}
+.discount-con-span{
+	float: left;
+}
+
+.discount-con .recommend{
+	width: 1.22rem;
+	height: 0.38rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/*汽车商城*/
+.car-shop{
+	width: 100%;
+}
+.car-shop-img{
+	width: 7.3rem;
+	height: 0.8rem;
+	margin: 0rem 0.1rem;
+}
+
+.car-shop-con{
+	width: 100%;
+	padding: 0rem .24rem; 
+	box-sizing: border-box; 
+}
+.car-shop-con img{
+	width: 3.21rem;
+	height: 2.33rem;
+}
+.car-shop-con ul{
+	width: 100%;
+	display: flex;
+	flex-direction:row;
+	justify-content:space-between;
+	flex-wrap:wrap;
+}
+.car-shop-con ul li{
+	width: 3.45rem;
+	font-size: .25rem;
+	color: #000;
+	background: #fff;
+	padding: 0.1rem 0rem;
+	display: flex;
+	flex-direction:column;
+	justify-content:space-around;
+	align-items:center;
+	margin-bottom: 0.18rem;
+	box-sizing: border-box; 
+}
+.car-shop-con ul li:nth-of-type(5){
+	margin-bottom: 0;
+}
+.car-shop-con ul li:nth-of-type(6){
+	margin-bottom: 0;
+}
+.car-shop-con p{
+	width: 2.95rem;
+}
+.Price{
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction:row;
+	justify-content:space-around;
+	align-items:center;
+	margin: 0.1rem 0rem;
+}
+.Price div{
+	float: left;
+}
+.Price-left{
+	color: #ff5200;
+	overflow: hidden;
+	display: flex;
+	flex-direction:row;
+	justify-content:flex-start;
+	align-items:center;
+}
+.Price-left span{
+	float: left;
+}
+.Price-right{
+	color: #8b8b8b;
+}
+.Price span{
+	font-size: .16rem;
+}
+.Price-left span:last-child{
+	font-size: .24rem;
+}
+
+/*摩托车商城*/
+.motorcycle{
+	margin-bottom: 0.18rem;
+}
+
+
+/*返回顶部*/
+.top-button{
+	width: .68rem;
+	height: .68rem;
+	position: fixed;
+	bottom: 1.8rem;
+	right: .24rem;
+	display: none;
+}
+.top-button img{
+	width: .68rem;
+	height: .68rem;
+}

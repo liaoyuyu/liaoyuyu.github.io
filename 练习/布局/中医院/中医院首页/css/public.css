@@ -1,0 +1,259 @@
+.inner{
+		width: 1200px;
+		margin: 0 auto;
+	}
+	*{
+		margin: 0;padding: 0;
+	}
+	li{
+		list-style: none;
+	}
+	.clearfix:before,.clearfix:after{
+		content: '';
+		display: table;
+	}  
+    .clearfix:after{
+    	clear: both;
+    }  
+    body,html{
+    	width: 100%;
+    	min-width: 1200px;
+    }
+    .back{
+		width: 100%;
+		background: url(../img/back.jpg);
+		background-size: 100% 100%;
+		padding-top: 25px;
+	}
+
+    /*顶部*/
+	.top{
+		width:100%;
+		background: #9d7f4a;
+	}
+	.inner{
+		width: 1200px;
+	}
+	.top-top{
+		line-height: 40px;
+		color: #fff;
+	}
+	.top-top span{
+		margin-right: 35px;
+		font-size: 12px;
+	}
+	.top-ul{
+		float: right;
+	}
+	.top-top ul li{
+		float: left;
+		padding: 0 18px;
+		position: relative;
+	}
+	.top-ul li img{
+		vertical-align: middle;
+		margin-right: 3px;
+	}
+	.a1{
+		color: #873424;
+	}
+	.a2,.a3{
+		color: #fff;
+	}
+	.top-ul li a{
+		font-size: 12px;
+		text-decoration: none;
+	}
+	.top-ul li:hover a{
+		color: #873424;
+	}
+	.line:before{
+		content: "";
+        display: block;
+        width: 1px;
+        height: 12px;
+        position: absolute;
+        background: #fff;
+        top: 50%;
+        right: 0;
+        margin-top: -6px;
+     }
+     /*log*/
+     .log{
+     	width: 1200px;
+     	height: 120px;
+     }
+   	.log a{
+		text-decoration: none;
+		float: left;
+		margin-top: 40px;
+	}
+	.log a img{
+		vertical-align: middle;
+	}
+	.dianhua{
+		float: right;
+	}
+	.dianhua ul{
+		float: left;
+		padding-top: 35px;
+	}
+	.dianhua img{
+		float: right;
+	}
+	.dianhua-ul li p{
+		font-size: 14px;
+	}
+	.dianhua-ul li span{
+		font-size: 24px;
+		font-weight: 900;
+		color: #8b2917;
+	}
+	.top-zhongjian{
+		background: url(../img/top-back.jpg);
+	}
+	.dianhua img{
+		margin-top: 9px;
+		margin-left: 48px;
+	}
+	/*导航栏*/
+	.nav{
+		width: 100%;
+		height: 55px;
+		background: url(../img/nav-back.png);
+	}
+	.nav-ul li{
+		height: 55px;
+		line-height: 55px;
+		float: left;
+		text-align: center;
+		padding: 0 17px;
+		position: relative;
+	}
+	.nav-ul li a{
+		color: #fff;
+		font-family: "微软雅黑";
+		text-decoration: none;
+		font-size: 16px;
+	}
+	.nav-ul li:hover{
+		background: url(../img/nav-li-biankuang.png) no-repeat center;
+		background-size: 100% 100%；
+	}
+	.nav-ul-ul{
+		background: url(../img/nav-ul-ulback.png) no-repeat center;
+	}
+	/*下拉菜单*/
+	/*.nav-ul-ul li:hover{
+		background: url(./img/nav-ul-ul-li-a-back.png) no-repeat center;
+	}
+	.nav-ul-ul li{
+		height: 100px;
+		text-align: center;
+	}
+	.nav-ul-ul li a{
+		font-size: 14px;
+	}
+	.nav-ul li ul{
+		display: none;
+	}
+	.nav-ul li:hover ul{
+		display: block;
+		position: absolute;
+	}*/
+
+/*footer*/
+	.footer{
+		padding-bottom: 30px;
+	}
+	/*footer  里的顶部*/
+	.footer-da-tit{
+		width: 1200px;
+		height:30px;
+		line-height: 30px;
+		border-bottom: 2px solid #790000;
+		padding-bottom: 5px;
+	}
+	.da-tit-left{
+		float: left;
+		position: relative;
+	}
+	.da-tit-right{
+		float: left;
+	}
+	.da-tit-left span{
+		color: #790000;
+		font-size: 18px;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	.da-tit-left img{
+		height: 22px;
+		position: absolute;
+		top: 50%;
+		margin-top: -11px;
+	}
+	.da-tit-right ul li{
+		float: left;
+		height: 30px;
+		text-align: center;
+	}
+	.da-tit-right ul li a{
+		text-decoration: none;
+		color: #790000;
+		font-size: 14px;
+		font-family: "宋体";
+		padding: 0 18px;
+		border-right: 1px solid #790000;
+	}
+	.da-tit-right ul li:last-child a{
+		border: 0px;
+	}
+
+	/*footer 里的中部  ul*/
+	.footer-xiao-tit{
+		margin-left: 125px;
+		padding-top: 15px;
+		margin-bottom: 10px;
+	}
+	.footer-xiao-tit ul li{
+		float: left;
+	}
+	.footer-xiao-tit ul li a{
+		text-decoration: none;
+		color: #444444;
+		font-size: 14px;
+		font-family: "宋体";
+		padding: 0 10px;
+		border-right: 1px solid #444444;
+	}
+	.footer-xiao-tit ul li:last-child a{
+		border: 0px;
+	}
+
+	/*footer 内容*/
+	.footer-content-top{
+		margin-left: 230px;
+	}
+	.footer-content-top span{
+		font-size: 12px;
+		font-family: "宋体";
+		color: #5a5959;
+	}
+	.footer-content-top span:nth-of-type(2){
+		margin-left: 50px;
+	} 
+	.footer-content-top span:last-child{
+		margin-left: 50px;
+	}
+	.footer-content-bottom{
+		margin-left: 235px;
+	}
+	.footer-content-bottom span{
+		color: #5e5e5e;
+		font-size: 12px;
+		font-family: "宋体";
+	}
+	.footer-content-bottom img{
+		vertical-align: middle;
+	}

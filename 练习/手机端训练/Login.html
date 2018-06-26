@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>登录</title>
+	<link rel="stylesheet" href="css/Login.css" />
+	<link rel="stylesheet" href="css/public.css" />
+</head>
+<script type="text/javascript">
+	(function(doc, win) {
+		var docEl = doc.documentElement,
+			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			recalc = function() {
+				var clientWidth = docEl.clientWidth;
+				if(!clientWidth) return;
+				docEl.style.fontSize = 20 * clientWidth / 640 + 'px';
+			};
+		if(!doc.addEventListener) return;
+		win.addEventListener(resizeEvt, recalc, false);
+		doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+</script>
+
+<body>
+	<header class="clearfix">
+		<div class="back">
+			<img src="img/back.png"/>
+		</div>
+		<p>登录</p>
+	</header>
+	
+	<!--内容-->
+	<div class="content">
+		<!--账户-->
+		<div class="input-zhanghu clearfix">
+			<input type="text" placeholder="请输入账户"/>
+		</div>
+		
+		<!--密码-->
+		<div class="input-zhanghu clearfix">
+			<input type="password" placeholder="请输入密码"/>
+		</div>
+		<!--忘记密码-->
+		<div class="forget-password">
+			<a href="">忘记密码？</a>
+		</div>
+		
+		<!--登录-->
+		<button class="Login">登录</button>
+		
+		<!--注册-->
+		<button class="register">注册</button>
+		
+	</div>
+</body>
+</html>

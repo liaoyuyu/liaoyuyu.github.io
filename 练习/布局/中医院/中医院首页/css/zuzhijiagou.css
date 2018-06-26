@@ -1,0 +1,122 @@
+/*nav*/
+	.nav-ul li:nth-of-type(2){
+		background: url(../img/nav-li-biankuang.png) no-repeat center;
+		background-size: 100% 100%；
+	}
+
+/*内容  顶部*/
+	.rongyuzizhi-content-tit{
+		width: 1200px;
+		border-bottom: 1px solid #aa0e25;
+		padding-bottom: 8px;
+		margin-bottom: 20px;
+	}
+	.rongyuzizhi-content-tit p{
+		float: left;
+		color: #222;
+		font-size: 14px;
+		font-family: "宋体";
+	}
+	.rongyuzizhi-content-tit a{
+		float: right;
+		text-decoration: none;
+	}
+	.rongyuzizhi-content-tit a p{
+		color: #222;
+		font-size: 14px;
+		font-family: "宋体";
+		float: right;
+		margin-top: 4px;
+		margin-left: 5px;
+	}
+	.rongyuzizhi-content-tit a img{
+		float: left;
+	}
+	/*内容  左边的菜单*/
+	.rongyuzizhi-content-left{
+		float: left;
+	}
+	.rongyuzizhi-content-right{
+		float: right;
+	}
+	.rongyuzizhi-content-left{
+		width: 254px;
+		border: 1px solid #c69961;
+		border-radius: 5px;
+	}
+	.rongyu-left-tit{
+		width: 254px;
+		height: 38px;
+		background: #790000;
+		border-bottom: 1px solid #a40000;
+		text-align: center;
+		line-height: 38px;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+	}
+	.rongyu-left-tit p{
+		color: #fff;
+		font-size: 20px;
+	}
+	.rongyu-left-content{
+		width: 253px;
+		height: 382px;
+		background: url(../img/rongyu-left-content-back.png) no-repeat center;
+	}
+	.rongyu-left-content ul{
+		padding-top: 25px;
+	}
+	.rongyu-left-content ul li{
+		text-align: center;
+		height: 40px;
+		line-height: 40px;
+		margin-bottom:20px; 
+		background: url(../img/rongyu-left-content-li-back.png) no-repeat center;
+	}
+	.rongyu-left-content ul li:nth-of-type(2){
+		background: url(../img/rongyu-left-li-back-red.png) no-repeat center;
+	}
+	.rongyu-left-content ul li:nth-of-type(2) a{
+		color: #fff;
+	}
+	.rongyu-left-content ul li:hover{
+		background: url(../img/rongyu-left-li-back-red.png) no-repeat center;
+	}
+	.rongyu-left-content ul li:hover a{
+		color: #fff;
+	}
+	.rongyu-left-content ul li a{
+		text-decoration: none;
+		color: #333333;
+		font-size: 18px;
+	}
+
+	/*内容  右边*/
+	.rongyuzizhi-content-right{
+		width: 915px;
+	}
+	.zuzhi-right-tit p:first-child{
+		color: #790000;
+		font-size: 24px;
+		text-align: center;
+	}
+	.zuzhi-right-tit p:last-child{
+		color: #222;
+		font-size: 14px;
+		text-align: right;
+		border-bottom: 1px solid #aa0e25;
+	}
+	.zuzhi-right-tit{
+		width: 865px;
+		margin-left: 25px;
+	}
+	.zuzhi-right-content{
+		text-align: center;
+		padding-top: 20px;
+		padding-bottom: 55px;
+	}
+	.rongyuzizhi-content-right{
+		width: 915px;
+		margin-bottom: 455px;
+		background: #f4e9d5;
+	}

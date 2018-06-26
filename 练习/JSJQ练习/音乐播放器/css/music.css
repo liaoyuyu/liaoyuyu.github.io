@@ -1,0 +1,278 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.clearfix:before,.clearfix:after{
+	content: '';
+	display: table;
+}  
+.clearfix:after{
+   	clear: both;	
+}
+body,html{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.Outer-frame{
+	width: 100%;
+	height: 61px;
+	position: absolute;
+	bottom: 0px;
+}
+.back{
+	float: left;
+	width: 100%;
+	height: 47px;
+	background: url(../img/background.png);
+	position: absolute;
+	bottom: 0px;
+}
+
+.inner{
+	width: 1000px;
+	height: 47px;
+	margin: 0 auto;
+}
+
+/*按钮*/
+.btn{
+	height: 47px;
+	float: left;
+}
+.upper{
+	float: left;
+	display: block;
+	width: 24px;
+	height: 25px;
+	margin: 11px 0px;
+	background: url(../img/upper.png) center;
+}
+.upper:hover{
+	background: url(../img/upper-hover.png);
+	cursor:pointer; 
+}
+.stop{
+	float: left;
+	display: block;
+	width: 32px;
+	height: 33px;
+	margin: 7px 15px;
+	background: url(../img/stop.png) no-repeat;
+}
+.stop:hover{
+	background: url(../img/stop-hover.png) no-repeat;
+	cursor:pointer; 
+}
+.play{
+	background: url(../img/play.png) no-repeat;
+}
+.play:hover{
+	background: url(../img/play-hover.png) no-repeat;
+}
+.lower{
+	float: left;
+	display: block;
+	width: 24px;
+	height: 25px;
+	margin: 11px 0px;
+	background: url(../img/lower.png) no-repeat;
+}
+.lower:hover{
+	background: url(../img/lower-hover.png) no-repeat;
+	cursor:pointer; 
+}
+
+
+/*中间*/
+.center{
+	height: 47px;
+	float: left;
+	padding: 0px 20px;
+}
+.img{
+	float: left;
+	display: block;
+	width: 35px;
+	height: 35px;
+	background: url(../img/default_album.jpg) no-repeat;
+	margin-top: 6px;
+	margin-right: 10px;
+}
+.img:hover{
+	cursor:pointer; 
+}
+
+.jindu{
+	float: left;
+}
+.jindu-top{
+	padding-top: 3px;
+}
+a:hover{
+	text-decoration: underline;
+}
+.music-name{
+	float: left;
+	color: #fff;
+	font-size: 12px;
+}
+.name{
+	float: left;
+	margin: 0px 15px 0px 10px;
+	color: gray;
+	font-size: 10px;
+}
+
+.lianjie{
+	display: block;
+	float: left;
+	width: 15px;
+	height: 15px;
+	background: url(../img/lianjie.png) no-repeat;
+}
+.lianjie:hover{
+	background: url(../img/lianjie-hover.png) no-repeat;
+}
+
+/*进度条*/
+.jindutiao-back{
+	margin-top: 8px;
+	width: 494px;
+	height: 10px;
+	background: url(../img/jindu.png) no-repeat;
+	position: relative;
+	margin-left: 8px;
+}
+.jindutiao{
+	width: 0px;
+	height: 10px;
+	background: url(../img/jindu-color.png) no-repeat;
+	position: absolute;
+}
+.circular{
+	width: 16px;
+	height: 16px;
+	background: url(../img/circular.png) no-repeat;
+	position: absolute;
+	bottom: -1px;
+	left: -8px;
+}
+
+/*时间*/
+.time{
+	float: left;
+	margin-left: 10px;
+	margin-top: 22px;
+		color: #fff;
+	font-size: 12px;
+}
+
+.right-con{
+	float: right;
+	height: 47px;
+}
+.Collection{
+	float: left;
+	display: block;
+	width: 18px;
+	height: 18px;
+	background: url(../img/Collection.png) no-repeat;
+	margin: 13px 5px;
+}
+.Collection:hover{
+	background: url(../img/Collection-hover.png) no-repeat;
+	cursor:pointer; 
+}
+.share{
+	display: block;
+	float: left;
+	width: 17px;
+	height: 17px;
+	background: url(../img/share.png) no-repeat;
+	margin: 13px 5px;
+}
+.share:hover{
+	background: url(../img/share-hover.png) no-repeat;
+	cursor:pointer; 
+}
+.shuxian{
+	float: left;
+	width: 1px;
+	height: 18px;
+	border-left: 1px solid #FFF;
+	margin: 12px 10px;
+}
+
+.volume{
+	display: block;
+	float: left;
+	width: 18px;
+	height: 19px;
+	background: url(../img/volume.png) no-repeat;
+	margin: 11px 5px;
+}
+.volume:hover{
+	background: url(../img/volume-hover.png) no-repeat;
+	cursor: pointer;
+}
+
+
+/*循环*/
+.loop{
+	display: block;
+	float: left;
+	width: 20px;
+	height: 18px;
+	background: url(../img/Cycle.png) no-repeat;
+	margin: 12px 5px;
+}
+
+/*音量大小*/
+.volume-back{
+	width: 33px;
+	height: 114px;
+	background: url(../img/volume-back.png) no-repeat;
+	position: fixed;
+	bottom: 46px;
+	right: 490px;
+	display: none;
+}
+.volume-inner{
+	width: 4px;
+	height: 92px;
+	position: relative;
+	bottom: -11px;
+	left: 50%;
+	margin-left: -3px;
+	display: inline-block;
+}
+.volume-size{
+	width: 4px;
+	height: 0px;
+	background: url(../img/volume-back-size.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	margin-left: -2px;
+}
+.volume-circular{
+	width: 15px;
+	height: 15px;
+	background: url(../img/volume-circular.png) no-repeat;
+	position: absolute;
+	bottom: -7px;
+	left: 50%;
+	margin-left: -7px;
+}
+.volume-circular:hover{
+	background: url(../img/volume-circular-hover.png) no-repeat;
+	cursor: pointer;
+}

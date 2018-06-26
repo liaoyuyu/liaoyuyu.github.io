@@ -1,0 +1,162 @@
+/*nav*/
+	.nav-ul li:nth-of-type(3){
+		background: url(../img/nav-li-biankuang.png) no-repeat center;
+		background-size: 100% 100%；
+	}
+
+/*内容  顶部*/
+	.rongyuzizhi-content-tit{
+		width: 1200px;
+		border-bottom: 1px solid #aa0e25;
+		padding-bottom: 8px;
+		margin-bottom: 20px;
+	}
+	.rongyuzizhi-content-tit p{
+		float: left;
+		color: #222;
+		font-size: 14px;
+		font-family: "宋体";
+	}
+	.rongyuzizhi-content-tit a{
+		float: right;
+		text-decoration: none;
+	}
+	.rongyuzizhi-content-tit a p{
+		color: #222;
+		font-size: 14px;
+		font-family: "宋体";
+		float: right;
+		margin-top: 4px;
+		margin-left: 5px;
+	}
+	.rongyuzizhi-content-tit a img{
+		float: left;
+	}
+	/*内容  左边的菜单*/
+	.rongyuzizhi-content-left{
+		float: left;
+	}
+	.rongyuzizhi-content-left{
+		width: 254px;
+		border: 1px solid #c69961;
+		border-radius: 5px;
+	}
+	.rongyu-left-tit{
+		width: 254px;
+		height: 38px;
+		background: #790000;
+		border-bottom: 1px solid #a40000;
+		text-align: center;
+		line-height: 38px;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+	}
+	.rongyu-left-tit p{
+		color: #fff;
+		font-size: 20px;
+	}
+	.rongyu-left-content{
+		width: 253px;
+		height: 320px;
+		background: url(../img/rongyu-left-content-back.png) no-repeat center;
+	}
+	.rongyu-left-content ul{
+		padding-top: 25px;
+	}
+	.rongyu-left-content ul li{
+		text-align: center;
+		height: 40px;
+		line-height: 40px;
+		margin-bottom:20px; 
+		background: url(../img/rongyu-left-content-li-back.png) no-repeat center;
+	}
+	.rongyu-left-content ul li:nth-of-type(1){
+		background: url(../img/rongyu-left-li-back-red.png) no-repeat center;
+	}
+	.rongyu-left-content ul li:nth-of-type(1) a{
+		color: #fff;
+	}
+	.rongyu-left-content ul li:hover{
+		background: url(../img/rongyu-left-li-back-red.png) no-repeat center;
+	}
+	.rongyu-left-content ul li:hover a{
+		color: #fff;
+	}
+	.rongyu-left-content ul li a{
+		text-decoration: none;
+		color: #333333;
+		font-size: 18px;
+	}
+	
+	/*右边的内容*/
+	.rongyuzizhi-content-right{
+		width: 915px;
+		float: right;
+		border: 1px solid #790000;
+		margin-bottom: 70px;
+		position: relative;
+	}
+	.xinwen-yangzhen-tit p{
+		color: #790000;
+		font-size: 24px;
+		text-align: center;
+		margin-top: 10px;
+		margin-bottom: 30px;
+	}
+	.xinwen-yangzhen-xiaotit{
+		text-align: center;
+	}
+	.xinwen-yangzhen-xiaotit span{
+		color: #444444;
+		font-size: 12px;
+		font-family: "宋体";
+		margin: 0 25px;
+	}
+	.xinwen-yangzhen-tit{
+		border-bottom: 1px solid #444444;
+		width: 860px;
+		margin: 0 28px;
+		padding-bottom: 5px;
+	}
+	
+	/*返回按钮*/
+	.rongyuzizhi-content-tit a{
+		float: right;
+		text-decoration: none;
+	}
+	.rongyuzizhi-content-tit a p{
+		color: #222;
+		font-size: 14px;
+		font-family: "宋体";
+		float: right;
+		margin-top: 4px;
+		margin-left: 5px;
+	}
+	.rongyuzizhi-content-tit a img{
+		float: left;
+	}
+
+	/*  新闻   文章*/
+	.xinwen-yangzhen-img{
+		padding: 20px 0;
+		text-align: center;
+	}
+	.xinwen-yangzhen-wenzhang{
+		padding: 30px 25px 165px 25px; 
+	}
+	.xinwen-yangzhen-wenzhang p{
+		text-indent: 2em;
+		color: #333333;
+		font-size: 14px;
+		line-height: 25px;
+	}
+	.xinwen-wenzhang-bottom a{
+		text-decoration: none;
+		color: #444;
+		font-size: 14px;
+	}
+	.xinwen-wenzhang-bottom{
+		padding-left: 30px;
+		position: absolute;
+		bottom: 20px;
+	}

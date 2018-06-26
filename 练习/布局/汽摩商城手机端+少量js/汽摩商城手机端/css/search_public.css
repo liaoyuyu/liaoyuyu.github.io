@@ -1,0 +1,29 @@
+.search-tit{
+	width: 100%;
+	height: 0.86rem;
+	background: #fff;
+	padding:0rem 0.24rem;
+	box-sizing: border-box; 
+}
+.tit-input .search::-ms-input-placeholder{
+	text-align: left;
+}
+.tit-input .search::-webkit-input-placeholder{
+	text-align: left;
+}
+.search-tit .tit-input{
+	width: 6.3rem;
+	height: 0.60rem;
+}
+.tit-input .search{
+	width: 5.4rem;
+	height: 0.55rem;
+}
+.search-tit{
+	display: flex;
+	flex-direction:row;
+	justify-content:space-between;
+	align-items:center;
+	border-bottom: 1px solid #d5d5d5;
+	box-sizing: border-box;
+}

@@ -1,0 +1,119 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	font-family:"苹方";
+}
+body,html{
+	width: 100%;
+	height: 100%;
+	background: #efefef;
+}
+.tit{
+	width: 100%;
+	height: 0.86rem;
+	padding: 0.2rem 0.24rem;
+	box-sizing:border-box;
+	background: #fff;
+	display: flex;
+	flex-direction:row;
+	justify-content:space-between;
+	align-items:center;
+	position: fixed;
+	top: 0;
+	z-index: 9999;
+}
+.logo{
+	width: 2.04rem;
+	height: 0.45rem;
+}
+.tit-input{
+	width: 4rem;
+	height: .46rem;
+	border: 1px solid #e8e8e8;
+	border-radius: 0.26rem;
+	padding: 0rem 0.22rem;
+	box-sizing: border-box; 
+	display: flex;
+	flex-direction:row;
+	justify-content:space-between;
+	align-items:center; 
+}
+.tit-input input{
+	width: 3.1rem;
+	border: none;
+	outline: none;
+	font-size: .22rem;
+}
+.tit-input input::-ms-input-placeholder{
+	text-align: center;
+}
+.tit-input input::-webkit-input-placeholder{
+	text-align: center;
+}
+.tit-input img{
+	width: .31rem;
+	height: .28rem;
+}
+.shop-car{
+	width: .44rem;
+	height: .39rem;
+}
+
+/*内容区*/
+.content{
+	width: 100%;
+	padding-bottom: 0.98rem;
+	padding-top: 0.86rem;	
+	box-sizing: border-box; 
+}
+
+
+/*底部切换按钮*/
+.buttom{
+	width: 100%;
+	height: .98rem;
+	background: #fbfbfb;
+	position: fixed;
+	bottom: 0;
+	z-index: 999;
+}
+
+.buttom-li1 img{
+	width: 0.42rem;
+	height: 0.42rem;
+	margin-top: .02rem;
+}
+.buttom-li2 img{
+	width: 0.42rem;
+	height: 0.42rem;
+	margin-top: .02rem;
+}
+.buttom-li3 img{
+	width: .44rem;
+	height: 0.33rem;
+	margin-top: .11rem;
+}
+.buttom-li4 img{
+	width: .38rem;
+	height: .44rem;
+}
+.buttom ul{
+	width: 100%;
+	display: flex;
+	flex-direction::row;
+	justify-content:space-between;
+}
+.buttom li{
+	width:25%; 
+	height: .98rem;
+	display: flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+}
+.buttom p{
+	font-size: .22rem;
+	color: #7b7b7b;
+}

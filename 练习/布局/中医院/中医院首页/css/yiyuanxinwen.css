@@ -1,0 +1,200 @@
+/*nav*/
+	.nav-ul li:nth-of-type(3){
+		background: url(../img/nav-li-biankuang.png) no-repeat center;
+		background-size: 100% 100%；
+	}
+
+/*内容  顶部*/
+	.rongyuzizhi-content-tit{
+		width: 1200px;
+		border-bottom: 1px solid #aa0e25;
+		padding-bottom: 8px;
+		margin-bottom: 20px;
+	}
+	.rongyuzizhi-content-tit p{
+		float: left;
+		color: #222;
+		font-size: 14px;
+		font-family: "宋体";
+	}
+	.rongyuzizhi-content-tit a{
+		float: right;
+		text-decoration: none;
+	}
+	.rongyuzizhi-content-tit a p{
+		color: #222;
+		font-size: 14px;
+		font-family: "宋体";
+		float: right;
+		margin-top: 4px;
+		margin-left: 5px;
+	}
+	.rongyuzizhi-content-tit a img{
+		float: left;
+	}
+	/*内容  左边的菜单*/
+	.rongyuzizhi-content-left{
+		float: left;
+	}
+	.rongyuzizhi-content-left{
+		width: 254px;
+		border: 1px solid #c69961;
+		border-radius: 5px;
+	}
+	.rongyu-left-tit{
+		width: 254px;
+		height: 38px;
+		background: #790000;
+		border-bottom: 1px solid #a40000;
+		text-align: center;
+		line-height: 38px;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+	}
+	.rongyu-left-tit p{
+		color: #fff;
+		font-size: 20px;
+	}
+	.rongyu-left-content{
+		width: 253px;
+		height: 320px;
+		background: url(../img/rongyu-left-content-back.png) no-repeat center;
+	}
+	.rongyu-left-content ul{
+		padding-top: 25px;
+	}
+	.rongyu-left-content ul li{
+		text-align: center;
+		height: 40px;
+		line-height: 40px;
+		margin-bottom:20px; 
+		background: url(../img/rongyu-left-content-li-back.png) no-repeat center;
+	}
+	.rongyu-left-content ul li:nth-of-type(1){
+		background: url(../img/rongyu-left-li-back-red.png) no-repeat center;
+	}
+	.rongyu-left-content ul li:nth-of-type(1) a{
+		color: #fff;
+	}
+	.rongyu-left-content ul li:hover{
+		background: url(../img/rongyu-left-li-back-red.png) no-repeat center;
+	}
+	.rongyu-left-content ul li:hover a{
+		color: #fff;
+	}
+	.rongyu-left-content ul li a{
+		text-decoration: none;
+		color: #333333;
+		font-size: 18px;
+	}
+
+	/*内容  右边*/
+	.rongyuzizhi-content-right{
+		float: right;
+		width: 915px;
+		border: 1px solid #c15536;
+		border-radius: 3px;
+		margin-bottom: 70px;
+	}
+	.yiyuanxinwen-right-tit{
+		height: 58px;
+		width: 915px;
+		margin: 0 auto;
+		background: url(../img/yiyuanxinwen-right-tit-back.png);
+		position: relative;
+	}
+	.yiyuanxinwen-right-content{
+		width: 915px;
+		height: 770px;
+		padding-bottom: 60px;
+		border-top: 1px solid #c15536;
+	}
+	.tit-biankuang{
+		width: 148px;
+		height: 46px;
+		line-height: 47px;
+		text-align: center;
+		background: #790000;
+		border-radius: 5px;
+		position: absolute;
+		left: 50%;
+		margin-left: -74px;
+		margin-top: 6px;
+	}
+	.yiyuanxinwen-right-tit p{
+		
+		color: #fff;
+		font-size: 24px;
+		font-family: "宋体";
+		font-weight: 900;
+	}
+
+	/*右边  的内容*/
+	.yiyuanxinwen-right-content ul li{
+		width: 865px;
+		margin-left: 25px;
+		margin-top: 30px;
+	}
+	.yiyuanxinwen-right-content ul li a{
+		text-decoration: none;
+	}
+	.yiyuanxinwen-right-content ul li a p{
+		color: #454242;
+		width: 620px;
+		font-size: 16px;
+		float: left;
+	}
+	.yiyuanxinwen-right-content ul li a span{
+		color: #454242;
+		font-size: 16px;
+		float: right;
+	}
+	.yiyuanxinwen-right-content ul li:hover a p{
+		color: #790000;
+	}
+	.yiyuanxinwen-right-content ul li:hover a span{
+		color: #790000;
+	}
+
+	/*新闻  底部的选择页面*/
+	.xinwen-right-content-bottom ul{
+		width: 625px;
+		padding-bottom: 30px;
+		margin-left: 20px;
+	}
+	.xinwen-right-content-bottom ul li{
+		height: 20px;
+		width: 24px;
+		float: left;
+		margin-left: 10px;
+		border: 1px solid #aa0e25;
+		text-align: center;
+		color: #aa0e25;
+		font-size: 14px;
+	}
+	.xinwen-right-content-bottom ul li:first-child{
+		width: 38px;
+		margin-left: 0px;
+	}
+	.xinwen-right-content-bottom ul li:nth-of-type(2){
+		width: 55px;
+	}
+	.xinwen-right-content-bottom ul li:nth-of-type(14){
+		width: 55px;
+	}
+	.xinwen-right-content-bottom ul li:nth-of-type(15){
+		width: 39px;
+	}
+	.xinwen-right-content-bottom ul li:hover{
+		background: #970000;
+		color: #fff;
+	}
+	.xinwen-right-content-bottom ul{
+		float: left;
+	}
+	.xinwen-right-content-bottom span{
+		float: right;
+		font-size: 14px;
+		color: #444444;
+		margin-right: 15px;
+	}

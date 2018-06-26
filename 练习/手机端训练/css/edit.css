@@ -1,0 +1,97 @@
+body,html{
+	width: 100%;
+	height: 100%;
+	background: #e5e5e5;
+	position: relative;
+}
+.content{
+	margin-top: 0.75rem;
+	padding-left: 1.75rem;
+	box-sizing: border-box;
+	background: #fff;
+}
+/*昵称*/
+.name{
+	width: 100%;
+	height: 4.4rem;
+}
+p{
+	float: left;
+	line-height: 4.4rem;
+	color: #888888;
+	font-size: 1.3rem;
+	margin-right: 1rem;
+}
+.name input{
+	float: left;
+	width: 21rem;
+	height: 4.4rem;
+	border: 0rem;
+	outline: none;
+	font-size: 1.3rem;
+}
+.name input::-webkit-input-placeholder{
+	color:#5e5e5e;
+}
+
+/*中间线*/
+.center{
+	width: 100%;
+	height: 0.1rem;
+	background: #888888;
+}
+
+/*性别*/
+.Sex-right{
+	height: 4.4rem;
+}
+.Sex-right{
+	float: left;
+	width: 21.7rem;
+	line-height: 4.4rem;
+}
+.Sex-right span{
+	float: left;
+	color: #5E5E5E;
+	font-size: 1.3rem;
+}
+.Sex-right img{
+	margin-top: 1.1rem;
+	float: right;
+	margin-right: 1rem;
+}
+
+/*弹出框*/
+.Popup{
+	width: 20rem;
+	height: 12rem;
+	background: #fff;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	margin-top: -6rem;
+	left: 50%;
+	margin-left: -10rem;
+}
+.Popup ul li {
+	width: 20rem;
+	height: 4rem;
+	color: #000;
+	line-height: 4rem;
+}
+.Popup ul li:nth-of-type(2){
+	border-top: 0.05rem solid #E5E5E5;
+	border-bottom: 0.05rem solid #E5E5E5;
+}
+.box{
+	width: 100%;
+	height: 100%;
+	background: #5e5e5e;
+	position: absolute;
+	top: 0rem;
+	/*padding-top: 4.4rem;
+	box-sizing: border-box;*/
+	opacity: 0.7;
+	display: none;
+}
+

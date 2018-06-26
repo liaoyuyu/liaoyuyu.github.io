@@ -1,0 +1,1321 @@
+html {
+-ms-touch-action: none;  /* 阻止windows Phone 的默认触摸事件 */
+}
+body,
+div,
+p {
+margin: 0;
+padding: 0;
+}
+ul {
+list-style: none;
+}
+body {
+width: 100%;
+*cursor: default;
+overflow: hidden;
+font: 16px/1.5 "Microsoft YaHei",Helvetica,STHeiti STXihei,Microsoft JhengHei,Arial;
+}
+#pageContain {
+overflow: hidden;
+}
+.page {
+display: none;
+width: 100%;
+height: 100%;
+overflow: hidden;
+position: absolute;
+top: 0;
+left: 0;
+}
+.contain {
+width: 100%;
+height: 100%;
+display: none;
+position: relative;
+z-index: 0;
+}
+.current .contain,.slide .contain {
+display: block;
+}
+.current {
+display: block;
+z-index: 1;
+}
+.slide {
+display: block;
+z-index: 2;
+}
+.swipe {
+display: block;
+z-index: 3;
+transition-duration: 0ms !important;
+-webkit-transition-duration: 0ms !important;
+}
+
+
+/* 音乐 */
+.music{
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 6%;
+    left: 11%;
+    z-index: 9999;
+    cursor: pointer;
+    animation:music 2s linear infinite;
+}
+@keyframes music
+{
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
+}
+.stop{
+    animation-play-state:paused;
+}
+.start{
+    animation-play-state:running;
+}
+
+
+/* 第一页 */
+.page1 {
+background: url(../images/one-back.jpg);
+background-size: 100% 100%;
+}
+
+/* 端午 */
+.one_tit{
+    width: 37%;
+    height: 53%;
+    position: absolute;
+    margin-top: -100%;
+    margin-left: 18%;
+    z-index: 2;
+    animation: onetit 1.5s 0.5s forwards;
+}
+@keyframes onetit
+{
+    100%{margin-top: 35%}
+}
+/* 粽子 */
+.one_zongzi{
+    width: 64%;
+    height: 23%;
+    position: absolute;
+    margin-top: 78%;
+    z-index: 1;
+    margin-left: 29%;
+    opacity: 0;
+    animation: onezongzi 1s 1.5s forwards;
+}
+@keyframes onezongzi
+{
+    100%{opacity: 1;}
+}
+.one_zongzi2{
+    width: 44%;
+    height: 8%;
+    position: absolute;
+    top:57.5%;
+    left: 36%; 
+    z-index: 2;
+    opacity: 0;
+    animation: onezongzi2 1s 1.5s forwards;
+}
+@keyframes onezongzi2
+{
+    100%{opacity: 1;}
+}
+/* 对联 */
+.one_couplet1{
+    width: 10%;
+    height: 0%;
+    overflow: hidden;
+    position: absolute;
+    top:45%;
+    left: 5%;
+    animation: onecouplet1 1s 2s linear forwards;
+}
+@keyframes onecouplet1
+{
+    100%{height: 28%;}
+}
+.one_couplet1 img{
+    width: 100%;
+}
+.one_couplet2{
+    width: 10%;
+    height: 0%;
+    overflow: hidden;
+    position: absolute;
+    top: 33%;
+    right: 7%;
+    z-index: 2;
+    animation: onecouplet2 1s 2s linear forwards;
+}
+@keyframes onecouplet2
+{
+    100%{height: 30%;}
+}
+.one_couplet2 img{
+    width: 100%;
+}
+/* 花瓣 */
+.one1{
+    position: absolute;
+    width: 6%;
+    height: 3%;
+    top: 15%;
+    right: 30%;
+    opacity: 0;
+    animation: one1 3s ease-in infinite;
+}
+@keyframes one1
+{
+    0%{top: 15%;}
+    30%{opacity: 1;}
+    100%{top: 55%;right: 45%;opacity: 1;}
+}
+.one2{
+    position: absolute;
+    width: 5%;
+    height: 2%;
+    top: 46%;
+    right: 55%;
+    opacity: 0;
+    animation: one2 4s 1s ease-in infinite;
+}
+@keyframes one2
+{
+    0%{top: 15%;}
+    30%{opacity: 1;}
+    100%{top: 55%;right: 20%;opacity: 1;}
+}
+.one3{
+    position: absolute;
+    width: 7%;
+    height: 2%;
+    top: 37%;
+    right: 50%;
+    opacity: 0;
+    animation: one3 3.5s 1s ease-in infinite;
+}
+@keyframes one3
+{
+    0%{top: 15%;right: 40%;}
+    30%{opacity: 1;}
+    100%{top: 55%;right: 50%;opacity: 1;}
+}
+.one4{
+    position: absolute;
+    width: 7%;
+    height: 2%;
+    top: 40%;
+    right: 35%;
+    opacity: 0;
+    animation: one4 3s ease-in infinite;
+}
+@keyframes one4
+{
+    0%{top: 15%;right: 40%;transform:rotateY(0deg);}
+    12.5%{transform:rotateY(45deg);}
+    25%{transform:rotateY(90deg);opacity: 1;}
+    37.5%{transform:rotateY(135deg);}
+    50%{transform:rotateY(180deg);}
+    62.5%{transform:rotateY(225deg);}
+    75%{transform:rotateY(270deg);}
+    87.5%{transform:rotateY(315deg);}
+    100%{top: 55%;opacity: 1;transform:rotateY(360deg);}
+}
+.one5{
+    position: absolute;
+    width: 4%;
+    height: 3.5%;
+    top: 44%;
+    right: 19%;
+    opacity: 0;
+    animation: one5 4s 2s ease-in infinite;
+}
+@keyframes one5
+{
+    0%{top: 15%;transform:rotateY(0deg);}
+    12.5%{transform:rotateY(45deg);}
+    25%{transform:rotateY(90deg);opacity: 1;}
+    37.5%{transform:rotateY(135deg);}
+    50%{transform:rotateY(180deg);}
+    62.5%{transform:rotateY(225deg);}
+    75%{transform:rotateY(270deg);}
+    87.5%{transform:rotateY(315deg);}
+    100%{top: 55%;opacity: 1;transform:rotateY(360deg);}
+}
+.one6{
+    position: absolute;
+    width: 6%;
+    height: 3%;
+    top: 32%;
+    right: 37%;
+    opacity: 0;
+    animation: one6 3s 1.5s ease-in infinite;
+}
+@keyframes one6
+{
+    0%{top: 15%;}
+    30%{opacity: 1;}
+    100%{top: 55%;opacity: 1;right: 20%;}
+}
+.one7{
+    position: absolute;
+    width: 4%;
+    height: 3%;
+    top: 36%;
+    right: 27%;
+    opacity: 0;
+    animation: one7 2.5s 1s ease-in infinite;
+}
+@keyframes one7
+{
+    0%{top: 15%;right: 30%;}
+    30%{opacity: 1;}
+    100%{top: 55%;opacity: 1;right: 25%;}
+}
+.one8{
+    position: absolute;
+    width: 4%;
+    height: 2%;
+    top: 30%;
+    right: 14%;
+    opacity: 0;
+    animation: one8 3.5s 2s ease-in infinite;
+}
+@keyframes one8
+{
+    0%{top: 15%;transform:rotateY(0deg);right: 10%;}
+    12.5%{transform:rotateY(45deg);}
+    25%{transform:rotateY(90deg);opacity: 1;}
+    37.5%{transform:rotateY(135deg);}
+    50%{transform:rotateY(180deg);}
+    62.5%{transform:rotateY(225deg);}
+    75%{transform:rotateY(270deg);}
+    87.5%{transform:rotateY(315deg);}
+    100%{top: 55%;opacity: 1;transform:rotateY(360deg);right: 45%;}
+}
+.one9{
+    position: absolute;
+    width: 3%;
+    height: 2%;
+    top: 23%;
+    right: 23%;
+    opacity: 0;
+    animation: one9 4s ease-in infinite;
+}
+@keyframes one9
+{
+    0%{top: 15%;}
+    30%{opacity: 1;}
+    100%{top: 40%;opacity: 1;right: -3%;;}
+}
+.one10{
+    position: absolute;
+    width: 3%;
+    height: 2%;
+    top: 19%;
+    right: 48%;
+    opacity: 0;
+    animation: one10 3s 0.5s ease-in infinite;
+}
+@keyframes one10
+{
+    0%{top: 15%;transform:rotateY(0deg);}
+    12.5%{transform:rotateY(45deg);}
+    25%{transform:rotateY(90deg);opacity: 1;}
+    37.5%{transform:rotateY(135deg);}
+    50%{transform:rotateY(180deg);}
+    62.5%{transform:rotateY(225deg);}
+    75%{transform:rotateY(270deg);}
+    87.5%{transform:rotateY(315deg);}
+    100%{top: 50%;opacity: 1;transform:rotateY(360deg);right: 13%;}
+}
+
+/* 灯笼 */
+.one_lantern1{
+    width: 3%;
+    height: 2.5%;
+    position: absolute;
+    bottom: -5%;
+    left: 53%;
+    animation:onelantern1 8s 1s forwards;
+}
+@keyframes onelantern1
+{
+    100%{bottom: 28%;}
+}
+.one_lantern2{
+    width: 3%;
+    height: 2.5%;
+    position: absolute;
+    bottom: -5%;
+    left: 72%;
+    animation:onelantern2 8s 0.5s forwards;
+}
+@keyframes onelantern2
+{
+    100%{bottom: 32%;}
+}
+.one_lantern3{
+    width: 3%;
+    height: 2.5%;
+    position: absolute;
+    bottom: -5%;
+    left: 70%;
+    animation:onelantern3 8s 1.5s forwards;
+}
+@keyframes onelantern3
+{
+    100%{bottom: 23%;}
+}
+.one_lantern4{
+    width: 4.5%;
+    height: 3.5%;
+    position: absolute;
+    bottom: -5%;
+    left: 49%;
+    animation:onelantern4 8s 1s forwards;
+}
+@keyframes onelantern4
+{
+    100%{bottom: 21%;}
+}
+.one_lantern5{
+    width: 3%;
+    height: 2.5%;
+    position: absolute;
+    bottom: -5%;
+    left: 39%;
+    animation:onelantern5 8s 1.5s forwards;
+}
+@keyframes onelantern5
+{
+    100%{bottom: 23%;}
+}
+.one_lantern6{
+    width: 3%;
+    height: 2.5%;
+    position: absolute;
+    bottom: -5%;
+    left: 33%;
+    animation:onelantern6 8s 2s forwards;
+}
+@keyframes onelantern6
+{
+    100%{bottom: 14%;}
+}
+.one_lantern7{
+    width: 7%;
+    height: 5.5%;
+    position: absolute;
+    bottom: -7%;
+    left: 57%;
+    animation:onelantern7 8s 2.5s forwards;
+}
+@keyframes onelantern7
+{
+    100%{bottom: 13%;}
+}
+
+
+/* 第二页 */
+.page2 {
+background: url(../images/one-back.jpg);
+background-size: 100% 100%;
+}
+/* tit */
+.two_tit{
+    width: 8%;
+    height: 0%;
+    overflow: hidden;
+    position: absolute;
+    top: 24%;
+    right: 21%;
+    z-index: 1;
+    animation: twotit 1.5s 0.5s linear forwards;
+}
+@keyframes twotit
+{
+    100%{height: 50%;}
+}
+.two_tit img{
+    width: 100%;
+}
+/* 正文 */
+/* one */
+.two_onep{
+    width: 8%;
+    height: 0%;
+    overflow: hidden;
+    position: absolute;
+    top: 27%;
+    right: 32%;
+    z-index: 1;
+    animation: twoonep 1s 2s  forwards;
+}
+@keyframes twoonep
+{
+    100%{height: 30%;}
+}
+.two_onep img{
+    width: 100%;
+}
+/* two */
+.two_twop{
+    width: 8%;
+    height: 0%;
+    overflow: hidden;
+    position: absolute;
+    top: 27%;
+    right: 40%;
+    z-index: 1;
+    animation: twotwop 1s 3s forwards;
+}
+@keyframes twotwop
+{
+    100%{height: 40%;}
+}
+.two_twop img{
+    width: 100%;
+}
+/* three */
+.two_threep{
+    width: 8%;
+    height: 0%;
+    overflow: hidden;
+    position: absolute;
+    top: 27%;
+    right: 48%;
+    z-index: 1;
+    animation: twothreep 1s 4s forwards;
+}
+@keyframes twothreep
+{
+    100%{height: 45%;}
+}
+.two_threep img{
+    width: 100%;
+}
+/* four */
+.two_fourp{
+    width: 8%;
+    height: 0%;
+    overflow: hidden;
+    position: absolute;
+    top: 27%;
+    right: 56%;
+    z-index: 1;
+    animation: twofourp 1s 5s forwards;
+}
+@keyframes twofourp
+{
+    100%{height: 35%;}
+}
+.two_fourp img{
+    width: 100%;
+}
+
+/* 花瓣 */
+.huaban{
+    z-index: 2;
+}
+.two1{
+    width: 7%;
+    height: 4%;
+    position: absolute;
+    top: 100%;
+    left: 55%;
+    opacity: 0;
+    animation: two1 10s infinite; 
+}
+@keyframes two1
+{
+    0%{top: 15%;}
+    20%{left: 40%;opacity: 1;}
+    60%{left: 75%;}
+    100%{left:65%;opacity: 1;}
+}
+.two2{
+    width: 4%;
+    height: 2%;
+    position: absolute;
+    top: 90%;
+    opacity: 0;
+    animation: two2 8s 1s infinite; 
+}
+@keyframes two2
+{
+    0%{top: 15%;left: 70%;}
+    30%{left: 45%;opacity: 1;}
+    100%{left: -4%;opacity: 1;}
+}
+.two3{
+    width: 4%;
+    height: 2%;
+    position: absolute;
+    top: 100%;
+    opacity: 0;
+    animation: two3 12s 4s infinite; 
+}
+@keyframes two3
+{
+    0%{top: 15%;left: 50%;}
+    30%{left: 30%;opacity: 1;}
+    100%{left: 40%;opacity: 1;}
+}
+.two4{
+    width: 4%;
+    height: 2%;
+    position: absolute;
+    top: 75%;
+    left: 100%;
+    opacity: 0;
+    animation: two4 10s 2s infinite; 
+}
+@keyframes two4
+{
+    0%{top: 15%;left: 45%;}
+    25%{left: 50%;opacity: 1;}
+    100%{left: 100%;opacity: 1;}
+}
+.two5{
+    width: 5%;
+    height: 3%;
+    position: absolute;
+    top: 100%;
+    left: 45%;
+    opacity: 0;
+    animation: two5 11s 6s infinite; 
+}
+@keyframes two5
+{
+    0%{top: 15%;}
+    25%{left: 30%;opacity: 1;}
+    100%{left: 60%;opacity: 1;}
+}
+.two6{
+    width: 7%;
+    height: 2%;
+    position: absolute;
+    top: 100%;
+    left: 60%;
+    opacity: 0;
+    animation: two6 7s 3s linear infinite; 
+}
+@keyframes two6
+{
+    0%{top: 15%;transform: rotateY(0deg);}
+    20%{left: 50%;transform: rotateY(180deg);opacity: 1;}
+    50%{left: 40%;transform: rotateY(90deg);opacity: 1;}
+    100%{left: 30%;opacity: 1;}
+}
+.two7{
+    width: 7%;
+    height: 2%;
+    position: absolute;
+    top: 56%;
+    left: 100%;
+    opacity: 0;
+    animation: two7 10s 6s infinite; 
+}
+@keyframes two7
+{
+    0%{top: 15%;left: 70%;transform: rotateY(0deg)}
+    25%{left: 80%;opacity: 1;opacity: 1;}
+    100%{left: 100%;transform: rotateY(180deg);opacity: 1;}
+}
+.two8{
+    width: 5%;
+    height: 5%;
+    position: absolute;
+    top: 100%;
+    left: 54%;
+    opacity: 0;
+    animation: two8 13s 7s infinite; 
+}
+@keyframes two8
+{
+    0%{top: 15%;transform: rotateY(0deg)}
+    30%{opacity: 1;}
+    65%{transform: rotateY(180deg)}
+    100%{left: 100%;opacity: 1;}
+}
+.two9{
+    width: 7%;
+    height: 3%;
+    position: absolute;
+    top: 100%;
+    left: 43%;
+    opacity: 0;
+    animation: two9 8s 8s infinite; 
+}
+@keyframes two9
+{
+    0%{top: 15%;transform: rotateY(0deg)}
+    30%{opacity: 1;}
+    100%{left: 10%;transform: rotateY(360deg);opacity: 1;}
+}
+.two10{
+    width: 4%;
+    height: 2%;
+    position: absolute;
+    top: 70%;
+    left: -5%;
+    opacity: 0;
+    animation: two10 8s 11s infinite; 
+}
+@keyframes two10
+{
+    0%{top: 15%;left: 54%;}
+    25%{left: 45%;opacity: 1;}
+    100%{left: -5%;opacity: 1;}
+}
+.two11{
+    width: 5%;
+    height: 3%;
+    position: absolute;
+    top: 100%;
+    left: 83%;
+    opacity: 0;
+    animation: two11 10s 10s infinite; 
+}
+@keyframes two11
+{
+    0%{top: 15%;}
+    30%{opacity: 0;}
+    70%{transform: rotateY(180deg);opacity: 1;}
+    100%{left: 50%;opacity: 1;}
+}
+.two12{
+    width: 2%;
+    height: 2%;
+    position: absolute;
+    top: 100%;
+    left: 60%;
+    opacity: 0;
+    animation: two12 10s 14s infinite; 
+}
+@keyframes two12
+{
+    0%{top: 15%;transform: rotateY(0deg);}
+    25%{opacity: 1;}
+    60%{transform: rotateY(180deg);opacity: 1;}
+    100%{left: 30%;opacity: 1;}
+}
+.two13{
+    width: 2%;
+    height: 2%;
+    position: absolute;
+    top: 92%;
+    left: 35%;
+    opacity: 0;
+    animation: two13 11s 15s infinite; 
+}
+@keyframes two13
+{
+    0%{top: 15%;}
+    25%{left: 50%;opacity: 1;}
+    100%{left: 10%;left: 100%;opacity: 1;}
+}
+
+
+
+/* 第三页 */
+.page3 {
+background: url(../images/one-back.jpg);
+background-size: 100% 100%;
+}
+/* tit */
+/* 左 */
+.three_tit{
+    width: 0%;
+    height: 4.5%;
+    overflow: hidden;
+    position: absolute;
+    top: 26%;
+    left: 50%;
+    z-index: 2;
+    animation: threetit1 1s 0.5s linear forwards;
+}
+@keyframes threetit1
+{
+    100%{width: 68%;margin-left: -34%;}
+}
+
+
+
+/* 正文 */
+.three_p{
+    width: 66%;
+    height: 39%;
+    z-index: 2;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -33%;
+    opacity: 0;
+    animation: threep 1s 1s forwards;
+}
+@keyframes threep
+{
+    100%{top: 32%;opacity: 1;}
+}
+
+/* logo */
+.three_logo{
+    width: 36%;
+    height: 5%;
+    position: absolute;
+    bottom: 18%;
+    left: 50%;
+    margin-left: -18%;
+    opacity: 0;
+    animation: threelogo 1s 2s linear forwards;
+}
+@keyframes threelogo
+{
+    100%{opacity: 1;}
+}
+
+/* 云 */
+.cloud1{
+    width: 27%;
+    height: 8%;
+    z-index: 1;
+    position: absolute;
+    top: 12%;
+    left: 11%;
+    animation: cloud1 2.5s infinite; 
+}
+@keyframes cloud1{
+    50%{top: 13%;}
+    100%{top:12%;}
+}
+.cloud2{
+    width: 18%;
+    height: 5%;
+    z-index: 1;
+    position: absolute;
+    top: 23%;
+    left: 54%;
+    animation: cloud2 2.5s infinite; 
+}
+@keyframes cloud2{
+    0%{top: 24%;}
+    50%{top: 23%;}
+    100%{top:24%;}
+}
+
+/* 鸟 */
+.bird1{
+    width: 11%;
+    height: 6%;
+    position: absolute;
+    top: 61%;
+    left: 44%;
+    animation: bird1 4s infinite; 
+}
+@keyframes bird1{
+    0%{top: 61%;}
+    50%{top: 60%;}
+    100%{top:61%;}
+}
+.bird2{
+    width: 13%;
+    height: 5%;
+    position: absolute;
+    top: 5%;
+    left: 57%;
+    animation: bird2 4s infinite; 
+}
+@keyframes bird2{
+    0%{top: 5%;}
+    50%{top: 6%;}
+    100%{top:5%;}
+}
+.bird3{
+    width: 19%;
+    height: 8%;
+    position: absolute;
+    top: 6%;
+    left: 23%;
+    animation: bird3 4s infinite; 
+}
+@keyframes bird3{
+    0%{top: 6%;}
+    50%{top: 5%;}
+    100%{top:6%;}
+}
+.bird4{
+    width: 12%;
+    height: 6%;
+    position: absolute;
+    top: 81%;
+    left: 22%;
+    animation: bird4 4s infinite; 
+}
+@keyframes bird4{
+    0%{top: 81%;}
+    50%{top: 80%;}
+    100%{top:81%;}
+}
+.bird5{
+    width: 20%;
+    height: 13%;
+    position: absolute;
+    top: 52%;
+    left: 11%;
+    animation: bird5 4s infinite; 
+}
+@keyframes bird5{
+    0%{top: 52%;}
+    50%{top: 53%;}
+    100%{top:52%;}
+}
+.bird6{
+    width: 8%;
+    height: 4%;
+    position: absolute;
+    top: 88%;
+    left: 34%;
+    animation: bird6 4s infinite; 
+}
+@keyframes bird6{
+    0%{top: 88%;}
+    50%{top: 89%;}
+    100%{top:88%;}
+}
+
+
+
+/* 第四页 */
+.page4 {
+background: url(../images/four-back.jpg);
+background-size: 100% 100%;
+}
+/* 边框 */
+.four_biankuang{
+    width: 70%;
+    height: 49%;
+    position: absolute;
+    top: 16%;
+    left: 50%;
+    margin-left: -35%;
+    opacity: 0;
+    z-index: 2;
+    animation: biank 1s 0.5s linear forwards;
+}
+@keyframes biank
+{
+    100%{opacity: 1;}
+}
+/* tit */
+.four_tit{
+    width: 54%;
+    height: 4%;
+    position: absolute;
+    top: -4%;
+    left: 50%;
+    margin-left: -27%;
+    animation: fourtit 1s 1s forwards;
+}
+@keyframes fourtit
+{
+    100%{top: 23.5%;}
+}
+/* 文字背景 */
+.back{
+    width: 70%;
+    height: 3%;
+    position: absolute;
+}
+.back1{
+    top: 30%;
+}
+.back2{
+    top: 34%;
+}
+.back3{
+    top: 38.2%;
+}
+.back4{
+    top: 42.6%;
+}
+.back5{
+    top: 46.6%;
+}
+.back6{
+    top: 51%;
+}
+.back7{
+    top: 55.3%;
+}
+.back1{
+    left: -70%;
+    animation: back1 2s 1.5s forwards;
+}
+@keyframes back1
+{
+    100%{left: 15%;}
+}
+.back2{
+    left: 100%;
+    animation: back2 2s 2s forwards;
+}
+@keyframes back2
+{
+    100%{left: 15%;}
+}
+.back3{
+    left: -70%;
+    animation: back3 2s 2.5s forwards;
+}
+@keyframes back3
+{
+    100%{left: 15%;}
+}
+.back4{
+    left: 100%;
+    animation: back4 2s 3s forwards;
+}
+@keyframes back4
+{
+    100%{left: 15%;}
+}
+.back5{
+    left: -70%;
+    animation: back5 2s 3.5s forwards;
+}
+@keyframes back5
+{
+    100%{left: 15%;}
+}
+.back6{
+    left: 100%;
+    animation: back6 2s 4s forwards;
+}
+@keyframes back6
+{
+    100%{left: 15%;}
+}
+.back7{
+    left: -70%;
+    animation: back7 2s 4.5s forwards;
+}
+@keyframes back7
+{
+    100%{left: 15%;}
+}
+
+/* 鸟 */
+.four_bird1{
+    width: 19%;
+    height: 10%;
+    position: absolute;
+    top: 3%;
+    left: 56%;
+    animation:fourbird1 4s infinite;
+}
+@keyframes fourbird1
+{
+    0%{top: 3%;}
+    50%{top: 4%;}
+    100%{top: 3%;}
+}
+.four_bird2{
+    width: 30%;
+    height: 12%;
+    position: absolute;
+    top: 10%;
+    left: 1%;
+    animation:fourbird2 4.5s infinite;
+}
+@keyframes fourbird2
+{
+    0%{top: 10%;}
+    50%{top: 9%;}
+    100%{top: 10%;}
+}
+.four_bird3{
+    width: 17%;
+    height: 7%;
+    position: absolute;
+    top: 64%;
+    left: 10%;
+    animation:fourbird3 4s infinite;
+}
+@keyframes fourbird3
+{
+    0%{top: 64%;}
+    50%{top: 65%;}
+    100%{top: 64%;}
+}
+.four_bird4{
+    width: 16%;
+    height: 5%;
+    position: absolute;
+    top: 70%;
+    left: 44%;
+    animation:fourbird4 5s infinite;
+}
+@keyframes fourbird4
+{
+    0%{top: 70%;}
+    50%{top: 69%;}
+    100%{top: 70%;}
+}
+.four_bird5{
+    width: 10%;
+    height: 5%;
+    position: absolute;
+    top: 82%;
+    left: 26%;
+    animation:fourbird5 4.5s infinite;
+}
+@keyframes fourbird5
+{
+    0%{top: 82%;}
+    50%{top: 83%;}
+    100%{top: 82%;}
+}
+
+/* logo */
+.four_logo{
+    width: 36%;
+    height: 5%;
+    position: absolute;
+    bottom: 18%;
+    left: 50%;
+    margin-left: -18%;
+    opacity: 0;
+    animation: fourlogo 1s 5.5s linear forwards;
+}
+@keyframes fourlogo
+{
+    100%{opacity: 1;}
+}
+
+
+
+
+/* 第五页 */
+.page5 {
+background: url(../images/four-back.jpg);
+background-size: 100% 100%;
+}
+/* 船 */
+.boat{
+    width: 75%;
+    height: 21%;
+    position: absolute;
+    top: 5%;
+    right: -75%;
+    animation:boat 1s 0.5s forwards;
+}
+@keyframes boat
+{
+    100%{right: -16%;}
+}
+/* 鸟 */
+.five_bird1{
+    width: 12%;
+    height: 6%;
+    position: absolute;
+    top: 14%;
+    left: 15%;
+    animation:fivebird1 4.5s infinite;
+}
+@keyframes fivebird1
+{
+    0%{top: 14%;}
+    50%{top: 15%;}
+    100%{top: 14%;}
+}
+.five_bird2{
+    width: 9%;
+    height: 4%;
+    position: absolute;
+    top: 8%;
+    left: 26%;
+    animation:fivebird2 4.5s infinite;
+}
+@keyframes fivebird2
+{
+    0%{top: 8%;}
+    50%{top: 7%;}
+    100%{top: 8%;}
+}
+
+
+/* tit */
+.five_tit{
+    width: 70%;
+    height: 5%;
+    position: absolute;
+    top: 24.5%;
+    left: 50%;
+    margin-left: -120%;
+    animation:fivetit 1s 1s forwards;
+}
+@keyframes fivetit
+{
+    100%{margin-left: -35%}
+}
+.five_biank{
+    width: 80%;
+    height: 38%;
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    margin-left: -47%;
+    opacity: 0;
+    animation:fivebiank 1s 1.5s forwards;
+}
+@keyframes fivebiank
+{
+    100%{opacity: 1;}
+}
+/* 头像 */
+.touxiang{
+    width:0%;
+    height: 0%;
+    position: absolute;
+    top: 42%;
+    left: 34%;
+    animation:touxiang 1s 2s forwards;
+}
+@keyframes touxiang
+{
+    100%{transform:rotateZ(720deg);width: 32%;height: 18%;top: 33%;left: 18%;}
+}
+/* 名字 */
+.five_name{
+    width:8.5%;
+    height: 4%;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    opacity: 0;
+    animation:fivename 1s 2.5s forwards;
+}
+@keyframes fivename
+{
+    100%{left: 59%;opacity: 1;}
+}
+/* 职务 */
+.post{
+    width:23%;
+    height: 2%;
+    position: absolute;
+    top: 45%;
+    left: 22%;
+    opacity: 0;
+    animation:post 1s 3s forwards;
+}
+@keyframes post
+{
+    100%{left: 53%;opacity: 1;}
+}
+/* 正文 */
+.five_zw{
+    width:60%;
+    height: 11%;
+    position: absolute;
+    top: 55%;
+    left: 19.5%;
+    opacity: 0;
+    animation:fivezw 1s 3.5s forwards;
+}
+@keyframes fivezw
+{
+    100%{opacity: 1;}
+}
+/* logo */
+.five_logo{
+    width: 36%;
+    height: 5%;
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    margin-left: -18%;
+    opacity: 0;
+    animation: fivelogo 1s 4s linear forwards;
+}
+@keyframes fivelogo
+{
+    100%{opacity: 1;}
+}
+
+
+.page6 {
+background: url(../images/four-back.jpg);
+background-size: 100% 100%;
+}
+/* tit */
+.tit_top{
+    width: 68%;
+    height: 6%;
+    position: absolute;
+    top: 24%;
+    left: 50%;
+    margin-left: -120%;
+    animation: tittop 2s 1s forwards;
+}
+@keyframes tittop
+{
+    100%{margin-left: -33%;}
+}
+.tit_bottom{
+    width: 68%;
+    height: 0.3%;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    margin-left: 50%;
+    animation: titbottom 2s 1s forwards;
+}
+@keyframes titbottom
+{
+    100%{margin-left: -33%;}
+}
+
+/* 二维码 */
+.code{
+    width: 0%;
+    height: 27%;
+    overflow: hidden;
+    position: absolute;
+    top: 31%;
+    left: 50%;
+    animation:code 1s 2s linear forwards;
+}
+@keyframes code
+{
+    100%{width: 70%;margin-left: -35%;}
+}
+
+
+/* logo */
+.six_logo{
+    width: 60%;
+    height: 5%;
+    position: absolute;
+    bottom: 33%;
+    left: 50%;
+    margin-left: -30%;
+    opacity: 0;
+    animation:sixlogo 2s 3s linear forwards;
+}
+@keyframes sixlogo
+{
+    100%{opacity: 1;}
+}
+
+
+

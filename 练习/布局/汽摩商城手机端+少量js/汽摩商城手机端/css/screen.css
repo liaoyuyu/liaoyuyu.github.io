@@ -1,0 +1,42 @@
+/*搜索*/
+.back{
+	width: .3rem;
+	height: .49rem;
+}
+#screen .search-tit .tit-input{
+	width: 5.8rem;
+	height: 0.60rem;
+}
+
+
+#screen .search-tit{
+	border-bottom: 0px;
+}
+.nav{
+	background: #fff;
+}
+.nav p{
+	color: #4c4c4c;
+	font-size: .28rem;
+	margin: 0rem .1rem;
+}
+.nav li:first-child p{
+	color: #ff8247;
+}
+.nav img{
+	width: .18rem;
+	height: .1rem;
+}
+.nav li{
+	width: 25%;
+	height: .9rem;
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	align-items:center;
+}
+.nav ul{
+	display: flex;
+	flex-direction:row;
+	justify-content:space-between;
+}
