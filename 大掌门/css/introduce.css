@@ -1,0 +1,309 @@
+.nav_list:nth-of-type(3) a{
+    color: #e60012;
+}
+.nav_list:nth-of-type(1) a{
+    color: #fff;
+}
+
+
+
+/* 内容区 */
+.content .container{
+    padding: 0;
+    padding-top: 40px;
+}
+
+
+/* 项目介绍 */
+.content{
+    width: 100%;
+    background: #fbfbfb;
+    padding-bottom: 85px;
+}
+.introducebox{
+    width: 100%;
+}
+.introduce_tit{
+    width: 144px;
+    height: 44px;
+    background: url(../img/introduce_back.png) no-repeat;
+    background-size: 100% 100%;
+    line-height: 44px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+.introduce_tit p{
+    color: #62000d;
+    font-size: 26px;
+    font-family: "微软雅黑";
+}
+
+
+
+
+/* 轮播 */
+.banner{
+    width: 100%;
+    position: relative;
+}
+.banner ul{
+    width:720px;
+    height: 445px;
+    position: relative;
+    margin: 0 auto;
+}
+.banner ul li{
+    width: 600px;
+    height: 345px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: absolute;
+}
+.banner img{
+    width: 100%;
+    height: 100%;
+}
+/*轮播按钮 */
+.banner_btn{
+    position: absolute;
+    top: 50%;
+    margin-top: -62px;
+    width: 92px;
+    height: 125px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    /* background: #8f4a53;
+    color: #fff;
+    font-size: 80px;
+    text-align: center;
+    line-height: 125px; */
+}
+.banner_left{
+    background: url(../img/banner_left2.png);
+    background-size: 100% 100%;
+    left: 50px;
+}
+.banner_right{
+    background: url(../img/banner_right2.png);
+    background-size: 100% 100%;
+    right: 50px;
+}
+
+
+/* 位置 */
+.banner ul li:nth-of-type(1){
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.banner ul li:nth-of-type(2){
+    top: 15px;
+    left: 30px;
+    z-index: 2;
+}
+.banner ul li:nth-of-type(3){
+    top: 30px;
+    left: 60px;
+    z-index: 3;
+}
+.banner ul li:nth-of-type(4){
+    top: 45px;
+    left: 90px;
+    z-index: 4;
+}
+.banner ul li:nth-of-type(5){
+    top: 60px;
+    left: 120px;
+    z-index: 5;
+}
+
+
+
+
+
+
+
+.col-lg-10.introduce_con{
+    border: 1px solid #212121;
+    border-radius: 15px;
+    padding:20px 60px; 
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+.introduce_con p{
+    color: #232323;
+    font-size: 18px;
+    font-family: "微软雅黑";
+    margin: 0;
+    line-height: 35px;
+    text-indent: 2em;
+}
+
+/* 掌门美食 */
+.food{
+    width: 100%;
+    /* margin-bottom: 65px; */
+}
+.food_box.col-lg-12{
+    width: 100%;
+    /* height: 450px; */
+    border: 1px solid #dcdcdc;
+    padding: 15px;
+}
+
+/* 左边的 */
+.food_left{
+    padding: 10px;
+}
+.food_left img{
+    width: 100;
+    height: 100%;
+}
+.food_right img{
+    width: 100%;
+    height: 100%;
+}
+.food_right .col-lg-3{
+    margin: 23px 0px;
+    /* padding: 0; */
+    position: relative;
+    overflow: hidden;
+}
+
+.hover_food:hover > .hover_sharebox{
+    top: 0;
+}
+.hover_food:hover > .food_name{
+   opacity: 0;
+   bottom: 100%
+}
+/* 美食下面的黑色背景名字 */
+.food_name{
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    opacity: 1;
+    text-align: center;
+    line-height: 40px;
+    padding: 0 15px;
+    transition: all .5s;
+}
+.food_name p{
+    margin: 0;
+    font-family: "微软雅黑";
+    font-size: 24px;
+    color: #fff;
+    background: rgba(0, 0, 0, .5);
+}
+
+
+/* hover后的样子 */
+.hover_sharebox{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    padding: 0 15px;
+    z-index: 999;
+    top: 100%;
+    left: 0;
+    transition:all .5s;
+}
+.hover_share{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    display: flex;
+    border-radius: 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hover_share p{
+    color: #fff;
+    font-size: 24px;
+    font-family: "微软雅黑";
+}
+.hover_share span{
+    display: block;
+    width: 130px;
+    height: 2px;
+    background: #fff;
+}
+
+
+.sharebox{
+    overflow: hidden;
+}
+.sharebox img{
+    width: 25px;
+    height: 25px;
+    float: left;
+    margin:5px 8px;
+    cursor: pointer;
+}
+
+
+/* 更多 */
+.food_morebox{
+    width: 100%;
+    position: relative;
+    margin-top: 10px;
+}
+.food_more{
+    width: 98px;
+    height: 35px;
+    border: 1px solid #9d9d9d;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 8px;
+    position: absolute;
+    right: -15px;
+}
+.food_more p{
+    margin: 0;
+    color: #62000d;
+    font-size: 20px;
+    font-family: "微软雅黑";
+}
+
+
+
+/* 店面展示 */
+.exhibition .col-lg-4:nth-of-type(2){
+    border-left: 2px solid #9c9c9c;
+    border-right: 2px solid #9c9c9c;
+}
+.exhibition{
+    width: 100%;
+    margin-bottom: 50px;
+}
+.exhibitionimg img{
+    width: 100%;
+}
+
+.exhibition_con{
+    width: 100%;
+}
+.exhibition_tit{
+    margin-top: 20px;
+}
+.exhibition_tit p{
+    color: #1d1d1d;
+    font-size: 18px;
+    font-family: "新宋体";
+    font-weight: 600;
+}
+.exhibition_p p{
+    color: #1d1d1d;
+    font-family: "新宋体";
+    font-size: 14px;
+    line-height: 30px;
+    text-decoration:underline !important;   
+}
+
+

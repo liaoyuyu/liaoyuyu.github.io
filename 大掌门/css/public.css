@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none !important;
+    font-family: "微软雅黑";
+ }
+ /* 大盒子 */
+ .big_box{
+     width: 100%;
+     /* height: 100%; */
+ }
+ .container{
+     padding-top: 23px;
+ }
+ .tit_bigbox{
+     width: 100%;
+     background: #62000d;
+ }
+ 
+ /* logo */
+ .logo{
+     width: 100%;
+ }
+ .logo img{
+     width: 100%;
+ }
+ .col-lg-3.logo{
+     padding: 0;
+ }
+ 
+ 
+ 
+ .col-lg-7.center_box{
+     padding-left: 0;
+ }
+ /* 搜索 */
+ .col-lg-8.search{
+     margin-top: 15px;
+     margin-bottom: 25px;
+ }
+ .search{
+     background: #fff;
+     border-radius: 5px;
+     height: 40px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+ }
+ .search input{
+     width: 80%;
+     outline: none;
+     border: none;
+     height: 40px;
+     font-family: "宋体";
+     font-size: 14px;
+ }
+ .search img{
+     width: 24px;
+     height: 24px;
+     cursor: pointer;
+ }
+
+ 
+/* nav */
+.nav_box{
+    margin-bottom: 15px;
+}
+.col-lg-2.nav_list{
+    text-align: center;
+}
+.nav_list{
+    border-right: 1px solid #fff;
+    line-height: 18px;
+    position: relative;
+}
+.nav_list a{
+    color: #fff;
+    font-size: 18px;
+    font-family: "微软雅黑";
+}
+.nav_list:first-child a{
+    color: #e60012;
+}
+.nav_list:last-child{
+    border-right: none;
+}
+.col-lg-2.nav_list a:hover{
+    color: #e60012;
+}
+
+
+/* nav 下划线 */
+.nav_list:first-child span{
+    width: 35px;
+    margin-left: -17px;
+}
+.nav_list span{
+    display: block;
+    width: 70px;
+    height: 1px;
+    background: #e60012;
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    margin-left: -35px;
+    opacity: 0;
+}
+.col-lg-2.nav_list >a:hover+span{
+    opacity: 1;
+}
+
+
+
+
+
+/* 联系电话 */
+.contact{
+    padding-top: 17px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.contact img{
+    width: 100%;
+    height: 100%;
+}
+ 
+
+
+
+
+/* footer */
+
+/* footer */
+.footer{
+    width: 100%;
+    background: #62000d;
+    padding: 15px 0px;
+}
+.footer_logo img{
+    width: 100%;
+}
+.footer_p p{
+    color: #fff;
+    font-size: 14px;
+    font-family: "宋体";
+    margin: 0;
+    line-height: 22px;
+}
+.QR p{
+    color: #fff;
+    font-family: "宋体";
+    font-size: 12px;
+}
+.QR img{
+    width: 100%;
+}
+.qrimg{
+    margin-bottom: 10px;
+}
+.row.footerbox{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: flex-start; */
+    align-items: center;
+
+}
+
+
+
+
+/* 右侧悬浮 */ 
+.suspension_box{
+    position: absolute;
+    top: 23%;
+    /* bottom: 20%; */
+    /* right: -80px; */
+    right: 0;
+    z-index: 999;
+    background: #fff;
+    border-radius: 5px;
+    padding: 9px;
+    /* transition: all .5s; */
+}
+.suspension_box>div{
+    width: 85px;
+    height: 85px;
+    background: #a8a8a8;
+    border-radius: 5px;
+    margin-bottom: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+.suspension_box>div p{
+    color: #fff;
+    font-size: 14px;
+    font-family: "宋体";
+    margin: 0;
+}
+
+/* 
+.suspension_box:hover{
+    right: 0;
+} */
+
+
+
+/* hover qr */
+.QR_left:hover .hover_qr{
+    visibility:visible
+}
+.hover_qr{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    left: -340px;
+    padding: 9px;
+    background: #ececec;
+    z-index: 2;
+    /* display: none; */
+    visibility:hidden
+}
+.hover_qr>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.QRletf img,.QRright img{
+    width: 136px;
+    height: 136px;
+    margin-bottom: 5px;
+}
+.hover_qr>div p{
+    color: #3a3a3a;
+    font-size: 12px;
+    font-family: "宋体";
+}
+.QRletf{
+    margin-right: 5px;
+}
+.QRright{
+    margin-left: 5px;
+}
+
+
+/* 淘宝 */
+.taobao a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* 箭头 */
+.jiantou{
+    position: absolute;
+    right: -20px;
+    z-index: 1;
+    top: 50%;
+    margin-top: -22px;
+}
+.jiantou img{
+    width: 25px;
+    height: 45px;
+}

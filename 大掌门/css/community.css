@@ -1,0 +1,447 @@
+.nav_list:nth-of-type(4) a{
+    color: #e60012;
+}
+.nav_list:nth-of-type(1) a{
+    color: #fff;
+}
+
+/* 内容区 */
+.conbox{
+    width: 100%;
+    background: #fdfdfd;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.back{
+    background: #eeeeee;
+    padding-top: 25px;
+    margin-bottom: 25px;
+}
+
+/* 最新   最热 */
+.col-lg-12.boxpadding{
+    padding: 0px 20px;
+}
+.community_titbox{
+    border-bottom: 1px solid #252525;
+}
+.community_tit{
+    padding: 0px 55px;
+    position: relative;
+}
+.community_titp p{
+    color: #62000d;
+    font-size: 24px;
+    margin: 0;
+    cursor: pointer;
+}
+.col-lg-1.community_titp:last-child p{
+    color: #202020;
+}
+/* 下划线 */
+.underline{
+    display: block;
+    position: absolute;
+    width: 55px;
+    height: 2px;
+    background: #62000d;
+    bottom: 0px;
+    left: 70px;
+}
+
+
+
+
+
+/* 最新   最热  评论盒子 */
+.Newestbox{
+    /* display: none */
+}
+.Hottestbox{
+    display: none;
+}
+/* 评论 */
+.innderbox{
+    width: 100%;
+}
+.row.commentbox{
+    padding-top: 40px;
+    padding-left: 60px;
+}
+.portrait img{
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+}
+.portrait span{
+    color: #252525;
+    font-size: 20px;
+    font-weight: 600;
+}
+.col-lg-12.portrait{
+    padding-left: 0;
+}
+.portraitbox{
+    margin-bottom: 20px;
+}
+
+
+/* 评论的内容 */
+.comment_con{
+    background: #fff;
+    border-radius: 5px;
+}
+.comment_con .comment_box{
+    /* padding-left: 35px;
+    padding-right: 50px; */
+    padding: 10px 50px 10px 35px;
+}
+/* tit */
+.comment_tit p{
+    color: #252525;
+    font-size: 18px;
+    margin: 0;
+    font-weight: 500;
+}
+/* 文字 */
+.comment_p p{
+    color: #252525;
+    font-size: 14px;
+    font-family: "宋体";
+    margin: 0;
+    line-height: 30px;
+    text-indent: 2em;
+}
+.upload img{
+    width: 100%;
+    height: 135px;
+}
+
+.comment_titbox{
+    margin-bottom: 12px;
+}
+.comment_pbox{
+    margin-bottom: 15px;
+}
+.uploadbox{
+    margin-bottom: 20px;
+}
+/* 浏览 点赞 */
+.everybottom span{
+    font-size: 14px;
+    font-family: "宋体";
+}
+.fabulousbox span{
+    color: #62000d;
+    display: inline-block;
+    margin-top: 3px;
+    margin-right: 3px;
+}
+.fabulousbox img{
+    width: 17px;
+    height: 17px;
+}
+.fabulousbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+
+.browsebox{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+.browsebox span{
+    color: #505050;
+    display: inline-block;
+    margin-right: 3px;
+}
+.browsebox img{
+    width: 23px;
+    height: 15px;
+}
+/* 发布时间 */
+.release p{
+    color: #505050;
+    font-family: "宋体";
+    font-size: 14px;
+    margin: 0;
+}
+
+.everybodybox{
+    margin-bottom: 35px;
+}
+
+
+/* 右侧盒子 */
+.every_food{
+    margin-bottom: 15px;
+}
+.discountbox{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.discountbox:hover >.hover_sharebox{
+    top: 0;
+}
+.discountbox:hover >.discount_botbox{
+    opacity: 0;
+}
+.discountbox img{
+    width: 100%;
+}
+
+
+.discount_botbox{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    opacity: 1;
+    background: rgba(255, 255, 255, .5);
+    transition: all .3s;
+}
+.discount_botbox p{
+    color: #202020;
+    font-size: 18px;
+}
+
+
+/* hover后的样子 */
+.hover_sharebox{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    /* padding: 0 15px; */
+    z-index: 999;
+    top: 100%;
+    left: 0;
+    transition:all .5s;
+}
+.hover_share{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    display: flex;
+    border-radius: 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hover_share p{
+    color: #fff;
+    font-size: 24px;
+    font-family: "微软雅黑";
+}
+.hover_share span{
+    display: block;
+    width: 130px;
+    height: 2px;
+    background: #fff;
+}
+
+
+.sharebox{
+    overflow: hidden;
+}
+.sharebox img{
+    width: 25px;
+    height: 25px;
+    float: left;
+    margin:5px 8px;
+    cursor: pointer;
+}
+
+
+
+/* 发布话题 */
+.Release{
+    background: #fff;
+}
+.topic_head{
+    background: #830213;
+    border-radius: 5px;
+}
+.topic_head p{
+    color: #fff;
+    font-size: 25px;
+    margin: 0;
+    line-height: 45px;
+}
+
+
+/* 上传照片 */
+.upload_picture{
+    margin-top: 20px;
+    padding-left: 8px;
+    padding-right: 15px;
+    margin-bottom: 15px;
+}
+.upload_picture p{
+    color: #000000;
+    font-size: 14px;
+   margin-bottom: 5px;
+}
+.upload_picture input{
+    width: 70%;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    outline: none !important;
+    opacity: 0;
+}
+.inputbox{
+    position: relative;
+}
+.input_topbox{
+    width: 70%;
+    height: 40px;
+    background: #fff;
+    border: 1px solid #959494;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 40px;
+}
+.input_topbox p{
+    margin: 0;
+    font-size: 17px;
+    color: #000000;
+    font-weight: 600;
+}
+
+/* 昵称 */
+.Nicknamebox,.Title,.Topic{
+    padding-left: 8px;
+    padding-right: 15px;
+    margin-bottom: 15px;
+}
+.Nicknamebox p{
+    margin: 0;
+    color: #000000;
+    font-size: 14px;
+}
+
+.Nickname_tit p{
+    margin-bottom: 5px;
+}
+.Nickname_input input{
+    width: 100%;
+    height: 35px;
+}
+
+/* 标题 */
+
+
+
+
+/* 话题 */
+.Topic_textarea textarea{
+    width: 100%;
+    height: 100px;
+    resize:none;
+    padding: 8px;
+    /* text-indent: 2em; */
+}
+
+
+/* 发布按钮 */
+.send{
+    margin-bottom: 15px;
+}
+.send input{
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    font-size: 25px;
+    background: #a30015;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+}
+
+
+
+/* 分页 */
+.paging_ul{
+    overflow: hidden;
+    margin-bottom: 0;
+}
+.paging_ul li{
+    float: left;
+    list-style: none;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+.paging_ul li p{
+    font-size: 14px;
+    font-family: "宋体";
+    margin: 0;
+    color: #0e0e0e;
+}
+.paging_ul input{
+    width: 40px;
+    height: 20px;
+    border: none;
+    text-align: center;
+}
+.paging_ul li div{
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+}
+.paging_ul li button{
+    width: 40px;
+    color: #fff;
+    background: #5f000d;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+
+.paging_ul li:nth-of-type(2)>div{
+    background: #5f000d;
+}
+.paging_ul li:nth-of-type(2)>div p{
+    color: #fff;
+}
+
+
+
+/*  hover 下划线 */
+.paging_ul li:first-child:hover> p{
+    text-decoration: underline !important;
+}
+.paging_ul li:nth-of-type(2):hover>div p{
+    text-decoration: underline !important;
+}
+.paging_ul li:nth-of-type(3):hover>div p{
+    text-decoration: underline !important;
+}
+.paging_ul li:nth-of-type(4):hover>div p{
+    text-decoration: underline !important;
+}
+.paging_ul li:nth-of-type(5):hover> p{
+    text-decoration: underline !important;
+}
+
+
+.paging_ul li:nth-of-type(6):hover> p{
+    cursor: default;
+}
+.paging_ul li:nth-of-type(7):hover> p{
+    cursor: default;
+}
+

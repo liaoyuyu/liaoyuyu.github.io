@@ -1,0 +1,229 @@
+.nav_list:nth-of-type(6) a{
+    color: #e60012;
+}
+.nav_list:nth-of-type(1) a{
+    color: #fff;
+}
+*{
+    list-style: none !important;
+}
+.conbox{
+    padding-bottom: 100px;
+}
+/* 人才招聘 */
+.recruitbox{
+    margin-bottom: 50px;
+}
+.recruit_tit{
+    padding-bottom: 8px;
+    border-bottom:  1px solid #939393;
+    margin-bottom: 15px;
+    padding-left: 15px;
+}
+.recruit_tit p{
+    color: #282828;
+    font-size: 24px;
+    margin: 0;
+}
+
+
+.recruit_imgbox{
+    padding-left: 0px;
+}
+.recruit_img img{
+    width: 100%;
+}
+
+
+
+
+/* 职位 */
+.post{
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.post li{
+    float: left;
+    padding:0px 30px; 
+    border-radius: 10px;
+}
+.post li p{
+    color: #4c4c4c;
+    font-size: 22px;
+    margin: 0;
+    line-height: 35px;
+    cursor: pointer;
+}
+.post li:first-child{
+    background: #830213;
+}
+.post li:first-child p{
+    color: #fff;
+}
+/* 职位描述 */
+.describebigbox p{
+    color: #383838;
+}
+.describebox{
+    /* padding-right: 0; */
+}
+.describe{
+    width: 100%;
+    height: 360px;
+    border: 1px solid #9d9d9d;
+    padding: 30px 20px 15px 20px;
+    overflow: auto;
+    margin-bottom: 15px;
+}
+
+/* 职位介绍 */
+.post_introduce{
+    display: inline-block;
+    border-bottom: 1px solid #5d5d5d;
+    margin-bottom: 10px;
+}
+.post_introduce p{
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30px
+}
+
+.introduce_pbox{
+    margin-bottom: 23px;;
+}
+.introduce_p p{
+    margin: 0;
+    font-family: "宋体";
+    font-size: 14px;
+    line-height: 24px;
+}
+
+
+.Requirement{
+    margin-bottom: 0;
+}
+
+
+/* 个人信息 */
+.Personal table{
+    width: 100%;
+    border:1px solid #9d9d9d;
+    border-radius: 5px;
+}
+.Personal{
+    /* border: 1px solid #9d9d9d;  */
+    /* border-radius: 5px;   */
+}
+.lsit td{
+    width: 50%;
+    height: 50px;
+    padding-left: 18px;
+    color: #383838;
+    font-size: 18px;
+    /* border: 1px solid #9d9d9d; */
+}
+.Personal input{
+    height: 100%;
+    width: 65%;
+    outline: none;
+    border: none;
+    margin-left: 10px;
+    font-size: 18px;
+}
+.threelist>td{
+    width: 100%;
+}
+
+.Personal form{
+    overflow: hidden;
+}
+.Personal .sub_btn{
+    width: 115px;
+    height: 40px;
+    border-radius: 5px;
+    background: #830213;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 15px;
+    float: right;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    transition: all .2s;
+}
+.Personal .sub_btn:hover{
+    box-shadow:5px 6px 6px 1px #000000;
+}
+
+
+
+
+
+
+/* 联系我们 */
+.recruit_left{
+    padding-left: 40px;
+}
+
+.contact_usp p{
+    color: #282828;
+    font-size: 18px;
+    margin: 0;
+    line-height: 30px;
+}
+.contact_usp span{
+    color: #282828;
+    font-size: 18px;
+    line-height: 30px;
+    margin-right: 30px;
+}
+
+.contact_usbox{
+    margin-bottom: 10px;
+}
+
+
+/* 建议 */
+.proposalbox{
+    margin-bottom: 10px;
+}
+.proposalbox textarea{
+    resize:none;
+    width: 100%;
+    height: 250px;
+    padding: 15px;
+    border-radius: 8px;
+    outline: none;
+    font-size: 18px;
+}
+.proposalbox textarea::-webkit-input-placeholder {
+    text-align: center;
+    padding-top:100px;
+}
+
+
+/* 提交按钮 */
+.proposal_btn{
+    width: 100px;
+    height: 35px;
+    background: #830213;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 18px;
+    outline: none;
+    border: none;
+}
+
+
+
+/* 地图 */
+.recruit_right{
+    padding-right: 0;
+    padding-top: 55px;
+}
+#mapbbox{
+    width: 100%;
+    height: 400px;
+    /* background: red; */
+    overflow: hidden;
+}
