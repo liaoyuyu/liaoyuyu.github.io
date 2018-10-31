@@ -93,8 +93,8 @@ $(function(){
 
 
     // 阻止浏览器右滑返回的默认行为
-    $(document.body).on('touchmove', function(e) {
-        alert(2)
+    $("body,html").on('touchmove', function(e) {
+        alert(1)
         e.preventDefault();
     });
 
