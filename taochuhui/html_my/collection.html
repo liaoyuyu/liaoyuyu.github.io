@@ -247,6 +247,7 @@
     //  });
     let self = this;
     document.addEventListener('touchstart', function (e) {
+        alert(1)
         self.moveY = e.targetTouches[0].pageY;
     })
     document.addEventListener('touchmove', function (e){
@@ -257,7 +258,6 @@
         }
     })
     document.addEventListener('touchmove', function (e) {
-        alert(1)
         e.preventDefault();
     })
 </script>
