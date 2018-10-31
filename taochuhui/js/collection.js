@@ -92,6 +92,11 @@ $(function(){
 
 
 
+    // 阻止浏览器右滑返回的默认行为
+    $(document.body).on('touchmove', function(e) {
+        e.preventDefault();
+    });
+
     function move_box(){
         // 向左滑动，滑出删除按钮
         var this_pagex = null;
@@ -108,13 +113,8 @@ $(function(){
             // console.log(pagex)
 
         $(this).on("touchmove",function(e){
-            // 阻止浏览器右滑返回的默认行为
-            $(document.body).on('touchmove', function(e) {
-                e.preventDefault();
-            });
             // 移动中的鼠标的位置
             this_pagex = e.originalEvent.targetTouches[0].pageX
-            console.log(this_pagex-pagex)
             // console.log(this_pagex-pagex)
             // 判断移动距离//乘100是应为要把rem转换为px（我的比例为100）
             // if(this_pagex-pagex<=-1*100){
