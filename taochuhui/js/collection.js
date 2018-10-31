@@ -136,7 +136,7 @@ $(function(){
                 $(this).addClass("collection_box_anim")
                 $(this).css("left",0+"rem")
             }
-
+            return false;
 
         })
 
