@@ -136,7 +136,10 @@ $(function(){
                 $(this).addClass("collection_box_anim")
                 $(this).css("left",0+"rem")
             }
-            return false;
+
+            $(document.body).on('touchmove', function(e) {
+                e.preventDefault();
+            });
 
         })
 
