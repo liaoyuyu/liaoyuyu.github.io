@@ -125,7 +125,7 @@ $(function(){
         $(this).on("touchend",function(e){
             // console.log(this_pagex-pagex)
             // 判断拖动了多少距离，来判断是否执行自动滑动动画
-            if(this_pagex-pagex<=-3*100){
+            if(this_pagex-pagex<=-1*100){
                 $(this).addClass("collection_box_anim")
                 $(this).css("left",-1+"rem")
             }else if(this_pagex-pagex<0){
@@ -133,7 +133,7 @@ $(function(){
                 $(this).css("left",0+"rem")
             }
 
-            if(this_pagex-pagex>=3*100){
+            if(this_pagex-pagex>=1*100){
                 $(this).addClass("collection_box_anim")
                 $(this).css("left",0+"rem")
             }else if(this_pagex-pagex>0){
