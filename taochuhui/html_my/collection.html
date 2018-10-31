@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>淘厨汇</title>
+    <!-- 我的收藏 -->
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/collection.css">
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../js/rem.js"></script>
+    <script src="../js/public.js"></script>
+    <script src="../js/collection.js"></script>
+
+<style>
+    [v-cloak] {
+        display: none !important;
+    }
+</style>
+</head>
+<body id="collection">
+<div id="collection_box">
+    <header class="collection_header">
+        <a class="back" href="../my.html"><img src="../img/icon/back.png" alt=""></a>
+        <p class="header_cen">我的收藏</p>
+        <p class="header_right_p" @click="Administration" v-if="ad">管理</p>
+        <p class="header_right_p" @click="cancel" v-if="!ad">取消</p>
+    </header>
+
+    <!-- 内容 -->
+    <div class="con">
+        <!-- 商品  基地 -->
+        <div class="collection_titele">
+            <p class="collection_shop">商城 (98)</p>
+            <p class="collection_base">基地 (47)</p>
+        </div>
+
+        <!-- 收藏内容 -->
+        <div class="collection_con">
+            <!-- 收藏盒子 -->
+            <div class="collection_box">
+                <!-- 勾选圆圈 -->
+                <div class="circular_box">
+                    <span class="circular" @click="single_election($event)"></span>
+                </div>
+                <!-- 内容 -->
+                <div class="collection">
+                    <a class="collection_a" href="">
+                        <div class="collection_left_img">
+                            <img src="../img/img/collection_img.png" alt="">
+                        </div>
+                        <div class="collection_right_con">
+                            <p class="collection_right_name">散养土鸡鸡蛋</p>
+                            <div class="collection_right_p">
+                                <p>正宗散养土鸡蛋优质蛋白</p>
+                            </div>
+                            <div class="shop_money">
+                                <p class="new_money">￥154</p>
+                                <p class="old_money">￥254</p>
+                            </div>
+                        </div>
+                    </a>
+                     <!-- 找相似 -->
+                    <a class="similar" href="">找相似</a>
+                </div>
+                <!-- 滑动  删除 -->
+                <div class="delete">删除</div>
+            </div>
+
+            <!-- 收藏盒子 -->
+            <div class="collection_box">
+                <!-- 勾选圆圈 -->
+                <div class="circular_box">
+                    <span class="circular" @click="single_election($event)"></span>
+                </div>
+                <!-- 内容 -->
+                <div class="collection">
+                    <a class="collection_a" href="">
+                        <div class="collection_left_img">
+                            <img src="../img/img/collection_img.png" alt="">
+                        </div>
+                        <div class="collection_right_con">
+                            <p class="collection_right_name">散养土鸡鸡蛋</p>
+                            <div class="collection_right_p">
+                                <p>正宗散养土鸡蛋优质蛋白</p>
+                            </div>
+                            <div class="shop_money">
+                                <p class="new_money">￥154</p>
+                                <p class="old_money">￥254</p>
+                            </div>
+                        </div>
+                    </a>
+                        <!-- 找相似 -->
+                    <a class="similar" href="">找相似</a>
+                </div>
+                <!-- 滑动  删除 -->
+                <div class="delete">删除</div>
+            </div>
+
+            <!-- 收藏盒子 -->
+            <div class="collection_box">
+                <!-- 勾选圆圈 -->
+                <div class="circular_box">
+                    <span class="circular" @click="single_election($event)"></span>
+                </div>
+                <!-- 内容 -->
+                <div class="collection">
+                    <a class="collection_a" href="">
+                        <div class="collection_left_img">
+                            <img src="../img/img/collection_img.png" alt="">
+                        </div>
+                        <div class="collection_right_con">
+                            <p class="collection_right_name">散养土鸡鸡蛋</p>
+                            <div class="collection_right_p">
+                                <p>正宗散养土鸡蛋优质蛋白</p>
+                            </div>
+                            <div class="shop_money">
+                                <p class="new_money">￥154</p>
+                                <p class="old_money">￥254</p>
+                            </div>
+                        </div>
+                    </a>
+                        <!-- 找相似 -->
+                    <a class="similar" href="">找相似</a>
+                </div>
+                <!-- 滑动  删除 -->
+                <div class="delete">删除</div>
+            </div>
+
+            <!-- 收藏盒子 -->
+            <div class="collection_box">
+                <!-- 勾选圆圈 -->
+                <div class="circular_box">
+                    <span class="circular" @click="single_election($event)"></span>
+                </div>
+                <!-- 内容 -->
+                <div class="collection">
+                    <a class="collection_a" href="">
+                        <div class="collection_left_img">
+                            <img src="../img/img/collection_img.png" alt="">
+                        </div>
+                        <div class="collection_right_con">
+                            <p class="collection_right_name">散养土鸡鸡蛋</p>
+                            <div class="collection_right_p">
+                                <p>正宗散养土鸡蛋优质蛋白</p>
+                            </div>
+                            <div class="shop_money">
+                                <p class="new_money">￥154</p>
+                                <p class="old_money">￥254</p>
+                            </div>
+                        </div>
+                    </a>
+                        <!-- 找相似 -->
+                    <a class="similar" href="">找相似</a>
+                </div>
+                <!-- 滑动  删除 -->
+                <div class="delete">删除</div>
+            </div>
+
+            <!-- 收藏盒子 -->
+            <div class="collection_box">
+                <!-- 勾选圆圈 -->
+                <div class="circular_box">
+                    <span class="circular" @click="single_election($event)"></span>
+                </div>
+                <!-- 内容 -->
+                <div class="collection">
+                    <a class="collection_a" href="">
+                        <div class="collection_left_img">
+                            <img src="../img/img/collection_img.png" alt="">
+                        </div>
+                        <div class="collection_right_con">
+                            <p class="collection_right_name">散养土鸡鸡蛋</p>
+                            <div class="collection_right_p">
+                                <p>正宗散养土鸡蛋优质蛋白</p>
+                            </div>
+                            <div class="shop_money">
+                                <p class="new_money">￥154</p>
+                                <p class="old_money">￥254</p>
+                            </div>
+                        </div>
+                    </a>
+                        <!-- 找相似 -->
+                    <a class="similar" href="">找相似</a>
+                </div>
+                <!-- 滑动  删除 -->
+                <div class="delete">删除</div>
+            </div>
+    
+            <!-- 收藏盒子 -->
+            <div class="collection_box">
+                <!-- 勾选圆圈 -->
+                <div class="circular_box">
+                    <span class="circular" @click="single_election($event)"></span>
+                </div>
+                <!-- 内容 -->
+                <div class="collection">
+                    <a class="collection_a" href="">
+                        <div class="collection_left_img">
+                            <img src="../img/img/collection_img.png" alt="">
+                        </div>
+                        <div class="collection_right_con">
+                            <p class="collection_right_name">散养土鸡鸡蛋</p>
+                            <div class="collection_right_p">
+                                <p>正宗散养土鸡蛋优质蛋白</p>
+                            </div>
+                            <div class="shop_money">
+                                <p class="new_money">￥154</p>
+                                <p class="old_money">￥254</p>
+                            </div>
+                        </div>
+                    </a>
+                        <!-- 找相似 -->
+                    <a class="similar" href="">找相似</a>
+                </div>
+                <!-- 滑动  删除 -->
+                <div class="delete">删除</div>
+            </div>
+    
+        </div>
+
+
+        <!-- 没有了 -->
+        <div class="period">没有更多了</div>
+
+    </div>
+
+
+    <!-- 点击 编辑 后 -->
+    <div class="edit_box">
+        <!-- 全选 -->
+        <div class="whole_box">
+            <span class="whole circular" @click="total_selection"></span>
+            <p class="whole_p">全选</p>
+        </div>
+        <p class="edit_delete">删除</p>
+    </div>
+</div>
+</body>
+</html>

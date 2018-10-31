@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>淘厨汇</title>
+    <!-- 分类页 -->
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/swiper.css">
+    <link rel="stylesheet" href="./css/classify.css">
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script src="./js/swiper.js"></script>
+    <script src="./js/vue.js"></script>
+    <script src="./js/rem.js"></script>
+    <script src="./js/public.js"></script>
+    <script src="./js/classify.js"></script>
+    
+
+</head>
+<body id="classify">
+<div id="classify_con">
+    <header class="classify_header">
+        <p class="header_left">极速送</p>
+        <p class="header_cen">淘厨汇农业电商平台</p>
+        <img class="header_right" src="./img/icon/search.png" alt="">
+    </header>
+
+    <!-- 内容 -->
+    <div class="con">
+
+
+        <div class="calssify_top_function">
+            <!-- 顶部导航 -->
+            <div class="calssify_top_nav">
+                <div class="swiper-container top_nav">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide top_nav_p click_style" @click="click_nav($event)">农家水果</div>
+                        <div class="swiper-slide top_nav_p" @click="click_nav($event)">绿色净菜</div>
+                        <div class="swiper-slide top_nav_p" @click="click_nav($event)">共享果园</div>
+                        <div class="swiper-slide top_nav_p" @click="click_nav($event)">刨汤江湖</div>
+                        <div class="swiper-slide top_nav_p" @click="click_nav($event)">山里土货</div>
+                        <div class="swiper-slide top_nav_p" @click="click_nav($event)">南北干货</div>
+                        <div class="swiper-slide top_nav_p" @click="click_nav($event)">社区超市</div>
+                        <div class="swiper-slide top_nav_p" @click="click_nav($event)">生态农家</div>
+                        <div class="swiper-slide top_nav_p" @click="click_nav($event)">其他</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 筛选 切换-->
+            <div class="screen_box">
+                <!-- 筛选 -->
+                <div class="screen" @click="screen_down">
+                    <p class="screen_p">默认排序</p>
+                    <img class="screen_img" src="./img/icon/screen.png" alt="">
+                </div>
+                <!-- 分割线 -->
+                <span class="screen_xian"></span>
+                <!-- 切换样式 -->
+                <div class="pattern_box" @click="switchClass">
+                    <!-- 列表模式 -->
+                    <div class="list_box pattern" v-if="switch_class">
+                        <p class="pattern_p">列表</p>
+                        <img class="pattern_img column_img" src="./img/icon/list_img.png" alt="">
+                    </div>
+                    <!-- 大图模式 -->
+                    <div class="big_box pattern" v-if="!switch_class">
+                        <p class="pattern_p">大图</p>
+                        <img class="pattern_img big_img" src="./img/icon/big_img.png" alt="">
+                    </div>
+                </div>
+
+                <!-- 筛选  下拉 -->
+                <div class="screen_down" :class="{none_visibility:none}">
+                    <p class="screen_down_p">默认排序</p>
+                    <p class="screen_down_p">新品优先</p>
+                    <p class="screen_down_p">销量优先</p>
+                    <p class="screen_down_p">价格升序</p>
+                    <p class="screen_down_p">价格降序</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="con_con">
+            <!-- 内容 -->
+            <div class="shop_con" :class="[switch_class?'shop_con_big':'shop_con_list']">
+
+                <div class="shop_box" :class="[switch_class?'shop_box_big':'shop_box_list']">
+                    <a class="shop_a" :class="[switch_class?'shop_a_big':'shop_a_list']" href="">
+                        <div class="shop_img" :class="[switch_class?'shop_img_big':'shop_img_list']">
+                            <img src="./img/img/banner_img.png" alt="">
+                        </div>
+                        <div :class="[switch_class?'bot_box_big':'bot_box_list']">
+                            <p class="shop_name" :class="[switch_class?'shop_name_big':'shop_name_list']">散养土鸡蛋优质蛋白散</p>
+                            <div class="shop_p" v-if="!switch_class">
+                                <p>正宗散养土鸡蛋优质蛋白</p>
+                            </div>
+                            <div class="shop_money">
+                                <p class="new_money">￥154</p>
+                                <p class="old_money">￥254</p>
+                            </div>
+                        </div>
+                        
+                    </a>
+                    <img class="json_shop_img" :class="[switch_class?'json_shop_img_big':'json_shop_img_list']" src="./img/icon/json_shop.png" alt="">
+                </div>
+
+                <div class="shop_box" :class="[switch_class?'shop_box_big':'shop_box_list']">
+                    <a class="shop_a" :class="[switch_class?'shop_a_big':'shop_a_list']" href="">
+                        <div class="shop_img" :class="[switch_class?'shop_img_big':'shop_img_list']">
+                            <img src="./img/img/shop_img.png" alt="">
+                        </div>
+                        <div :class="[switch_class?'bot_box_big':'bot_box_list']">
+                            <p class="shop_name" :class="[switch_class?'shop_name_big':'shop_name_list']">散养土鸡蛋优质蛋白散</p>
+                            <div class="shop_p" v-if="!switch_class">
+                                <p>正宗散养土鸡蛋优质蛋白</p>
+                            </div>
+                            <div class="shop_money">
+                                <p class="new_money">￥154</p>
+                                <p class="old_money">￥254</p>
+                            </div>
+                        </div>
+                        
+                    </a>
+                    <img class="json_shop_img" :class="[switch_class?'json_shop_img_big':'json_shop_img_list']" src="./img/icon/json_shop.png" alt="">
+                </div>
+
+                <div class="shop_box" :class="[switch_class?'shop_box_big':'shop_box_list']">
+                    <a class="shop_a" :class="[switch_class?'shop_a_big':'shop_a_list']" href="">
+                        <div class="shop_img" :class="[switch_class?'shop_img_big':'shop_img_list']">
+                            <img src="./img/img/shop_img.png" alt="">
+                        </div>
+                        <div :class="[switch_class?'bot_box_big':'bot_box_list']">
+                            <p class="shop_name" :class="[switch_class?'shop_name_big':'shop_name_list']">散养土鸡蛋优质蛋白散</p>
+                            <div class="shop_p" v-if="!switch_class">
+                                <p>正宗散养土鸡蛋优质蛋白</p>
+                            </div>
+                            <div class="shop_money">
+                                <p class="new_money">￥154</p>
+                                <p class="old_money">￥254</p>
+                            </div>
+                        </div>
+                        
+                    </a>
+                    <img class="json_shop_img" :class="[switch_class?'json_shop_img_big':'json_shop_img_list']" src="./img/icon/json_shop.png" alt="">
+                </div>
+
+                <div class="shop_box" :class="[switch_class?'shop_box_big':'shop_box_list']">
+                    <a class="shop_a" :class="[switch_class?'shop_a_big':'shop_a_list']" href="">
+                        <div class="shop_img" :class="[switch_class?'shop_img_big':'shop_img_list']">
+                            <img src="./img/img/shop_img.png" alt="">
+                        </div>
+                        <div :class="[switch_class?'bot_box_big':'bot_box_list']">
+                            <p class="shop_name" :class="[switch_class?'shop_name_big':'shop_name_list']">散养土鸡蛋优质蛋白散</p>
+                            <div class="shop_p" v-if="!switch_class">
+                                <p>正宗散养土鸡蛋优质蛋白</p>
+                            </div>
+                            <div class="shop_money">
+                                <p class="new_money">￥154</p>
+                                <p class="old_money">￥254</p>
+                            </div>
+                        </div>
+                        
+                    </a>
+                    <img class="json_shop_img" :class="[switch_class?'json_shop_img_big':'json_shop_img_list']" src="./img/icon/json_shop.png" alt="">
+                </div>
+
+                <div class="shop_box" :class="[switch_class?'shop_box_big':'shop_box_list']">
+                    <a class="shop_a" :class="[switch_class?'shop_a_big':'shop_a_list']" href="">
+                        <div class="shop_img" :class="[switch_class?'shop_img_big':'shop_img_list']">
+                            <img src="./img/img/shop_img.png" alt="">
+                        </div>
+                        <div :class="[switch_class?'bot_box_big':'bot_box_list']">
+                            <p class="shop_name" :class="[switch_class?'shop_name_big':'shop_name_list']">散养土鸡蛋优质蛋白散</p>
+                            <div class="shop_p" v-if="!switch_class">
+                                <p>正宗散养土鸡蛋优质蛋白</p>
+                            </div>
+                            <div class="shop_money">
+                                <p class="new_money">￥154</p>
+                                <p class="old_money">￥254</p>
+                            </div>
+                        </div>
+                        
+                    </a>
+                    <img class="json_shop_img" :class="[switch_class?'json_shop_img_big':'json_shop_img_list']" src="./img/icon/json_shop.png" alt="">
+                </div>
+
+                <div class="shop_box" :class="[switch_class?'shop_box_big':'shop_box_list']">
+                    <a class="shop_a" :class="[switch_class?'shop_a_big':'shop_a_list']" href="">
+                        <div class="shop_img" :class="[switch_class?'shop_img_big':'shop_img_list']">
+                            <img src="./img/img/shop_img.png" alt="">
+                        </div>
+                        <div :class="[switch_class?'bot_box_big':'bot_box_list']">
+                            <p class="shop_name" :class="[switch_class?'shop_name_big':'shop_name_list']">散养土鸡蛋优质蛋白散</p>
+                            <div class="shop_p" v-if="!switch_class">
+                                <p>正宗散养土鸡蛋优质蛋白</p>
+                            </div>
+                            <div class="shop_money">
+                                <p class="new_money">￥154</p>
+                                <p class="old_money">￥254</p>
+                            </div>
+                        </div>
+                        
+                    </a>
+                    <img class="json_shop_img" :class="[switch_class?'json_shop_img_big':'json_shop_img_list']" src="./img/icon/json_shop.png" alt="">
+                </div>
+
+            
+
+            
+
+            </div>
+
+            <!-- 相关基地 -->
+            <div class="relevant_base">
+                <!-- 基地标题 -->
+                <div class="base_title">
+                    <p>相关基地</p>
+                    <span></span>
+                </div>
+                <!-- 基地内容 -->
+                <div class="base_con">
+                    <div class="list">
+                        <a class="list_a" href="" v-cloak>
+                            <img class="list_img" src="./img/img/broadcast_img.jpg" alt="" v-cloak>
+                            <p class="list_name" v-cloak>江津散养土猪基地</p>
+                            <p class="list_p" v-cloak>散养的猪肉更香</p>
+                            <!-- 标签 -->
+                            <div class="list_label">直播中</div>
+                        </a>
+                    </div>
+        
+                    <div class="list">
+                        <a class="list_a" href="" v-cloak>
+                            <img class="list_img" src="./img/img/broadcast_img.jpg" alt="" v-cloak>
+                            <p class="list_name" v-cloak>江津散养土猪基地</p>
+                            <p class="list_p" v-cloak>散养的猪肉更香</p>
+                            <!-- 标签 -->
+                            <div class="list_label">直播中</div>
+                        </a>
+                    </div>
+        
+                    <div class="list">
+                        <a class="list_a" href="" v-cloak>
+                            <img class="list_img" src="./img/img/broadcast_img.jpg" alt="" v-cloak>
+                            <p class="list_name" v-cloak>江津散养土猪基地</p>
+                            <p class="list_p" v-cloak>散养的猪肉更香</p>
+                            <!-- 标签 -->
+                            <div class="list_label">直播中</div>
+                        </a>
+                    </div>
+        
+                    <div class="list">
+                        <a class="list_a" href="" v-cloak>
+                            <img class="list_img" src="./img/img/broadcast_img.jpg" alt="" v-cloak>
+                            <p class="list_name" v-cloak>江津散养土猪基地</p>
+                            <p class="list_p" v-cloak>散养的猪肉更香</p>
+                            <!-- 标签 -->
+                            <div class="list_label">直播中</div>
+                        </a>
+                    </div>
+                </div>
+            
+            </div>        
+
+            <!-- 底线 -->
+            <div class="baseline">
+                <span></span>
+                <p>我是有底线的</p>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <nav>
+        <a class="nav_a" href="index.html">
+            <img src="./img/icon/index_unselected.png" alt=""><p>首页</p>
+        </a>
+        <a class="nav_a" href="javascript:;">
+            <img src="./img/icon/classify_select.png" alt=""><p>分类</p>
+        </a>
+        <a class="nav_a" href="javascript:;">
+            <img src="./img/icon/my_unselected.png" alt=""><p>基地</p>
+        </a>
+        <a class="nav_a" href="javascript:;">
+            <img src="./img/icon/shop_car_unselected.png" alt=""><p>购物车</p>
+        </a>
+        <a class="nav_a" href="my.html">
+            <img src="./img/icon/my_unselected.png" alt=""><p>我的</p>
+        </a>
+    </nav>
+
+</body>
+</html>

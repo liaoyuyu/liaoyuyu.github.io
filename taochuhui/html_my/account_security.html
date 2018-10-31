@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <title>淘厨汇</title>
+    <!-- 账号与安全 -->
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/mobileSelect.css">
+    <link rel="stylesheet" href="../css/account_security.css">
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/rem.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../js/mobileSelect.js"></script>
+    <script src="../js/account_security.js"></script>
+ 
+<style>
+    /* [v-cloak] {
+        display: none !important;
+    } */
+</style>
+</head>
+<body id="account_security">
+<div id="account_security_box">
+
+    <header class="account_security_header">
+        <a class="back" href="javascript:history.back(-1)"><img src="../img/icon/back.png" alt=""></a>
+        <p class="header_cen">个人信息</p>
+    </header>
+    
+    <!-- 内容 -->
+    <div class="con">
+
+        <ul class="account_ul">
+            <li class="account_li portrait_li">
+                <p class="li_left">头像</p>
+                <div class="li_right portrait_box">
+                    <input id="upload" class="upload" type="file" accept="image/*" onchange="uploadobj()">
+                    <!-- 头像  -->
+                    <img class="upload_img" v-if="data.headpicfrom==1" :src="data.UserHeadPic" alt="" v-cloak>
+                    <img class="upload_img" v-if="data.headpicfrom==2" v-if="data.UserInfoImgList[0].PictureUrl !=''" :src="data.UserInfoImgList[0].PictureUrl" alt="" v-cloak>
+                    
+                    <!-- 默认头像 -->
+                    <!-- <img class="upload_img" v-if="data.headpicfrom==2" v-if="data.UserInfoImgList[0].PictureUrl ==''" src="../asset/icons/MRtouxiang.png" alt="" v-cloak> -->
+                </div>
+            </li>
+            <li class="account_li phone_li" @click="replace">
+                <a class="li_a" href="javascript:void(0);">
+                    <p class="li_left">手机号</p>
+                    <div class="li_right">
+                        <p class="right_p phone" v-cloak>{{data.UserMobile}}</p>
+                        <img class="right_img" src="../img/icon/forward.png" alt="">
+                    </div>
+                </a>
+            </li>
+            <li class="account_li">
+                <p class="li_left">微信</p>
+                <div class="li_right">
+                    <p class="right_p" v-if="data.OpenID !=''" v-cloak>已绑定</p>
+                    <p class="right_p" v-if="data.OpenID ==''" v-cloak>未绑定</p>
+                </div>
+            </li>
+            <li class="account_li">
+                <p class="li_left">昵称</p>
+                <div class="li_right">
+                    <!-- <p class="right_p">被风带走的叶</p> -->
+                    <input id="dateSelectorOne" class="right_p name" type="text" @focus="name_focus" @blur="name_blur($event)" :value="data.wxnickname" maxlength="6" v-cloak>
+                </div>
+            </li>
+            <li class="account_li sex" @click="sex">
+                <p class="li_left">性别</p>
+                <div class="li_right">
+                    <p class="right_p" v-if="data.UserSex == 1" v-cloak>男</p>
+                    <p class="right_p" v-if="data.UserSex == 2" v-cloak>女</p>
+                    <img class="right_img" src="../img/icon/forward.png" alt="">
+                </div>
+            </li>
+            <li id="birthday" class="account_li">
+                <p class="li_left">生日</p>
+                <div class="li_right">
+                    <!-- <input type="text" class="right_p" id="birthday_p" value="1997年9月26日" v-cloak> -->
+                    <p class="right_p" id="birthday_p" v-cloak>{{time[0]}}年-{{time[1]}}月-{{time[2]}}日</p>
+                    <img class="right_img" src="../img/icon/forward.png" alt="">
+                </div>
+            </li>
+        </ul>
+
+
+    </div>
+
+
+
+    <!-- 性别弹出框 -->
+    <div class="sex_box" :class="{none_visibility:none,sex_box_anim:anim}">
+        <!-- 背景 -->
+        <div class="sex_back" @click.stop="disappear"></div>
+        <!-- 弹出层 -->
+            <div class="sex_frame">
+                <p class="sex_tit">性别</p>
+                <div class="sex_list sex1" @click="sex_nan">
+                    <p class="list_p">男</p>
+                    <span class="list_option" :class="{option:data.UserSex==1}"></span>
+                </div>
+                <div class="sex_list sex2" @click="sex_nv">
+                    <p class="list_p">女</p>
+                    <span class="list_option" :class="{option:data.UserSex==2}"></span>
+                </div>
+            </div>
+    </div>
+
+
+
+</div>
+
+<script src="../js/selectDate.js"></script>
+</body>
+</html>

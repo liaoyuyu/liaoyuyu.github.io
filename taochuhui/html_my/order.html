@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>淘厨汇</title>
+    <!-- 订单 -->
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/order.css">
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../js/rem.js"></script>
+    <script src="../js/public.js"></script>
+    <script src="../js/order.js"></script>
+
+<style>
+    [v-cloak] {
+        display: none !important;
+    }
+</style>
+</head>
+<body id="order">
+<div class="order">
+    <header class="order_header">
+        <a class="back" href="../my.html"><img src="../img/icon/back.png" alt=""></a>
+        <p class="header_cen">我的订单</p>
+    </header>
+
+        <!-- 订单导航 -->
+        <div class="order_nav">
+            <ul class="order_ul">
+                <li class="order_li order_nav_select" @click="click_nav(0)">全部</li>
+                <li class="order_li" @click="click_nav(1)">待付款</li>
+                <li class="order_li" @click="click_nav(2)">待收货</li>
+                <li class="order_li" @click="click_nav(3)">待评价</li>
+            </ul>
+        </div>
+
+    <!-- 内容 -->
+    <div class="con">
+        <!-- 订单数据 盒子 -->
+        <div class="order_box">
+            <!-- 每个订单的盒子 -->
+            <div class="order_list_box">
+                <!-- 头部 -->
+                <div class="order_title">
+                    <p class="order_number">订单编号：17895462469D55</p>
+                    <p class="order_state">已付款</p>
+                </div>
+                <!-- 商品内容 -->
+                <div class="order_con">
+                    <!-- 每个商品的盒子 -->
+                    <div class="order_column">
+                        <a class="order_column_a" href="">
+                            <!-- 里面的盒子 -->
+                            <div class="order_column_inner">
+                                <div class="column_left">
+                                    <img class="order_img" src="../img/img/order_img.png" alt="">
+                                </div>
+                                <div class="column_right">
+                                    <p class="order_name">散养土鸡鸡蛋</p>
+                                    <div class="order_p">
+                                        <p>正宗散养土鸡蛋优质蛋白</p>
+                                    </div>
+                                    <div class="order_money">
+                                        <span class="new_money">￥154</span>
+                                        <span class="old_money">￥254</span>
+                                    </div>
+                                    <!-- 数量 -->
+                                    <p class="number_p">x1</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="order_column">
+                        <a class="order_column_a" href="">
+                            <!-- 里面的盒子 -->
+                            <div class="order_column_inner">
+                                <div class="column_left">
+                                    <img class="order_img" src="../img/img/order_img.png" alt="">
+                                </div>
+                                <div class="column_right">
+                                    <p class="order_name">散养土鸡鸡蛋</p>
+                                    <div class="order_p">
+                                        <p>正宗散养土鸡蛋优质蛋白</p>
+                                    </div>
+                                    <div class="order_money">
+                                        <span class="new_money">￥154</span>
+                                        <span class="old_money">￥254</span>
+                                    </div>
+                                    <!-- 数量 -->
+                                    <p class="number_p">x1</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+                <!-- 顶部 -->
+                <div class="order_bottom">
+                    <p class="money">应付：<span>￥148.23</span></p>
+                    <a class="state" href="">待付款</a>
+                    <!-- <a class="state" href="">待收货</a> -->
+                    <!-- <a class="state" href="">待评价</a> -->
+                    <!-- <a class="state" href="">查看详情</a> -->
+                </div>
+            </div>
+
+            <!-- 每个订单的盒子 -->
+            <div class="order_list_box">
+                <!-- 头部 -->
+                <div class="order_title">
+                    <p class="order_number">订单编号：17895462469D55</p>
+                    <p class="order_state">已完成</p>
+                </div>
+                <!-- 商品内容 -->
+                <div class="order_con">
+                    <!-- 每个商品的盒子 -->
+                    <div class="order_column">
+                        <a class="order_column_a" href="">
+                            <!-- 里面的盒子 -->
+                            <div class="order_column_inner">
+                                <div class="column_left">
+                                    <img class="order_img" src="../img/img/order_img.png" alt="">
+                                </div>
+                                <div class="column_right">
+                                    <p class="order_name">散养土鸡鸡蛋</p>
+                                    <div class="order_p">
+                                        <p>正宗散养土鸡蛋优质蛋白</p>
+                                    </div>
+                                    <div class="order_money">
+                                        <span class="new_money">￥154</span>
+                                        <span class="old_money">￥254</span>
+                                    </div>
+                                    <!-- 数量 -->
+                                    <p class="number_p">x1</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+                <!-- 顶部 -->
+                <div class="order_bottom">
+                    <p class="money">应付：<span>￥148.23</span></p>
+                    <a class="state" href="">待评价</a>
+                    <!-- <a class="state" href="">待收货</a> -->
+                    <!-- <a class="state" href="">待评价</a> -->
+                    <!-- <a class="state" href="">查看详情</a> -->
+                </div>
+            </div>
+
+             <!-- 每个订单的盒子 -->
+             <div class="order_list_box">
+                <!-- 头部 -->
+                <div class="order_title">
+                    <p class="order_number">订单编号：17895462469D55</p>
+                    <p class="order_state">已取消</p>
+                </div>
+                <!-- 商品内容 -->
+                <div class="order_con">
+                    <!-- 每个商品的盒子 -->
+                    <div class="order_column">
+                        <a class="order_column_a" href="">
+                            <!-- 里面的盒子 -->
+                            <div class="order_column_inner">
+                                <div class="column_left">
+                                    <img class="order_img" src="../img/img/order_img.png" alt="">
+                                </div>
+                                <div class="column_right">
+                                    <p class="order_name">散养土鸡鸡蛋</p>
+                                    <div class="order_p">
+                                        <p>正宗散养土鸡蛋优质蛋白</p>
+                                    </div>
+                                    <div class="order_money">
+                                        <span class="new_money">￥154</span>
+                                        <span class="old_money">￥254</span>
+                                    </div>
+                                    <!-- 数量 -->
+                                    <p class="number_p">x1</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+                <!-- 顶部 -->
+                <div class="order_bottom">
+                    <p class="money">应付：<span>￥148.23</span></p>
+                    <a class="state" href="">查看详情</a>
+                    <!-- <a class="state" href="">待收货</a> -->
+                    <!-- <a class="state" href="">待评价</a> -->
+                    <!-- <a class="state" href="">查看详情</a> -->
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+         <!-- 底线 -->
+         <div class="baseline">
+            <span></span>
+            <p>我是有底线的</p>
+            <span></span>
+        </div>
+
+    </div>
+    
+</div>
+
+</body>
+</html>

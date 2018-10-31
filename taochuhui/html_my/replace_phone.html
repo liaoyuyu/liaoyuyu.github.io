@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <title>淘厨汇</title>
+    <!-- 更换手机号码 -->
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/replace_phone.css">
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/rem.js"></script>
+    <script src="../js/public.js"></script>
+    <script src="../js/replace_phone.js"></script>
+
+
+</head>
+<body id="replace_phone">
+<div id="replace_phone_box">
+
+    <header class="sreplace_header">
+        <a class="back" href="javascript:history.back(-1)"><img src="../img/icon/back.png" alt=""></a>
+        <p class="header_cen">更换手机号</p>
+    </header>
+
+    <!-- 内容 -->
+    <div class="con">
+
+        <ul class="replace_ul">
+            <li class="replace_li this_phone">
+                <p>当前手机号</p>
+                <p class="phone_num"></p>
+            </li>
+            <li class="replace_li">
+                <input class="replace_input code" type="text" placeholder="请输入您新手机号码" maxlength="11" onkeyup="this.value=this.value.replace(/[^0-9-]+/,'');">
+                <p class="get_code">获取验证码</p>
+            </li>
+            <li class="replace_li">
+                <input class="replace_input code_p" maxlength="6"  type="text" placeholder="请输入验证码" onkeyup="this.value=this.value.replace(/[^0-9-]+/,'');">
+            </li>
+        </ul>
+
+    </div>
+
+    <!-- 确认更换按钮 -->
+    <div class="confirm">
+        确认更换
+    </div>
+
+  
+
+
+
+
+
+</div>
+</body>
+</html>

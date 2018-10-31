@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <title>淘厨汇</title>
+    <!-- 意见反馈 -->
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/feedback.css">
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/rem.js"></script>
+    <script src="../js/feedback.js"></script>
+
+
+</head>
+<body id="feedback">
+<div id="feedback_box">
+
+    <header class="feedback_header">
+        <a class="back" href="javascript:history.back(-1)"><img src="../img/icon/back.png" alt=""></a>
+        <p class="header_cen">意见反馈</p>
+    </header>
+    <div class="interval"></div>
+    <!-- 内容 -->
+
+
+    <div class="con">
+
+        <!-- 选择建议还是意见 -->
+        <div class="proposal_opinion">
+            <!-- 建议 -->
+            <div class="proposal">
+                <div class="proposal_circle spot"></div>
+                <span class="proposal_opinion_p">建议</span>
+            </div>
+            <!-- 意见 -->
+            <div class="opinion">
+                <div class="proposal_circle"></div>
+                <span class="proposal_opinion_p">意见</span>
+            </div>
+        </div>
+
+        <!-- 反馈信息 -->
+        <div class="feedback_con_box">
+            <!-- id不能改，不然不能时时监听输入文字 -->
+            <textarea id="addressSearch" class="feedback_con" placeholder="请写下您的建议" maxlength="300"></textarea>
+
+            <!-- 输入了多少字 -->
+            <div class="input_text">
+                <span class="much_p">0</span>
+                <span class="all_p">/ 300</span>
+            </div>
+        </div>
+        <!-- 一段文字 -->
+        <p class="section_p">每一条反馈淘厨汇都会认真对待，我们将定期选出优秀反馈意见，发送积分奖励哦~</p>
+
+
+        <!-- 上传图片 -->
+        <div class="upload">
+            <ul class="upload_ul">
+                <!-- <li class="upload_li">
+                    <img class="upload_img" src="../asset/imgs/banner2.jpg" alt="">
+
+                    <div class="close_down" onclick="close_down(this)">
+                        <img class="close_down_img" src="../asset/icons/close_down1.png" alt="">
+                    </div>
+                </li> -->
+                <li class="upload_li upload_li_last">
+                    <img class="upload_img" src="../img/icon/upload_icon.png" alt="">
+                    <input id="file" class="upload_input" type="file" accept="image/*" onchange="uploadobj()">
+                </li>
+            </ul>
+        </div>
+
+
+        <!-- 提交按钮 -->
+        <div class="submission">
+            提交
+        </div>
+    </div>
+
+
+  
+
+
+
+
+
+</div>
+</body>
+</html>

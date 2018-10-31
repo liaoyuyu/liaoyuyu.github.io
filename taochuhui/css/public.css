@@ -1,0 +1,222 @@
+*{margin: 0;padding: 0;}
+body,html{width: 100%;height: 100%;position: relative;background: #fff;}
+a{text-decoration: none;width: 100%;height: 100%;}
+li{list-style: none;}
+
+
+.none{display: none}
+.none_visibility{visibility:hidden}
+
+
+/* 顶部  header */
+header{
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0.9rem;
+    font-size: 0.32rem;
+    padding: 0rem 0.3rem;
+    /* border-bottom: 1px solid #eee; */
+    box-sizing: border-box;
+    line-height: 0.9rem;
+    text-align: center;
+    background: #fff;
+}
+/* header */
+.header_left{
+    color: #84a539;
+    font-weight: bold;
+    position: absolute;
+    left: 0.3rem;
+}
+.header_cen{
+    color: #1f1212;
+}
+.header_right{
+    position: absolute;
+    width: 0.32rem;
+    height: 0.33rem;
+    right: 0.3rem;
+    top: 50%;
+    margin-top: -0.16rem;
+}
+
+/* 子页面的header */
+.back{
+    display: block;
+    width: 1rem;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.back img{
+    width: 0.14rem;
+    height: 0.27rem;
+}
+
+/* swiper */
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+/* 内容 */
+.con{
+    width: 100%;
+    padding-top: 0.9rem;
+    padding-bottom: 1rem;
+}
+
+/* 底部导航 */
+nav{
+    position: fixed;
+    z-index: 999;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1rem;
+    overflow: hidden;
+    border-top: 1px solid #bfbfbf;
+    box-sizing: border-box;
+    background: #fff;
+}
+.nav_a{
+    width: 20%;
+    height: 100%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nav_a img{
+    width: 0.4rem;
+    height: 0.4rem;
+    margin-bottom: 0.1rem;
+}
+.nav_a p{
+    color: #333333;
+    font-size: 0.24rem;
+}
+
+
+/* 灰色间隔 */
+.interval{
+    width: 100%;
+    height: 0.1rem;
+    background: #f5f5f7;
+}
+/* 底线 */
+.baseline{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0rem;
+    background: #f5f5f7;
+}
+.baseline span{
+    display: block;
+    width: 30%;
+    height: 1px;
+    background: #e3e3e3;
+}
+.baseline p{
+    color: #999999;
+    font-size: 0.2rem;
+    margin: 0rem 0.25rem;
+}
+
+
+
+/* 直播样式 */
+.list{
+    float: left;
+    width: 49%;
+    position: relative;
+    font-size: 0;
+    margin: 0rem 0.5%;
+    margin-bottom: 0.2rem;
+}
+.list_a{
+    display: block;
+    position: relative;
+}
+.list_img{
+    width: 100%;
+    height: 2.4rem;
+    margin-bottom: 0.05rem;
+}
+.list_name{
+    color: #333333;
+    font-size: 0.28rem;
+    margin-bottom: 0.05rem;
+    padding-left: 0.1rem;
+}
+.list_p{
+    padding-left: 0.1rem;
+    color: #666666;
+    font-size: 0.24rem;
+    width: 60%;
+}
+.list_name,.list_p{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+/* 标签 */
+.list_label{
+    position: absolute;
+    color: #fff;
+    font-size: 0.18rem;
+    background: #f73031;
+    border-top-right-radius: 0.35rem;
+    border-bottom-right-radius: 0.35rem;
+    border-top-left-radius: 0.5rem;
+    padding: 0.02rem 0.1rem 0.02rem 0.13rem;
+    bottom: 0;
+    right: 0.15rem;
+}
+
+
+/* 加入购物车  icon */
+.json_shop_img{
+    width: 0.48rem;
+    height: 0.48rem;
+}
+/* 现价  原价 */
+.new_money{
+    color: #ed2018;
+    font-size: 0.32rem;
+    margin-right: 0.15rem;
+}
+.old_money{
+    color: #666666;
+    font-size: 0.24rem;
+    text-decoration: line-through;
+}
