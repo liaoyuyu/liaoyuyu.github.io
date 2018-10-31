@@ -141,6 +141,8 @@ $(function(){
                 $(this).css("left",-1+"rem")
             }
 
+            alert(1)
+
         })
 
         })
