@@ -98,6 +98,11 @@ $(function(){
         var pagex = null;
 
         $(".collection_box").on("touchstart",function(e){
+            // 阻止浏览器右滑返回的默认行为
+            $(document.body).on('touchmove', function(e) {
+                e.preventDefault();
+            });
+
             // 初始化
             this_pagex = 0;
             pagex = 0;
@@ -136,11 +141,8 @@ $(function(){
                 $(this).addClass("collection_box_anim")
                 $(this).css("left",0+"rem")
             }
-            
-            $(document.body).on('touchmove', function(e) {
-                e.preventDefault();
-            });
 
+            
         })
 
         })
