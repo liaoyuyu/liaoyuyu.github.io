@@ -128,11 +128,11 @@ $(function(){
             // console.log(this_pagex-pagex)
             // 判断拖动了多少距离，来判断是否执行自动滑动动画
             var move = this_pagex-pagex
-            if(move <= -0.6*100){
+            if(move <= -0.3*100){
                 $(this).addClass("collection_box_anim")
                 $(this).css("left",-1+"rem")
             }
-            if(move >=0.6*100){
+            if(move >=0.3*100){
                 $(this).addClass("collection_box_anim")
                 $(this).css("left",0+"rem")
             }
