@@ -93,10 +93,9 @@ $(function(){
 
 
     // 阻止浏览器右滑返回的默认行为
-    $("body,html").on('touchmove', function(e) {
-        alert(1)
-        e.preventDefault();
-    });
+    // $("body,html").on('touchmove', function(e) {
+    //     e.preventDefault();
+    // });
 
     function move_box(){
         // 向左滑动，滑出删除按钮
