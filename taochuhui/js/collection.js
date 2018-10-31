@@ -98,11 +98,6 @@ $(function(){
         var pagex = null;
 
         $(".collection_box").on("touchstart",function(e){
-            // 阻止浏览器右滑返回的默认行为
-            $(document.body).on('touchmove', function(e) {
-                e.preventDefault();
-            });
-
             // 初始化
             this_pagex = 0;
             pagex = 0;
@@ -113,6 +108,11 @@ $(function(){
             // console.log(pagex)
 
         $(this).on("touchmove",function(e){
+            alert(1)
+            // 阻止浏览器右滑返回的默认行为
+            $(document.body).on('touchmove', function(e) {
+                e.preventDefault();
+            });
             // 移动中的鼠标的位置
             this_pagex = e.originalEvent.targetTouches[0].pageX
             console.log(this_pagex-pagex)
