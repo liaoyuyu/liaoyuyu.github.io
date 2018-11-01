@@ -18,7 +18,7 @@ $(function(){
     //     alert("系统错误，请联系客服！")
     //     console.log(err)
     // })
-
+    alert(localStorage.switch_class)
 
     new Vue({
         el:"#classify_con",
@@ -60,13 +60,15 @@ $(function(){
             // 切换大图和列表模式
             switchClass:function(){
                 this.none = 1
-                this.switch_class = !this.switch_class
+
                 if(this.switch_class == 1){
                     localStorage.switch_class = 0
                 }else{
                     localStorage.switch_class = 1
                 }
-                alert(localStorage.switch_class)
+                this.switch_class = !this.switch_class
+                
+                // alert(localStorage.switch_class)
                 // localStorage.switch_class = !localStorage.switch_class
             }
         },
