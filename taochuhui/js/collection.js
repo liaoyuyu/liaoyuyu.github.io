@@ -15,7 +15,7 @@ $(function(){
             all:1,//判断全选还是不全选//1代表全选，0代表取消全选
         },
         created:function(){
-
+            
         },
         mounted:function(){
 
@@ -90,12 +90,6 @@ $(function(){
         }
     }
 
-
-
-    // 阻止浏览器右滑返回的默认行为
-    // $("body,html").on('touchmove', function(e) {
-    //     e.preventDefault();
-    // });
 
 
     function move_box(){

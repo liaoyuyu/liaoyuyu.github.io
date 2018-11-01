@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>淘厨汇</title>
+    <!-- 邀请有礼 -->
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/Invitation.css">
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../js/rem.js"></script>
+    <script src="../js/public.js"></script>
+    <script src="../js/Invitation.js"></script>
+
+<style>
+    [v-cloak] {
+        display: none !important;
+    }
+</style>
+</head>
+<body id="Invitation">
+
+    <header class="Invitation_header">
+        <a class="back" href="../my.html"><img src="../img/icon/back.png" alt=""></a>
+        <p class="header_cen">邀请有礼</p>
+    </header>
+
+    <!-- 内容 -->
+    <div class="con">
+        <!-- 顶部图片 -->
+        <img class="Invitation_top_img" src="../img/img/Invitation_img.jpg" alt="">
+        <!-- 隔阂 -->
+        <div class="interval"></div>
+        <div class="interval"></div>
+
+        <!-- 自己的奖励 -->
+        <div class="reward_box">
+            <div class="reward_left">
+                <p class="reward_p">成功邀请</p>
+                <p class="reward_Invitation">28<span>人</span></p>
+            </div>
+            <div class="reward_right">
+                <p class="reward_p">累计奖励</p>
+                <p class="reward_Invitation">68.00<span>元</span></p>
+            </div>
+        </div>
+        <!-- 隔阂 -->
+        <div class="interval"></div>
+
+
+        <!-- 排行榜 -->
+        <div class="Rankings">
+            <!-- 标题 -->
+            <div class="Rankings_title">
+                <p class="Rankings_title_p">今日排行</p>
+                <span class="Rankings_title_span">top/10</span>
+            </div>
+            <!-- 排行标题 -->
+            <div class="Rankings_list_title">
+                <p class="ranking_p">排名</p>
+                <p class="user_name">用户名</p>
+                <p class="Invitation_number">邀请人数</p>
+            </div>
+            <!-- 排名 -->
+            <div class="ranking_box">
+                <ul class="ranking_ul">
+
+                    <li class="ranking_li">
+                        <div class="ranking_li_div">
+                            <!-- 名次 -->
+                            <div class="place_img">
+                                <img src="../img/icon/No_1.png" alt="">
+                            </div>
+                            <!-- 头像 姓名 -->
+                            <div class="place_people">
+                                <div class="portrait">
+                                    <img src="../img/img/portrait.png" alt="">
+                                </div>
+                                <p class="portrait_name">猫星人</p>
+                            </div>
+                            <!-- 人数 -->
+                            <div class="people_number">28</div>
+                        </div>
+                    </li>
+
+                    <!-- 第二 -->
+                    <li class="ranking_li">
+                        <div class="ranking_li_div">
+                            <!-- 名次 -->
+                            <div class="place_img">
+                                <img src="../img/icon/No_2.png" alt="">
+                            </div>
+                            <!-- 头像 姓名 -->
+                            <div class="place_people">
+                                <div class="portrait">
+                                    <img src="../img/img/portrait.png" alt="">
+                                </div>
+                                <p class="portrait_name">猫星人沙拉酱打死</p>
+                            </div>
+                            <!-- 人数 -->
+                            <div class="people_number">25</div>
+                        </div>
+                    </li>
+
+                    <!-- 第三 -->
+                    <li class="ranking_li">
+                        <div class="ranking_li_div">
+                            <!-- 名次 -->
+                            <div class="place_img">
+                                <img src="../img/icon/No_3.png" alt="">
+                            </div>
+                            <!-- 头像 姓名 -->
+                            <div class="place_people">
+                                <div class="portrait">
+                                    <img src="../img/img/portrait.png" alt="">
+                                </div>
+                                <p class="portrait_name">连续参加了坚实的</p>
+                            </div>
+                            <!-- 人数 -->
+                            <div class="people_number">23</div>
+                        </div>
+                    </li>
+
+                    <!-- 第四 -->
+                    <li class="ranking_li">
+                        <div class="ranking_li_div">
+                            <!-- 名次 -->
+                            <div class="place_img">
+                                <!-- <img src="../img/icon/No_3.png" alt=""> -->
+                                <p>4</p>
+                            </div>
+                            <!-- 头像 姓名 -->
+                            <div class="place_people">
+                                <div class="portrait">
+                                    <img src="../img/img/portrait.png" alt="">
+                                </div>
+                                <p class="portrait_name">大石街道</p>
+                            </div>
+                            <!-- 人数 -->
+                            <div class="people_number">20</div>
+                        </div>
+                    </li>
+
+                    <!-- 第五 -->
+                    <li class="ranking_li">
+                        <div class="ranking_li_div">
+                            <!-- 名次 -->
+                            <div class="place_img">
+                                <!-- <img src="../img/icon/No_3.png" alt=""> -->
+                                <p>5</p>
+                            </div>
+                            <!-- 头像 姓名 -->
+                            <div class="place_people">
+                                <div class="portrait">
+                                    <img src="../img/img/portrait.png" alt="">
+                                </div>
+                                <p class="portrait_name">乡镇灿烂说的就是</p>
+                            </div>
+                            <!-- 人数 -->
+                            <div class="people_number">18</div>
+                        </div>
+                    </li>
+
+                    <!-- 第六 -->
+                    <li class="ranking_li">
+                        <div class="ranking_li_div">
+                            <!-- 名次 -->
+                            <div class="place_img">
+                                <!-- <img src="../img/icon/No_3.png" alt=""> -->
+                                <p>6</p>
+                            </div>
+                            <!-- 头像 姓名 -->
+                            <div class="place_people">
+                                <div class="portrait">
+                                    <img src="../img/img/portrait.png" alt="">
+                                </div>
+                                <p class="portrait_name">怎么形成北京市</p>
+                            </div>
+                            <!-- 人数 -->
+                            <div class="people_number">17</div>
+                        </div>
+                    </li>
+
+                    <!-- 第七 -->
+                    <li class="ranking_li">
+                        <div class="ranking_li_div">
+                            <!-- 名次 -->
+                            <div class="place_img">
+                                <!-- <img src="../img/icon/No_3.png" alt=""> -->
+                                <p>7</p>
+                            </div>
+                            <!-- 头像 姓名 -->
+                            <div class="place_people">
+                                <div class="portrait">
+                                    <img src="../img/img/portrait.png" alt="">
+                                </div>
+                                <p class="portrait_name">现在穿看沙袋</p>
+                            </div>
+                            <!-- 人数 -->
+                            <div class="people_number">15</div>
+                        </div>
+                    </li>
+
+                    <!-- 第八 -->
+                    <li class="ranking_li">
+                        <div class="ranking_li_div">
+                            <!-- 名次 -->
+                            <div class="place_img">
+                                <!-- <img src="../img/icon/No_3.png" alt=""> -->
+                                <p>8</p>
+                            </div>
+                            <!-- 头像 姓名 -->
+                            <div class="place_people">
+                                <div class="portrait">
+                                    <img src="../img/img/portrait.png" alt="">
+                                </div>
+                                <p class="portrait_name">盛开的花</p>
+                            </div>
+                            <!-- 人数 -->
+                            <div class="people_number">10</div>
+                        </div>
+                    </li>
+
+                    <!-- 第九 -->
+                    <li class="ranking_li">
+                        <div class="ranking_li_div">
+                            <!-- 名次 -->
+                            <div class="place_img">
+                                <!-- <img src="../img/icon/No_3.png" alt=""> -->
+                                <p>9</p>
+                            </div>
+                            <!-- 头像 姓名 -->
+                            <div class="place_people">
+                                <div class="portrait">
+                                    <img src="../img/img/portrait.png" alt="">
+                                </div>
+                                <p class="portrait_name">啥都问饿哦为</p>
+                            </div>
+                            <!-- 人数 -->
+                            <div class="people_number">9</div>
+                        </div>
+                    </li>
+
+                    <!-- 第十 -->
+                    <li class="ranking_li">
+                        <div class="ranking_li_div">
+                            <!-- 名次 -->
+                            <div class="place_img">
+                                <!-- <img src="../img/icon/No_3.png" alt=""> -->
+                                <p>10</p>
+                            </div>
+                            <!-- 头像 姓名 -->
+                            <div class="place_people">
+                                <div class="portrait">
+                                    <img src="../img/img/portrait.png" alt="">
+                                </div>
+                                <p class="portrait_name">撒多万</p>
+                            </div>
+                            <!-- 人数 -->
+                            <div class="people_number">7</div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</body>
+</html>
