@@ -8,7 +8,7 @@ $(function(){
             if(hashName !== '') {  
                 var hash = window.location.hash;  
                 if(hash === '') {  
-                   alert("你点击的是返回键")
+                   window.location.href = "../my.html"
                 }  
             }  
         });  
