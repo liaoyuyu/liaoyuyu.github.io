@@ -1,5 +1,5 @@
 
-localStorage.switch_class = 1//默认模式大图模式
+
 // 按返回键返回  要刷新
 window.addEventListener('pageshow', function(event) {
     //event.persisted属性为true时，表示当前文档是从往返缓存中获取
@@ -18,13 +18,11 @@ $(function(){
     //     alert("系统错误，请联系客服！")
     //     console.log(err)
     // })
-   
-    alert(localStorage.switch_class)
     new Vue({
         el:"#classify_con",
         data:{
             // data:res
-            switch_class:localStorage.switch_class,//切换类(改变模式)
+            switch_class:1,//切换类(改变模式)
             none:1,//筛选显示
         },
         created:function(){
@@ -60,16 +58,7 @@ $(function(){
             // 切换大图和列表模式
             switchClass:function(){
                 this.none = 1
-
-                if(this.switch_class == 1){
-                    localStorage.switch_class = 0
-                }else{
-                    localStorage.switch_class = 1
-                }
                 this.switch_class = !this.switch_class
-                
-                // alert(localStorage.switch_class)
-                // localStorage.switch_class = !localStorage.switch_class
             }
         },
     })
