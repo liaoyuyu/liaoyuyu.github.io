@@ -28,6 +28,7 @@ body,html{background: #f5f4f7;}
 .top_reward_p{
     color: #fd5a39;
     font-size: 0.32rem;
+    font-weight: bold;
 }
 .top_reward_p span{
     color: #333333;

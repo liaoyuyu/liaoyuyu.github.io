@@ -37,6 +37,7 @@
 .reward_Invitation{
     color: #fd5a39;
     font-size: 0.32rem;
+    font-weight: bold;
 }
 .reward_Invitation span{
     color: #333333;
@@ -66,6 +67,7 @@
     color: #fd5a39;
     font-size: 0.32rem;
     float: left;
+    font-weight: bold;
 }
 .Rankings_list_title{
     width: 100%;
@@ -136,6 +138,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    font-weight: bold;
 }
 .place_img img{
     width: 0.41rem;
@@ -183,6 +186,7 @@
     text-align: center;
     line-height: 1rem;
     float: left;
+    font-weight: bold;
 }
 
 
