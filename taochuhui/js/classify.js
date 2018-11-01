@@ -18,8 +18,8 @@ $(function(){
     //     alert("系统错误，请联系客服！")
     //     console.log(err)
     // })
+   
     alert(localStorage.switch_class)
-
     new Vue({
         el:"#classify_con",
         data:{
