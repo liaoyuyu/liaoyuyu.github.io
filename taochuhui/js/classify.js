@@ -1,5 +1,5 @@
-localStorage.switch_class = 1//默认模式大图模式
 
+localStorage.switch_class = 1//默认模式大图模式
 // 按返回键返回  要刷新
 window.addEventListener('pageshow', function(event) {
     //event.persisted属性为true时，表示当前文档是从往返缓存中获取
