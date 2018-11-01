@@ -1,4 +1,20 @@
 $(function(){
+    // 监听物理返回
+    if(window.history && window.history.pushState) {  
+        $(window).on('popstate', function() {  
+            var hashLocation = location.hash;  
+            var hashSplit = hashLocation.split("#!/");  
+            var hashName = hashSplit[1];  
+            if(hashName !== '') {  
+                var hash = window.location.hash;  
+                if(hash === '') {  
+                   alert("你点击的是返回键")
+                }  
+            }  
+        });  
+    }  
+
+
 
     new Vue({
         el:".order",
