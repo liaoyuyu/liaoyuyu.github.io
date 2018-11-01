@@ -81,6 +81,8 @@ body,html{
     display: block;
     height: 2rem;
     overflow: hidden;
+    /* border-bottom: 1px solid #eee; */
+    box-sizing: border-box;
 }
 /* 左边图片 */
 .shop_a_left{
@@ -101,6 +103,7 @@ body,html{
     box-sizing: border-box;
     float: left;
     padding-top: 0.2rem;
+    position: relative;
 }
 .shop_name{
     color: #333333;
@@ -139,7 +142,14 @@ body,html{
     margin-right: 0.15rem;
     margin-bottom: 0.1rem;
 }
-
+/* 数量 */
+.shop_number{
+    color: #666666;
+    font-size: 0.28rem;
+    position: absolute;
+    top: 20%;
+    right: 0.05rem;
+}
 
 /* 退换 */
 .Refund{
@@ -154,7 +164,7 @@ body,html{
     padding: 0rem 0.2rem;
     border: 1px solid #bfbfbf;
     border-radius: 0.5rem;
-    bottom: 0.2rem;
+    bottom: 0.15rem;
     right: 0.3rem;
 }
 
@@ -176,7 +186,7 @@ body,html{
     align-items: center;
 }
 .money_p{
-    color: #333333;
+    color: #666666;
     font-size: 0.28rem;
 }
 .money_Price{

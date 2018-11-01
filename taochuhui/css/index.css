@@ -110,7 +110,8 @@
 /* 标题 */
 .title{
     width: 100%;
-    height: 0.8rem;
+    height: 0.9rem;
+    margin-bottom: 0.15rem;
     line-height: 0.8rem;
     display: flex;
     flex-direction: row;
@@ -379,6 +380,8 @@
     text-overflow:ellipsis;
     white-space: nowrap;
     margin-bottom: 0.5rem;
+    padding: 0rem 0.08rem;
+    box-sizing: border-box;
 }
 .like_money{
     width: 100%;
@@ -386,6 +389,8 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-end;
+    padding: 0rem 0.08rem;
+    box-sizing: border-box;
 }
 
 .like_json_img{
