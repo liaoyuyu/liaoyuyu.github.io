@@ -190,6 +190,9 @@ html,body{background: #f5f4f7}
     background: #fff;
     margin-bottom: 0.2rem;
 }
+.last_block{
+    margin-bottom: 1rem;
+}
 .block_title{
     width: 100%;
     height: 0.7rem;
