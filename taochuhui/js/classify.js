@@ -61,7 +61,13 @@ $(function(){
             switchClass:function(){
                 this.none = 1
                 this.switch_class = !this.switch_class
-                localStorage.switch_class = !localStorage.switch_class
+                if(this.switch_class == 1){
+                    localStorage.switch_class = 0
+                }else{
+                    localStorage.switch_class = 1
+                }
+                alert(localStorage.switch_class)
+                // localStorage.switch_class = !localStorage.switch_class
             }
         },
     })
