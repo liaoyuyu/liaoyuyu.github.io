@@ -17,6 +17,10 @@
     height: 1.2rem;
     overflow: hidden;
 }
+.reward_box_a{
+    display: block;
+    overflow: hidden;
+}
 .reward_left,.reward_right{
     width: 50%;
     height: 100%;
