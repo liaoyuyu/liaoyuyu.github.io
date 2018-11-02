@@ -14,7 +14,7 @@ $(function(){
             }  
         });  
     }  
-    alert(3)
+    alert(2)
 
 
     // new Vue({
