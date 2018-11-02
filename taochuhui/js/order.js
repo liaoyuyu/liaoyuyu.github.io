@@ -1,4 +1,5 @@
 $(function(){
+    alert(1)
     // 监听物理返回//物理返回就返回进入页
     if(window.history && window.history.pushState) {  
         $(window).on('popstate', function() {  
@@ -13,7 +14,7 @@ $(function(){
             }  
         });  
     }  
-
+    alert(2)
 
 
     new Vue({
@@ -22,7 +23,7 @@ $(function(){
             data:"",
         },
         created:function(){
-            alert(1)
+            alert(3)
         },
         mounted:function(){
             this.get_url_index()
