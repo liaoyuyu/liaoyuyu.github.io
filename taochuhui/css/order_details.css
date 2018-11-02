@@ -267,8 +267,11 @@ body,html{
     position: absolute;
     top: 0%;
     left: 18%;
-    height: 0;
+    height: 90%;
     opacity: 0;
+}
+.order_code{
+    color: red;
 }
 
 /* 联系 */
