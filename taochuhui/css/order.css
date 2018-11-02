@@ -31,7 +31,8 @@
     height: 0.8rem;
     text-align: center;
     line-height: 0.8rem;
-    color: #333333;
+    /* color: #333333; */
+    color: red;
     font-size: 0.28rem;
     position: relative;
 }
