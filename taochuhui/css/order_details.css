@@ -265,8 +265,8 @@ body,html{
 /* 订单编号 */
 #order_code_input{
     position: absolute;
-    top: 0%;
-    left: 18%;
+    top: 110%;
+    left: 110%;
     height: 90%;
     opacity: 0;
 }
