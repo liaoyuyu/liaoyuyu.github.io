@@ -6,5 +6,4 @@ $(function(){
         document.execCommand("Copy");
         console.log(document.execCommand("Copy"))
     })
-
 })
