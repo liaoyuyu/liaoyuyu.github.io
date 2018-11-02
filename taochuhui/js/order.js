@@ -1,20 +1,20 @@
 $(function(){
     alert(1)
-    // 监听物理返回//物理返回就返回进入页
-    // if(window.history && window.history.pushState) {  
-    //     $(window).on('popstate', function() {  
-    //         var hashLocation = location.hash;  
-    //         var hashSplit = hashLocation.split("#!/");  
-    //         var hashName = hashSplit[1];  
-    //         if(hashName !== '') {  
-    //             var hash = window.location.hash;  
-    //             if(hash === '') {  
-    //                window.location.href = "../my.html"
-    //             }  
-    //         }  
-    //     });  
-    // }  
-    alert(2)
+    监听物理返回//物理返回就返回进入页
+    if(window.history && window.history.pushState) {  
+        $(window).on('popstate', function() {  
+            var hashLocation = location.hash;  
+            var hashSplit = hashLocation.split("#!/");  
+            var hashName = hashSplit[1];  
+            if(hashName !== '') {  
+                var hash = window.location.hash;  
+                if(hash === '') {  
+                   window.location.href = "../my.html"
+                }  
+            }  
+        });  
+    }  
+    alert(3)
 
 
     // new Vue({
