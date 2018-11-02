@@ -253,7 +253,7 @@ body,html{
 }
 /* 复制 */
 .copy{
-    display: block;
+    /* display: block; */
     color: #80ac3a;
     font-size: 0.24rem;
     line-height: 0.4rem;
@@ -265,13 +265,10 @@ body,html{
 /* 订单编号 */
 #order_code_input{
     position: absolute;
-    top: 100%;
-    left: 100%;
-    /* height: 90%; */
+    top: 0%;
+    left: 18%;
+    height: 90%;
     opacity: 0;
-}
-.order_code{
-    color: red
 }
 
 /* 联系 */
