@@ -169,6 +169,7 @@
 }
 .money span{
     color: #e10707;
+    font-weight: bold;
 }
 .state{
     display: block;
