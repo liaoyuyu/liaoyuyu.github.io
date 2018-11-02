@@ -30,10 +30,10 @@ $(function(){
         methods:{
             // 获取链接地址传过来的值
             get_url_index:function(){
-                var url = document.URL
-                console.log(url)
+                // var url = document.URL
+                // console.log(url)
                 // url = url.substr(url.lastIndexOf("?")+1,)
-                alert(url)
+                alert(1)
 
                 // this.click_nav(url)
             },
