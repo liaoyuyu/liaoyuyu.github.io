@@ -270,6 +270,9 @@ body,html{
     /* height: 90%; */
     opacity: 0;
 }
+.order_code{
+    color: red
+}
 
 
 /* 联系 */
