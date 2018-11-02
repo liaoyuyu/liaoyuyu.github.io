@@ -33,6 +33,7 @@ $(function(){
                 var url = document.URL
                 console.log(url)
                 url = url.substr(url.lastIndexOf("?")+1,)
+                alert(url)
                 this.click_nav(url)
             },
             // 切换导航样式 和 数据
