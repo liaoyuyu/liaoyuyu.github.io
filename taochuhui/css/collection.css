@@ -46,7 +46,7 @@ body,html{background: #f5f4f7;}
     left: 0rem;
 }
 .collection_box_anim{
-    transition: all 0.3s;
+    transition: all 0.2s;
 }
 .collection_box:last-child{
     border-bottom: 1px solid #eee;
