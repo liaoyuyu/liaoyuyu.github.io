@@ -1,5 +1,5 @@
 $(function(){
-    // 监听物理返回
+    // 监听物理返回//物理返回就返回进入页
     if(window.history && window.history.pushState) {  
         $(window).on('popstate', function() {  
             var hashLocation = location.hash;  
@@ -49,7 +49,12 @@ $(function(){
                 $(".order_li").eq(index).addClass("order_nav_select")
 
                 // 请求数据
-
+                // get_data("","Advertisement/GetWebIndexData","get").then(function(res){
+    
+                // },function(err){
+                //     alert("系统错误，请联系客服！")
+                //     // console.log(err)
+                // })
             },
         },
     })

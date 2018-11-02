@@ -2,7 +2,9 @@
 .nav_a:nth-of-type(1) p{
     color: #7ea83a;
 }
-
+.index_header .header_left{
+    font-style: italic;
+}
 /* 内容 */
 
 /* 轮播 */
