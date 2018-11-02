@@ -22,7 +22,7 @@ $(function(){
             data:"",
         },
         created:function(){
-
+            alert(1)
         },
         mounted:function(){
             this.get_url_index()
@@ -34,7 +34,7 @@ $(function(){
                 console.log(url)
                 url = url.substr(url.lastIndexOf("?")+1,)
                 alert(url)
-                
+
                 this.click_nav(url)
             },
             // 切换导航样式 和 数据
