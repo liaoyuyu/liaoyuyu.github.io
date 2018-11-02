@@ -32,7 +32,7 @@ $(function(){
             get_url_index:function(){
                 var url = document.URL
                 console.log(url)
-                url = url.substr(url.lastIndexOf("?")+1,)
+                // url = url.substr(url.lastIndexOf("?")+1,)
                 alert(url)
 
                 // this.click_nav(url)
