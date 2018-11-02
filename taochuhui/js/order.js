@@ -1,6 +1,6 @@
 $(function(){
     alert(1)
-    监听物理返回//物理返回就返回进入页
+    // 监听物理返回//物理返回就返回进入页
     if(window.history && window.history.pushState) {  
         $(window).on('popstate', function() {  
             var hashLocation = location.hash;  
@@ -14,7 +14,7 @@ $(function(){
             }  
         });  
     }  
-    alert(5)
+    alert(3)
 
 
     // new Vue({
