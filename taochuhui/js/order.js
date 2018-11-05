@@ -1,5 +1,4 @@
 $(function(){
-    alert(4)
     // 监听物理返回//物理返回就返回进入页
     if(window.history && window.history.pushState) {  
         $(window).on('popstate', function() {  
