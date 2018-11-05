@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>淘厨汇</title>
+    <!-- 任务中心 -->
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/search.css">
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../js/rem.js"></script>
+    <script src="../js/public.js"></script>
+    <!-- <script src="../js/search.js"></script> -->
+
+<style>
+    [v-cloak] {
+        display: none !important;
+    }
+</style>
+</head>
+<body id="search">
+    <header class="search_header">
+        <a class="back" href="../my.html"><img src="../img/icon/back.png" alt=""></a>
+        <div class="search">
+            <div class="search_img">
+                <img src="../img/icon/search_shallow.png" alt="">
+            </div>
+            <input type="text" class="search_input" placeholder="请输入商品名称">
+        </div>
+        <p class="search_p">搜索</p>
+    </header>
+
+    <!-- 内容 -->
+    <div class="con">
+        <!-- 搜索历史 -->
+        <div class="search_history">
+            <div class="search_history_title">
+                <p class="search_history_p">历史搜索</p>
+                <div class="search_history_right">
+                    <img src="../img/icon/delete.png" alt="">
+                    <p>清空历史记录</p>
+                </div>
+            </div>
+
+           <div class="search_Record_box">
+                <p class="search_Record">榴莲</p>
+                <p class="search_Record">蜂蜜柚子茶</p>
+                <p class="search_Record">澳洲龙虾</p>
+                <p class="search_Record">北极贝</p>
+                <p class="search_Record">土鸡</p>
+           </div>
+
+        </div>
+
+
+        <!-- 推荐商品 -->
+        <div class="Recommend_shop_box">
+            <div class="Recommend_shop_title">推荐商品</div>
+            
+            <div class="Recommend_shop">
+                <div class="Recommend_shop_left">
+                    <img src="../img/img/banner_img.png" alt="">
+                </div>
+                <div class="Recommend_shop_right">
+                    <p class="Recommend_shop_name">散养麻鸭土鸭子老水鸭</p>
+                    <div class="Recommend_shop_p">
+                        <p>正宗散养土鸭两年老鸭子正宗散养土鸭两</p>
+                    </div>
+                    <p class="Recommend_shop_money">¥32.8</p>
+                    <!-- <img class="Recommend_shop_img json_shop_img" src="../img/icon/json_shop.png" alt=""> -->
+                    <div class="plus_reduce">
+                        <img class="plus" src="../img/icon/plus.png" alt="">
+                        <input class="number" type="text" name="" id="" value="1" maxlength="3" onkeyup="this.value=this.value.replace(/[^0-9-]+/,'');">
+                        <img class="reduce" src="../img/icon/reduce.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="Recommend_shop">
+                <div class="Recommend_shop_left">
+                    <img src="../img/img/banner_img.png" alt="">
+                </div>
+                <div class="Recommend_shop_right">
+                    <p class="Recommend_shop_name">散养麻鸭土鸭子老水鸭</p>
+                    <div class="Recommend_shop_p">
+                        <p>正宗散养土鸭两年老鸭子正宗散养土鸭两</p>
+                    </div>
+                    <p class="Recommend_shop_money">¥32.8</p>
+                    <img class="Recommend_shop_img json_shop_img" src="../img/icon/json_shop.png" alt="">
+                </div>
+            </div>
+
+            <div class="Recommend_shop">
+                <div class="Recommend_shop_left">
+                    <img src="../img/img/banner_img.png" alt="">
+                </div>
+                <div class="Recommend_shop_right">
+                    <p class="Recommend_shop_name">散养麻鸭土鸭子老水鸭</p>
+                    <div class="Recommend_shop_p">
+                        <p>正宗散养土鸭两年老鸭子正宗散养土鸭两</p>
+                    </div>
+                    <p class="Recommend_shop_money">¥32.8</p>
+                    <img class="Recommend_shop_img json_shop_img" src="../img/icon/json_shop.png" alt="">
+                </div>
+            </div>
+
+            <div class="Recommend_shop">
+                <div class="Recommend_shop_left">
+                    <img src="../img/img/banner_img.png" alt="">
+                </div>
+                <div class="Recommend_shop_right">
+                    <p class="Recommend_shop_name">散养麻鸭土鸭子老水鸭</p>
+                    <div class="Recommend_shop_p">
+                        <p>正宗散养土鸭两年老鸭子正宗散养土鸭两</p>
+                    </div>
+                    <p class="Recommend_shop_money">¥32.8</p>
+                    <img class="Recommend_shop_img json_shop_img" src="../img/icon/json_shop.png" alt="">
+                </div>
+            </div>
+
+            <div class="Recommend_shop">
+                <div class="Recommend_shop_left">
+                    <img src="../img/img/banner_img.png" alt="">
+                </div>
+                <div class="Recommend_shop_right">
+                    <p class="Recommend_shop_name">散养麻鸭土鸭子老水鸭</p>
+                    <div class="Recommend_shop_p">
+                        <p>正宗散养土鸭两年老鸭子正宗散养土鸭两</p>
+                    </div>
+                    <p class="Recommend_shop_money">¥32.8</p>
+                    <img class="Recommend_shop_img json_shop_img" src="../img/icon/json_shop.png" alt="">
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <!-- 底线 -->
+    <div class="baseline">
+        <span></span>
+        <p>我是有底线的</p>
+        <span></span>
+    </div>
+
+</body>
+</html>

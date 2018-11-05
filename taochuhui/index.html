@@ -35,11 +35,14 @@
         <div class="banner">
             <div class="swiper-container banner_box">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide" v-for="banner in data.Return_Data.MobileBannerList">
-                        <img src="./img/img/banner_img.png" alt="">
-                        <!-- <img :src="banner.AdvPicture" alt="" v-cloak> -->
+                    <div class="swiper-slide" v-for="banner in banner_data">
+                        <a class="banner_a" href="" v-cloak>
+                            <img :src="['http://192.168.2.241:8089/Image/big'+banner.Image_Url]" alt="" v-cloak>
+                        </a>
                     </div>
                 </div>
+                <!-- 小圆点 -->
+                <div class="swiper-pagination index_circular"></div>
             </div>
         </div>
 
@@ -48,15 +51,7 @@
             <li class="nav_li">
                 <a href="javascript:;">
                     <div class="nav_div">
-                        <img src="./img/img/banner_img.png" alt="">
-                    </div>
-                    <p class="nav_p">年货预定</p>
-                </a>
-            </li>
-            <li class="nav_li">
-                <a href="javascript:;">
-                    <div class="nav_div">
-                        <img src="./img/img/banner_img.png" alt="">
+                        <img src="./img/icon/fresh.png" alt="">
                     </div>
                     <p class="nav_p">新鲜好货</p>
                 </a>
@@ -64,38 +59,47 @@
             <li class="nav_li">
                 <a href="javascript:;">
                     <div class="nav_div">
-                        <img src="./img/img/banner_img.png" alt="">
+                        <img src="./img/icon/Reserve.png" alt="">
                     </div>
-                    <p class="nav_p">人气推荐</p>
+                    <p class="nav_p">年货预定</p>
                 </a>
             </li>
             <li class="nav_li">
                 <a href="javascript:;">
                     <div class="nav_div">
-                        <img src="./img/img/banner_img.png" alt="">
+                        <img src="./img/icon/Discount_Recommend.png" alt="">
                     </div>
                     <p class="nav_p">特惠推荐</p>
                 </a>
             </li>
+            <li class="nav_li">
+                <a href="javascript:;">
+                    <div class="nav_div">
+                        <img src="./img/icon/Popularity_Recommend.png" alt="">
+                    </div>
+                    <p class="nav_p">人气推荐</p>
+                </a>
+            </li>
         </ul>
 
-        <!-- 喇叭 -->
+       
         <div class="interval"></div>
+        <!-- 喇叭 -->
         <div class="horn_box">
             <img class="horn_img" src="./img/icon/horn.png" alt="">
             <div class="horn_con">
                 <div class="swiper-container horn">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide horn_slide" v-for="horn in data.Return_Data.SystemNoticeList" v-cloak>
-                            <a class="horn_a" href="" v-cloak>{{horn.NoticeContent}}</a>
+                        <div class="swiper-slide horn_slide" v-for="notice in Notice" v-cloak>
+                            <a class="horn_a" href="" v-cloak>{{notice.Create_AdminName}}</a>
                         </div>                    
                     </div>
                 </div>
             </div>
             <a class="horn_details" href="javascript:;">详情</a>
         </div>
-        <div class="interval"></div>
 
+        <div class="interval"></div>
 
         <!-- 模块 -->
         <!-- 直播 -->
@@ -116,13 +120,12 @@
             <!-- 内容 -->
             <div class="modular_con">
 
-                <div class="list" v-for="broadcast in data.Return_Data.RandomVideoList">
-
+                <div class="list">
                     <!-- 页面地址没写 -->
-                    <a class="list_a" :href="['.html?'+broadcast.SvNiD]" v-cloak>
-                        <img class="list_img" src="./img/img/broadcast_img.jpg" alt="" v-cloak>
-                        <p class="list_name" v-cloak>{{broadcast.SupName}}</p>
-                        <p class="list_p" v-cloak>{{broadcast.VideoName}}</p>
+                    <a class="list_a" href="">
+                        <img class="list_img" src="./img/img/broadcast_img.jpg" alt="">
+                        <p class="list_name"></p>
+                        <p class="list_p"></p>
                         <!-- 标签 -->
                         <div class="list_label">直播中</div>
                     </a>
@@ -133,16 +136,16 @@
 
         <div class="interval"></div>
 
-        <!-- 年货预定 -->
-        <div class="modular">
+        <!-- 限时预定 -->
+        <!-- <div class="modular"> -->
             <!-- 标题 -->
-            <div class="title">
+            <!-- <div class="title">
                 <div class="title_left">
                     <span class="title_span"></span>
-                    <p class="titel_p">限时预定</p>
+                    <p class="titel_p">限时预定</p> -->
 
                     <!-- 时间 -->
-                    <div class="time">
+                    <!-- <div class="time">
                         <p class="time_p">8:00场</p>
                         <p class="time_surplus"><span>00</span>:<span>36</span>:<span>42</span></p>
                     </div>
@@ -153,9 +156,9 @@
                         <img class="right_img" src="./img/icon/more.png" alt="">
                     </a>
                 </div>  
-            </div>
+            </div> -->
             <!-- 内容 -->
-            <div class="modular_con">
+            <!-- <div class="modular_con">
                 <ul class="year_list">
                     <li class="year_li">
                         <a class="yaer_list_a" href="">
@@ -230,15 +233,15 @@
                         </a>
                     </li>
                 </ul>
-            </div>
+            </div> -->
           
-        </div>
+        <!-- </div> -->
 
-        <div class="interval"></div>
+        <!-- <div class="interval"></div> -->
 
 
         <!-- 新鲜好货 -->
-        <div class="modular">
+        <div class="modular fresh">
             <!-- 标题 -->
             <div class="title">
                 <div class="title_left">
@@ -453,9 +456,9 @@
 
 
          <!-- 猜你喜欢 -->
-         <div class="modular">
+         <!-- <div class="modular"> -->
             <!-- 标题 -->
-            <div class="title">
+            <!-- <div class="title">
                 <div class="title_left">
                     <span class="title_span"></span>
                     <p class="titel_p">猜你喜欢</p>
@@ -466,9 +469,9 @@
                         <img class="right_img" src="./img/icon/more.png" alt="">
                     </a>
                 </div>  
-            </div>
+            </div> -->
             <!-- 内容 -->
-            <div class="modular_con">
+            <!-- <div class="modular_con">
                <ul class="like_ul">
                    <li class="like_li">
                        <a class="like_a" href="">
@@ -523,8 +526,8 @@
                             <img class="like_json_img json_shop_img" src="./img/icon/json_shop.png" alt="">
                     </li>
                </ul>
-            </div>
-        </div>
+            </div> -->
+        <!-- </div> -->
 
 
         <!-- 底线 -->
@@ -557,49 +560,5 @@
 
 
 
-<script>
-var banner = new Swiper('.banner_box',{
-    autoplay: {
-        observer:true, //修改swiper自己或子元素时，自动初始化swiper
-        observeParents:true,//修改swiper的父元素时，自动初始化swiper
-        speed:1000,//切换速度
-        autoplay: {
-            delay: 3000,
-            stopOnLastSlide: false,
-            disableOnInteraction: false,
-        },
-        stopOnLastSlide: false,
-        disableOnInteraction: false,
-    },
-    loop:true,
-});
-
-var fresh = new Swiper('.fresh_box', {
-    observer:true, //修改swiper自己或子元素时，自动初始化swiper
-    observeParents:true,//修改swiper的父元素时，自动初始化swiper
-    slidesPerView: 3,
-    spaceBetween : 5,
-    freeMode: true,
-});
-
-var horn = new Swiper('.horn', {
-        observer:true, //修改swiper自己或子元素时，自动初始化swiper
-        observeParents:true,//修改swiper的父元素时，自动初始化swiper
-        loop:true,
-        direction: 'vertical',//垂直
-        autoplay: {
-            delay: 5000,
-            stopOnLastSlide: false,
-            disableOnInteraction: false,
-        },
-        simulateTouch : false,//禁止鼠标模拟
-        allowTouchMove: false,//禁止触摸滑动
-        // on:{
-        //     slideChangeTransitionStart: function(){//开始过渡时执行
-        //         _this.get_index()
-        //     }
-        // },
-    });
-</script>
 </body>
 </html>

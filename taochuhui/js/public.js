@@ -1,6 +1,6 @@
 // localStorage.weburl = "http://admin.taochuhui.com/"//接口地址
 
-localStorage.weburl = "http://192.168.2.110:8089/"//测试接口地址
+localStorage.weburl = "http://192.168.2.241:8090/"//测试接口地址
 
 function get_data(data,url,typeobj){
     return new Promise(function(resolve, reject) {
@@ -9,6 +9,8 @@ function get_data(data,url,typeobj){
             type:typeobj,
             dataType:"json",
             data:data,
+            // processData: false,  // 不处理数据
+            // contentType: false,   // 不设置内容类型
             success:function(res){
                 resolve(res)
             },

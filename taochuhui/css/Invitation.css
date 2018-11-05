@@ -3,6 +3,21 @@
     padding-bottom: 0;
     font-size: 0;
 }
+.reward{
+    position: absolute;
+    right: 0.2rem;
+    top: 0;
+    height: 100%;
+    width: auto;
+    padding: 0rem 0.15rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.reward img{
+    width: 0.39rem;
+    height: 0.39rem;
+}
 
 .Invitation_top_img{
     width: 100%;

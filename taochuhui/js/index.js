@@ -11,67 +11,121 @@ window.addEventListener('pageshow', function(event) {
     }
 });
 
+
 $(function(){
     // 授权
     // if(getCookie("SQ")==""||getCookie("SQ") =="0"){
     //     var back_html = "http://www.taochuhui.com/html_authorization/judge_sj.html";
     // }
-    // get_data("","Advertisement/GetWebIndexData","get").then(function(res){
-       
-    // },function(err){
-    //     alert("系统错误，请联系客服！")
-    //     // console.log(err)
+
+    // 轮播
+    get_data("","Home/GetShopBanner","get").then(function(res){
+        new Vue({
+            el:".banner",
+            data:{
+                banner_data:res.Return_Data.PageData,//首页banner
+            },
+            created:function(){     
+                // console.log(this.banner_data)           
+            },
+            mounted:function(){
+                // 初始化 swiper
+                Initialization_swiper()
+            },
+            methods:{
+    
+            },
+        })
+    
+    },function(err){
+        alert("系统错误，请联系客服！")
+    }) 
+
+    // 公告
+    var fd = {"PageIndex":0}
+    get_data(fd,"Home/GetMessage","get").then(function(res){
+        new Vue({
+            el:".horn_box",
+            data:{
+                Notice:res.Return_Data.PageData,//公告
+            },
+            created:function(){
+                // console.log(this.Notice)
+            },
+            mounted:function(){
+                // 初始化 swiper
+                Initialization_swiper()
+            },
+            methods:{
+    
+            },
+        })
+    },function(err){
+        alert("系统错误，请联系客服！")
+    })
+
+
+    // new Vue({
+    //     el:"#index_con",
+    //     data:{
+    //         banner_data:"",//首页banner
+    //         Notice:"",//公告
+    //     },
+    //     created:function(){
+    //         var _this = this
+    //         //   首页轮播
+    //         get_data("","Home/GetShopBanner","get").then(function(res){
+    //             _this.banner_data = res.Return_Data.PageData
+    //             // console.log(_this.banner_data)
+    //         },function(err){
+    //             alert("系统错误，请联系客服！")
+    //         })
+
+
+    //         // 喇叭公告
+    //         var fd = {"PageIndex":0}
+    //         get_data(fd,"Home/GetMessage","get").then(function(res){
+    //             _this.Notice = res.Return_Data.PageData
+    //             console.log(res.Return_Data.PageData)
+    //         },function(err){
+    //             alert("系统错误，请联系客服！")
+    //         })
+    //     },
+    //     mounted:function(){
+    //         // 初始化 swiper
+    //         Initialization_swiper()
+    //     },
+    //     methods:{
+
+    //     },
     // })
 
 
-    new Vue({
-        el:"#index_con",
-        data:{
-            data:res
-        },
-        created:function(){
-            console.log(this.data)
-            if(this.data.Return_ID == 999){
-                alert("系统错误，请联系客服！")
-            }
-        },
-        mounted:function(){
-            // 初始化 swiper
-            Initialization_swiper()
-        },
-        methods:{
 
-        },
-    })
-
-    
 
     // 初始化  swiper
+    
+    
     function Initialization_swiper(){
+        // banner
         var banner = new Swiper('.banner_box',{
             autoplay: {
-                observer:true, //修改swiper自己或子元素时，自动初始化swiper
-                observeParents:true,//修改swiper的父元素时，自动初始化swiper
-                speed:1000,//切换速度
-                autoplay: {
-                    delay: 3000,
-                    stopOnLastSlide: false,
-                    disableOnInteraction: false,
-                },
+                delay: 3000,
                 stopOnLastSlide: false,
                 disableOnInteraction: false,
             },
             loop:true,
-        });
-        
-        var fresh = new Swiper('.fresh_box', {
+            speed: 1000,//切换速度
             observer:true, //修改swiper自己或子元素时，自动初始化swiper
             observeParents:true,//修改swiper的父元素时，自动初始化swiper
-            slidesPerView: 3,
-            spaceBetween : 5,
-            freeMode: true,
+            // 小圆点
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+              },
         });
-        
+
+        // 公告
         var horn = new Swiper('.horn', {
             observer:true, //修改swiper自己或子元素时，自动初始化swiper
             observeParents:true,//修改swiper的父元素时，自动初始化swiper
@@ -84,12 +138,16 @@ $(function(){
             },
             simulateTouch : false,//禁止鼠标模拟
             allowTouchMove: false,//禁止触摸滑动
-            // on:{
-            //     slideChangeTransitionStart: function(){//开始过渡时执行
-            //         _this.get_index()
-            //     }
-            // },
         });
+        
+        var fresh = new Swiper('.fresh_box', {
+            observer:true, //修改swiper自己或子元素时，自动初始化swiper
+            observeParents:true,//修改swiper的父元素时，自动初始化swiper
+            slidesPerView: 3,
+            spaceBetween : 5,
+            freeMode: true,
+        });
+
     }
 
 
