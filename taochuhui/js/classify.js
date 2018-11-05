@@ -39,8 +39,8 @@ $(function(){
             // 滚动隐藏头部header
             handleScroll:function(){
                 this.none = 1;
-                var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-                fixed(scrollTop)
+                // var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+                // fixed(scrollTop)
             },
             // 点击导航，切换样式
             click_nav:function(e){
@@ -75,14 +75,14 @@ $(function(){
     }
 
     // 让顶部导航  变成 fixed
-    function fixed(scrTop){
-        var height = $(".classify_header").height()
-        if(scrTop>height){
-            $(".calssify_top_function").addClass("fixed")
-        }else{
-            $(".calssify_top_function").removeClass("fixed")
-        }
-    }
+    // function fixed(scrTop){
+    //     var height = $(".classify_header").height()
+    //     if(scrTop>height){
+    //         $(".calssify_top_function").addClass("fixed")
+    //     }else{
+    //         $(".calssify_top_function").removeClass("fixed")
+    //     }
+    // }
 
 
 
