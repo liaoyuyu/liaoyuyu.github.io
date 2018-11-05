@@ -47,6 +47,7 @@ $(function(){
                 }
                 $(".order_li").eq(index).addClass("order_nav_select")
 
+                
                 // 请求数据
                 // get_data("","Advertisement/GetWebIndexData","get").then(function(res){
     
