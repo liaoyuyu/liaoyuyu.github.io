@@ -3,6 +3,7 @@
 localStorage.weburl = "http://192.168.2.241:8090/"//测试接口地址
 
 function get_data(data,url,typeobj){
+    alert(1)
     return new Promise(function(resolve, reject) {
         $.ajax({
             url:localStorage.weburl+url,
