@@ -27,12 +27,12 @@
         <!-- 描述评分 -->
         <div class="describe_score padd">
             <p class="describe_score_p">描述相符</p>
-            <img class="describe_score_img" src="../img/icon/score_unselected.png" alt="">
-            <img class="describe_score_img" src="../img/icon/score_unselected.png" alt="">
-            <img class="describe_score_img" src="../img/icon/score_unselected.png" alt="">
-            <img class="describe_score_img" src="../img/icon/score_unselected.png" alt="">
-            <img class="describe_score_img" src="../img/icon/score_unselected.png" alt="">
-            <p class="describe">好</p>
+            <img class="describe_score_img describe_evaluate" src="../img/icon/score_unselected.png" alt="">
+            <img class="describe_score_img describe_evaluate" src="../img/icon/score_unselected.png" alt="">
+            <img class="describe_score_img describe_evaluate" src="../img/icon/score_unselected.png" alt="">
+            <img class="describe_score_img describe_evaluate" src="../img/icon/score_unselected.png" alt="">
+            <img class="describe_score_img describe_evaluate" src="../img/icon/score_unselected.png" alt="">
+            <p class="describe"></p>
         </div>
     
 
@@ -40,9 +40,9 @@
         <div class="evaluate_box padd">
             <textarea class="evaluate_p" name="" id="" cols="30" rows="10" maxlength="300" placeholder="宝贝满足你的期待吗？说说你的使用心得，分享给想买的他们吧"></textarea>
             <div class="upload_img_box">
-                <div class="upload_img">
+                <div class="upload_img upload">
                     <img src="../img/icon/upload_img.png" alt="">
-                    <input class="upload_input" type="file">
+                    <input class="upload_input" id="file" type="file" multiple accept="image/*" onchange="uploadobj()">
                 </div>
             </div>
         </div>
@@ -50,7 +50,7 @@
         <!-- 匿名 -->
         <div class="anonymous_box padd">
             <div class="anonymous_left">
-                <img src="../img/icon/anonymous.png" alt="">
+                <img class="anonymous_select" src="../img/icon/anonymous.png" alt="">
                 <p class="anonymous_p">匿名</p>
             </div>
             <p class="anonymous_right">你的评价能帮助其他小伙伴哟</p>
@@ -68,21 +68,21 @@
             <!-- 物流评分 -->
             <div class="describe_score score">
                 <p class="describe_score_p">物流服务</p>
-                <img class="describe_score_img" src="../img/icon/score_unselected.png" alt="">
-                <img class="describe_score_img" src="../img/icon/score_unselected.png" alt="">
-                <img class="describe_score_img" src="../img/icon/score_unselected.png" alt="">
-                <img class="describe_score_img" src="../img/icon/score_unselected.png" alt="">
-                <img class="describe_score_img" src="../img/icon/score_unselected.png" alt="">
+                <img class="describe_score_img logistics_evaluate" src="../img/icon/score_unselected.png" alt="">
+                <img class="describe_score_img logistics_evaluate" src="../img/icon/score_unselected.png" alt="">
+                <img class="describe_score_img logistics_evaluate" src="../img/icon/score_unselected.png" alt="">
+                <img class="describe_score_img logistics_evaluate" src="../img/icon/score_unselected.png" alt="">
+                <img class="describe_score_img logistics_evaluate" src="../img/icon/score_unselected.png" alt="">
             </div>
 
             <!-- 服务评分 -->
              <div class="describe_score score">
-                <p class="describe_score_p">服务台服</p>
-                <img class="describe_score_img" src="../img/icon/score_unselected.png" alt="">
-                <img class="describe_score_img" src="../img/icon/score_unselected.png" alt="">
-                <img class="describe_score_img" src="../img/icon/score_unselected.png" alt="">
-                <img class="describe_score_img" src="../img/icon/score_unselected.png" alt="">
-                <img class="describe_score_img" src="../img/icon/score_unselected.png" alt="">
+                <p class="describe_score_p">服务态度</p>
+                <img class="describe_score_img attitude_evaluate" src="../img/icon/score_unselected.png" alt="">
+                <img class="describe_score_img attitude_evaluate" src="../img/icon/score_unselected.png" alt="">
+                <img class="describe_score_img attitude_evaluate" src="../img/icon/score_unselected.png" alt="">
+                <img class="describe_score_img attitude_evaluate" src="../img/icon/score_unselected.png" alt="">
+                <img class="describe_score_img attitude_evaluate" src="../img/icon/score_unselected.png" alt="">
             </div>
         </div>
 

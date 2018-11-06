@@ -29,6 +29,8 @@
     border-bottom: 1px solid #eee;
     box-sizing: border-box;
     padding-bottom: 0.05rem;
+    padding-top: 0.05rem;
+    line-height: 0.5rem;
 }
 .describe_score_p{
     color: #333333;
@@ -74,7 +76,7 @@
     width: 23%;
     height: 1.6rem;
     float: left;
-    margin: 0rem 1%; 
+    margin: 0.05rem 1%; 
     position: relative;
 }
 .upload_img img{
