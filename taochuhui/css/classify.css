@@ -222,7 +222,7 @@ body,html{background: #f5f5f7;}
 
 /* 列表的类 */
 .shop_con_list{
-    padding: 0.2rem 0rem;
+    padding: 0.2rem 0.2rem;
     box-sizing: border-box;
 }
 .shop_box_list{
@@ -235,12 +235,14 @@ body,html{background: #f5f5f7;}
     flex-direction: row;
 }
 .shop_img_list{
-    width: 35%;
-    height: 2.6rem;
+    width: 30%;
+    height: 2.9rem;
+    padding: 0.3rem 0rem;
+    box-sizing: border-box;
 }
 .bot_box_list{
-    width: 65%;
-    padding: 0.2rem 0.2rem 0.3rem 0.2rem;
+    width: 70%;
+    padding: 0.5rem 0.1rem 0.3rem 0.2rem;
     box-sizing: border-box;
 }
 .shop_name_list{
