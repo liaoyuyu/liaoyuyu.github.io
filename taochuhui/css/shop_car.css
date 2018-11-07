@@ -1,0 +1,284 @@
+.con{
+    padding-bottom: 1.95rem;
+}
+.Destination{
+    width: 100%;
+    line-height: 0.8rem;
+    color: #333333;
+    font-size: 0.28rem;
+    padding: 0rem 0.3rem;
+    box-sizing: border-box;
+    background: #f5f4f7;
+}
+
+/* 购物车 物品 */
+.shop_car_box{
+    width: 100%;
+    padding: 0.2rem 0rem;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* 每件商品 */
+.car_list{
+    width: 100%;
+    height: 2rem;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+    position: relative;
+    left: 0rem;
+    transition: all 0.2s;
+}
+/* .car_list_anim{
+    transition: all 0.2s;
+} */
+.car_list:last-child{
+    border-bottom: none;
+}
+
+.car_box{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.car_box_a{
+    display: block;
+    position: relative;
+}
+/* 圆 */
+.car_circular{
+    width: 10%;
+    height: 100%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Choice_shop{
+    display: block;
+    width: 0.35rem;
+    height: 0.35rem;
+    border-radius: 100%;
+    border: 1px solid #999;
+    box-sizing: border-box;
+}
+/* 图片 */
+.car_img{
+    width: 28%;
+    height: 100%;
+    float: left;
+}
+.car_img img{
+    width: 100%;
+    height: 100%;
+}
+/* 内容 */
+.car_con{
+    width: 62%;
+    height: 100%;
+    float: left;
+    padding: 0.15rem 0.3rem 0.2rem 0.2rem;
+    box-sizing: border-box;
+}
+.car_con_name{
+    color: #333333;
+    font-size: 0.28rem;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    margin-bottom: 0.08rem;
+}
+.car_con_p{
+    width: 100%;
+    height: 0.8rem;
+}
+.car_con_p p{
+    color: #666666;
+    font-size: 0.24rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.car_money{
+    color: #e10707;
+    font-size: 0.24rem;
+}
+
+/* 加减 */
+.plus_reduce{
+    font-size: 0;
+    position: absolute;
+    bottom: 0.2rem;
+    right: 0.3rem;
+}
+
+/* 左滑 删除 */
+.car_delete{
+    width: 1rem;
+    height: 100%;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background: #e40303;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.car_delete img{
+    width: 0.37rem;
+    height: 0.45rem;
+}
+
+/* 间隔 */
+.interval{
+    height: 0.2rem;
+}
+
+
+/* 好物推荐 */
+.good_recommend{
+    width: 100%;
+    padding: 0rem 0.3rem;
+    box-sizing: border-box;
+}
+/* 标题 */
+.good_recommend_title{
+    width: 100%;
+    line-height: 1.1rem;
+    color: #333333;
+    font-size: 0.32em;
+    padding-left: 0.1rem;
+    box-sizing: border-box;
+}
+.good_recommend_con{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+/* 每个推荐 */
+.good_recommend_list{
+    width: 49%;
+    margin-bottom: 0.2rem;
+}
+.good_recommend_list_a{
+    display: block;
+    padding-bottom: 0.2rem;
+}
+.good_recommend_img{
+    width: 100%;
+    height: 3.5rem;
+    border: 1px solid #eee;
+    box-sizing: border-box;
+    margin-bottom: 0.2rem;
+}
+.good_recommend_img img{
+    width: 100%;
+    height: 100%;
+}
+.good_recommend_bot{
+    width: 100%;
+    padding: 0rem 0.15rem;
+    box-sizing: border-box;
+    position: relative;
+}
+.good_recommend_name{
+    width: 100%;
+    height: 0.8rem;
+}
+.good_recommend_name{
+    color: #333333;
+    font-size: 0.28rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.good_recommend_money{
+    color: #e11818;
+    font-size: 0.32rem;
+    font-weight: bold;
+}
+.good_recommend_json{
+    position: absolute;
+    right: 0.15rem;
+    bottom: 0rem;
+    z-index: 9;
+}
+
+
+
+/* 底部结算 */
+.Settlement{
+    width: 100%;
+    height: 0.95rem;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    bottom: 1rem;
+    background: #fff;
+    overflow: hidden;
+    /* border-top: 1px solid #eee; */
+    /* box-sizing: border-box; */
+}
+/* 全选 */
+.all_choose{
+    width: 25%;
+    height: 100%;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.all_choose_circular{
+    display: block;
+    width: 0.35rem;
+    height: 0.35rem;
+    border: 1px solid #999;
+    border-radius: 100%;
+    box-sizing: border-box;
+}
+.all_choose_p{
+    color: #333333;
+    font-size: 0.32rem;
+    margin-left: 0.1rem;
+}
+/* 价格 */
+.cen_money{
+    width: 40%;
+    height: 100%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.Total{
+    color: #333333;
+    font-size: 0.32rem;
+    margin-bottom: 0.1rem;
+}
+.Total span{
+    color: #e11010;
+}
+.Discount{
+    color: #333333;
+    font-size: 0.24rem;
+}
+/* 结算 */
+.Settlement_bot{
+    width: 35%;
+    height: 100%;
+    float: left;
+    background: #7ea83a;
+    color: #ffffff;
+    font-size: 0.36rem;
+    text-align: center;
+    line-height: 0.95rem;
+}

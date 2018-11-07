@@ -64,20 +64,23 @@ $(function(){
     // 上传多张图片
     var m = 0;
     var img = [];
-    var fd = new FormData(); 
+    // var fd = new FormData(); 
     uploadobj = function(){
         for(var i=0;i<document.getElementById('file').files.length;i++){
             m++;
-            if(m>=9){
+            // console.log(m)
+             // 判断上传了多少个
+             if(m>=9){
                 $(".upload").addClass("none")
-                return;
+                break;
             }
 
+             // fd.append(i,document.getElementById('file').files[i]);
+             img.push(document.getElementById('file').files[i])
+            
+        
             var reader = new FileReader(); 
             reader.readAsDataURL(document.getElementById('file').files[i]); 
-            fd.append(i,document.getElementById('file').files[i]);
-            img += document.getElementById('file').files[i];
-
             reader.onload=function(e){
             // 在前面追加  元素
             var obj = $( "<div class='upload_img'>"
@@ -87,7 +90,7 @@ $(function(){
             $(".upload").before(obj)
             }
         }
-        console.log(JSON.stringify(img))
+        console.log(img)
         $("#file").val("")
     }  
 

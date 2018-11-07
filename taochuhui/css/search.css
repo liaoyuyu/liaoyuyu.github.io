@@ -158,12 +158,12 @@
 }
 /* 左边 */
 .Recommend_shop_left{
-    width: 35%;
+    width: 30%;
     height: 100%;
     float: left;
 }
 .Recommend_shop_right{
-    width: 65%;
+    width: 70%;
     height: 100%;
     float: left;
     padding: 0.2rem;
@@ -208,26 +208,11 @@
 
 /* 加减 */
 .plus_reduce{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
     position: absolute;
     right: 0.2rem;
     bottom: 0.2rem;
 }
-.plus,.reduce{
-    width: 0.35rem;
-    height: 0.35rem;
-}
-.number{
-    width: 0.6rem;
-    height: 0.35rem;
-    margin: 0rem 0.1rem;
-    text-align: center;
-    line-height: 0.35rem;
-    border: none;
-}
+
 
 
 /* 底线 */
