@@ -222,13 +222,18 @@ body,html{background: #f5f5f7;}
 
 /* 列表的类 */
 .shop_con_list{
-    padding: 0.2rem 0.2rem;
+    padding: 0rem 0.2rem;
+    margin: 0.1rem 0rem;
     box-sizing: border-box;
+    background: #fff;
 }
 .shop_box_list{
     width: 100%;
     border-bottom: 1px solid #eee;
     box-sizing: border-box;
+}
+.shop_box_list:last-child{
+    border-bottom: none;
 }
 .shop_a_list{
     display: flex;
