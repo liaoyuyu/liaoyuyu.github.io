@@ -258,6 +258,9 @@ nav{
     border-bottom: 1px solid #eee;
     box-sizing: border-box;
 }
+.Recommend_shop_a{
+    display: block;
+}
 /* 左边 */
 .Recommend_shop_left{
     width: 30%;
