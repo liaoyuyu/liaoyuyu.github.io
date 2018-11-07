@@ -239,7 +239,7 @@ nav{
     color: #ed2018;
     font-size: 0.32rem;
     margin-right: 0.15rem;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 .old_money{
     color: #666666;
@@ -260,6 +260,8 @@ nav{
 }
 .Recommend_shop_a{
     display: block;
+    padding: 0.3rem 0rem;
+    box-sizing: border-box;
 }
 /* 左边 */
 .Recommend_shop_left{
@@ -267,15 +269,16 @@ nav{
     height: 100%;
     float: left;
     /* padding: 0.1rem; */
-    padding: 0.3rem 0rem;
+    /* border-radius: 4px; */
     box-sizing: border-box;
+    overflow: hidden;
 }
 .Recommend_shop_right{
     width: 70%;
     height: 100%;
     float: left;
     /* padding: 0.2rem 0.1rem 0.2rem 0.2rem; */
-    padding: 0.5rem 0.1rem 0.3rem 0.2rem;
+    padding: 0.2rem 0.1rem 0rem 0.2rem;
     /* padding-top: 0.3rem; */
     box-sizing: border-box;
     position: relative;
@@ -290,7 +293,7 @@ nav{
     overflow: hidden;
     text-overflow:ellipsis;
     white-space: nowrap;
-    margin-bottom: 0.1rem;
+    margin-bottom: 0.08rem;
 }
 .Recommend_shop_p{
     width: 100%;
@@ -304,6 +307,9 @@ nav{
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden;
+}
+.recommend_money{
+    font-size: 0;
 }
 /* .Recommend_shop_money{
     color: #e10707;

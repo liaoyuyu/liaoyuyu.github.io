@@ -1,0 +1,326 @@
+body,html{background: #f5f4f7;}
+.con{
+    padding-bottom: 1.5rem;
+}
+.Destination{
+    width: 100%;
+    line-height: 0.8rem;
+    color: #333333;
+    font-size: 0.28rem;
+    padding: 0rem 0.3rem;
+    box-sizing: border-box;
+    background: #f5f4f7;
+}
+
+/* 地址 */
+.collect_address{
+    width: 100%;
+    background: #fff;
+    position: relative;
+    margin-bottom: 0.2rem;
+}
+.collect_address::after{
+    content: "";
+    width: 100%;
+    height: 0.1rem;
+    background: url(../img/icon/address_back.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    bottom: 0rem;
+    left: 0rem;
+}
+.collect_address_a{
+    display: block;
+    padding: 0.25rem 0.3rem 0.4rem 0.3rem;
+    box-sizing: border-box;
+    position: relative;
+}
+.collect_address_img{
+    width: 0.2rem;
+    height: 0.3rem;
+    position: absolute;
+    right: 0.3rem;
+    top: 50%;
+    margin-top: -0.15rem;
+}
+.collect_address_City{
+    color: #333333;
+    font-size: 0.28rem;
+}
+.collect_address_detailed{
+    color: #333333;
+    font-size: 0.36rem;
+    font-weight: bold;
+    margin: 0.18rem 0rem;
+}
+.collect_address_name{
+    color: #333333;
+    font-size: 0.28rem;
+}
+
+
+/* 商品 */
+.payment_shop{
+    width: 100%;
+    padding: 0rem 0.3rem;
+    box-sizing: border-box;
+    background: #fff;
+    margin-bottom: 0.1rem;
+}
+/* title */
+.payment_shop_title{
+    width: 100%;
+    line-height: 0.9rem;
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+}
+.payment_shop_title_p{
+    float: left;
+    color: #7ea83a;
+    font-size: 0.28rem;
+    font-weight: bold;
+    font-style: italic;
+}
+.payment_shop_title_tips{
+    float: right;
+    color: #999999;
+    font-size: 0.24rem;
+}
+
+/* 商品列表 */
+.payment_shop_box{
+    width: 100%;
+    height: 1.8rem;
+    overflow: hidden;
+}
+.payment_shop_list{
+    width: 75%;
+    height: 100%;
+    float: left;
+    padding: 0.3rem 0.1rem;
+    box-sizing: border-box;
+}
+.payment_shop_a{
+    float: right;
+    display: block;
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* padding: 0rem 0.1rem 0rem 0.2rem; */
+    /* box-sizing: border-box; */
+}
+.payment_shop_a p{
+    color: #333333;
+    font-size: 0.24rem;
+    margin-right: 0.1rem;
+}
+.payment_shop_a img{
+    width: 0.13rem;
+    height: 0.25rem;
+}
+
+/* 商品图片 */
+.shop_img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* 订单信息 */
+.shop_order_ul{
+    width: 100%;
+    padding: 0rem 0.3rem;
+    box-sizing: border-box;
+    background: #fff;
+    margin-bottom: 0.1rem;
+}
+.shop_order_li{
+    width: 100%;
+    line-height: 0.9rem;
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+}
+.shop_order_li:last-child{
+    border: none;
+}
+.shop_order_left{
+    color: #666666;
+    font-size: 0.24rem;
+    float: left;
+}
+.shop_order_right{
+    color: #666666;
+    font-size: 0.24rem;
+    float: right;
+}
+.settlement_p{
+    color: #333333;
+}
+/* 总价 */
+.total_price{
+    font-size: 0.28rem;
+}
+/* 优惠 */
+.Discount_p{
+    color: #999999;
+}
+
+
+/* 详细价格 */
+.price_li{
+    height: auto;
+}
+.price{
+    width: 100%;
+    line-height: 0.5rem;
+    overflow: hidden;
+}
+.price_p{
+    font-size: 0.28rem;
+}
+
+/* 总价 */
+.total_money_li{
+    line-height: 1rem;
+}
+.total_money{
+    color: #333333;
+    font-size: 0.32rem;
+}
+.total_money span{
+    color: #e11010;
+}
+
+
+
+/* 支付方式 */
+.payment_box{
+    width: 100%;
+    padding: 0rem 0.3rem;
+    box-sizing: border-box;
+    background: #fff;
+}
+.payment_ul{
+    width: 100%;
+}
+.payment_li{
+    width: 100%;
+    height: 0.88rem;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.payment_li:last-child{
+    border: none;
+}
+.payment_left{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.payment_left_img{
+    width: 0.6rem;
+    height: 0.6rem;
+    margin-right: 0.2rem;
+}
+.payment_left_p{
+    color: #333333;
+    font-size: 0.28rem;
+}
+.payment_right{
+    display: block;
+    width: 0.35rem;
+    height: 0.35rem;
+    border: 1px solid #999;
+    border-radius: 100%;
+}
+/* 微信支付 */
+.WeChat_li{
+    height: 1.1rem;
+}
+.left_right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.left_right_payment{
+    color: #333333;
+    font-size: 0.28rem;
+    margin-right: 0.2rem;
+    margin-bottom: 0.1rem;
+    position: relative;
+}
+.recommend_label::after{
+    content: "推荐";
+    width: auto;
+    height: 0.34rem;
+    background: #ff7161;
+    color: #ffffff;
+    font-size: 0.24rem;
+    border-radius: 5px;
+    padding: 0rem 0.1rem;
+    position: absolute;
+    top: 50%;
+    margin-top: -0.17rem;
+    right: -75%;
+}
+
+.left_right_p{
+    color: #999999;
+    font-size: 0.24rem;
+}
+/* 货到付款 */
+.Under_line{
+    margin-right: 0.1rem;
+}
+.Under_line_p{
+    color: #999999;
+    font-size: 0.24rem;
+}
+
+
+
+/* 底部支付 */
+.payment_bot{
+    width: 100%;
+    height: 1rem;
+    overflow: hidden;
+    position: fixed;
+    z-index: 999;
+    bottom: 0rem;
+    left: 0rem;
+    line-height: 1rem;
+    background: #fff;
+}
+.payment_bot_left{
+    width: 65%;
+    float: left;
+    padding-left: 0.4rem;
+    box-sizing: border-box;
+}
+.payment_bot_left p{
+    color: #333333;
+    font-size: 0.32rem;
+}
+.payment_bot_left span{
+    color: #e11010;
+    font-weight: bold;
+}
+.payment_bot_right{
+    float: right;
+    width: 35%;
+    text-align: center;
+    color: #fff;
+    font-size: 0.36rem;
+    background: #7ea83a;
+}

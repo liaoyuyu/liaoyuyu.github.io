@@ -74,14 +74,14 @@ body,html{
 /* 商品 */
 .shop_box{
     width: 100%;
-    padding: 0.2rem 0.3rem 0.8rem 0.3rem;
+    padding: 0.3rem 0.3rem 0.8rem 0.3rem;
     box-sizing: border-box;
     position: relative;
     background: #fff;
 }
 .shop_a{
     display: block;
-    height: 2rem;
+    height: 2.3rem;
     overflow: hidden;
     /* border-bottom: 1px solid #eee; */
     box-sizing: border-box;
@@ -119,6 +119,7 @@ body,html{
 .shop_p{
     width: 100%;
     height: 0.8rem;
+    margin-bottom: 0.2rem;
 }
 .shop_p p{
     color: #666666;

@@ -19,7 +19,7 @@ $(function(){
     // }
 
     // 轮播
-    get_data("","Home/GetShopBanner","get").then(function(res){
+    get_data("","/Home/GetShopBanner","get").then(function(res){
         new Vue({
             el:".banner",
             data:{
@@ -43,7 +43,7 @@ $(function(){
 
     // 公告
     var fd = {"PageIndex":0}
-    get_data(fd,"Home/GetMessage","get").then(function(res){
+    get_data(fd,"/Home/GetMessage","get").then(function(res){
         new Vue({
             el:".horn_box",
             data:{
@@ -64,42 +64,28 @@ $(function(){
         alert("系统错误，请联系客服！")
     })
 
-
-    // new Vue({
-    //     el:"#index_con",
-    //     data:{
-    //         banner_data:"",//首页banner
-    //         Notice:"",//公告
-    //     },
-    //     created:function(){
-    //         var _this = this
-    //         //   首页轮播
-    //         get_data("","Home/GetShopBanner","get").then(function(res){
-    //             _this.banner_data = res.Return_Data.PageData
-    //             // console.log(_this.banner_data)
-    //         },function(err){
-    //             alert("系统错误，请联系客服！")
-    //         })
-
-
-    //         // 喇叭公告
-    //         var fd = {"PageIndex":0}
-    //         get_data(fd,"Home/GetMessage","get").then(function(res){
-    //             _this.Notice = res.Return_Data.PageData
-    //             console.log(res.Return_Data.PageData)
-    //         },function(err){
-    //             alert("系统错误，请联系客服！")
-    //         })
-    //     },
-    //     mounted:function(){
-    //         // 初始化 swiper
-    //         Initialization_swiper()
-    //     },
-    //     methods:{
-
-    //     },
-    // })
-
+    // 预定
+    get_data("","/Home/GetReserTypeHomeShow","get").then(function(res){
+        console.log(res)
+        // new Vue({
+        //     el:".horn_box",
+        //     data:{
+        //         Notice:res.Return_Data.PageData,//公告
+        //     },
+        //     created:function(){
+        //         // console.log(this.Notice)
+        //     },
+        //     mounted:function(){
+        //         // 初始化 swiper
+        //         Initialization_swiper()
+        //     },
+        //     methods:{
+    
+        //     },
+        // })
+    },function(err){
+        alert("系统错误，请联系客服！")
+    })
 
 
 

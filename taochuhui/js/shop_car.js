@@ -1,6 +1,8 @@
 $(function(){
 
-
+    $("#Settlement_bot").click(function(){
+        window.location.href = "./html_shop_car/purchase_order.html"
+    })
 
 
 

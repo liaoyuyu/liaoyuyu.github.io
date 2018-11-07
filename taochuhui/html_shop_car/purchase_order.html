@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>淘厨汇</title>
+    <!-- 支付订单 -->
+    <link rel="stylesheet" href="../css/swiper.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/purchase_order.css">
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/swiper.js"></script>
+    <script src="../js/rem.js"></script>
+    <script src="../js/public.js"></script>
+    <!-- <script src="../js/purchase_order.js"></script> -->
+
+
+</head>
+<body id="purchase_order">
+    <header class="purchase_order_header">
+        <a class="back" href="javascript:history.back(-1)"><img src="../img/icon/back.png" alt=""></a>
+        <p class="header_cen">填写订单</p>
+    </header>
+
+
+    <div class="con">
+         <!-- 目的地 -->
+         <div class="Destination">下单次日送达(全国送商品2~4日送达)</div>
+
+         <!-- 地址 -->
+         <div class="collect_address">
+            <a class="collect_address_a" href="../html_search/address_search.html">
+                <p class="collect_address_City">重庆  重庆市  江北区</p>
+                <p class="collect_address_detailed">建新南路16号西普大厦18-5</p>
+                <p class="collect_address_name">邓晓菁  15520086360</p>
+                <img class="collect_address_img" src="../img/icon/forward1.png" alt="">
+            </a>
+         </div>
+
+         <!-- 商品 -->
+         <div class="payment_shop">
+              <div class="payment_shop_title">
+                  <p class="payment_shop_title_p">极速配送</p>
+                  <p class="payment_shop_title_tips">全国送商品2~4日送达</p>
+              </div>
+              <div class="payment_shop_box">
+                    <div class="payment_shop_list">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img class="shop_img" src="../img/img/shop_img1.png" alt=""></div>
+                                <div class="swiper-slide"><img class="shop_img" src="../img/img/shop_img1.png" alt=""></div>
+                                <div class="swiper-slide"><img class="shop_img" src="../img/img/shop_img1.png" alt=""></div>
+                                <div class="swiper-slide"><img class="shop_img" src="../img/img/shop_img1.png" alt=""></div>
+                                <div class="swiper-slide"><img class="shop_img" src="../img/img/shop_img1.png" alt=""></div>
+                                <div class="swiper-slide"><img class="shop_img" src="../img/img/shop_img1.png" alt=""></div>
+                            </div>
+                          </div>
+                    </div>
+                    <a class="payment_shop_a" href="purchase_order_list.html">
+                        <p>共6件</p>
+                        <img src="../img/icon/forward.png" alt="">
+                    </a>
+              </div>
+         </div>
+
+
+         <!-- 订单信息 -->
+        <ul class="shop_order_ul">
+            <!-- 订单号 -->
+            <li class="shop_order_li">
+                <p class="shop_order_left">订单号</p>
+                <p class="shop_order_right">DD1084564139854</p>
+            </li>
+            <!-- 创建时间 -->
+            <li class="shop_order_li">
+                <p class="shop_order_left">创建时间</p>
+                <p class="shop_order_right">2018-10-26 22:05:33</p>
+            </li>
+        </ul>
+
+         <!-- 结算信息 -->
+         <ul class="shop_order_ul">
+              <!-- 标题 -->
+            <li class="shop_order_li">
+                <p class="shop_order_left settlement_p">结算信息</p>
+            </li>
+            <!-- 总价 -->
+            <li class="shop_order_li">
+                <p class="shop_order_left settlement_p">商品总价</p>
+                <p class="shop_order_right settlement_p total_price">￥39.8</p>
+            </li>
+            <!-- 优惠券 -->
+            <li class="shop_order_li">
+                <p class="shop_order_left settlement_p">优惠券</p>
+                <p class="shop_order_right Discount_p">还差￥19.2可减20</p>
+            </li>
+            <!-- 实际价格 -->
+            <li class="shop_order_li price_li">
+               <div class="price">
+                    <p class="shop_order_left settlement_p">商品实付</p>
+                    <p class="shop_order_right settlement_p price_p">￥39.8</p>
+               </div>
+               <div class="price">
+                    <p class="shop_order_left settlement_p">运费</p>
+                    <p class="shop_order_right settlement_p price_p">￥10</p>
+               </div>
+            </li>
+            <!-- 总价 -->
+            <li class="shop_order_li total_money_li">
+                <p class="shop_order_right total_money">合计:<span>￥49.8</span></p>
+            </li>
+        </ul>
+
+
+        <!-- 支付方式 -->
+        <div class="payment_box">
+            <ul class="payment_ul">
+                 <!-- 微信 -->
+                 <li class="payment_li WeChat_li">
+                    <div class="payment_left">
+                        <img class="payment_left_img" src="../img/icon/WeChat.png" alt="">
+                        <div class="left_right">
+                            <p class="left_right_payment recommend_label">微信支付</p>
+                            <p class="left_right_p">亿万用户的选择，更快更安全</p>
+                        </div>
+                    </div>
+                    <span class="payment_right"></span>
+                </li>
+                <!-- 支付宝 -->
+                <li class="payment_li">
+                    <div class="payment_left">
+                       <img class="payment_left_img" src="../img/icon/Alipay.png" alt="">
+                       <p class="payment_left_p">支付宝支付</p>
+                    </div>
+                    <span class="payment_right"></span>
+                </li>
+                <!-- 货到付款 -->
+                <li class="payment_li">
+                    <div class="payment_left">
+                        <p class="payment_left_p Under_line">货到付款</p>
+                        <p class="payment_left_p Under_line_p">需付5元手续费，仅支持500元以下订单</p>
+                    </div>
+                    <span class="payment_right"></span>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <!-- 支付 -->
+    <div class="payment_bot">
+        <div class="payment_bot_left">
+            <p>付款:<span>￥26.50</span></p>
+        </div>
+        <div class="payment_bot_right">去支付</div>
+    </div>
+
+
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        observer:true, //修改swiper自己或子元素时，自动初始化swiper
+        observeParents:true,//修改swiper的父元素时，自动初始化swiper
+        slidesPerView: 4,
+        spaceBetween: 5,
+        freeMode: true,
+    });
+</script>
+</body>
+</html>

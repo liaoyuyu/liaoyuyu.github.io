@@ -14,15 +14,15 @@
 /* 购物车 物品 */
 .shop_car_box{
     width: 100%;
-    padding: 0.2rem 0rem;
-    box-sizing: border-box;
+    /* padding: 0.2rem 0rem; */
+    /* box-sizing: border-box; */
     overflow: hidden;
 }
 
 /* 每件商品 */
 .car_list{
     width: 100%;
-    height: 2rem;
+    height: 2.1rem;
     border-bottom: 1px solid #eee;
     box-sizing: border-box;
     position: relative;
@@ -37,14 +37,17 @@
 }
 
 .car_box{
-    width: 100%;
+    width: 90%;
     height: 100%;
     overflow: hidden;
     position: relative;
+    float: left;
 }
 .car_box_a{
     display: block;
     position: relative;
+    padding: 0.3rem 0rem;
+    box-sizing: border-box;
 }
 /* 圆 */
 .car_circular{
@@ -66,7 +69,7 @@
 }
 /* 图片 */
 .car_img{
-    width: 28%;
+    width: 25%;
     height: 100%;
     float: left;
 }
@@ -76,10 +79,10 @@
 }
 /* 内容 */
 .car_con{
-    width: 62%;
+    width: 75%;
     height: 100%;
     float: left;
-    padding: 0.15rem 0.3rem 0.2rem 0.2rem;
+    padding: 0rem 0.3rem 0rem 0.2rem;
     box-sizing: border-box;
 }
 .car_con_name{
@@ -92,7 +95,7 @@
 }
 .car_con_p{
     width: 100%;
-    height: 0.8rem;
+    height: 0.7rem;
 }
 .car_con_p p{
     color: #666666;
@@ -111,7 +114,7 @@
 .plus_reduce{
     font-size: 0;
     position: absolute;
-    bottom: 0.2rem;
+    bottom: 0.3rem;
     right: 0.3rem;
 }
 
@@ -174,7 +177,9 @@
     width: 100%;
     height: 3.5rem;
     border: 1px solid #eee;
+    border-radius: 4px;
     box-sizing: border-box;
+    overflow: hidden;
     margin-bottom: 0.2rem;
 }
 .good_recommend_img img{

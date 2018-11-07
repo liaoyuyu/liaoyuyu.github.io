@@ -88,6 +88,7 @@
 .search_history_p{
     color: #333333;
     font-size: 0.32rem;
+    font-weight: bold;
 }
 
 /* 右边 */
@@ -105,6 +106,7 @@
     color: #999999;
     font-size: 0.22rem;
     margin-left: 0.1rem;
+    font-weight: bold;
 }
 
 /* 搜索 记录 */
@@ -148,71 +150,9 @@
     margin-bottom: 0.2rem;
 }
 
-/* 商品 */
-.Recommend_shop{
-    width: 100%;
-    height: 2.5rem;
-    overflow: hidden;
-    border-bottom: 1px solid #eee;
-    box-sizing: border-box;
+.recommend_money{
+    font-size: 0;
 }
-/* 左边 */
-.Recommend_shop_left{
-    width: 30%;
-    height: 100%;
-    float: left;
-}
-.Recommend_shop_right{
-    width: 70%;
-    height: 100%;
-    float: left;
-    padding: 0.2rem;
-    padding-top: 0.3rem;
-    box-sizing: border-box;
-    position: relative;
-}
-.Recommend_shop_left img{
-    width: 100%;
-    height: 100%;
-}
-.Recommend_shop_name{
-    color: #333333;
-    font-size: 0.32rem;
-    overflow: hidden;
-    text-overflow:ellipsis;
-    white-space: nowrap;
-    margin-bottom: 0.1rem;
-}
-.Recommend_shop_p{
-    width: 100%;
-    height: 0.8rem;
-}
-.Recommend_shop_p p{
-    color: #666666;
-    font-size: 0.28rem;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-}
-.Recommend_shop_money{
-    color: #e10707;
-    font-size: 0.36rem;
-    margin-top: 0.25rem;
-}
-.Recommend_shop_img{
-    position: absolute;
-    right: 0.2rem;
-    bottom: 0.2rem;
-}
-
-/* 加减 */
-.plus_reduce{
-    position: absolute;
-    right: 0.2rem;
-    bottom: 0.2rem;
-}
-
 
 
 /* 底线 */

@@ -23,24 +23,25 @@ body,html{background: #f5f4f7;}
 /* 内容 */
 .collection{
     width: 100%;
+    height: 2.9rem;
     overflow: hidden;
     position: relative;
-    height: 2.7rem;
-    border-top: 1px solid #eee;
-    box-sizing: border-box;
 }
 .collection_a{
     display: block;
-    padding: 0rem 0.3rem 0rem 0rem;
+    padding: 0.3rem;
     box-sizing: border-box;
     overflow: hidden;
 }
 
 /* 左边图片 */
 .collection_left_img{
-    width: 35%;
+    width: 30%;
     height: 100%;
     float: left;
+    /* border-radius: 4px; */
+    overflow: hidden;
+    font-size: 0;
 }
 .collection_left_img img{
     width: 100%;
@@ -49,9 +50,9 @@ body,html{background: #f5f4f7;}
 /* 右边内容 */
 .collection_right_con{
     float: left;
-    width: 65%;
+    width: 70%;
     height: 100%;
-    padding: 0.4rem 0rem 0.5rem 0.2rem;
+    padding: 0.2rem 0rem 0rem 0.2rem;
     box-sizing: border-box;
     position: relative;
 }
@@ -66,6 +67,7 @@ body,html{background: #f5f4f7;}
 .collection_right_p{
     width: 100%;
     height: 0.8rem;
+    margin-bottom: 0.2rem;
 }
 .collection_right_p p{
     color: #666666;
@@ -88,7 +90,7 @@ body,html{background: #f5f4f7;}
     height: auto;
     color: #666666;
     font-size: 0.24rem;
-    padding: 0.05rem 0.15rem;
+    padding: 0.05rem 0.1rem;
     border:1px solid #886868;
     border-radius: 0.5rem;
     box-sizing: border-box;

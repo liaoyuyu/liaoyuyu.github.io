@@ -80,77 +80,26 @@
 }
 
 /* 商品内容 */
-.order_con,.order_column{
-    width: 100%;
-}
-.order_column_a{
-    display: block;
-    width: 100%;
-    padding: 0rem 0.4rem;
-    box-sizing: border-box;
-}
-.order_column_inner{
+.order_con{
     width: 100%;
     border-top: 1px solid #eee;
+    padding: 0rem 0.3rem;
     box-sizing: border-box;
-    overflow: hidden;
-    padding: 0.4rem 0rem 0.5rem 0rem;
 }
-.order_column:last-child .order_column_inner{
-    border-bottom: 1px solid #eee;
-}
-.column_left{
-    width: 30%;
-    float: left;
-    font-size: 0;
-}
-.order_img{
-    width: 100%;
-    height: 100%;
-}
-
-
-
-.column_right{
-    width: 70%;
-    float: left;
-    padding-left: 0.1rem;
-    padding-right: 0.4rem;
+.Recommend_shop_a{
+    padding: 0.3rem 0rem;
     box-sizing: border-box;
-    position: relative;
 }
-.order_name{
-    color: #333333;
-    font-size: 0.32rem;
-    overflow: hidden;
-    text-overflow:ellipsis;
-    white-space: nowrap;
-    margin-bottom: 0.1rem;
-}
-.order_p{
-    width: 100%;
-    height: 0.8rem;
-}
-.order_p p{
-    color: #666666;
-    font-size: 0.28rem;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-}
-.order_money{
-    font-size: 0;
-    width: 100%;
-}
-/* 订单数量 */
-.number_p{
+/* 数量 */
+.number{
     color: #666666;
     font-size: 0.28rem;
     position: absolute;
     right: 0rem;
-    top: 0.25rem
+    top: 0.5rem;
 }
+
+
 
 /* 订单底部 */
 .order_bottom{
