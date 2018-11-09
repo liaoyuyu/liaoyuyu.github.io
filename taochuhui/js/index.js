@@ -17,7 +17,32 @@ $(function(){
     // if(getCookie("SQ")==""||getCookie("SQ") =="0"){
     //     var back_html = "http://www.taochuhui.com/html_authorization/judge_sj.html";
     // }
-    $.ajax({type:"OPTIONS",url:"/",complete:function(x){alert(x.getResponseHeader("Date"))}})
+    // $.ajax({type:"OPTIONS",url:"/",complete:function(x){alert(x.getResponseHeader("Date"))}})
+
+    //创建全局变量，也可以是局部的
+var time,year,month,date,hours,minutes,seconds;
+//通过ajax访问服务器，获取服务器时间
+$.ajax({
+	type:"OPTIONS",
+	url:"/",
+	error:function(a){
+		time = new Date(a.getResponseHeader("Date"));
+		year = time.getFullYear();
+			
+		//以下是通过三元运算对日期进行处理,小于10的数在前面加上0
+		month = (time.getMonth()+1)<10?("0"+(time.getMonth()+1)):(time.getMonth()+1)
+		date = time.getDate()<10?("0"+time.getDate()):time.getDate();
+		hours = time.getHours()<10?("0"+time.getHours()):time.getHours();
+		minutes = (time.getMinutes()<10?("0"+time.getMinutes()):time.getMinutes());
+		seconds = (time.getSeconds()<10?("0"+time.getSeconds()):time.getSeconds());
+			
+		//拼成自己想要的日期格式，2018-01-15 19:05:33
+		time = year+"-"+month+"-"+date+" "+hours+":"+minutes+":"+seconds;
+		//给相应的位置赋值
+		$("#registerTime").val(time); 
+	}
+});
+
 
     
     // 轮播
