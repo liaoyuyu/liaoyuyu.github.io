@@ -18,6 +18,7 @@ $(function(){
     //     var back_html = "http://www.taochuhui.com/html_authorization/judge_sj.html";
     // }
     // $.ajax({type:"OPTIONS",url:"/",complete:function(x){alert(x.getResponseHeader("Date"))}})
+    
     var t = $.ajax({type:'HEAD', async:'false'}).getResponseHeader('date'); 
     alert(t)
     
