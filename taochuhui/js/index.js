@@ -17,10 +17,8 @@ $(function(){
     // if(getCookie("SQ")==""||getCookie("SQ") =="0"){
     //     var back_html = "http://www.taochuhui.com/html_authorization/judge_sj.html";
     // }
-    // $.ajax({type:"OPTIONS",url:"/",complete:function(x){alert(x.getResponseHeader("Date"))}})
-    
-    var t = $.ajax({type:'HEAD', async:'false'}).getResponseHeader('date'); 
-    alert(t)
+    $.ajax({type:"OPTIONS",url:"/",complete:function(x){alert(x.getResponseHeader("Date"))}})
+
     
     // 轮播
     // get_data("","/Home/GetShopBanner","get").then(function(res){
