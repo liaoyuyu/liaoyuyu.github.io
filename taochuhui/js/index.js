@@ -38,7 +38,7 @@ $(function(){
         })
     
     },function(err){
-        alert("系统错误，请联系客服！")
+        // alert("系统错误，请联系客服！")
     }) 
 
     // 公告
@@ -61,30 +61,30 @@ $(function(){
             },
         })
     },function(err){
-        alert("系统错误，请联系客服！")
+        // alert("系统错误，请联系客服！")
     })
 
     // 预定
-    get_data("","/Home/GetReserTypeHomeShow","get").then(function(res){
-        console.log(res)
-        // new Vue({
-        //     el:".horn_box",
-        //     data:{
-        //         Notice:res.Return_Data.PageData,//公告
-        //     },
-        //     created:function(){
-        //         // console.log(this.Notice)
-        //     },
-        //     mounted:function(){
-        //         // 初始化 swiper
-        //         Initialization_swiper()
-        //     },
-        //     methods:{
+    get_data("","/Home/ResterInfo_HomeShow","get").then(function(res){
+        new Vue({
+            el:".limit_time",
+            data:{
+               data:res,
+            },
+            created:function(){
+                console.log(this.data)
+            },
+            mounted:function(){
+                // var time= $.ajax({async: false}).getResponseHeader("Date");
+                // alert(time)
+                $.ajax({type:"OPTIONS",url:"/",complete:function(x){alert(x.getResponseHeader("Date"))}})
+            },
+            methods:{
     
-        //     },
-        // })
+            },
+        })
     },function(err){
-        alert("系统错误，请联系客服！")
+        // alert("系统错误，请联系客服！")
     })
 
 
