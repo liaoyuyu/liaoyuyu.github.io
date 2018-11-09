@@ -172,7 +172,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="base_follow">+ 关注</div>
+                <div class="base_follow">+ 收藏</div>
             </div>
 
             <!-- 基地介绍 -->
@@ -196,22 +196,47 @@
             <p class="base_recommend_title">基地推荐</p>
             
             <a class="base_recommend_a" href="">
-                <img class="base_recommend_img" src="../img/img/base_recommend_img.png" alt="">
+                <div class="base_recommend_img_box">
+                    <div class="swiper-container base_recommend_swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img class="base_recommend_img" src="../img/img/base_recommend_img.png" alt=""></div>
+                            <div class="swiper-slide"><img class="base_recommend_img" src="../img/img/base_recommend_img.png" alt=""></div>
+                            <div class="swiper-slide"><img class="base_recommend_img" src="../img/img/base_recommend_img.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
                 <p class="base_recommend_name">江津土鸡养殖场</p>
                 <p class="base_recommend_p">农家自养好物，营养超高，健康安全食用</p>
             </a>
 
             <a class="base_recommend_a" href="">
-                <img class="base_recommend_img" src="../img/img/base_recommend_img.png" alt="">
+                <div class="base_recommend_img_box">
+                    <div class="swiper-container base_recommend_swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img class="base_recommend_img" src="../img/img/base_recommend_img.png" alt=""></div>
+                            <div class="swiper-slide"><img class="base_recommend_img" src="../img/img/base_recommend_img.png" alt=""></div>
+                            <div class="swiper-slide"><img class="base_recommend_img" src="../img/img/base_recommend_img.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
                 <p class="base_recommend_name">江津土鸡养殖场</p>
                 <p class="base_recommend_p">农家自养好物，营养超高，健康安全食用</p>
             </a>
 
             <a class="base_recommend_a" href="">
-                <img class="base_recommend_img" src="../img/img/base_recommend_img.png" alt="">
+                <div class="base_recommend_img_box">
+                    <div class="swiper-container base_recommend_swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img class="base_recommend_img" src="../img/img/base_recommend_img.png" alt=""></div>
+                            <div class="swiper-slide"><img class="base_recommend_img" src="../img/img/base_recommend_img.png" alt=""></div>
+                            <div class="swiper-slide"><img class="base_recommend_img" src="../img/img/base_recommend_img.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
                 <p class="base_recommend_name">江津土鸡养殖场</p>
                 <p class="base_recommend_p">农家自养好物，营养超高，健康安全食用</p>
             </a>
+
 
         </div>
 
@@ -231,6 +256,13 @@
         slidesPerView:3.5,//显示多少个
         spaceBetween:5,//间隔
         freeMode:true,//滑动后，不贴合边缘
+    });
+
+    var base_recommend = new Swiper('.base_recommend_swiper',{
+        observer:true, //修改swiper自己或子元素时，自动初始化swiper
+        observeParents:true,//修改swiper的父元素时，自动初始化swiper
+        speed:800,
+        // freeMode:true,//滑动后，不贴合边缘
     });
 </script>
 </body>

@@ -19,100 +19,99 @@ $(function(){
     // }
     // $.ajax({type:"OPTIONS",url:"/",complete:function(x){alert(x.getResponseHeader("Date"))}})
 
-    //创建全局变量，也可以是局部的
-    var time,year,month,date,hours,minutes,seconds;
-    //通过ajax访问服务器，获取服务器时间
-    $.ajax({
-        type:"OPTIONS",
-        url:"/",
-        error:function(a){
-            time = new Date(a.getResponseHeader("Date"));
-            year = time.getFullYear();
-                
-            //以下是通过三元运算对日期进行处理,小于10的数在前面加上0
-            month = (time.getMonth()+1)<10?("0"+(time.getMonth()+1)):(time.getMonth()+1)
-            date = time.getDate()<10?("0"+time.getDate()):time.getDate();
-            hours = time.getHours()<10?("0"+time.getHours()):time.getHours();
-            minutes = (time.getMinutes()<10?("0"+time.getMinutes()):time.getMinutes());
-            seconds = (time.getSeconds()<10?("0"+time.getSeconds()):time.getSeconds());
-                
-            //拼成自己想要的日期格式，2018-01-15 19:05:33
-            time = year+"-"+month+"-"+date+" "+hours+":"+minutes+":"+seconds;
-            //给相应的位置赋值
-            $("#registerTime").val(time); 
-        }
-    });
-
-
     
     // 轮播
-    // get_data("","/Home/GetShopBanner","get").then(function(res){
-    //     new Vue({
-    //         el:".banner",
-    //         data:{
-    //             banner_data:res.Return_Data.PageData,//首页banner
-    //         },
-    //         created:function(){     
-    //             // console.log(this.banner_data)           
-    //         },
-    //         mounted:function(){
-    //             // 初始化 swiper
-    //             Initialization_swiper()
-    //         },
-    //         methods:{
+    get_data("","/Home/GetShopBanner","get").then(function(res){
+        new Vue({
+            el:".banner",
+            data:{
+                banner_data:res.Return_Data.PageData,//首页banner
+            },
+            created:function(){     
+                // console.log(this.banner_data)           
+            },
+            mounted:function(){
+                // 初始化 swiper
+                Initialization_swiper()
+            },
+            methods:{
     
-    //         },
-    //     })
+            },
+        })
     
-    // },function(err){
-    //     // alert("系统错误，请联系客服！")
-    // }) 
+    },function(err){
+        // alert("系统错误，请联系客服！")
+    }) 
 
-    // // 公告
-    // var fd = {"PageIndex":0}
-    // get_data(fd,"/Home/GetMessage","get").then(function(res){
-    //     new Vue({
-    //         el:".horn_box",
-    //         data:{
-    //             Notice:res.Return_Data.PageData,//公告
-    //         },
-    //         created:function(){
-    //             // console.log(this.Notice)
-    //         },
-    //         mounted:function(){
-    //             // 初始化 swiper
-    //             Initialization_swiper()
-    //         },
-    //         methods:{
+    // 公告
+    var fd = {"PageIndex":0}
+    get_data(fd,"/Home/GetMessage","get").then(function(res){
+        new Vue({
+            el:".horn_box",
+            data:{
+                Notice:res.Return_Data.PageData,//公告
+            },
+            created:function(){
+                // console.log(this.Notice)
+            },
+            mounted:function(){
+                // 初始化 swiper
+                Initialization_swiper()
+            },
+            methods:{
     
-    //         },
-    //     })
-    // },function(err){
-    //     // alert("系统错误，请联系客服！")
-    // })
+            },
+        })
+    },function(err){
+        // alert("系统错误，请联系客服！")
+    })
 
-    // // 预定
-    // get_data("","/Home/ResterInfo_HomeShow","get").then(function(res){
-    //     new Vue({
-    //         el:".limit_time",
-    //         data:{
-    //            data:res,
-    //         },
-    //         created:function(){
-    //             console.log(this.data)
-    //         },
-    //         mounted:function(){
-    //             // var time= $.ajax({async: false}).getResponseHeader("Date");
-    //             // alert(time)
-    //             $.ajax({type:"OPTIONS",url:"/",complete:function(x){alert(x.getResponseHeader("Date"))}})
-    //         },
-    //         methods:{
+    // 预定
+    get_data("","/Home/ResterInfo_HomeShow","get").then(function(res){
+        new Vue({
+            el:".limit_time",
+            data:{
+               data:res,
+            },
+            created:function(){
+                console.log(this.data)
+            },
+            mounted:function(){
+                // var time= $.ajax({async: false}).getResponseHeader("Date");
+                // alert(time)
+                // $.ajax({type:"OPTIONS",url:"/",complete:function(x){alert(x.getResponseHeader("Date"))}})
+                // //创建全局变量，也可以是局部的
+                // var time,year,month,date,hours,minutes,seconds;
+                // //通过ajax访问服务器，获取服务器时间
+                // $.ajax({
+                //     type:"OPTIONS",
+                //     url:"/",
+                //     error:function(a){
+                //         time = new Date(a.getResponseHeader("Date"));
+                //         year = time.getFullYear();
+                            
+                //         //以下是通过三元运算对日期进行处理,小于10的数在前面加上0
+                //         month = (time.getMonth()+1)<10?("0"+(time.getMonth()+1)):(time.getMonth()+1)
+                //         date = time.getDate()<10?("0"+time.getDate()):time.getDate();
+                //         hours = time.getHours()<10?("0"+time.getHours()):time.getHours();
+                //         minutes = (time.getMinutes()<10?("0"+time.getMinutes()):time.getMinutes());
+                //         seconds = (time.getSeconds()<10?("0"+time.getSeconds()):time.getSeconds());
+                            
+                //         //拼成自己想要的日期格式，2018-01-15 19:05:33
+                //         time = year+"-"+month+"-"+date+" "+hours+":"+minutes+":"+seconds;
+                //         //给相应的位置赋值
+                //         $("#registerTime").val(time); 
+                //     }
+                // });
+            
+            },
+            methods:{
     
-    //         },
-    //     })
-    // },function(err){
-    //     // alert("系统错误，请联系客服！")
-    // })
+            },
+        })
+    },function(err){
+        // alert("系统错误，请联系客服！")
+    })
 
 
 

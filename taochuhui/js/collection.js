@@ -105,39 +105,26 @@ $(function(){
             // 计算点下去是  鼠标到这个盒子左边距的距离
             var positionDiv = $(this).offset();
             pagex = e.originalEvent.targetTouches[0].pageX
-            // console.log(pagex)
 
-        $(this).on("touchmove",function(e){
-            // 移动中的鼠标的位置
-            this_pagex = e.originalEvent.targetTouches[0].pageX
-            // console.log(this_pagex-pagex)
-            // 判断移动距离//乘100是应为要把rem转换为px（我的比例为100）
-            // if(this_pagex-pagex<=-1*100){
-            //     $(this).css("left",-1+"rem")
-            //     return;
-            // }
-            // if(this_pagex-pagex>=0){
-            //     $(this).css("left",0+"rem")
-            //     return;
-            // }
-            // $(this).css("left",(this_pagex-pagex)/100+"rem")
-        })
+            $(this).on("touchmove",function(e){
+                // 移动中的鼠标的位置
+                this_pagex = e.originalEvent.targetTouches[0].pageX
 
-        $(this).on("touchend",function(e){
-            // console.log(this_pagex-pagex)
-            // 判断拖动了多少距离，来判断是否执行自动滑动动画
-            var move = this_pagex-pagex
-            if(move <= -0.3*100){
-                $(this).addClass("collection_box_anim")
-                $(this).css("left",-1+"rem")
-            }
-            if(move >=0.3*100){
-                $(this).addClass("collection_box_anim")
-                $(this).css("left",0+"rem")
-            }
+                $(this).on("touchend",function(e){
+                    // 判断拖动了多少距离，来判断是否执行自动滑动动画
+                    var move = this_pagex-pagex
+                    if(move <= -0.3*100){
+                        $(this).addClass("collection_box_anim")
+                        $(this).css("left",-1+"rem")
+                    }
+                    if(move >=0.3*100){
+                        $(this).addClass("collection_box_anim")
+                        $(this).css("left",0+"rem")
+                    }
+                })
+            })
 
-            
-        })
+        
 
         })
     }

@@ -29,12 +29,6 @@
         <a class="header_right_a" href="./html_search/search.html"><img class="" src="./img/icon/search.png" alt=""></a>
     </header>
 
-    
-    <input type="text" name="" id="">
-    <input type="text">
-    <input id="registerTime" type="text">
-
-
     <!-- 内容 -->
     <div class="con" id="index_con">
         <!-- 轮播 -->
@@ -88,8 +82,8 @@
             </li>
         </ul>
 
-       
         <div class="interval"></div>
+
         <!-- 喇叭 -->
         <div class="horn_box">
             <img class="horn_img" src="./img/icon/horn.png" alt="">
@@ -143,7 +137,7 @@
         <div class="interval"></div>
 
         <!-- 限时预定 -->
-        <div class="modular limit_time">
+        <div class="modular limit_time" v-if="data.Return_Data.Reservation_Info.length">
             <!-- 标题 -->
             <div class="title">
                 <div class="title_left">

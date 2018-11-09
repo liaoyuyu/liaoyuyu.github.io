@@ -103,7 +103,7 @@ body,html{background: #f5f4f7}
     height: auto;
 }
 .more_a_img{
-    width: 0.5rem;
+    width: 0.6rem;
     height: 0.35rem;
     margin-bottom: 0.1rem;
 }
@@ -309,9 +309,15 @@ body,html{background: #f5f4f7}
     font-size: 0;
     margin-bottom: 0.35rem;
 }
-.base_recommend_img{
+.base_recommend_img_box{
     width: 100%;
     height: 2.4rem;
+    font-size: 0;
+    overflow: hidden;
+}
+.base_recommend_img{
+    width: 100%;
+    height: 100%;
 }
 .base_recommend_name{
     color: #333333;
@@ -321,4 +327,8 @@ body,html{background: #f5f4f7}
 .base_recommend_p{
     color: #666666;
     font-size: 0.24rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
 }
