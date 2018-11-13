@@ -103,7 +103,6 @@ $(function(){
                 //         $("#registerTime").val(time); 
                 //     }
                 // });
-            
             },
             methods:{
     

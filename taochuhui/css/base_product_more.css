@@ -99,3 +99,8 @@
 .baseline{
     background: #fff;
 }
+
+.upper_slide_up{
+    width: 100%;
+    height: 0;
+}

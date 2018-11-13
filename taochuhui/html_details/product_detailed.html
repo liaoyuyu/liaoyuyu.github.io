@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>淘厨汇</title>
+    <!-- 基地详情 -->
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/swiper.css">
+    <link rel="stylesheet" href="../css/product_detailed.css">
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/swiper.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../js/rem.js"></script>
+    <script src="../js/public.js"></script>
+    <script src="../js/product_detailed.js"></script>
+    
+<style>
+    [v-cloak] {
+        display: none !important;
+    }
+</style>
+</head>
+<body id="product_detailed">
+<div id="product_detailed_box">
+    <header class="product_detailed_header">
+        <a class="back" href="javascript:history.back(-1)"><img src="../img/icon/back.png" alt=""></a>
+        <p class="header_cen">产品详情</p>
+        <a class="right_a" href="">基地直播</a>
+    </header>
+
+    <div class="product_detailed_con_nav">
+        <div class="product_nav_list" :class="{product_nav_list_select_cor:index==top_nav_index,product_nav_list_select:index==top_nav_index}"  @click="switch_slide(index)" v-for="(top_nav,index) in top_nav" v-cloak>{{top_nav}}</div>
+        <!-- <div class="product_nav_list product_nav_list_select_cor product_nav_list_select" @click="switch_slide(0)">商品介绍</div>
+        <div class="product_nav_list"  @click="switch_slide(1)">图文详情</div>
+        <div class="product_nav_list"  @click="switch_slide(2)">商品评论</div>
+        <div class="product_nav_list"  @click="switch_slide(3)">基地信息</div> -->
+    </div>
+
+    <!-- 中间内容 -->
+    <div class="con product_detailed_con_box">
+
+
+        <div class="product_detailed_con">
+            <div class="swiper-container product_detailed_swiper">
+                <div class="swiper-wrapper">
+                    <!-- 商品介绍 -->
+                    <div class="swiper-slide slide_transverse first_slide">
+                        <!-- 顶部 商品banner -->
+                        <div class="product_banner">
+                            <div class="swiper-container product_banner_swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img class="product_banner_img" src="../img/img/banner_img.png" alt=""></div>
+                                    <div class="swiper-slide"><img class="product_banner_img" src="../img/img/banner_img.png" alt=""></div>
+                                    <div class="swiper-slide"><img class="product_banner_img" src="../img/img/banner_img.png" alt=""></div>
+                                </div>
+                                <div class="swiper-pagination swiper_point"></div>
+                            </div>
+                        </div>
+                        <!-- 信息 -->
+                        <div class="product_information">
+                            <p class="product_name">酸甜果茶  记得多喝水</p>
+                            <p class="product_p">海口青柠海口青柠檬70g~90g*12个</p>
+                            <div class="product_money">
+                                <div class="product_money_left">
+                                    <p class="present_price">￥16.9</p>
+                                    <p class="original_price">￥16.9</p>
+                                </div>
+                                <p class="product_money_right">已售165笔</p>
+                            </div>
+                            <div class="product_activity">
+                                <p class="product_activity_left">预定抢购中</p>
+                                <div class="product_activity_right">
+                                    <p class="product_activity_right_p">本场结束剩余<span class="right_span">00</span><span>:</span><span class="right_span">36</span><span>:</span><span class="right_span">42</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 规格 -->
+                        <div class="product_specifications">
+                            <div class="specifications_list">
+                                <div class="specifications_list_left">服务说明</div>
+                                <div class="specifications_list_right">
+                                    <div class="specifications_list_img">
+                                        <img src="../img/icon/specifications_list_img.png" alt="">
+                                        <p>无忧退货</p>
+                                    </div>
+                                    <div class="specifications_list_img">
+                                        <img src="../img/icon/specifications_list_img.png" alt="">
+                                        <p>快速退款</p>
+                                    </div>
+                                    <div class="specifications_list_img">
+                                        <img src="../img/icon/specifications_list_img.png" alt="">
+                                        <p>免费包邮</p>
+                                    </div>
+                                    <img class="specifications_list_down_img" src="../img/icon/down.png" alt="">
+                                </div>
+                            </div>
+                            <div class="specifications_list">
+                                <div class="specifications_list_left">商品参数</div>
+                                <div class="specifications_list_right">
+                                    <p class="specifications_list_right_p">查看</p>
+                                    <img class="specifications_list_down_img" src="../img/icon/down.png" alt="">
+                                </div>
+                            </div>
+                            <div class="specifications_list">
+                                <div class="specifications_list_left">选择规格</div>
+                                <div class="specifications_list_right">
+                                    <p class="specifications_list_right_p">箱/普通装</p>
+                                    <img class="specifications_list_down_img" src="../img/icon/down.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 商品简介 -->
+                        <div class="product_introduce">
+                            <p class="product_introduce_title">商品简介</p>
+                            <pre class="product_introduce_pre">农家土鸡蛋精选三清山下农家野外放养捕虫食谷的三黄鸡、白毛乌骨鸡等新鲜土鸡蛋。该蛋色浅、壳薄、蛋黄大、蛋清透明、蛋白质含量高、营养丰富，特别是煮熟后蛋白香软，口感好。食用土鸡蛋能明显改善少儿偏食、挑食、厌食现象，增强人体的记忆力，调节免疫功能，提高人体抗病能力。该蛋色浅、壳薄、蛋黄大、蛋清透明、蛋白质含量高、营养丰富，特别是煮熟后蛋白香软，口感好。食用土鸡蛋能明显改善少儿偏食、挑食、厌食现象，增强人体的记忆力，调节免疫功能，提高人体抗病能力。</pre>
+                        </div>
+
+                        <!-- 同类推荐 -->
+                        <div class="identical_recommend_box">
+                            <p class="product_introduce_title">同类推荐</p>
+                            <div class="identical_recommend">
+                                <div class="swiper-container base_shop_swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide slide_list">
+                                            <a class="slide_list_a" href="">
+                                                <div class="slide_img_box">
+                                                    <img class="slide_img" src="../img/img/slide_img.png" alt="">
+                                                    <span class="slide_img_p">直播中</span>
+                                                </div>
+                                                <p class="slide_title">野生猕猴桃</p>
+                                                <p class="slide_p">营养超高的小个头</p>
+                                                <p class="slide_money">￥154</p>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide slide_list">
+                                            <a class="slide_list_a" href="">
+                                                <div class="slide_img_box">
+                                                    <img class="slide_img" src="../img/img/slide_img.png" alt="">
+                                                    <span class="slide_img_p">直播中</span>
+                                                </div>
+                                                <p class="slide_title">野生猕猴桃</p>
+                                                <p class="slide_p">营养超高的小个头</p>
+                                                <p class="slide_money">￥154</p>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide slide_list">
+                                            <a class="slide_list_a" href="">
+                                                <div class="slide_img_box">
+                                                    <img class="slide_img" src="../img/img/slide_img.png" alt="">
+                                                    <span class="slide_img_p">直播中</span>
+                                                </div>
+                                                <p class="slide_title">野生猕猴桃</p>
+                                                <p class="slide_p">营养超高的小个头</p>
+                                                <p class="slide_money">￥154</p>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide slide_list">
+                                            <a class="slide_list_a" href="">
+                                                <div class="slide_img_box">
+                                                    <img class="slide_img" src="../img/img/slide_img.png" alt="">
+                                                    <span class="slide_img_p">直播中</span>
+                                                </div>
+                                                <p class="slide_title">野生猕猴桃</p>
+                                                <p class="slide_p">营养超高的小个头</p>
+                                                <p class="slide_money">￥154</p>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide slide_list">
+                                            <a class="slide_list_a" href="">
+                                                <div class="slide_img_box">
+                                                    <img class="slide_img" src="../img/img/slide_img.png" alt="">
+                                                    <span class="slide_img_p">直播中</span>
+                                                </div>
+                                                <p class="slide_title">野生猕猴桃</p>
+                                                <p class="slide_p">营养超高的小个头</p>
+                                                <p class="slide_money">￥154</p>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide slide_list">
+                                            <a class="slide_list_a" href="">
+                                                <div class="slide_img_box">
+                                                    <img class="slide_img" src="../img/img/slide_img.png" alt="">
+                                                    <span class="slide_img_p">直播中</span>
+                                                </div>
+                                                <p class="slide_title">野生猕猴桃</p>
+                                                <p class="slide_p">营养超高的小个头</p>
+                                                <p class="slide_money">￥154</p>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide slide_list">
+                                            <a class="slide_list_a" href="">
+                                                <div class="slide_img_box">
+                                                    <img class="slide_img" src="../img/img/slide_img.png" alt="">
+                                                    <span class="slide_img_p">直播中</span>
+                                                </div>
+                                                <p class="slide_title">野生猕猴桃</p>
+                                                <p class="slide_p">营养超高的小个头</p>
+                                                <p class="slide_money">￥154</p>
+                                            </a>
+                                        </div>
+                                        <!-- 查看更多 -->
+                                        <div class="swiper-slide slide_list product_more_slide">
+                                            <a class="slide_list_a more_a" href="../html_base/base_product_classify.html">
+                                                <img class="more_a_img" src="../img/icon/browse.png" alt="">
+                                                <p class="more_a_p">查看更多</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                           </div>
+                        </div>
+
+                        <!-- 基地信息 -->
+                        <div class="base_message_box">
+                            <p class="product_introduce_title">基地信息</p>
+                            <a class="base_information_box_a" href="">
+                                <div class="base_information_left">
+                                    <div class="left_left">
+                                        <img src="../img/img/portrait.png" alt="">
+                                    </div>
+                                    <div class="left_right">
+                                        <p class="left_right_name">江津土鸡基地</p>
+                                        <p class="left_right_p">江津乡下农户自家养殖</p>
+                                    </div>
+                                </div>
+                                <div class="base_information_right">
+                                    <p class="base_information_right_p">100件商品</p>
+                                    <img class="base_information_right_img" src="../img/icon/forward1.png" alt="">
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 上划  切换 -->
+                        <div class="upper_slide">
+                            <p class="upper_slide_p">↑ 上划查看详情</p>
+                        </div>
+                        <!-- <div class="upper_slide_up"></div> -->
+
+                    </div>
+                    <!-- 图文详情 -->
+                    <div class="swiper-slide slide_transverse img_text_details">
+                        <img src="../img/img/img.png" alt="">
+                    </div>
+                    <!-- 评论 -->
+                    <!-- <div class="swiper-slide slide_transverse evaluate_slide">
+                        <div class="evaluate_screen">
+                            <span class="evaluate_screen_span evaluate_screen_select">全部(240)</span>
+                            <span class="evaluate_screen_span">全部(240)</span>
+                            <span class="evaluate_screen_span">全部(240)</span>
+                            <span class="evaluate_screen_span">全部(240)</span>
+                            <span class="evaluate_screen_span">全部(240)</span>
+                            <span class="evaluate_screen_span">全部(240)</span>
+                            <span class="evaluate_screen_span">全部(240)</span>
+
+                           
+                            <div class="down_more"><img src="../img/icon/down.png" alt=""></div>
+                        </div>
+
+                        <div class="evaluate_slide_con">
+                            <div class="evaluate_slide_con_title">
+                                <div class="evaluate_slide_con_portrait">
+                                    <img src="../img/img/base_portrait.png" alt="">
+                                </div>
+                                <p class="Nickname">微风**正好</p>
+                            </div>
+                            <div class="time_product">
+                                <p class="purchase_time">2018-03-24</p>
+                                <p class="purchase_commodity">规格:两盒土鸡鸡蛋[20枚]</p>
+                            </div>
+
+                            <p class="evaluate_con_p">女王节买的，发了四瓶，还蛮划算的。说说宝贝吧，味道超好闻，用筷子调一下试试很拉丝，味道很正，是我喜欢的味道，摇晃有泡泡产生，可以确定是很好的蜂蜜，用来泡柠檬玫瑰花真的超棒，值得信赖，会回购的！</p>
+                            <div class="evaluate_con_img_box">
+                                <div class="evaluate_con_img">
+                                    <img src="../img/img/shop_img1.png" alt="">
+                                </div>
+                                <div class="evaluate_con_img">
+                                    <img src="../img/img/shop_img1.png" alt="">
+                                </div>
+                                <div class="evaluate_con_img">
+                                    <img src="../img/img/shop_img1.png" alt="">
+                                </div>
+                            </div>
+                            
+                            <div class="evaluate_bot">
+                                <p class="browse_frequency">浏览 1.2万次</p>
+                                <div class="evaluate_bot_right">
+                                    <div class="comment_div">
+                                        <img class="comment_div_img" src="../img/icon/comment.png" alt="">
+                                        <p class="comment_div_p">1</p>
+                                    </div>
+                                    <div class="click_fabulous">
+                                        <img class="click_fabulous_img" src="../img/icon/click_fabulous.png" alt="">
+                                        <p class="click_fabulous_p">123</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="interval"></div>
+
+
+                        <div class="evaluate_slide_con">
+                            <div class="evaluate_slide_con_title">
+                                <div class="evaluate_slide_con_portrait">
+                                    <img src="../img/img/base_portrait.png" alt="">
+                                </div>
+                                <p class="Nickname">微风**正好</p>
+                            </div>
+                            <div class="time_product">
+                                <p class="purchase_time">2018-03-24</p>
+                                <p class="purchase_commodity">规格:两盒土鸡鸡蛋[20枚]</p>
+                            </div>
+
+                            <p class="evaluate_con_p">女王节买的，发了四瓶，还蛮划算的。说说宝贝吧，味道超好闻，用筷子调一下试试很拉丝，味道很正，是我喜欢的味道，摇晃有泡泡产生，可以确定是很好的蜂蜜，用来泡柠檬玫瑰花真的超棒，值得信赖，会回购的！</p>
+                            <div class="evaluate_con_img_box">
+                                <div class="evaluate_con_img">
+                                    <img src="../img/img/shop_img1.png" alt="">
+                                </div>
+                                <div class="evaluate_con_img">
+                                    <img src="../img/img/shop_img1.png" alt="">
+                                </div>
+                                <div class="evaluate_con_img">
+                                    <img src="../img/img/shop_img1.png" alt="">
+                                </div>
+                            </div>
+                           
+                            <div class="evaluate_bot">
+                                <p class="browse_frequency">浏览 1.2万次</p>
+                                <div class="evaluate_bot_right">
+                                    <div class="comment_div">
+                                        <img class="comment_div_img" src="../img/icon/comment.png" alt="">
+                                        <p class="comment_div_p">1</p>
+                                    </div>
+                                    <div class="click_fabulous">
+                                        <img class="click_fabulous_img" src="../img/icon/click_fabulous.png" alt="">
+                                        <p class="click_fabulous_p">123</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="interval"></div>
+
+                        <div class="evaluate_slide_con">
+                            <div class="evaluate_slide_con_title">
+                                <div class="evaluate_slide_con_portrait">
+                                    <img src="../img/img/base_portrait.png" alt="">
+                                </div>
+                                <p class="Nickname">微风**正好</p>
+                            </div>
+                            <div class="time_product">
+                                <p class="purchase_time">2018-03-24</p>
+                                <p class="purchase_commodity">规格:两盒土鸡鸡蛋[20枚]</p>
+                            </div>
+
+                            <p class="evaluate_con_p">女王节买的，发了四瓶，还蛮划算的。说说宝贝吧，味道超好闻，用筷子调一下试试很拉丝，味道很正，是我喜欢的味道，摇晃有泡泡产生，可以确定是很好的蜂蜜，用来泡柠檬玫瑰花真的超棒，值得信赖，会回购的！</p>
+                            <div class="evaluate_con_img_box">
+                                <div class="evaluate_con_img">
+                                    <img src="../img/img/shop_img1.png" alt="">
+                                </div>
+                                <div class="evaluate_con_img">
+                                    <img src="../img/img/shop_img1.png" alt="">
+                                </div>
+                                <div class="evaluate_con_img">
+                                    <img src="../img/img/shop_img1.png" alt="">
+                                </div>
+                            </div>
+                            
+                            <div class="evaluate_bot">
+                                <p class="browse_frequency">浏览 1.2万次</p>
+                                <div class="evaluate_bot_right">
+                                    <div class="comment_div">
+                                        <img class="comment_div_img" src="../img/icon/comment.png" alt="">
+                                        <p class="comment_div_p">1</p>
+                                    </div>
+                                    <div class="click_fabulous">
+                                        <img class="click_fabulous_img" src="../img/icon/click_fabulous.png" alt="">
+                                        <p class="click_fabulous_p">123</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="interval"></div>
+
+                        <div class="evaluate_slide_con">
+                            <div class="evaluate_slide_con_title">
+                                <div class="evaluate_slide_con_portrait">
+                                    <img src="../img/img/base_portrait.png" alt="">
+                                </div>
+                                <p class="Nickname">微风**正好</p>
+                            </div>
+                            <div class="time_product">
+                                <p class="purchase_time">2018-03-24</p>
+                                <p class="purchase_commodity">规格:两盒土鸡鸡蛋[20枚]</p>
+                            </div>
+
+                            <p class="evaluate_con_p">女王节买的，发了四瓶，还蛮划算的。说说宝贝吧，味道超好闻，用筷子调一下试试很拉丝，味道很正，是我喜欢的味道，摇晃有泡泡产生，可以确定是很好的蜂蜜，用来泡柠檬玫瑰花真的超棒，值得信赖，会回购的！</p>
+                            <div class="evaluate_con_img_box">
+                                <div class="evaluate_con_img">
+                                    <img src="../img/img/shop_img1.png" alt="">
+                                </div>
+                                <div class="evaluate_con_img">
+                                    <img src="../img/img/shop_img1.png" alt="">
+                                </div>
+                                <div class="evaluate_con_img">
+                                    <img src="../img/img/shop_img1.png" alt="">
+                                </div>
+                            </div>
+                           
+                            <div class="evaluate_bot">
+                                <p class="browse_frequency">浏览 1.2万次</p>
+                                <div class="evaluate_bot_right">
+                                    <div class="comment_div">
+                                        <img class="comment_div_img" src="../img/icon/comment.png" alt="">
+                                        <p class="comment_div_p">1</p>
+                                    </div>
+                                    <div class="click_fabulous">
+                                        <img class="click_fabulous_img" src="../img/icon/click_fabulous.png" alt="">
+                                        <p class="click_fabulous_p">123</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="interval"></div>
+            
+                    </div> -->
+                    <!-- 产品详情 -->
+                    <div class="swiper-slide slide_transverse product_details">
+                        <div class="broadcast_video">
+                            <video class="broadcast_video" src=""  poster="../img/img/base_video.png"></video>
+                            <div class="video_play">
+                                <img src="../img/icon/video_play.png" alt="">
+                            </div>
+                        </div>
+
+                        <!-- 基地 关注 -->
+                        <div class="base_information_box">
+                            <div class="base_information_box_left">
+                                <div class="base_portrait">
+                                    <img src="../img/img/portrait.png" alt="">
+                                </div>
+                                <div class="base_information">
+                                    <p class="base_information_p">江津土鸡蛋</p>
+                                    <p class="base_information_p septum_p">江津乡下农户自家养殖</p>
+                                    <div class="base_ ">
+                                        <div class="base_address">
+                                            <img src="../img/icon/address_gray.png" alt="">
+                                            <p class="base_information_p">江津</p>
+                                        </div>
+                                        <div class="Collection">
+                                            <img src="../img/icon/fabulous_love.png" alt="">
+                                            <p class="base_information_p">789</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="base_follow">+ 收藏</div>
+                        </div>
+
+                        <!-- 基地介绍 -->
+                        <div class="base_introduce">
+                            <p class="base_introduce_title">基地介绍:</p>
+                            <pre class="base_introduce_pre">    尤其是现在人们都特别关注舌尖上的安全，土鸡在人们的认知里会更加的安全些，在加上口感的优质，所以人们都非常愿意购买土鸡，土鸡的销售也非常的火爆。从这些方面来看，土鸡价格比较高也是有自身独特优势的。我们说了土鸡的口感也要说说它的营养价值。<br>    在营养上土鸡富含蛋白质，具有维持钾钠平衡;消除水肿。提高免疫力。调低血压 ，缓冲贫血，有利于生长发育；富含烟酸，具有促进消化系统的健康，有益皮肤健康，促进血液循环，降血压，减轻腹泻。富含铜，铜是人体健康不可缺少的微量营养素，对于血液、中枢神经和免疫系统，头发、皮肤和骨骼组织以及脑子和肝、心等内脏的发育和功能有重要影响。<br>    对于很多老人，孕妇和小孩子来说都是非常有好处的。尤其是当下的初春季节，气温反反复复，非常容易感冒，喝一些鸡汤也能适当的预防流感。同时也有助于缓解感冒引起的鼻塞、咳嗽等症状。能够提高免疫力。一般在生活中比较常见的就是喝些鸡汤补补身体，尤其是在比较寒冷的冬季，我们都有这种喝鸡汤调理身体，增强体魄的习惯。</pre>
+                            <div class="down_display">
+                                <img src="../img/icon/down.png" alt="">
+                            </div>
+                        </div>
+
+                         <!-- 间隔 -->
+                        <div class="interval"></div>
+
+
+                        <!-- 热销产品 -->
+                        <div class="hot_sale">
+                            <p class="hot_sale_title">热销产品</p>
+                            <div class="hot_sale_con">
+                                <!-- 每个商品 -->
+                                <div class="Recommend_shop">
+                                    <a class="Recommend_shop_a" href="">
+                                        <div class="Recommend_shop_left">
+                                            <img src="../img/img/recommend_img.jpg" alt="">
+                                        </div>
+                                        <div class="Recommend_shop_right">
+                                            <p class="Recommend_shop_name">散养麻鸭土鸭子老水鸭</p>
+                                            <div class="Recommend_shop_p">
+                                                <p>正宗散养土鸭两年老鸭子</p>
+                                            </div>
+                                            <div class="recommend_money">
+                                                <span class="new_money">¥32.8</span>
+                                                <span class="old_money">￥254</span>
+                                            </div>
+                                            <!-- <img class="Recommend_shop_img json_shop_img" src="../img/icon/json_shop.png" alt=""> -->
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <!-- 每个商品 -->
+                                <div class="Recommend_shop">
+                                    <a class="Recommend_shop_a" href="">
+                                        <div class="Recommend_shop_left">
+                                            <img src="../img/img/recommend_img.jpg" alt="">
+                                        </div>
+                                        <div class="Recommend_shop_right">
+                                            <p class="Recommend_shop_name">散养麻鸭土鸭子老水鸭</p>
+                                            <div class="Recommend_shop_p">
+                                                <p>正宗散养土鸭两年老鸭子</p>
+                                            </div>
+                                            <div class="recommend_money">
+                                                <span class="new_money">¥32.8</span>
+                                                <span class="old_money">￥254</span>
+                                            </div>
+                                            <!-- <img class="Recommend_shop_img json_shop_img" src="../img/icon/json_shop.png" alt=""> -->
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <!-- 每个商品 -->
+                                <div class="Recommend_shop">
+                                    <a class="Recommend_shop_a" href="">
+                                        <div class="Recommend_shop_left">
+                                            <img src="../img/img/recommend_img.jpg" alt="">
+                                        </div>
+                                        <div class="Recommend_shop_right">
+                                            <p class="Recommend_shop_name">散养麻鸭土鸭子老水鸭</p>
+                                            <div class="Recommend_shop_p">
+                                                <p>正宗散养土鸭两年老鸭子</p>
+                                            </div>
+                                            <div class="recommend_money">
+                                                <span class="new_money">¥32.8</span>
+                                                <span class="old_money">￥254</span>
+                                            </div>
+                                            <!-- <img class="Recommend_shop_img json_shop_img" src="../img/icon/json_shop.png" alt=""> -->
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <!-- 每个商品 -->
+                                <div class="Recommend_shop">
+                                    <a class="Recommend_shop_a" href="">
+                                        <div class="Recommend_shop_left">
+                                            <img src="../img/img/recommend_img.jpg" alt="">
+                                        </div>
+                                        <div class="Recommend_shop_right">
+                                            <p class="Recommend_shop_name">散养麻鸭土鸭子老水鸭</p>
+                                            <div class="Recommend_shop_p">
+                                                <p>正宗散养土鸭两年老鸭子</p>
+                                            </div>
+                                            <div class="recommend_money">
+                                                <span class="new_money">¥32.8</span>
+                                                <span class="old_money">￥254</span>
+                                            </div>
+                                            <!-- <img class="Recommend_shop_img json_shop_img" src="../img/icon/json_shop.png" alt=""> -->
+                                        </div>
+                                    </a>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- 底部 -->
+    <div class="footer">
+        <!-- 小功能 -->
+        <div class="small_function">
+             <!-- 直播 -->
+             <div class="function_list">
+                <a class="function_list_a" href="">
+                    <img class="live_broadcast" src="../img/icon/live_broadcast.png" alt="">
+                    <p class="function_list_p">直播</p>
+                </a>
+                <div class="broadcast_polygon">
+                    <img class="polygon" src="../img/icon/polygon.png" alt="">
+                    <div class="broadcast_polygon_p">
+                        <p>火爆直播···</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 客服 -->
+            <div class="function_list">
+                <a class="function_list_a" href="">
+                    <img class="customer_service" src="../img/icon/customer_service.png" alt="">
+                    <p class="function_list_p">客服</p>
+                </a>
+            </div>
+            <!-- 收藏 -->
+            <div class="function_list">
+                <a class="function_list_a" href="">
+                    <img class="shopping_cart" src="../img/icon/fabulous_select.png" alt="">
+                    <p class="function_list_p">收藏</p>
+                </a>
+            </div>
+        </div>
+        <!-- 加入购物车 -->
+        <div class="add_to_cart">加入购物车</div>
+        <!-- 立即购买 -->
+        <div class="purchase_immediately">立即购买</div>
+    </div>
+
+</div>
+
+
+
+
+</body>
+</html>

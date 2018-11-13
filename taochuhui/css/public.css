@@ -346,3 +346,241 @@ nav{
     line-height: 0.35rem;
     border: none;
 }
+
+
+
+
+/* 基地信息 */
+/* 商品列表 */
+.slide_list{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.slide_list_a{
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* 查看更多 */
+.more_slide{
+    height: auto !important;
+}
+.more_a_img{
+    width: 0.6rem;
+    height: 0.35rem;
+    margin-bottom: 0.1rem;
+}
+.more_a_p{
+    color: #333333;
+    font-size: 0.32rem;
+}
+.base_shop_swiper{
+    padding-bottom: 0.15rem;
+}
+.slide_img_box{
+    width: 100%;
+    height: 2rem;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 0.15rem;
+}
+.slide_img{
+    width: 100%;
+    height: 100%;
+}
+.slide_img_p{
+    position: absolute;
+    display: block;
+    bottom: 0rem;
+    left: 0rem;
+    color: #fff;
+    font-size: 0.18rem;
+    padding: 0.03rem 0.1rem;
+    /* padding: 0.5rem; */
+    background: #82a541;
+    border-bottom-right-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.6rem;
+}
+
+.slide_title{
+    color: #333333;
+    font-size: 0.28rem;
+    margin-bottom: 0.07rem;
+}
+.slide_p{
+    color: #666666;
+    font-size: 0.24rem;
+    margin-bottom: 0.1rem;
+}
+.slide_money{
+    color: #ed2018;
+    font-size: 0.28rem;
+    font-weight: bold;
+}
+.slide_title,.slide_p,.slide_money{
+    width: 100%;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+
+
+
+/* 视频样式和按钮安阳 */
+.broadcast_video{
+    width: 100%;
+    height: 100%;
+}
+.video_play{
+    width: 1.16rem;
+    height: 1.16rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 0;
+    top: 50%;
+    margin-top: -0.58rem;
+    left: 50%;
+    margin-left: -0.58rem;
+}
+.video_play img{
+    width: 0.5rem;
+    height: 0.66rem;
+    margin-left: 0.1rem;
+}
+
+
+/* 关注 */
+/* 基地信息 */
+.base_information_box{
+    width: 100%;
+    padding: 0.1rem 0.4rem 0.25rem 0.3rem;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.base_information_box_left{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+/* 头像 */
+.base_portrait{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+    overflow: hidden;
+    float: left;
+    margin-right: 0.15rem;
+}
+.base_portrait img{
+    width: 100%;
+    height: 100%;
+}
+/* 信息 */
+.base_information{
+    float: left;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.base_information_p{
+    color: #666666;
+    font-size: 0.24rem;
+}
+/* 位置和收藏数 */
+.base_,.base_address,.Collection{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.base_address,.Collection{
+    margin-right: 0.2rem;
+}
+/* 位置 */
+.base_address img{
+    width: 0.21rem;
+    height: 0.26rem;
+    margin-right: 0.1rem;
+}
+/* 收藏 */
+.Collection img{
+    width: 0.26rem;
+    height: 0.22rem;
+    margin-right: 0.1rem;
+}
+.septum_p{
+    margin: 0.15rem 0rem;
+}
+
+
+/* 关注 */
+.base_follow{
+    float: right;
+    color: #ffffff;
+    font-size: 0.28rem;
+    text-align: center;
+    height: 0.55rem;
+    line-height: 0.55rem;
+    padding: 0rem 0.25rem;
+    background: #82a541;
+    border-radius: 5px;
+    overflow: hidden;
+}
+/* 基地介绍 */
+.base_introduce{
+    width: 100%;
+    padding: 0.35rem 0rem 0.7rem 0rem;
+    box-sizing: border-box;
+    position: relative;
+}
+.base_introduce_title{
+    color: #666666;
+    font-size: 0.24rem;
+    margin-bottom: 0.1rem;
+}
+.base_introduce_pre{
+    max-height: 3.6rem;
+    color: #666666;
+    font-size: 0.24rem;
+    padding: 0rem 0.3rem;
+    box-sizing: border-box;
+    text-align: justify;
+    white-space: pre-wrap;
+    overflow: hidden;
+    line-height: 0.35rem;
+}
+
+/* 下拉显示全部 */
+.down_display{
+    width: 100%;
+    height: 0.7rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.down_display img{
+    width: 0.28rem;
+    height: 0.11rem;
+}
