@@ -242,7 +242,28 @@ body,html{background: #f5f4f7;}
     height: 0.35rem;
     border: 1px solid #999;
     border-radius: 100%;
+    position: relative;
+    overflow: hidden;
+    font-size: 0;
 }
+.payment_right img{
+    width: 100%;
+    height: 100%;
+}
+/* 选中样式 */
+.payment_mode::after{
+    content: "";
+    width: 0.35rem;
+    height: 0.35rem;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../img/icon/payment_mode.png) no-repeat;
+    background-size: 100%;
+}
+
+
 /* 微信支付 */
 .WeChat_li{
     height: 1.1rem;
@@ -274,6 +295,7 @@ body,html{background: #f5f4f7;}
     margin-top: -0.17rem;
     right: -75%;
 }
+
 
 .left_right_p{
     color: #999999;

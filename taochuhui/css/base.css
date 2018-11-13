@@ -135,7 +135,7 @@ html,body{background: #f5f4f7;}
     text-indent: 2em;
     line-height: 0.35rem;
     text-align: justify;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 /* 浏览 点赞 评论 */
 .operation{
@@ -165,7 +165,7 @@ html,body{background: #f5f4f7;}
     color: #666666;
     font-size: 0.24rem;
     margin-left: 0.1rem;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 .comment_p{
     margin-bottom: 0.04rem;

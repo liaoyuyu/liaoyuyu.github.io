@@ -118,7 +118,7 @@
 }
 .money span{
     color: #e10707;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 .state{
     display: block;

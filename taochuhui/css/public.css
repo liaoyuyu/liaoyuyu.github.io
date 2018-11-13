@@ -421,7 +421,7 @@ nav{
 .slide_money{
     color: #ed2018;
     font-size: 0.28rem;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 .slide_title,.slide_p,.slide_money{
     width: 100%;

@@ -216,7 +216,7 @@
 .good_recommend_money{
     color: #e11818;
     font-size: 0.32rem;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 .good_recommend_json{
     position: absolute;
