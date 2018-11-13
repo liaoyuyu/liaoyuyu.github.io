@@ -364,6 +364,7 @@ nav{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 0.2rem;
 }
 /* 查看更多 */
 .more_slide{
