@@ -37,6 +37,7 @@ body,html{background: #f5f5f7;}
     border-top: 1px solid #eee;
     box-sizing: border-box;
     background: #fff;
+    overflow: hidden;
 }
 .top_nav_p{
     color: #333333;
