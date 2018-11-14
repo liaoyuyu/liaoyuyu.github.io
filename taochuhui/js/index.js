@@ -1,7 +1,8 @@
 // document.cookie="obj=0; expires=Thu, 18 Dec 2013 12:00:00 GMT;path=/";   //清楚相对应的cookie值
 // document.cookie="SQ=0; expires=Thu, 18 Dec 2013 12:00:00 GMT;path=/";   //清楚相对应的cookie值
-
-
+localStorage.big_img = "http://192.168.2.241:8089/Image/big"//原图接口
+localStorage.middle_img = "http://192.168.2.241:8089/Image/middle"//中图接口
+localStorage.small_img = "http://192.168.2.241:8089/Image/small"//小图接口
 
 // 按返回键返回  要刷新
 window.addEventListener('pageshow', function(event) {
@@ -26,6 +27,10 @@ $(function(){
             el:".banner",
             data:{
                 banner_data:res.Return_Data.PageData,//首页banner
+                //图片接口
+                big_img:localStorage.big_img,//大
+                middle_img:localStorage.middle_img,//中
+                small_img:localStorage.small_img, //小
             },
             created:function(){     
                 // console.log(this.banner_data)           
@@ -72,6 +77,10 @@ $(function(){
             el:".limit_time",
             data:{
                data:res,
+               //图片接口
+               big_img:localStorage.big_img,//大
+               middle_img:localStorage.middle_img,//中
+               small_img:localStorage.small_img, //小
             },
             created:function(){
                 console.log(this.data)

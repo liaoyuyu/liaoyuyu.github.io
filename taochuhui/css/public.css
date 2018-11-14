@@ -4,7 +4,7 @@ a{text-decoration: none;width: 100%;height: 100%;}
 li{list-style: none;}
 
 
-.none{display: none}
+.none{display: none !important}
 .none_visibility{visibility:hidden}
 
 
@@ -212,13 +212,14 @@ nav{
     position: absolute;
     color: #fff;
     font-size: 0.18rem;
-    background: #f73031;
+    background: #82a541;
     border-top-right-radius: 0.35rem;
     border-bottom-right-radius: 0.35rem;
     border-top-left-radius: 0.5rem;
     padding: 0.02rem 0.1rem 0.02rem 0.13rem;
     bottom: 0;
     right: 0.15rem;
+    
 }
 
 
@@ -551,7 +552,6 @@ nav{
     margin-bottom: 0.1rem;
 }
 .base_introduce_pre{
-    max-height: 3.6rem;
     color: #666666;
     font-size: 0.24rem;
     padding: 0rem 0.3rem;
@@ -560,6 +560,10 @@ nav{
     white-space: pre-wrap;
     overflow: hidden;
     line-height: 0.35rem;
+}
+/* 默认状态 */
+.base_introduce_pre_default{
+    max-height: 3.6rem;
 }
 
 /* 下拉显示全部 */

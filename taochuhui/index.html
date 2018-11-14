@@ -37,7 +37,7 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" v-for="banner in banner_data">
                         <a class="banner_a" href="" v-cloak>
-                            <img :src="['http://192.168.2.241:8089/Image/big'+banner.Image_Url]" alt="" v-cloak>
+                            <img :src="[big_img+banner.Image_Url]" alt="" v-cloak>
                         </a>
                     </div>
                 </div>
@@ -163,7 +163,7 @@
                     <li class="year_li" v-for="limit in data.Return_Data.Reservation_Info">
                         <a class="yaer_list_a" href="">
                             <div class="year_img">
-                                <img :src="'http://192.168.2.241:8089/Image/big'+limit.Product_Info.Image_Url" alt="">
+                                <img :src="big_img+limit.Product_Info.Image_Url" alt="">
                             </div>
                             <p class="year_p">{{limit.Product_Info.Product_Name}}</p>
                             <div class="year_monye">

@@ -1,11 +1,11 @@
 html,body{background: #f5f4f7;}
 .con{
-    padding-top: 0rem;
+    padding-top: 1.7rem;
 }
 .base_header{
     border-bottom: 1px solid #eee;
     box-sizing: border-box;
-    position: relative;
+    /* position: relative; */
 }
 
 /* 顶部导航 */
@@ -13,6 +13,10 @@ html,body{background: #f5f4f7;}
     width: 100%;
     height: 0.8rem;
     background: #fff;
+    position: fixed;
+    z-index: 99999;
+    top: 0.9rem;
+    left: 0;
 }
 .base_slide{
     color: #333333;
@@ -29,21 +33,7 @@ html,body{background: #f5f4f7;}
     margin-left: -38%;
     background: #84a539;
 }
-/* 滑动到顶部是 改变样式 */
-.base_nav_top{
-    position: fixed;
-    z-index: 99999;
-    top: 0;
-    left: 0;
-}
-/* 滑动到顶部是撑起 */
-.prop_up{
-    width: 100%;
-    height: 0;
-}
-.prop_up_up{
-   height: 0.8rem;
-}
+
 
 /* 基地 */
 .base_con{

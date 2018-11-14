@@ -32,18 +32,18 @@ $(function(){
     }
 
 
-    // 导航滑动到顶部时，导航固定定位
-    var distance_top =  $(".base_nav").offset().top//元素到顶部的距离
-    $(window).scroll(function(){
-        var scr_distance = $(window).scrollTop()//滚动的距离
-        if(scr_distance >= distance_top){
-            $(".base_nav").addClass("base_nav_top")
-            $(".prop_up").addClass("prop_up_up")
-        }else{
-            $(".base_nav").removeClass("base_nav_top")
-            $(".prop_up").removeClass("prop_up_up")
-        }
-    })
+    // // 导航滑动到顶部时，导航固定定位
+    // var distance_top =  $(".base_nav").offset().top//元素到顶部的距离
+    // $(window).scroll(function(){
+    //     var scr_distance = $(window).scrollTop()//滚动的距离
+    //     if(scr_distance >= distance_top){
+    //         $(".base_nav").addClass("base_nav_top")
+    //         $(".prop_up").addClass("prop_up_up")
+    //     }else{
+    //         $(".base_nav").removeClass("base_nav_top")
+    //         $(".prop_up").removeClass("prop_up_up")
+    //     }
+    // })
 
 
 })

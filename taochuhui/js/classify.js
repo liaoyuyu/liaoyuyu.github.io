@@ -34,16 +34,10 @@ $(function(){
 
             // 初始化 swiper
             Initialization_swiper()
-            // 监听滚动事件
-            window.addEventListener('scroll', this.handleScroll)
+
         },
         methods:{
-            // 滚动隐藏头部header
-            handleScroll:function(){
-                this.none = 1;
-                var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-                fixed(scrollTop)
-            },
+            
             // 点击导航，切换样式
             click_nav:function(e){
                 this.none = 1;
@@ -75,19 +69,6 @@ $(function(){
             slideToClickedSlide:true,//点击 跳转到相应solid
         });
     }
-
-    // 让顶部导航  变成 fixed
-    function fixed(scrTop){
-        var height = $(".classify_header").height()
-        if(scrTop>height){
-            $(".calssify_top_function").addClass("fixed")
-            $(".spacing").addClass("open_spacing")
-        }else{
-            $(".calssify_top_function").removeClass("fixed")
-            $(".spacing").removeClass("open_spacing")
-        }
-    }
-
 
 
 })

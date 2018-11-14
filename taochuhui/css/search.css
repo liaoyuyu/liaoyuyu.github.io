@@ -88,7 +88,7 @@
 .search_history_p{
     color: #333333;
     font-size: 0.32rem;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 /* 右边 */

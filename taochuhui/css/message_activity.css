@@ -5,90 +5,67 @@ body,html{background: #f5f4f7}
     box-sizing: border-box;
 }
 
-
-.message_activity_box{
+.message_service_box{
+    width: 100%;
     background: #f5f4f7;
 }
-.message_activity_time{
+.message_service_time{
     width: 100%;
+    text-align: center;
     line-height: 0.75rem;
     color: #999999;
     font-size: 0.24rem;
-    text-align: center;
 }
-.message_activity{
-    width: 100%;
-    border-radius: 5px;
+.message_service{
     background: #fff;
+    border-radius: 5px;
     overflow: hidden;
 }
-
-.message_activity_con{
+.message_service_div{
     width: 100%;
     padding: 0rem 0.3rem;
+    border-bottom: 1px solid #eee;
     box-sizing: border-box;
-}
-.message_activity_title{
-    width: 100%;
-    height: 0.76rem;
-    /* line-height: 0.76rem; */
+    line-height: 0.78rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
-.activity_title{
+.message_service_div_p{
     color: #333333;
     font-size: 0.28rem;
 }
-.activity_state{
-    color: #ffffff;
-    font-size: 0.28rem;
+.message_service_div_img{
+    width: 0.1rem;
+    height: 0.1rem;
+}
+
+.message_service_a{
     display: block;
-    line-height: 0.45rem;
-    padding: 0rem 0.2rem;
-    background: #82a541;
-    border-radius: 0.5rem;
-}
-.activity_img{
-    width: 100%;
-    height: 2.2rem;
-    font-size: 0;
-    margin-bottom: 0.15rem;
-}
-.activity_img img{
-    width: 100%;
-    height: 100%;
-}
-.activity_p{
-    width: 100%;
-}
-.activity_p p{
-    color: #999999;
-    font-size: 0.24rem;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-}
-.message_activity_a{
-    display: block;
-    height: 0.85rem;
-    border-top: 1px solid #eee;
+    padding: 0.2rem 0.3rem;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 0.2rem;
-    padding: 0rem 0.3rem;
-    box-sizing: border-box;
 }
-.message_activity_a p{
+.message_service_a_p{
+    width: 80%;
+    color: #999999;
+    font-size: 0.24rem;
+    text-align: justify;
+    line-height: 0.35rem;
+}
+.message_service_a_img{
+    width: 0.15rem;
+    height: 0.25rem;
+}
+
+/* 查看详情 */
+.look_details{
     color: #82a541;
     font-size: 0.24rem;
 }
-.message_activity_a img{
-    width: 0.13rem;
-    height: 0.25rem;
-}
+
+

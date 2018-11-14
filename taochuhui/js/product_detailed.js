@@ -46,7 +46,8 @@ $(function(){
                 var product_banner_swiper = new Swiper('.product_banner_swiper',{
                     observer:true, //修改swiper自己或子元素时，自动初始化swiper
                     observeParents:true,//修改swiper的父元素时，自动初始化swiper
-                    
+                    preventInteractionOnTransition:true,//设置过渡时不能进行操作//好像没用(在这里没用)
+                    // speed:5000,
                     pagination: {
                         el: '.swiper_point',
                         clickable: true,
@@ -83,6 +84,7 @@ $(function(){
                 // console.log(scrollHeight)
                 console.log(windowHeight+scrollTop == scrollHeight)
                 if(windowHeight+scrollTop == scrollHeight){
+                    // $(".first_slide").bind("touchstart touchmove touchend")
                     var pagey = null;
                     var this_pagey = null;
                     $(".first_slide").on("touchstart",function(e){
