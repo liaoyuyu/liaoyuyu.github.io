@@ -29,15 +29,16 @@
         <a class="header_right_a" href="./html_search/search.html"><img class="" src="./img/icon/search.png" alt=""></a>
     </header>
 
+
     <!-- 内容 -->
     <div class="con" id="index_con">
         <!-- 轮播 -->
         <div class="banner">
             <div class="swiper-container banner_box">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide" v-for="banner in banner_data">
+                    <div class="swiper-slide">
                         <a class="banner_a" href="" v-cloak>
-                            <img :src="[big_img+banner.Image_Url]" alt="" v-cloak>
+                            <img src="" alt="" v-cloak>
                         </a>
                     </div>
                 </div>
@@ -48,14 +49,7 @@
 
         <!-- 导航 -->
         <ul class="nav_ul">
-            <li class="nav_li">
-                <a href="javascript:;">
-                    <div class="nav_div">
-                        <img src="./img/icon/fresh.png" alt="">
-                    </div>
-                    <p class="nav_p">新鲜好货</p>
-                </a>
-            </li>
+           
             <li class="nav_li">
                 <a href="javascript:;">
                     <div class="nav_div">
@@ -67,9 +61,9 @@
             <li class="nav_li">
                 <a href="javascript:;">
                     <div class="nav_div">
-                        <img src="./img/icon/Discount_Recommend.png" alt="">
+                        <img src="./img/icon/fresh.png" alt="">
                     </div>
-                    <p class="nav_p">特惠推荐</p>
+                    <p class="nav_p">新鲜好货</p>
                 </a>
             </li>
             <li class="nav_li">
@@ -78,6 +72,14 @@
                         <img src="./img/icon/Popularity_Recommend.png" alt="">
                     </div>
                     <p class="nav_p">人气推荐</p>
+                </a>
+            </li>
+            <li class="nav_li">
+                <a href="javascript:;">
+                    <div class="nav_div">
+                        <img src="./img/icon/Discount_Recommend.png" alt="">
+                    </div>
+                    <p class="nav_p">特惠推荐</p>
                 </a>
             </li>
         </ul>
@@ -90,8 +92,8 @@
             <div class="horn_con">
                 <div class="swiper-container horn">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide horn_slide" v-for="notice in Notice" v-cloak>
-                            <a class="horn_a" href="" v-cloak>{{notice.Create_AdminName}}</a>
+                        <div class="swiper-slide horn_slide" v-cloak>
+                            <a class="horn_a" href="" v-cloak></a>
                         </div>                    
                     </div>
                 </div>
@@ -137,7 +139,7 @@
         <div class="interval"></div>
 
         <!-- 限时预定 -->
-        <div class="modular limit_time" v-if="data.Return_Data.Reservation_Info.length">
+        <div class="modular limit_time">
             <!-- 标题 -->
             <div class="title">
                 <div class="title_left">
@@ -146,7 +148,7 @@
 
                     <!-- 时间 -->
                     <div class="time">
-                        <p class="time_p" v-cloak>{{data.Return_Data.RType_Num}}</p>
+                        <p class="time_p" v-cloak>第一场</p>
                         <p class="time_surplus"><span>00</span>:<span>36</span>:<span>42</span></p>
                     </div>
                 </div>
@@ -160,12 +162,12 @@
             <!-- 内容 -->
             <div class="modular_con">
                 <ul class="year_list">
-                    <li class="year_li" v-for="limit in data.Return_Data.Reservation_Info">
+                    <li class="year_li" >
                         <a class="yaer_list_a" href="">
                             <div class="year_img">
-                                <img :src="big_img+limit.Product_Info.Image_Url" alt="">
+                                <img src="" alt="">
                             </div>
-                            <p class="year_p">{{limit.Product_Info.Product_Name}}</p>
+                            <p class="year_p"></p>
                             <div class="year_monye">
                                 <span class="new_money">￥154</span>
                                 <span class="old_money">￥254</span>

@@ -26,7 +26,7 @@ $(function(){
         new Vue({
             el:".banner",
             data:{
-                banner_data:res.Return_Data.PageData,//首页banner
+                // banner_data:res.Return_Data.PageData,//首页banner
                 //图片接口
                 big_img:localStorage.big_img,//大
                 middle_img:localStorage.middle_img,//中
@@ -54,7 +54,7 @@ $(function(){
         new Vue({
             el:".horn_box",
             data:{
-                Notice:res.Return_Data.PageData,//公告
+                // Notice:res.Return_Data.PageData,//公告
             },
             created:function(){
                 // console.log(this.Notice)

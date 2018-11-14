@@ -37,7 +37,7 @@ $(function(){
                     observeParents:true,//修改swiper的父元素时，自动初始化swiper
                     autoHeight:true,//自适应高度
                     on: {
-                        transitionEnd: function(event){
+                        slideChange: function(event){
                             // alert(_this.product_detailed_swiper.activeIndex)
                             _this.change_style(_this.product_detailed_swiper.activeIndex)
                         },

@@ -23,6 +23,30 @@ function get_data(data,url,typeobj){
 }
 
 
+
+// vue 组件
+// Vue.component('public_nav',{
+//     template: "<nav>"
+//                 +"<a class='nav_a' :href='a_a_href'>"
+//                     +"<img :src='imgsrc'><p>首页</p>"
+//                 +"</a>"
+//                 +"<a class='nav_a' :href='a_href'>"
+//                     +"<img :src='imgsrc' alt=''><p>分类</p>"
+//                 +"</a>"
+//                 +"<a class='nav_a' :href='a_href'>"
+//                     +"<img :src='imgsrc' alt=''><p>基地</p>"
+//                 +"</a>"
+//                 +"<a class='nav_a' :href='a_href'>"
+//                     +"<img :src='imgsrc' alt=''><p>购物车</p>"
+//                 +"</a>"
+//                 +"<a class='nav_a' :href='a_href'>"
+//                     +"<img :src='imgsrc' alt=''><p>我的</p>"
+//                 +"</a>"
+//             +"</nav>",
+//     props:['a_href','imgsrc']
+// })
+
+
 // 获取验证码方法
 //code_obj 为点击的对象的名字，phone_box 为接受短信的号码的那个对象名字,没有写空""，
 //phone 为手机号码，没有对象，直接给phone这个电话发短信,没有写空"",url 为接口后面部分地址，

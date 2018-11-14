@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <title>淘厨汇</title>
+    <!-- 优惠券 -->
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/coupon.css">
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/rem.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../js/coupon.js"></script>
+
+<style>
+    [v-cloak] {
+        display: none !important;
+    }
+</style>
+</head>
+<body id="coupon">
+<div id="coupon_box">
+    <header class="coupon_header">
+        <a class="back" href="javascript:history.back(-1)"><img src="../img/icon/back.png" alt=""></a>
+        <p class="header_cen">我的优惠券</p>
+    </header>
+
+    <!-- 顶部切换 -->
+    <div class="top_switch">
+        <p class="top_switch_p" :class="{top_switch_p_select:switch_not}" @click="switch_option(1)">未使用</p>
+        <p class="top_switch_p" :class="{top_switch_p_select:switch_already}" @click="switch_option(0)">已失效</p>
+    </div>
+
+    <div class="con">
+        <!-- 优惠券 -->
+        <div class="coupon_box">
+            <div class="coupon_information">
+                <p class="coupon_p" :class="{Invalid:switch_already}" v-cloak>全场20元网购劵</p>
+                <p class="coupon_condition" :class="{Invalid:switch_already}" v-cloak>仅线上购物使用</p>
+                <p class="coupon_term" :class="{Invalid:switch_already}" v-cloak>有效期：2018.05.19 -2018.06.02</p>
+
+                <p class="coupon_money" :class="{Invalid:switch_already}" v-cloak>￥<span>20</span></p>
+            </div>
+            <a class="coupon_a" href="" v-if="switch_not" v-cloak>
+                <p class="coupon_a_p" v-cloak>满299.00元减20.00元</p>
+                <div class="coupon_a_see">
+                    <p class="see_shop">查看可用商品</p>
+                    <img class="see_shop_img" src="../img/icon/coupon_see.png" alt="">
+                </div>
+            </a>
+            <a class="coupon_a" href="javascript:;" v-if="switch_already" v-cloak>
+                <p class="coupon_a_p" :class="{Invalid:switch_already}" v-cloak>满299.00元减20.00元</p>
+                <p class="see_shop Invalid">已过期</p>
+            </a>
+        </div>
+
+        <!-- 优惠券 -->
+        <div class="coupon_box">
+            <div class="coupon_information">
+                <p class="coupon_p" :class="{Invalid:switch_already}" v-cloak>全场20元网购劵</p>
+                <p class="coupon_condition" :class="{Invalid:switch_already}" v-cloak>仅线上购物使用</p>
+                <p class="coupon_term" :class="{Invalid:switch_already}" v-cloak>有效期：2018.05.19 -2018.06.02</p>
+
+                <p class="coupon_money" :class="{Invalid:switch_already}" v-cloak>￥<span>20</span></p>
+            </div>
+            <a class="coupon_a" href="" v-if="switch_not" v-cloak>
+                <p class="coupon_a_p" v-cloak>满299.00元减20.00元</p>
+                <div class="coupon_a_see">
+                    <p class="see_shop">查看可用商品</p>
+                    <img class="see_shop_img" src="../img/icon/coupon_see.png" alt="">
+                </div>
+            </a>
+            <a class="coupon_a" href="javascript:;" v-if="switch_already" v-cloak>
+                <p class="coupon_a_p" :class="{Invalid:switch_already}" v-cloak>满299.00元减20.00元</p>
+                <p class="see_shop Invalid">已过期</p>
+            </a>
+        </div>
+
+        <!-- 优惠券 -->
+        <div class="coupon_box">
+            <div class="coupon_information">
+                <p class="coupon_p" :class="{Invalid:switch_already}" v-cloak>全场20元网购劵</p>
+                <p class="coupon_condition" :class="{Invalid:switch_already}" v-cloak>仅线上购物使用</p>
+                <p class="coupon_term" :class="{Invalid:switch_already}" v-cloak>有效期：2018.05.19 -2018.06.02</p>
+
+                <p class="coupon_money" :class="{Invalid:switch_already}" v-cloak>￥<span>20</span></p>
+            </div>
+            <a class="coupon_a" href="" v-if="switch_not" v-cloak>
+                <p class="coupon_a_p" v-cloak>满299.00元减20.00元</p>
+                <div class="coupon_a_see">
+                    <p class="see_shop">查看可用商品</p>
+                    <img class="see_shop_img" src="../img/icon/coupon_see.png" alt="">
+                </div>
+            </a>
+            <a class="coupon_a" href="javascript:;" v-if="switch_already" v-cloak>
+                <p class="coupon_a_p" :class="{Invalid:switch_already}" v-cloak>满299.00元减20.00元</p>
+                <p class="see_shop Invalid">已过期</p>
+            </a>
+        </div>
+
+        <!-- 优惠券 -->
+        <div class="coupon_box">
+            <div class="coupon_information">
+                <p class="coupon_p" :class="{Invalid:switch_already}" v-cloak>全场20元网购劵</p>
+                <p class="coupon_condition" :class="{Invalid:switch_already}" v-cloak>仅线上购物使用</p>
+                <p class="coupon_term" :class="{Invalid:switch_already}" v-cloak>有效期：2018.05.19 -2018.06.02</p>
+
+                <p class="coupon_money" :class="{Invalid:switch_already}" v-cloak>￥<span>20</span></p>
+            </div>
+            <a class="coupon_a" href="" v-if="switch_not" v-cloak>
+                <p class="coupon_a_p" v-cloak>满299.00元减20.00元</p>
+                <div class="coupon_a_see">
+                    <p class="see_shop">查看可用商品</p>
+                    <img class="see_shop_img" src="../img/icon/coupon_see.png" alt="">
+                </div>
+            </a>
+            <a class="coupon_a" href="javascript:;" v-if="switch_already" v-cloak>
+                <p class="coupon_a_p" :class="{Invalid:switch_already}" v-cloak>满299.00元减20.00元</p>
+                <p class="see_shop Invalid">已过期</p>
+            </a>
+        </div>
+
+         <!-- 优惠券 -->
+         <div class="coupon_box">
+            <div class="coupon_information">
+                <p class="coupon_p" :class="{Invalid:switch_already}" v-cloak>全场20元网购劵</p>
+                <p class="coupon_condition" :class="{Invalid:switch_already}" v-cloak>仅线上购物使用</p>
+                <p class="coupon_term" :class="{Invalid:switch_already}" v-cloak>有效期：2018.05.19 -2018.06.02</p>
+
+                <p class="coupon_money" :class="{Invalid:switch_already}" v-cloak>￥<span>20</span></p>
+            </div>
+            <a class="coupon_a" href="" v-if="switch_not" v-cloak>
+                <p class="coupon_a_p" v-cloak>满299.00元减20.00元</p>
+                <div class="coupon_a_see">
+                    <p class="see_shop">查看可用商品</p>
+                    <img class="see_shop_img" src="../img/icon/coupon_see.png" alt="">
+                </div>
+            </a>
+            <a class="coupon_a" href="javascript:;" v-if="switch_already" v-cloak>
+                <p class="coupon_a_p" :class="{Invalid:switch_already}" v-cloak>满299.00元减20.00元</p>
+                <p class="see_shop Invalid">已过期</p>
+            </a>
+        </div>
+
+         
+
+    </div>
+</div>
+</body>
+</html>
