@@ -55,9 +55,7 @@
 </style>
 </head>
 <body>
-    <video id="container" class="video-js vjs-big-play-centered" playsinline controls>
-            <source src="https://open.lechange.com/viewH5?uuid=2d50da59ba744abba236cb32364eb6"  type=''>
-    </video>
+    <video id="container" class="video-js vjs-big-play-centered" data-setup='{}' playsinline controls></video>
 
 
 
@@ -65,23 +63,14 @@
 
     //初始化视频
     let player = videojs('container',{
-        // bigPlayButton : false,
-        // textTrackDisplay : false,
-        // posterImage: true,
-        // errorDisplay : false,
-        // controlBar : false
-        //像data-setup那样设置的参数
-    },function(){
-        this.on('loadedmetadata',function(){
-            console.log('loadedmetadata');
-            //加载到元数据后开始播放视频
-            myPlayer.play();
-        })
+        
+    //像data-setup那样设置的参数
+    },function onPlayerReady(){
     //视频播放器初始化完毕，就会调用这个回调函数
-    // this.src({
-    //     src: "https://open.lechange.com/viewH5?uuid=2d50da59ba744abba236cb32364eb6",
-    //     type:'rtmp/flv'
-    // });
+    this.src({
+        src: "./video/video_list.mp4",
+        // type:'rtmp/flv'
+    });
     });
 </script>
 </body>
