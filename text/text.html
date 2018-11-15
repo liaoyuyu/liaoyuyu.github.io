@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/swiper.css">
+    <script src="./js/swiper.js"></script>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script src="./js/vue.js"></script>
+</head>
+<style>
+*{margin: 0;padding: 0;}
+html,body{position: relative;background: #eee;}
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+#box{
+    margin: 10px;
+    width: 300px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+img{
+    width: 20px;
+    height: 17px;
+}
+.box_div{
+    width: 70%;
+    text-align: left;
+    height: 50px;
+    overflow: hidden;
+    padding-left: 10px;
+    line-height: 50px;
+    position: absolute;
+    left: 20px;
+    top: 0;
+    background: #fff;
+    margin-left: 10px;
+}
+.list_a{width: 100%;height: 100%;text-decoration: none;text-align: left;overflow: hidden;
+text-overflow:ellipsis;
+white-space: nowrap;}
+.box_ul{
+    width: 100%;
+    transition: all 1s;
+}
+.box_li{
+    list-style: none;
+    width: 100%;
+    height: 50px;
+    color: #000;
+    font-size: 18px;
+}
+
+.list{
+    height: 50px !important;
+}
+</style>
+<body>
+    <div id="box">
+        <img src="./img/horn.png" alt="">
+        <div class="box_div">
+            <!-- <ul class="box_ul">
+                <li class="box_li" :data-index =index v-for="(list,index) in data">{{list}}</li>
+            </ul> -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide list" v-for="(list,index) in data"><a class="list_a" href="">{{list}}</a></div>
+                </div>
+            </div>
+        </div>
+        <a v-if="li_index == index" v-for="(a_src,index) in data" :href="a_src">详情</a>
+    </div>
+
+
+
+
+<script>
+    new Vue({
+        el:"#box",
+        data:{
+            data:[
+                "一一一一一一一一一","二二二二二二二二二","三三三三三三三三三","四四四四四四四四四","五五五五五五五五五"
+            ],
+            li_index:0,
+            a_src:"",
+            myswiper:"",
+        },
+        created:function(){
+
+        },
+        mounted:function(){
+            this.a_src = this.data
+            var _this = this
+            this.myswiper = new Swiper('.swiper-container', {
+                observer:true, //修改swiper自己或子元素时，自动初始化swiper
+                observeParents:true,//修改swiper的父元素时，自动初始化swiper
+                loop:true,
+                direction: 'vertical',
+                autoplay: {
+                    delay: 3000,
+                    stopOnLastSlide: false,
+                    disableOnInteraction: false,
+                },
+                simulateTouch : false,//禁止鼠标模拟
+                allowTouchMove: false,//禁止触摸滑动
+                on:{
+                    slideChangeTransitionStart: function(){//开始过渡时执行
+                        _this.get_index()
+                    }
+                },
+            });
+        },
+        methods:{
+            get_index:function(){
+                if(this.myswiper.realIndex == undefined||this.myswiper.realIndex == 0){
+                    this.li_index = 0
+                }else{
+                    this.li_index = this.myswiper.realIndex
+                }
+                console.log(this.li_index)
+            }
+        },
+    })
+
+
+   
+
+
+
+</script>
+</body>
+</html>
