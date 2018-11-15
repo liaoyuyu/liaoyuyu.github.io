@@ -55,22 +55,22 @@
 </style>
 </head>
 <body>
-    <video id="container" class="video-js vjs-big-play-centered" data-setup='{}' playsinline controls></video>
+    <video id="container" src="https://open.lechange.com/viewH5?uuid=2d50da59ba744abba236cb32364eb6" class="video-js vjs-big-play-centered" data-setup='{}' playsinline controls></video>
 
 
 
 <script>
 
-    //初始化视频
-    let player = videojs('container',{
-    //像data-setup那样设置的参数
-    },function onPlayerReady(){
-    //视频播放器初始化完毕，就会调用这个回调函数
-    this.src({
-        src: "https://open.lechange.com/viewH5?uuid=2d50da59ba744abba236cb32364eb6",
-        type:'rtmp/flv'
-    });
-    });
+    // //初始化视频
+    // let player = videojs('container',{
+    // //像data-setup那样设置的参数
+    // },function onPlayerReady(){
+    // //视频播放器初始化完毕，就会调用这个回调函数
+    // this.src({
+    //     src: "https://open.lechange.com/viewH5?uuid=2d50da59ba744abba236cb32364eb6",
+    //     type:'rtmp/flv'
+    // });
+    // });
 </script>
 </body>
 </html>
