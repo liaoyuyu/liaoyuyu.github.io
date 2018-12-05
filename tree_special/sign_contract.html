@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>合同</title>
+    <link rel="stylesheet" href="./css/public.css">
+    <script src="./js/rem.js"></script>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script src="./js/address.js"></script>
+    <script src="./js/jSignature.min.js"></script>
+
+<style>
+
+</style>
+</head>
+<body>
+
+    <div id="signature"></div>    
+
+
+
+
+    <script>
+    
+         //初始化画布  
+         $(document).ready(function(){  
+            // var dHeight = document.getElementById("signCont").offsetHeight + "px";
+            var dWidth = document.getElementById("signature").offsetWidth ;
+           
+          $("#signature").jSignature({'UndoButton':false,'height':'5rem','width':'100%','signatureLine':false,'lineWidth':'2','decor-color':'#fff'});　
+          $("canvas").attr("width",dWidth*DPI)
+          $("canvas").css("width",dWidth)
+        })  
+    
+    </script>
+</body>
+</html>

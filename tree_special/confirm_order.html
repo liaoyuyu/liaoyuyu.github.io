@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>确认订单</title>
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/swiper.css">
+    <link rel="stylesheet" href="./css/confirm_order.css">
+    <script src="./js/rem.js"></script>
+    <script src="./js/swiper.js"></script>
+</head>
+<body>
+    <header>
+        <a class="back" href="javascript:history.back(-1)"><img src="./img/icon/back.png" alt=""></a>
+        <p class="header_title">确认订单</p>
+    </header>
+
+    <div class="order_con">
+        <div class="confirm_order_address">
+            <a class="confirm_order_address_a" href="./shop_car/address.html">
+                <p class="confirm_order_address_city">重庆  重庆市  江北区</p>
+                <p class="confirm_order_address_details">建新南路16号西普大厦18-5</p>
+                <p class="confirm_order_address_name">邓晓菁  15520086360</p>
+                <img class="confirm_order_address_img" src="./img/icon/forward1.png" alt="">
+            </a>    
+        </div>
+
+
+        <div class="order_product_box">
+
+            <div class="order_product_list padd">
+                <div class="order_product_list_inner_box">
+                    <div class="order_product_left"><img src="./img/plate_4.jpg" alt=""></div>
+                    <div class="order_product_right">
+                        <p class="order_product_right_name">杀戮空间大萨达建设大道</p>
+                        <div class="order_product_right_p">
+                            <p>四大皆空撒大家爱睡懒觉阿萨德四大皆空撒大家爱睡懒觉阿萨德</p>
+                        </div>
+                        <div class="order_product_number">×1</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order_product_list padd">
+                <div class="order_product_list_inner_box">
+                    <div class="order_product_left"><img src="./img/plate_4.jpg" alt=""></div>
+                    <div class="order_product_right">
+                        <p class="order_product_right_name">杀戮空间大萨达建设大道</p>
+                        <div class="order_product_right_p">
+                            <p>四大皆空撒大家爱睡懒觉阿萨德四大皆空撒大家爱睡懒觉阿萨德</p>
+                        </div>
+                        <div class="order_product_number">×1</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order_product_list padd">
+                <div class="order_product_list_inner_box">
+                    <div class="order_product_left"><img src="./img/plate_4.jpg" alt=""></div>
+                    <div class="order_product_right">
+                        <p class="order_product_right_name">杀戮空间大萨达建设大道</p>
+                        <div class="order_product_right_p">
+                            <p>四大皆空撒大家爱睡懒觉阿萨德四大皆空撒大家爱睡懒觉阿萨德</p>
+                        </div>
+                        <div class="order_product_number">×1</div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <!-- 订单号 -->
+        <div class="order_list_box padd">
+            <div class="order_list">
+                <p class="order_list_left">订单号</p>
+                <p class="order_list_right">DD1084564139854</p>
+            </div>
+            <div class="order_list no_border">
+                <p class="order_list_left">创建时间</p>
+                <p class="order_list_right">2018-10-26 22:05:33</p>
+            </div>
+        </div>
+
+        <!-- 结算 -->
+        <div class="order_list_box padd">
+            <div class="order_list">
+                <p class="order_list_title">订单号</p>
+            </div>
+            <div class="order_list">
+                <p class="order_list_left settlement_left">商品总价</p>
+                <p class="order_list_right settlement_right">￥39.8</p>
+            </div>
+            <div class="order_list no_border">
+                <p class="order_list_left settlement_left">商品实付</p>
+                <p class="order_list_right settlement_right">￥39.8</p>
+            </div>
+        </div>
+
+        <div class="payment_mode padd">
+            <div class="payment_mode_left">
+                <img src="./img/icon/WeChat.png" alt="">
+                <p>微信支付</p>
+            </div>
+            <span class="payment_mode_right"></span>
+        </div>
+
+    </div>
+    <div class="bot_payment">
+        <div class="payment_money_p_box">
+            <p class="payment_money_p">付款:<span class="payment_money">￥26.50</span></p>
+        </div>
+        <div class="payment_money_but"><a class="payment_money_but payment_money_but_a" href="./shop_car/payment_success.html">去支付</a></div>
+    </div>
+    
+
+
+
+<script>
+    var swiper = new Swiper('.swiper-container',{
+        observer:true,//修改swiper自己或子元素时，自动初始化swiper
+        observeParents:true,//修改swiper的父元素时，自动初始化swiper
+        freeMode:true,
+        slidesPerView:4.5,
+        spaceBetween:5,
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+
+*{font-family: workshops;}
+
+
+/* 顶部图片 */
+.top_img{
+    width: 100%;
+}
+.top_img img{
+    width: 100%;
+}
+
+/* 板块 */
+.plate{
+    width: 100%;
+    position: relative;
+    /* background: url(../img/noe_plate.jpg) no-repeat;
+    background-size: 100% 100%; */
+}
+/* 板块背景图 */
+.back_img{
+    width: 100%;
+}
+
+/* 内容 */
+.plate_con{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0.6rem;
+    box-sizing: border-box;
+}
+/* 文字在右边的样式 */
+.plate_p_left{
+    padding-left: 3.6rem;
+}
+/* 文字 */
+.plate_con_p{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.fruit_tree,.base_location{
+    color: #ff6a10;
+}
+.fruit_tree{
+    font-size: 0.32rem;
+}
+.base_location{
+    font-size: 0.24rem;
+    margin: 0.3rem 0rem;
+}
+.reserve_button{
+    line-height: 0.58rem;
+    padding: 0rem 0.2rem;
+    background: #fff;
+    color: #ff6a10;
+    font-size: 0.285rem;
+    border-radius: 0.29rem;
+}
+
+
+
+/* 底部 */
+.bottom_plate{
+    width: 100%;
+    position: relative;
+}
+.bottom_img{
+    width: 100%;
+}
+.bottom_img img{
+    width: 100%;
+}
+.bottom_plate_con{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 0.75rem;
+    box-sizing: border-box;
+}
+.pig_soup_box{
+    width: 100%;
+    position: relative;
+}
+.pig_soup_box img{
+    width: 100%;
+}
+.pig_soup_box_con{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 1.5rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.pig_soup_box_con_p{
+    font-family: siyuan;
+    color: #fff;
+    font-size: 0.36rem;
+    text-align: center;
+    margin-bottom: 0.05rem;
+}
+.pig_soup_box_con_money{
+    color: yellow;
+    font-size: 0.44rem;
+    font-weight: bold;
+    text-align: center;
+}
+.pig_soup_box_con_a{
+    margin-top: 0.1rem;
+}
+
+
+.copyright{
+    width: 100%;
+    position: absolute;
+    bottom: 0.28rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 0.5rem;
+    box-sizing: border-box;
+}
+.phone{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.phone_p,.phone_a,.copyright_p{
+    font-size: 0.24rem;
+    color: #fff;
+}
+.copyright_p{
+    margin-left: 0.15rem;
+}
+
+

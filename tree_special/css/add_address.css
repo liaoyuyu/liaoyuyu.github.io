@@ -1,0 +1,182 @@
+body,html{background: #f5f4f7}
+.add_address_title{
+    text-align: left;
+    padding-left: 1rem;
+    box-sizing: border-box;
+}
+.preservation_address{
+    position: absolute;
+    width: 1rem;
+    text-align: center;
+    right: 0;
+    top: 0;
+    color: #84a539;
+    font-size: 0.28rem;
+}
+
+.add_address_con{
+    position: fixed;
+    top: 0.9rem;
+    padding-top: 0.1rem;
+    width: 100%;
+}
+.add_address_ul{
+    width: 100%;
+    background: #fff;
+}
+.add_address_li{
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    overflow: hidden;
+    padding: 0rem 0.4rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+}
+.add_address_li_p{
+    width: 20%;
+    float: left;
+    color: #333333;
+    font-size: 0.28rem;
+    line-height: 1rem;
+}
+.add_address_input{
+    width: 75%;
+    float: left;
+    height: 80%;
+    outline: none;
+    color: #333333;
+    font-size: 0.28rem;
+    border: none;
+}
+
+
+/* 详细地址 */
+.detailed_address_li{
+    width: 100%;
+    padding: 0rem 0.4rem;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.detailed_address{
+    float: left;
+    width: 75%;
+    height: 1.5rem;
+    margin: 0.35rem 0rem 0.2rem 0rem;
+    /* padding: 0.35rem 0.2rem 0.2rem 0.2rem; */
+    padding: 0rem 0.2rem;
+    box-sizing: border-box;
+    text-align: justify;
+    border: none;
+    resize: none;
+    outline: none;
+    color: #333333;
+    font-size: 0.28rem;
+}
+
+/* 设为默认地址 */
+.set_default_address{
+    margin-top: 0.1rem;
+    width: 100%;
+    line-height: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 0rem 0.4rem;
+    box-sizing: border-box;
+}
+.set_default_address_p{
+    color: #333333;
+    font-size: 0.28rem;
+    line-height: 1rem;
+}
+.set_default_address_box{
+    width: 0.38rem;
+    height: 0.38rem;
+    border: 1px solid #333333;
+    border-radius: 3px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.set_default_address_box_select{
+    border: none;
+    background: url(../img/icon/default_address.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+
+
+/* 所在地区  三级联动  弹出层 */
+.choice_region_back_box{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .3);
+    visibility: hidden;
+}
+.choice_region{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    background: #fff;
+    transition: all .3s;
+}
+.choice_region_anim{
+    bottom: 0;
+}
+.choice_region_title{
+    width: 100%;
+    height: 0.8rem;
+    text-align: center;
+    line-height: 0.8rem;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box; 
+}
+.choice_region_title_p{
+    font-size: 0.26rem;
+    color: #666666;
+}
+.choice_region_title_cancel{
+    height: 0.8rem;
+    position: absolute;
+    padding: 0rem 0.1rem;
+    right: 0.2rem;
+    top: 0;
+    font-size: 0.24rem;
+    color: #84a539;
+}
+
+.choice_region_con{
+    width: 100%;
+}
+.choice_region_con_ul{
+    width: 100%;
+    max-height: 5rem;
+    overflow: auto;
+}
+.choice_region_con_li{
+    width: 100%;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    text-align: center;
+    font-size: 0.24rem;
+    color: #666666;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+}
+.choice_region_con_li:active{
+    background: #eee;
+}
+.choice_region_con_li:last-child{
+    border-bottom: none;
+}

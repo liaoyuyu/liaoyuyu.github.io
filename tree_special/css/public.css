@@ -1,0 +1,562 @@
+/* 字体 */
+@font-face{
+    font-family: 'workshops'; 
+    src: url('../font/造字工房悦圆.otf'),
+    url('../font/造字工房悦圆.otf');
+}
+
+@font-face{
+    font-family: 'siyuan'; 
+    src: url('../font/思源黑体正常字体.ttf'),
+    url('../font/思源黑体正常字体.ttf');
+}
+
+body,html{width: 100%;height: 100%;}
+*{margin: 0;padding: 0;font-size: 0;}
+a{text-decoration: none;}
+li{list-style: none;}
+
+.con{
+    width: 100%;
+    padding-bottom: 1rem;
+}
+.tree_special_img{
+    width: 100%;
+}
+/* 顶部购物车 */
+.shop_car_but{
+    width: 0.5rem;
+    height: 0.5rem;
+    padding: 0.2rem;
+    position: fixed;
+    z-index: 3;
+    top: 0.15rem;
+    right: 0.15rem;
+    border-radius: 100%;
+    overflow: hidden;
+    background: #fff;
+}
+.shop_car_but img{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* header */
+header{
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    height: 0.9rem;
+    line-height: 0.9rem;
+    /* position: relative; */
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+    background: #fff;
+}
+.header_title{
+    font-size: 0.32rem;
+    color: #1f1212;
+    width: 100%;
+    text-align: center;
+}
+.back{
+    display: block;
+    width: 1rem;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.back img{
+    width: 0.14rem;
+    height: 0.27rem;
+}
+
+
+/* 底部按钮 */
+.adopt_button{
+    width: 100%;
+    height: 1rem;
+    position: fixed;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    line-height: 0.98rem;
+    text-align: center;
+}
+.join_shopping_cart,.immediately_receive{
+    width: 50%;
+    height: 100%;
+    color: #fff;
+    font-size: 0.3rem;
+    float: left;
+}
+.join_shopping_cart{
+    background: linear-gradient(to right,#ffc900,#ff6e02);
+}
+.immediately_receive{
+    background: linear-gradient(to right,#fd4b50,#ff0e0f);
+}
+
+
+
+
+/* 登录 注册  样式 */
+.login_register{
+    position: fixed;
+    z-index: 999;
+    width: 76%;
+    /* height: 5rem; */
+    left: 50%;
+    margin-left: -38%;
+    top: 50%;
+    margin-top: -2.5rem;
+    background: #fff;
+    padding: 0.3rem;
+    padding-top: 0.2rem;
+    box-sizing: border-box;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.5s;
+    visibility: hidden;
+    opacity: 0;
+}
+.login_register_title{
+    width: 100%;
+    text-align: center;
+    color: #333333;
+    font-size: 0.28rem;
+    line-height: 0.7rem;
+    font-weight: bold;
+}
+.input_frame{
+    width: 100%;
+    height: 1rem;
+    overflow: hidden;
+    background: #f5f4f7;
+    margin-bottom: 0.05rem;
+    position: relative;
+}
+.phone_input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding-left: 0.1rem;
+    box-sizing: border-box;
+    font-size: 0.24rem;
+    color: #999999;
+    background: #f5f4f7;
+}
+
+
+.code_input{
+    width: 60%;
+    float: left;
+}
+.code{
+    width: 1.4rem;
+    height: 0.5rem;
+    background: #1a1a1a;
+    border-radius: 5px;
+    overflow: hidden;
+    position: absolute;
+    right: 0.2rem;
+    top: 50%;
+    margin-top: -0.25rem;
+    color: #fff;
+    font-size: 0.24rem;
+    text-align: center;
+    line-height: 0.5rem;
+}
+
+
+/* 提交按钮 */
+.submission_but{
+    width: 75%;
+    margin: 0 auto;
+    height: 0.58rem;
+    border-radius: 0.28rem;
+    overflow: hidden;
+    text-align: center;
+    line-height: 0.58rem;
+    background: #fb4a4a;
+    color: #ffffff;
+    font-size: 0.28rem;
+    margin-top: 0.7rem;
+    margin-bottom: 0.5rem;
+}
+
+/* 关闭按钮 */
+.close{
+    padding: 0.2rem;
+    box-sizing: border-box;
+    position: absolute;
+    right: 0rem;
+    top: 0rem;
+}
+.close img{
+    width: 0.28rem;
+    height: 0.28rem;
+}
+
+/* 动画 */
+.login_register_anim{
+    visibility:visible;
+    opacity: 1;
+}
+
+
+
+/* 确认订单弹出 */
+.confirmation_order_box{
+    position: fixed;
+    z-index: 999;
+    width: 76%;
+    left: 50%;
+    margin-left: -38%;
+    top: 50%;
+    margin-top: -2.5rem;
+    padding: 0.25rem;
+    box-sizing: border-box;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f5f4f7;
+    transition: all 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.confirmation_order_title{
+    width: 100%;
+    text-align: center;
+    line-height: 0.9rem;
+    color: #333333;
+    font-size: 0.28rem;
+    font-weight: bold;
+}
+
+.product_con{
+    width: 100%;
+    height: 1.88rem;
+    padding: 0.15rem;
+    background: #fff;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+
+.product_con_left{
+    width: 30%;
+    height: 100%;
+    float: left;
+}
+.product_con_left img{
+    width: 100%;
+    height: 100%;
+}
+
+.product_con_right{
+    float: left;
+    width: 70%;
+    height: 100%;
+    padding-left: 0.2rem;
+    padding-top: 0.1rem;
+    box-sizing: border-box;
+}
+.product_con_name{
+    width: 100%;
+    font-size: 0.28rem;
+    color: #333333;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.product_con_p{
+    width: 100%;
+    height: 0.7rem;
+    overflow: hidden;
+}
+.product_con_p p{
+    font-size: 0.24rem;
+    color: #333333;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.product_con_money{
+    font-size: 0.28rem;
+    color: #333333;
+}
+
+/* 加减按钮 */
+.order_product_number{
+    position: absolute;
+    right: 0.2rem;
+    bottom: 0.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.order_reduce_but,.order_plus_but{
+    width: 0.25rem;
+    height: 0.25rem;
+    border-radius: 2px;
+    overflow: hidden;
+    background: #2c2c2c;
+}
+.order_reduce_but img,.order_plus_but img{
+    width: 100%;
+    height: 100%;
+}
+.order_number_input{
+    width: 0.6rem;
+    height: 0.25rem;
+    text-align: center;
+    line-height: 0.25rem;
+    color: #333333;
+    font-size: 0.28rem;
+    outline: none;
+    border: none;
+}
+
+/* 确认订单按钮 */
+.confirmation_order_but{
+    width: 75%;
+    height: 0.58rem;
+    text-align: center;
+    line-height: 0.58rem;
+    border-radius: 0.29rem;
+    overflow: hidden;
+    margin: 0.5rem auto;
+    background: #fb4a4a;
+    font-size: 0.28rem;
+    color: #ffffff;
+}
+
+
+/* 订单动画 */
+.confirmation_order_anim{
+    visibility:visible;
+    opacity: 1;
+}
+
+
+/* 错误弹框 */
+.error_elastic_frame_box{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 9999999;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+}
+.error_elastic_frame_box_anim{
+    visibility: visible;
+    opacity: 1;
+}
+.error_elastic_frame{
+    width: 50%;
+    height: 2.4rem;
+    position: absolute;
+    top: 50%;
+    margin-top: -1.2rem;
+    left: 50%;
+    margin-left: -25%;
+    background: #fff;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    box-sizing: border-box;
+}
+.error_elastic_frame_title{
+    font-size: 0.28rem;
+    color: #666;
+    text-align: center;
+    line-height: 0.8rem;
+}
+.error_elastic_frame_p{
+    width: 100%;
+    text-align: center;
+    padding: 0.2rem 0.2rem;
+    box-sizing: border-box;
+    font-size: 0.26rem;
+    color: #999999;
+}
+.error_elastic_frame_box_but{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0.7rem;
+    line-height: 0.7rem;
+    text-align: center;
+    font-size: 0.28rem;
+    color: #666;
+    border-top: 1px solid #eee;
+    box-sizing: border-box;
+}
+.error_elastic_frame_box_but:active{
+    background: #eee;
+}
+
+
+
+
+
+
+
+
+
+/* 认养须知 */
+.bottom_adopt_notice{
+    width: 100%;
+    padding: 0.35rem;
+    box-sizing: border-box;
+    position: relative;
+}
+.bottom_adopt_notice_inner{
+    width: 100%;
+    padding: 0.25rem 0.3rem 0.2rem 0.3rem;
+    box-sizing: border-box;
+    border-top-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    position: relative;
+}
+.bottom_adopt_notice_inner_title{
+    font-size: 0.28rem;
+    color: #fefbfb;
+    font-weight: bold;
+    margin-bottom: 0.1rem;
+}
+.bottom_adopt_notice_list{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.bottom_adopt_notice_list_name,.bottom_adopt_notice_list_p{
+    font-size: 0.24rem;
+    color: #fefdfd;
+    line-height: 0.5rem;
+}
+.bottom_adopt_notice_list_name{
+    width: 20%;
+}
+.bottom_adopt_notice_list_p{
+    width: 80%;
+}
+.be_careful{
+    margin-top: 0.1rem;
+}
+.be_careful,.be_careful a{
+    font-size: 0.2rem;
+    color: #fff;
+}
+.be_careful a{
+    text-decoration: underline;
+}
+/* 装饰 */
+.decorate_circular{
+    position: absolute;
+    display: block;
+    width: 0.25rem;
+    height: 0.25rem;
+    border-radius: 100%;
+    top: 0.3rem;
+    right: 0.3rem;
+    background:#fff;
+}
+
+
+
+/* 蓝莓 */
+.blueberry_bottom_adopt_notice{
+    background: #dde1f2;
+}
+.blueberry_bottom_adopt_notice .bottom_adopt_notice_inner{
+    background: #5f6199;
+}
+/* 脆桃 */
+.crisp_peach_bottom_adopt_notice{
+    background: #dde1f2
+}
+.crisp_peach_bottom_adopt_notice .bottom_adopt_notice_inner{
+    background: #5f6199;
+}
+/* 葡萄 */
+.grape_bottom_adopt_notice{
+    background: #e1e5f9;
+}
+.grape_bottom_adopt_notice .bottom_adopt_notice_inner{
+    background: #4b4c81;
+}
+/* 猕猴桃 */
+.kiwifruit_bottom_adopt_notice{
+    background: #f8fad7;
+}
+.kiwifruit_bottom_adopt_notice .bottom_adopt_notice_inner{
+    background: #c6ca2c;
+}
+/* 布朗李 */
+.lawrence_brownlee_bottom_adopt_notice{
+    background: #f8fad7;
+}
+.lawrence_brownlee_bottom_adopt_notice .bottom_adopt_notice_inner{
+    background: #c6ca2c
+}
+/* 黄花梨 */
+.yellow_pear_bottom_adopt_notice{
+    background: #fff;
+}
+.yellow_pear_bottom_adopt_notice .bottom_adopt_notice_inner{
+    background: #6cbc0f
+}
+
+
+/* 信息弹出 */
+.information_elastic_frame_box{
+    width: 100%;
+    position: fixed;
+    z-index: 99999;
+    border-radius: 3px;
+    overflow: hidden;
+    /* left: 50%; */
+    top: 50%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+.information_elastic_frame_box_p{
+    display: block;
+    width: 35%;
+    margin: 0 auto;
+    background: #333333;
+    padding: 0.05rem 0.1rem;
+    border-radius: 3px;
+    font-size: 0.24rem;
+    color: #fff;
+    text-align: center;
+}
+
+.information_elastic_frame_box_anim{
+    visibility: visible;
+    opacity: 1;
+}

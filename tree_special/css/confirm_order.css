@@ -1,0 +1,255 @@
+body,html{background: #f5f4f7}
+
+.padd{
+    padding: 0rem 0.3rem;
+    box-sizing: border-box;
+}
+
+.order_con{
+    width: 100%;
+    padding: 0.9rem 0rem 1.2rem 0rem;
+
+}
+
+/* 收货地址 */
+.confirm_order_address{
+    width: 100%;
+    background: #fff;
+    position: relative;
+    margin-bottom: 0.2rem;
+}
+.confirm_order_address_a{
+    display: block;
+    padding: 0.25rem 0.3rem 0.4rem 0.3rem;
+    box-sizing: border-box;
+    position: relative;
+}
+.confirm_order_address::after{
+    content: "";
+    width: 100%;
+    height: 0.1rem;
+    background: url(../img/icon/address_back.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    bottom: 0rem;
+    left: 0rem;
+}
+
+.confirm_order_address_city{
+    color: #333333;
+    font-size: 0.28rem;
+}
+.confirm_order_address_details{
+    color: #333333;
+    font-size: 0.36rem;
+    font-weight: bold;
+    margin: 0.18rem 0rem;
+}
+.confirm_order_address_name{
+    color: #333333;
+    font-size: 0.28rem;
+}
+.confirm_order_address_img{
+    width: 0.2rem;
+    height: 0.3rem;
+    position: absolute;
+    right: 0.3rem;
+    top: 50%;
+    margin-top: -0.15rem;
+}
+
+.order_product_box{
+    width: 100%;
+    margin-bottom: 0.1rem;
+    background: #fff;
+}
+.order_product_list{
+    width: 100%;
+    height: 2rem;
+    padding: 0rem 0.3rem;
+    box-sizing: border-box;
+    /* border-bottom: 1px solid #eee; */
+    box-sizing: border-box;
+}
+.order_product_list_inner_box{
+    width: 100%;
+    height: 100%;
+    padding: 0.2rem 0rem;
+    box-sizing: border-box;
+    border-bottom: 1px solid #eee;
+}
+.order_product_list:last-child .order_product_list_inner_box{
+    border-bottom: none;
+}
+
+.order_product_left{
+    width: 25%;
+    height: 100%;
+    float: left;
+}
+.order_product_left img{
+    width: 100%;
+    height: 100%;
+}
+.order_product_right{
+    height: 100%;
+    float: right;
+    width: 75%;
+    /* background: #000 */
+    padding: 0.1rem 0.1rem 0rem 0.1rem;
+    box-sizing: border-box;
+    position: relative;
+}
+.order_product_right_name{
+    width: 100%;
+    font-size: 0.28rem;
+    color: #333333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 0.1rem;
+}
+.order_product_right_p{
+    width: 100%;
+    height: 0.7rem;
+}
+.order_product_right_p p{
+    width: 100%;
+    color: #666666;
+    font-size: 0.24rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.order_product_number{
+    font-size: 0.28rem;
+    color: #333333;
+    position: absolute;
+    right: 0.1rem;
+    bottom: 0rem
+}
+
+/* 列表 */
+.order_list_box{
+    width: 100%;
+    background: #fff;
+    margin-bottom: 0.1rem;
+}
+.order_list{
+    width: 100%;
+    line-height: 0.9rem;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+/* 没有下边框线的样式 */
+.no_border{
+    border-bottom: none;
+}
+.order_list_left{
+    float: left;
+    color: #666666;
+    font-size: 0.24rem;
+}
+.order_list_right{
+    float: right;
+    color: #666666;
+    font-size: 0.24rem;
+}
+
+
+/* 结算 */
+.order_list_title{
+    font-size: 0.24rem;
+    color: #333333;
+}
+.settlement_left{
+    color: #333333
+}
+.settlement_right{
+    font-size: 0.28rem;
+    color: #333333;
+}
+
+/* 支付方式 */
+.payment_mode{
+    width: 100%;
+    height: 0.88rem;
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.payment_mode_left{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.payment_mode_left img{
+    width: 0.6rem;
+    height: 0.6rem;
+    margin-right: 0.2rem;
+}
+.payment_mode_left p{
+    color: #333333;
+    font-size: 0.28rem;
+}
+
+.payment_mode_right{
+    display: block;
+    width: 0.35rem;
+    height: 0.35rem;
+    background: url(../img/icon/product_selection.png) no-repeat;
+    background-size: 100%;
+    box-sizing: border-box;
+    border-radius: 100%;
+    position: relative;
+    overflow: hidden;
+    font-size: 0;
+}
+
+
+/* 底部支付 */
+.bot_payment{
+    width: 100%;
+    height: 1rem;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    overflow: hidden;
+    line-height: 1rem;
+}
+.payment_money_p_box{
+    width: 65%;
+    height: 100%;
+    padding-left: 0.3rem;
+    box-sizing: border-box;
+    float: left;
+}
+.payment_money_p{
+    color: #333333;
+    font-size: 0.32rem;
+}
+.payment_money{
+    font-size: 0.32rem;
+    color: #e11010;
+    font-weight: bold;
+}
+.payment_money_but{
+    width: 35%;
+    height: 100%;
+    background: #7ea83a;
+    float: right;
+    text-align: center;
+    color: #fff;
+    font-size: 0.36rem;
+}
+
+.payment_money_but_a{
+    width: 100%;
+}

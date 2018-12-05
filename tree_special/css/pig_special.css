@@ -1,0 +1,74 @@
+*{font-family: 微软雅黑;font-weight: bold;}
+.pig_special_box{
+    width: 100%;
+}
+.pig_special_img{
+    width: 100%;
+}
+
+
+/* 头部价格 */
+.demand_text{
+    width: 100%;
+    position: relative;
+}
+.demand_p_box{
+    position: absolute;
+    bottom: 0.1rem;
+    left: 0.9rem;
+}
+.demand_p_title{
+    color: #fefdfc;
+    font-size: 0.51rem;
+}
+.demand_p_money{
+    font-size: 0.325rem;
+    color: #c79b6c;
+}
+
+/* 矩形预定 */
+.rectangle_reserve{
+    position: absolute;
+    top: 0;
+    right: 1.75rem;
+    width: 1.45rem;
+    height: 0.5rem;
+}
+.rectangle_reserve img{
+    width: 100%;
+    height: 100%;
+}
+/* 多边形预定 */
+.polygon_reserve{
+    width: 2.33rem;
+    height: 0.53rem;
+    position: absolute;
+    top: 0;
+    left: 1.38rem;
+}
+.polygon_reserve img{
+    width: 100%;
+    height: 100%;
+}
+
+/* 大的预定按钮 */
+.rectangle_reserve_big{
+    width: 2.17rem;
+    height: 0.65rem;
+    left: 1.15rem;
+}
+
+/* 购买须知 */
+.purchase_notice{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    padding: 0rem 0.8rem;
+    box-sizing: border-box;
+}
+.purchase_notice_title,.purchase_notice_p{
+    color: #ffffff;
+    font-size: 0.2rem;
+    font-family: siyuan;
+    font-weight: 500;
+}

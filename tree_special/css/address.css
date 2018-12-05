@@ -1,0 +1,279 @@
+.bottom_add_address{
+    position: fixed;
+    z-index: 9;
+    background: #84a539;
+    width: 100%;
+    height: 0.88rem;
+    bottom: 0;
+    left: 0;
+}
+.bottom_add_address_a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.bottom_add_address_a img{
+    width: 0.36rem;
+    height: 0.36rem;
+}
+.bottom_add_address_a p{
+    color: #fff;
+    font-size: 0.32rem;
+    margin-left: 0.15rem;
+}
+
+
+.address_con{
+    position: fixed;
+    top: 0.9rem;
+    bottom: 0.88rem;
+    left: 0;
+    width: 100%;
+    overflow: auto;
+    background: #f5f4f7;
+    padding: 0.2rem;
+    box-sizing: border-box;
+}
+
+.address_list_box{
+    width: 100%;
+    padding: 0.2rem;
+    padding-bottom: 0rem;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 0.2rem;
+}
+.address_information_box{
+    width: 100%;
+    padding: 0rem 0.15rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+}
+.address_information_name,.address_information_name span,.address_position{
+    color: #333333;
+    font-size: 0.28rem;
+    margin-bottom: 0.1rem;
+}
+.address_information_name span{
+    margin-left: 0.2rem;
+}
+
+/* 地址列表地址默认 编辑删除按钮 */
+.address_list_but{
+    width: 100%;
+    height: 0.6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+/* 默认地址 */
+.address_list_but_left{
+    width: 49.7%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.default_address_choice{
+    width: 0.26rem;
+    height: 0.26rem;
+    border-radius: 3px;
+    overflow: hidden;
+    border: 1px solid #999;
+    box-sizing: border-box;
+    margin-right: 0.1rem;
+}
+/* 默认地址被选中样式 */
+.default_address_choice_select{
+    border: none;
+    background: url(../img/icon/default_address.png) no-repeat;
+    background-size: 100% 100%;
+}
+.default_address_p{
+    color: #999999;
+    font-size: 0.24rem;
+}
+
+/* 分割线 */
+.address_list_but_center{
+    display: block;
+    width: 0.6%;
+    height: 0.4rem;
+    background: #eee;
+}
+
+
+
+
+.address_list_but_right{
+    width: 49.7%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* 删除 */
+.address_delete,.address_edit{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.25rem;
+}
+.address_delete img{
+    width: 0.38rem;
+    height: 0.35rem;
+}
+.address_edit img{
+    width: 0.36rem;
+    height: 0.35rem;
+}
+.address_delete p,.address_edit p{
+    color: #999999;
+    font-size: 0.24rem;
+    margin-left: 0.1rem;
+}
+
+
+
+/* 最低一个地址  弹出框 */
+.default_address_popup_box{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+    background: rgba(0, 0, 0, .3);
+}
+.default_address_popup{
+    width: 60%;
+    height: 2.8rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -30%;
+    margin-top: -1.4rem;
+    background: #fff;
+    /* border-radius: 8px; */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+    /* border: 1px solid #eee; */
+    box-sizing: border-box;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.default_address_popup_amin{
+    opacity: 1;
+    visibility: visible;
+}
+.default_address_popup_title,.delete_popup_title{
+    font-size: 0.3rem;
+    color: #666;
+    width: 100%;
+    text-align: center;
+    line-height: 1rem;
+}
+.default_address_popup_p,.delete_popup_p{
+    font-size: 0.28rem;
+    color: #999;
+    width: 100%;
+    padding: 0.2rem;
+    text-align: center;
+    box-sizing: border-box;
+}
+.default_address_popup_but{
+    width: 100%;
+    position: absolute;
+    border-top: 1PX solid #eee;
+    box-sizing: border-box;
+    bottom: 0;
+    left: 0;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    text-align: center;
+    font-size: 0.26rem;
+    color: #fff;
+    background: #fb4a4a;
+}
+.default_address_popup_but:active{
+    background: #f04050;
+}
+
+
+/* 删除弹出框 */
+.delete_popup_box{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .3);
+    visibility: hidden;
+}
+.delete_popup{
+    width: 60%;
+    height: 2.8rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -30%;
+    margin-top: -1.4rem;
+    background: #fff;
+    /* border-radius: 8px; */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.delete_popup_anim{
+    opacity: 1;
+    visibility: visible;
+}
+.delete_popup_but_box{
+    width: 100%;
+    position: absolute;
+    border-top: 1PX solid #eee;
+    box-sizing: border-box;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.delete_popup_but{
+    width: 49.7%;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    text-align: center;
+    font-size: 0.26rem;
+    color: #666;
+}
+.delete_popup_but:active{
+    background: #eee;
+}
+.delete_popup_but_box span{
+    display: block;
+    width: 0.6%;
+    height: 0.5rem;
+    background: #eee;
+}

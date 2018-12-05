@@ -1,0 +1,309 @@
+body,html{background: #fff;}
+.shop_car_product_list_box{
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 0.95rem;
+    padding-top: 0.9rem;
+}
+
+.shop_car_product_list{
+    width: 100%;
+    /* overflow: hidden; */
+    height: 2.1rem;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+    position: relative;
+    transition: all 0.3s;
+    left: 0rem;
+}
+
+/* 选择按钮 */
+.choice_frame{
+    float: left;
+    width: 10%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.choice_circle{
+    display: block;
+    width: 0.35rem;
+    height: 0.35rem;
+    border-radius: 100%;
+    border: 1px solid #999;
+    box-sizing: border-box;
+}
+/* 选中的样式 */
+.choice_circle_selection{
+    border: none;
+    background: url(../img/icon/product_selection.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+
+.shop_car_product_con{
+    float: left;
+    width: 90%;
+    height: 100%;
+}
+.shop_car_product_con_a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0.3rem 0rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 左边的图片 */
+.shop_car_product_left{
+    width: 25%;
+    height: 100%;
+    float: left;
+}
+.shop_car_product_left img{
+    width: 100%;
+    height: 100%;
+}
+
+/* 右边的内容 */
+.shop_car_product_con_right{
+    width: 75%;
+    height: 100%;
+    float: left;
+    padding: 0rem 0.3rem 0rem 0.2rem;
+    box-sizing: border-box;
+}
+
+.shop_car_product_con_right_name{
+    color: #333333;
+    font-size: 0.28rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 0.08rem;
+}
+.shop_car_product_con_right_p{
+    width: 100%;
+    height: 0.7rem;
+}
+.shop_car_product_con_right_p p{
+    width: 100%;
+    color: #666666;
+    font-size: 0.24rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.shop_car_product_con_right_money{
+    color: #e10707;
+    font-size: 0.24rem;
+}
+
+
+/* 加减数量 */
+.plus_reduce_number{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0.3rem;
+    bottom: 0.3rem;
+}
+.reduce_but,.plus_but{
+    width: 0.35rem;
+    height: 0.35rem;
+}
+.number_frame{
+    width: 0.6rem;
+    height: 0.35rem;
+    margin: 0rem 0.1rem;
+    text-align: center;
+    line-height: 0.35rem;
+    border: none;
+    outline: none;
+    font-size: 0.24rem;
+    color: #333333;
+    background: #fff;
+}
+
+/* 删除按钮 */
+.delete_frame{
+    width: 1rem;
+    height: 100%;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background: #e40303;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.delete_frame img{
+    width: 0.37rem;
+    height: 0.45rem;
+}
+
+
+
+/* 底部结算 */
+.bottom_settlement_box{
+    width: 100%;
+    height: 0.95rem;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    border-top: 1px solid #eee;
+    box-sizing: border-box;
+}
+.all_choose{
+    width: 25%;
+    height: 100%;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.all_choose_circular{
+    display: block;
+    width: 0.35rem;
+    height: 0.35rem;
+    border: 1px solid #999;
+    border-radius: 100%;
+    box-sizing: border-box;
+}
+
+.all_choose_p{
+    color: #333333;
+    font-size: 0.32rem;
+    margin-left: 0.1rem;
+}
+
+.cen_money{
+    width: 40%;
+    height: 100%;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.Total{
+    color: #333333;
+    font-size: 0.32rem;
+}
+.Total span{
+    color: #e11010;
+    font-size: 0.32rem;
+}
+
+/* 结算按钮 */
+.settlement_but{
+    width: 35%;
+    height: 100%;
+    float: right;
+    background: #7ea83a;
+}
+.settlement_but a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 0.36rem;
+    text-align: center;
+    line-height: 0.95rem;
+    color: #fff;
+}
+
+
+/* 弹出提示 */
+.shop_tips{
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 1.1rem;
+    left: 0;
+    font-size: 0.26rem;
+    color: #333333;
+    visibility:hidden;
+    opacity: 0;
+}
+.shop_tips_eject{
+    animation: shop_tips_anim 2s;
+}
+@keyframes shop_tips_anim
+{
+10%{visibility:visible;opacity: 0.3;}
+50%{visibility:visible;opacity: 1;}
+100%{visibility:hidden;opacity: 0;}
+}
+
+
+
+/* 最低选择一件商品弹出框 */
+.settlement_popup_big_box{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    display: none;
+    background: rgba(0, 0, 0, .3);
+}
+.settlement_popup{
+    width: 60%;
+    height: 2.8rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -30%;
+    margin-top: -1.4rem;
+    background: #fff;
+    /* border-radius: 8px; */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+    /* border: 1px solid #eee; */
+    box-sizing: border-box;
+}
+.settlement_popup_title{
+    font-size: 0.3rem;
+    color: #666;
+    width: 100%;
+    text-align: center;
+    line-height: 1rem;
+}
+.settlement_popup_p{
+    font-size: 0.28rem;
+    color: #999;
+    width: 100%;
+    padding: 0.2rem;
+    text-align: center;
+    box-sizing: border-box;
+}
+.settlement_popup_but{
+    width: 100%;
+    position: absolute;
+    border-top: 1PX solid #eee;
+    box-sizing: border-box;
+    bottom: 0;
+    left: 0;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    text-align: center;
+    font-size: 0.26rem;
+    color: #fff;
+    background: #fb4a4a;
+}
+.settlement_popup_but:active{
+    background: #f04000;
+}
