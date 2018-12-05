@@ -13,7 +13,9 @@
     <script src="./js/jSignature.min.js"></script>
 
 <style>
-
+    #signature{
+        background: #fff;
+    }
 </style>
 </head>
 <body>
@@ -31,7 +33,7 @@
             var dWidth = document.getElementById("signature").offsetWidth ;
            
           $("#signature").jSignature({'UndoButton':false,'height':'5rem','width':'100%','signatureLine':false,'lineWidth':'2','decor-color':'#fff'});　
-          $("canvas").attr("width",dWidth*DPI)
+          $("canvas").attr("width",dWidth)
           $("canvas").css("width",dWidth)
         })  
     
