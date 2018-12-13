@@ -430,6 +430,7 @@ header{
     padding: 0.35rem;
     box-sizing: border-box;
     position: relative;
+    background: #fff;
 }
 .bottom_adopt_notice_inner{
     width: 100%;
@@ -440,7 +441,7 @@ header{
     position: relative;
 }
 .bottom_adopt_notice_inner_title{
-    font-size: 0.28rem;
+    font-size: 0.32rem;
     color: #fefbfb;
     font-weight: bold;
     margin-bottom: 0.1rem;
@@ -453,25 +454,41 @@ header{
     align-items: flex-start;
 }
 .bottom_adopt_notice_list_name,.bottom_adopt_notice_list_p{
-    font-size: 0.24rem;
+    font-size: 0.28rem;
     color: #fefdfd;
     line-height: 0.5rem;
+
 }
 .bottom_adopt_notice_list_name{
-    width: 20%;
+    width: 25%;
 }
 .bottom_adopt_notice_list_p{
-    width: 80%;
+    width: 75%;
+    text-align: justify;
 }
+.bottom_adopt_notice_list_div{
+    width: 75%;
+}
+.right_div_p{
+    width: 100%;
+}
+
+
 .be_careful{
     margin-top: 0.1rem;
 }
 .be_careful,.be_careful a{
-    font-size: 0.2rem;
+    font-size: 0.28rem;
     color: #fff;
 }
 .be_careful a{
     text-decoration: underline;
+}
+.be_careful_tagging{
+    color: #f8fb1a;
+}
+.be_careful_phone{
+    margin-right: 0.2rem;
 }
 /* 装饰 */
 .decorate_circular{
@@ -485,50 +502,33 @@ header{
     background:#fff;
 }
 
+/* 刨猪汤底部 */
+.pig_bottom_adopt_notice_list_p{
+    font-size: 0.24rem;
+    color: #fff;
+    width: 100%;
+    line-height: 0.4rem;
+}
 
+/* 间隔 */
+.jiange{
+    width: 100%;
+    height: 0.6rem;
+}
 
-/* 蓝莓 */
-.blueberry_bottom_adopt_notice{
-    background: #dde1f2;
+/* 蓝色的认养须知 */
+.blue_back{
+    background: #3f6ea3;
 }
-.blueberry_bottom_adopt_notice .bottom_adopt_notice_inner{
-    background: #5f6199;
+/* 绿色 */
+.green_back{
+    background: #6cbc0f;
 }
-/* 脆桃 */
-.crisp_peach_bottom_adopt_notice{
-    background: #dde1f2
+/* 刨猪汤的底色 */
+.pig_bottom_back{
+    background: #0d3f3d;
 }
-.crisp_peach_bottom_adopt_notice .bottom_adopt_notice_inner{
-    background: #5f6199;
-}
-/* 葡萄 */
-.grape_bottom_adopt_notice{
-    background: #e1e5f9;
-}
-.grape_bottom_adopt_notice .bottom_adopt_notice_inner{
-    background: #4b4c81;
-}
-/* 猕猴桃 */
-.kiwifruit_bottom_adopt_notice{
-    background: #f8fad7;
-}
-.kiwifruit_bottom_adopt_notice .bottom_adopt_notice_inner{
-    background: #c6ca2c;
-}
-/* 布朗李 */
-.lawrence_brownlee_bottom_adopt_notice{
-    background: #f8fad7;
-}
-.lawrence_brownlee_bottom_adopt_notice .bottom_adopt_notice_inner{
-    background: #c6ca2c
-}
-/* 黄花梨 */
-.yellow_pear_bottom_adopt_notice{
-    background: #fff;
-}
-.yellow_pear_bottom_adopt_notice .bottom_adopt_notice_inner{
-    background: #6cbc0f
-}
+
 
 
 /* 信息弹出 */

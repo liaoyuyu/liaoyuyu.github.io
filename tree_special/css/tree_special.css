@@ -131,24 +131,33 @@
 }
 
 
+
+/* 底部版权  电话 */
+
 .copyright{
     width: 100%;
     position: absolute;
-    bottom: 0.28rem;
+    bottom: 0.2rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
     align-items: center;
-    padding-left: 0.5rem;
+    /* padding-left: 0.5rem; */
     box-sizing: border-box;
 }
 .phone{
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-bottom: 0.1rem;
 }
 .phone_p,.phone_a,.copyright_p{
     font-size: 0.24rem;
     color: #fff;
+}
+.phone_a:last-child{
+    margin-left: 0.2rem;
 }
 .copyright_p{
     margin-left: 0.15rem;
