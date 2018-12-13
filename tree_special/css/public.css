@@ -434,7 +434,7 @@ header{
 }
 .bottom_adopt_notice_inner{
     width: 100%;
-    padding: 0.25rem 0.3rem 0.2rem 0.3rem;
+    padding: 0.25rem 0.2rem 0.2rem 0.2rem;
     box-sizing: border-box;
     border-top-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
@@ -460,14 +460,14 @@ header{
 
 }
 .bottom_adopt_notice_list_name{
-    width: 25%;
+    width: 23%;
 }
 .bottom_adopt_notice_list_p{
-    width: 75%;
+    width: 77%;
     text-align: justify;
 }
 .bottom_adopt_notice_list_div{
-    width: 75%;
+    width: 77%;
 }
 .right_div_p{
     width: 100%;

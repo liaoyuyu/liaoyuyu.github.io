@@ -45,13 +45,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 }
 .fruit_tree,.base_location{
-    color: #ff6a10;
+    color: #2eaffd;
 }
 .fruit_tree{
-    font-size: 0.32rem;
+    font-size: 0.42rem;
 }
 .base_location{
     font-size: 0.24rem;
@@ -61,7 +61,7 @@
     line-height: 0.58rem;
     padding: 0rem 0.2rem;
     background: #fff;
-    color: #ff6a10;
+    color: #ff3a3a;
     font-size: 0.285rem;
     border-radius: 0.29rem;
 }
@@ -69,98 +69,65 @@
 
 
 /* 底部 */
-.bottom_plate{
+.bottom_pig{
+    width: 100%;
+}
+.bottom_pig_img{
+    width: 100%;
+}
+.bottom_pig_div{
     width: 100%;
     position: relative;
 }
-.bottom_img{
+.bottom_pig_p_div{
     width: 100%;
-}
-.bottom_img img{
-    width: 100%;
-}
-.bottom_plate_con{
-    width: 100%;
-    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0rem 0.75rem;
-    box-sizing: border-box;
+    overflow: hidden;
 }
-.pig_soup_box{
+.bottom_pig_p{
     width: 100%;
-    position: relative;
-}
-.pig_soup_box img{
-    width: 100%;
-}
-.pig_soup_box_con{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding-top: 1.5rem;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.pig_soup_box_con_p{
-    font-family: siyuan;
-    color: #fff;
-    font-size: 0.36rem;
     text-align: center;
-    margin-bottom: 0.05rem;
-}
-.pig_soup_box_con_money{
-    color: yellow;
     font-size: 0.44rem;
-    font-weight: bold;
-    text-align: center;
-}
-.pig_soup_box_con_a{
-    margin-top: 0.1rem;
-}
-
-
-
-/* 底部版权  电话 */
-
-.copyright{
-    width: 100%;
-    position: absolute;
-    bottom: 0.2rem;
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    justify-content: center;
-    align-items: center;
-    /* padding-left: 0.5rem; */
-    box-sizing: border-box;
-}
-.phone{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    color: #05c40a;
     margin-bottom: 0.1rem;
 }
-.phone_p,.phone_a,.copyright_p{
+.bottom_pig_money{
+    color: #fd0107;
+    font-size: 1.18rem;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;   
+}
+.bottom_pig_a{
+    font-size: 0.285rem;
+    color: #ffffff;
+    background: #fd6c6c;
+    line-height: 0.56rem;
+    padding: 0rem 0.2rem;
+    border-radius: 0.28rem;
+    overflow: hidden;
+    float: right;
+    margin-right: 0.6rem;
+}
+
+/* 底部联系电话 */
+.bottom_phone_p{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.05rem;
     font-size: 0.24rem;
+    color: #ffffff;
+}
+.bottom_phone_p a{
+    font-size: 0.26rem;
+    color: #ffffff;
+    margin-right: 0.2rem;
+}
+.bottom_copyright_p{
+    width: 100%;
+    text-align: center;
+    font-size: 0.20rem;
     color: #fff;
 }
-.phone_a:last-child{
-    margin-left: 0.2rem;
-}
-.copyright_p{
-    margin-left: 0.15rem;
-}
-
-
