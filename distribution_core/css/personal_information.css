@@ -1,7 +1,13 @@
 /* 内容 */
 .con{
     width: 100%;
-    padding-top: 0rem;
+    position: absolute;
+    left: 0;
+    top: 0.9rem;
+    bottom: 0;
+    overflow: auto;
+    padding-top: 0.1rem;
+    box-sizing: border-box;
 }
 .account_ul{
     width: 100%;
@@ -10,7 +16,7 @@
 }
 .account_li{
     width: 100%;
-    padding: 0rem 0.4rem;
+    padding: 0rem 0.3rem;
     border-bottom: 1px solid #eee;
     box-sizing: border-box;
     display: flex;
@@ -49,7 +55,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0rem 0.4rem;
+    padding: 0rem 0.3rem;
     box-sizing: border-box;
 }
 
@@ -89,4 +95,6 @@
 .phone{
     color: #333333;
 }
-
+.front_arrow{
+    font-size: 0.45rem;
+}
