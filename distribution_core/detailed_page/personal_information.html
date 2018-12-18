@@ -9,8 +9,11 @@
     <link rel="stylesheet" href="../css/public.css">
     <link rel="stylesheet" href="../css/personal_information.css">
     <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/iScroll.js"></script>
+    <script src="../js//Mdate.js"></script>
     <script src="../js/rem.js"></script>
     <script src="../js/public.js"></script>
+    <script src="../js/personal_information.js"></script>
 
 </head>
 <body>
@@ -50,7 +53,7 @@
                     <input id="dateSelectorOne" class="right_p name" type="text" value="撒旦教阿拉丁" maxlength="6">
                 </div>
             </li>
-            <li class="account_li sex">
+            <li class="account_li personal_information_sex">
                 <p class="li_left">性别</p>
                 <div class="li_right">
                     <p class="right_p">男</p>
@@ -60,12 +63,52 @@
             <li id="birthday" class="account_li">
                 <p class="li_left">生日</p>
                 <div class="li_right">
-                    <p class="right_p" id="birthday_p">1997年-09月26日</p>
+                    <!-- <p class="right_p" id="birthday_p">1997年-09月26日</p> -->
+                    <input class="right_p" id="birthday_p" type="text" name="">
                     <i class="iconfont front_arrow">&#xe619;</i>
                 </div>
             </li>
         </ul>
     </div>
 
+     <!-- 性别弹出框 -->
+     <div class="sex_box">
+        <!-- 背景 -->
+        <div class="sex_back"></div>
+        <!-- 弹出层 -->
+        <div class="sex_frame">
+            <p class="sex_tit">性别</p>
+            <div class="sex_list sex_list_sex1" data_sex="男">
+                <p class="list_p">男</p>
+                <span class="list_option"></span>
+            </div>
+            <div class="sex_list sex_list_sex2" data_sex="女">
+                <p class="list_p">女</p>
+                <span class="list_option"></span>
+            </div>
+        </div>
+    </div>
+
 </body>
+
+
+
+<script>
+
+    // 100年以内
+    var date = new Date()
+    date = date.getFullYear()-100
+
+    // birthday为点击的元素id，birthday_p为要渲染名字的元素id
+    new Mdate("birthday", {
+        acceptId: "birthday_p",
+        beginYear: date,//此项为Mdate的初始年份，不填写默认为2000
+        beginMonth: "1",//此项为Mdate的初始月份，不填写默认为1
+        beginDay: "1",//此项为Mdate的初始日期，不填写默认为1
+        endYear: "",//此项为Mdate的结束年份，不填写默认为当年
+        endMonth: "",//此项为Mdate的结束月份，不填写默认为当月
+        endDay: "", //此项为Mdate的结束日期，不填写默认为当天
+        format: ""//此项为Mdate需要显示的格式，可填写"/"或"-"或".",不填写默认为年-月-日
+    })
+</script>
 </html>

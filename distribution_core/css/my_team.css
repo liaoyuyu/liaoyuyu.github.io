@@ -1,9 +1,10 @@
+body,html{background: #fff;}
 /* 推荐人数 */
 .recommend_number{
     width: 94%;
     height: 2.65rem;
     margin: 0 auto;
-    /* background: #fc4834; */
+    background: #fe422f;
     border-radius: 8px;
     overflow: hidden;
     padding-top: 0.8rem;
@@ -14,7 +15,7 @@
 }
 .recommend_number_title{
     font-size: 0.38rem;
-    color: #333333;
+    color: #fff;
     margin-bottom: 0.1rem;
 }
 .recommend_number_p,.recommend_number_title{
@@ -23,11 +24,11 @@
 }
 .recommend_number_p{
     font-size: 0.75rem;
-    color: #333333;
+    color: #fff;
 }
 .recommend_number_p span{
     font-size: 0.75rem;
-    color: #fc4834;
+    color: #feef02;
 }
 
 /* 推荐明细 */
