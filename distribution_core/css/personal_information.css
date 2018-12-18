@@ -1,0 +1,92 @@
+/* 内容 */
+.con{
+    width: 100%;
+    padding-top: 0rem;
+}
+.account_ul{
+    width: 100%;
+    background: #fff;
+    font-size: 0;
+}
+.account_li{
+    width: 100%;
+    padding: 0rem 0.4rem;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 1rem;
+    line-height: 1rem;
+    overflow: hidden;
+}
+.li_left{
+    color: #333333;
+    font-size: 0.32rem;
+}
+.li_right{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.right_p{
+    height: 1rem;
+    color: #999999;
+    font-size: 0.32rem;
+    text-align: right;
+    border: none;
+    outline: none;
+}
+.right_img{
+    width: 0.12rem;
+    height: 0.25rem;
+    margin-left: 0.1rem;
+}
+.li_a{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 0.4rem;
+    box-sizing: border-box;
+}
+
+
+
+/* 头像 */
+.portrait_li{
+    height: 1.8rem;
+    line-height: 1.8rem;
+}
+.portrait_box{
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 100%;
+    overflow: hidden;
+    font-size: 0;
+    position: relative;
+    border: 1px solid #eee;
+    box-sizing: border-box;
+}
+.portrait_box img{
+    width: 100%;
+    height: 100%;
+}
+.upload{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+/* 手机号 */
+.phone_li{
+    padding: 0;
+}
+.phone{
+    color: #333333;
+}
+

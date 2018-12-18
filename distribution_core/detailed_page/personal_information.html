@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人信息</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/personal_information.css">
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/rem.js"></script>
+    <script src="../js/public.js"></script>
+
+</head>
+<body>
+    <header>
+        <a href="javascript:history.back(-1)" class="back_a"><i class="iconfont back_img">&#xe62f;</i></a>
+        <p class="header_center_p">个人信息</p>
+    </header>
+
+     <!-- 内容 -->
+     <div class="con">
+
+        <ul class="account_ul">
+            <li class="account_li portrait_li">
+                <p class="li_left">头像</p>
+                <div class="li_right portrait_box">
+                    <input id="upload" class="upload" type="file" accept="image/*" onchange="uploadobj()">
+                    <img class="upload_img" v-if="data.headpicfrom==1" :src="data.UserHeadPic" alt="" v-cloak>
+                </div>
+            </li>
+            <li class="account_li phone_li" @click="replace">
+                <a class="li_a" href="javascript:void(0);">
+                    <p class="li_left">手机号</p>
+                    <div class="li_right">
+                        <p class="right_p phone" v-cloak>{{data.UserMobile}}</p>
+                        <img class="right_img" src="../img/icon/forward.png" alt="">
+                    </div>
+                </a>
+            </li>
+            <li class="account_li">
+                <p class="li_left">微信</p>
+                <div class="li_right">
+                    <p class="right_p" v-if="data.OpenID !=''" v-cloak>已绑定</p>
+                    <p class="right_p" v-if="data.OpenID ==''" v-cloak>未绑定</p>
+                </div>
+            </li>
+            <li class="account_li">
+                <p class="li_left">昵称</p>
+                <div class="li_right">
+                    <!-- <p class="right_p">被风带走的叶</p> -->
+                    <input id="dateSelectorOne" class="right_p name" type="text" @focus="name_focus" @blur="name_blur($event)" :value="data.wxnickname" maxlength="6" v-cloak>
+                </div>
+            </li>
+            <li class="account_li sex" @click="sex">
+                <p class="li_left">性别</p>
+                <div class="li_right">
+                    <p class="right_p" v-if="data.UserSex == 1" v-cloak>男</p>
+                    <img class="right_img" src="../img/icon/forward.png" alt="">
+                </div>
+            </li>
+            <li id="birthday" class="account_li">
+                <p class="li_left">生日</p>
+                <div class="li_right">
+                    <p class="right_p" id="birthday_p" v-cloak>{{time[0]}}年-{{time[1]}}月-{{time[2]}}日</p>
+                    <img class="right_img" src="../img/icon/forward.png" alt="">
+                </div>
+            </li>
+        </ul>
+
+
+    </div>
+
+</body>
+</html>
