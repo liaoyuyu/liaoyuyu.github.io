@@ -1,0 +1,168 @@
+
+
+
+
+.top_portrait_region{
+    width: 100%;
+    height: 3rem;
+    background: url(../images/icon/top_box.jpg) no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 0.35rem;
+    box-sizing: border-box;
+    position: relative;
+}
+/* 头像盒子 */
+.portrait_region_a{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.portrait_box{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.portrait_img{
+    width: 100%;
+    height: 100%;
+}
+/* 昵称 加入时间 */
+.user_name_box{
+    margin-left: 0.2rem;
+}
+.user_name{
+    font-size: 0.36rem;
+    color: #333333;
+    margin-bottom: 0.1rem;
+}
+.user_json_time{
+    font-size: 0.24rem;
+    color: #333333;
+}
+.service_news_box{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    right: 0.3rem;
+    top: 0.2rem;
+}
+.iconfont_service_box,.iconfont_news_box{
+    font-size: 0.5rem;
+    color: #fff;
+    padding: 0.1rem;
+}
+.service_box{
+    width: 0.45rem;
+    height: 0.42rem;
+    padding: 0.1rem;
+}
+.service_news_a{
+    width: auto;
+    height: auto;
+    position: relative;
+}
+.news_tips{
+    display: block;
+    width: 0.1rem;
+    height: 0.1rem;
+    border-radius: 100%;
+    overflow: hidden;
+    background: #e60012;
+    position: absolute;
+    right: 0.17rem;
+    top: 0.08rem;
+}
+
+/* 分销金额 */
+.distribution_money_box{
+    width: 100%;
+    height: 1.6rem;
+    overflow: hidden;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 20px #eee;
+    margin-bottom: 0.2rem;
+}
+.distribution_money{
+    float: left;
+    width: 33.3%;
+    height: 100%;
+   
+}
+.distribution_money_a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.distribution_money_p{
+    font-size: 0.24rem;
+    color: #333333;
+    margin-bottom: 0.1rem;
+}
+.distribution_money_money{
+    font-size: 0.28rem;
+    color: #88ad48;
+}
+.center_distribution_money{
+    border-left: 3px solid #e9e7ea;
+    border-right: 3px solid #e9e7ea;
+    box-sizing: border-box;
+}
+
+
+/* 功能列表 */
+.function_list{
+    width: 100%;
+    background: #fff;
+}
+.function_list_ul{
+    width: 100%;
+}
+.function_list_li{
+    width: 100%;
+    height: 1rem;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+}
+.function_list_li:last-child{
+    border: none;
+}
+.function_list_a{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 0.3rem 0rem 0.5rem;
+    box-sizing: border-box;
+}
+.function_list_left,.function_list_right{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.function_list_left_img{
+    font-size: 0.55rem;
+    margin-right: 0.2rem;
+}
+.function_list_left_p{
+    font-size: 0.28rem;
+    color: #333333;
+}
+.function_list_right_p{
+    font-size: 0.24rem;
+    color: #88ad48;
+}
+.front_arrow{
+    font-size: 0.45rem;
+}
+

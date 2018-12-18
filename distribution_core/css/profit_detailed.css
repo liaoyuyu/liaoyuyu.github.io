@@ -1,0 +1,81 @@
+.profit_detailed{
+    width: 100%;
+}
+.profit_detailed_title{
+    width: 100%;
+    line-height: 1.3rem;
+    padding-left: 0.5rem;
+    box-sizing: border-box;
+    font-size: 0.32rem;
+    color: #333333;
+}
+.profit_detailed_ul{
+    width: 100%;
+    padding: 0rem 0.3rem;
+    box-sizing: border-box;
+    overflow: auto;
+}
+.profit_detailed_li{
+    width: 100%;
+    height: 1.4rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 0rem 0.4rem 0rem 0.2rem;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 8px #ccc;
+    margin-bottom: 0.15rem;
+}
+.profit_detailed_li:first-child{
+    margin-top: 0.1rem;
+}
+.profit_detailed_li_left{
+    height: 100%;
+    padding: 0.25rem 0rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.profit_detailed_left_p{
+    font-size: 0.28rem;
+    color: #333333;
+}
+.profit_detailed_left_pp{
+    font-size: 0.24rem;
+    color: #999999;
+}
+.profit_detailed_li_right{
+    font-size: 0.28rem;
+}
+.profit_detailed_lose{
+    color: #ef1212;
+}
+.profit_detailed_get{
+    color: #88ad48;
+}
+
+
+
+
+/* 提现页面右边 */
+.profit_detailed_li_right{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.profit_detailed_li_right_money{
+    font-size: 0.28rem;
+    color: #ef1212;
+    margin-bottom: 0.08rem;
+}
+.profit_detailed_li_right_p{
+    font-size: 0.28rem;
+    color: #fd331d;
+}

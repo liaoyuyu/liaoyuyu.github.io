@@ -1,0 +1,92 @@
+.cash_withdrawal_box{
+    width: 94%;
+    margin: 0 auto;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 0.4rem;
+    background: #fff;
+    padding: 0.5rem 0.4rem 1rem 0.4rem;
+    box-sizing: border-box;
+}
+.bank_card_box{
+    width: 100%;
+    height: 1rem;
+    overflow: hidden;
+    margin-bottom: 0.8rem;
+}
+.bank_card_left{
+    font-size: 0.28rem;
+    color: #333333;
+    width: 35%;
+    text-align: left;
+    float: left;
+}
+.bank_card_right{
+    float: left;
+    width: 65%;
+}
+.bank_card{
+    font-size: 0.24rem;
+    color: #445ea4;
+    margin-bottom: 0.3rem;
+}
+.bank_card_p{
+    font-size: 0.24rem;
+    color: #999999;
+}
+
+.cash_withdrawal_title{
+    font-size: 0.24rem;
+    color: #333333;
+    margin-bottom: 0.2rem;
+}
+.cash_withdrawal_money_box_box{
+    width: 100%;
+}
+.cash_withdrawal_money_box{
+    width: 100%;
+    height: 0.9rem;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 0.2rem;
+}
+.money_symbol{
+    color: #333333;
+    font-size: 0.38rem;
+    font-weight: bold;
+    width: 7%;
+}
+.cash_withdrawal_input{
+    width: 93%;
+    height: 75%;
+    font-size: 0.48rem;
+    color: #333;
+    font-weight: bold;
+    outline: none;
+    border: none;
+}
+.all_cash_withdrawal{
+    font-size: 0.24rem;
+    color: #999999;
+    margin-bottom: 0.4rem;
+}
+.all_cash_withdrawal span{
+    font-size: 0.24rem;
+    color: #445ea4;
+}
+
+
+.cash_withdrawal_but{
+    width: 100%;
+    line-height: 1rem;
+    text-align: center;
+    font-size: 0.36rem;
+    color: #fffffe;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #88ad48;
+}
