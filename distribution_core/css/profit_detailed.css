@@ -26,7 +26,7 @@
     background: #fff;
     padding: 0rem 0.4rem 0rem 0.2rem;
     box-sizing: border-box;
-    box-shadow: 0px 0px 8px #ccc;
+    box-shadow: 0px 1px 5px #ccc;
     margin-bottom: 0.15rem;
 }
 .profit_detailed_li:first-child{
