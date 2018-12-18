@@ -171,12 +171,11 @@
     border: 1px solid #999999;
     border-radius: 100%;
     box-sizing: border-box;
-    text-align: center;
-    line-height: 0.3rem;
-    font-size: 0.8rem;
-    color: #fc4834;
 }
 
-
+.option{
+    background: url(../images/icon/select_sex.png) no-repeat;
+    background-size: 100% 100%;
+}
 
 
