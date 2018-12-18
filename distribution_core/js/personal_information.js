@@ -12,8 +12,8 @@ $(function(){
         $(this).find(".list_option").text("·")
         //请求接口，成功赋值
 
-        $(".personal_information_sex").find(".right_p").text(sex)
-        $(".sex_box").removeClass("sex_box_anim")
+        // $(".personal_information_sex").find(".right_p").text(sex)
+        // $(".sex_box").removeClass("sex_box_anim")
     })
     //点击其他地方，关闭弹出层
     $(".sex_back").click(function(){

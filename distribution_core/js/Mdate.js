@@ -181,8 +181,8 @@
                 var cancelBtn=d.getElementById("dateCancel");
                 sureBtn.onclick=function(){
                     if(that.format=="YMD"){
-                        var time_obj = yearTag+"年-"+monthTag+"月-"+dayTag+"日"
-                        that.acceptId.value=yearTag+"年-"+monthTag+"月-"+dayTag+"日"
+                        var time_obj = yearTag+"年"+monthTag+"月"+dayTag+"日"
+                        that.acceptId.value=yearTag+"年"+monthTag+"月"+dayTag+"日"
                     }else{
                         var time_obj = yearTag+that.format+that.dateForTen(monthTag)+that.format+that.dateForTen(dayTag)
                         console.log(time_obj)
