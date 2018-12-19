@@ -9,6 +9,7 @@ $(function(){
         alert(1)
         document.activeElement.blur();
     });
+    
     // 实时监听输入金额的情况
     $("#cash_withdrawal_money").bind("input propertychange",function(event){
         console.log($("#cash_withdrawal_money").val())
