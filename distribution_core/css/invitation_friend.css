@@ -1,0 +1,44 @@
+.invitation_friend_box{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.invitation_friend_img{
+    width: 100%;
+}
+
+/* 二维码 */
+.qr_code_box{
+    width: 100%;
+    position: relative;
+}
+.qr_code{
+    width: 3.46rem;
+    height: 3.46rem;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -1.73rem;
+}
+.qr_code img{
+    width: 100%;
+    height: 100%;
+}
+
+/* 招商电话 */
+.attract_investment_phone{
+    position: absolute;
+    bottom: 0.3rem;
+    right: 0.3rem;
+    font-size: 0.28rem;
+    color: #fafbfc;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.attract_investment_phone a{
+    width: auto;
+    font-size: 0.28rem;
+    color: #fafbfc;
+    margin-left: 0.1rem;
+}

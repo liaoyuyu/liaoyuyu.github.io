@@ -6,22 +6,31 @@ var payment_password = "<div class='password_top_display_div'>"+
 $(function(){
 
     // 禁止弹出自带弹出框
-    
+
 
     // 实时监听输入金额的情况
-    $("#cash_withdrawal_money").bind("input propertychange",function(event){
+    $("#cash_withdrawal_money").focus(function(){
         console.log($("#cash_withdrawal_money").val())
         var value = $("#cash_withdrawal_money").val()
-        if(value != ""){
-            $(".cash_withdrawal_but").addClass("cash_withdrawal_but_input")
-            $(".cash_withdrawal_but").attr("onclick","judge_click()")
-        }else{
-            $(".cash_withdrawal_but").removeClass("cash_withdrawal_but_input")
-            $(".cash_withdrawal_but").removeAttr("onclick")
-        }
 
-        // 判断输入的金额是否大于可提现金额
-    });
+        $("#cash_withdrawal_money").bind("input propertychange",function(event){
+            value = $("#cash_withdrawal_money").val()
+            console.log(value)
+            // 如果第一次输入小数点，直接变成 0.  ，如果输入了小数点，后面只能两位
+            
+
+
+            if(value != ""){
+                $(".cash_withdrawal_but").addClass("cash_withdrawal_but_input")
+                $(".cash_withdrawal_but").attr("onclick","judge_click()")
+            }else{
+                $(".cash_withdrawal_but").removeClass("cash_withdrawal_but_input")
+                $(".cash_withdrawal_but").removeAttr("onclick")
+            }
+
+            // 判断输入的金额是否大于可提现金额
+        });
+    })
 
 
 
