@@ -4,10 +4,12 @@ var payment_password = "<div class='password_top_display_div'>"+
 
 
 $(function(){
+
     // 禁止弹出自带弹出框
     $("#cash_withdrawal_money").focus(function(){
         document.activeElement.blur();
     });
+    
     // 实时监听输入金额的情况
     $("#cash_withdrawal_money").bind("input propertychange",function(event){
         console.log($("#cash_withdrawal_money").val())
