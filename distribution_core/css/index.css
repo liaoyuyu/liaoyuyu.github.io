@@ -45,7 +45,20 @@
     font-size: 0.24rem;
     color: #333333;
 }
-.service_news_box{
+/* 企业还是个人 */
+.information_type{
+    position: absolute;
+    right: 0.3rem;
+    top: 30%;
+    font-size: 0.3rem;
+    color: #333333;
+    padding: 0rem 0.1rem;
+    line-height: 0.45rem;
+    border-radius: 8px;
+    /* font-style: oblique; */
+    background: yellow;
+}
+/* .service_news_box{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -79,7 +92,7 @@
     position: absolute;
     right: 0.17rem;
     top: 0.08rem;
-}
+} */
 
 /* 分销金额 */
 .distribution_money_box{
