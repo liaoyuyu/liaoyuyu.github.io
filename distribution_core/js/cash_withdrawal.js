@@ -70,6 +70,7 @@ function input_payment_pas(n){
         }
         console.log(payment_pas)
     }else{
+        m--
         $(".password_top_display_div").eq(-1).remove();
         payment_pas = payment_pas.slice(0,-1)
         console.log(payment_pas)
