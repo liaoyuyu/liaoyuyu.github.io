@@ -1,0 +1,92 @@
+.cardholder_information_box{
+    width: 100%;
+}
+.cardholder_information_title{
+    width: 100%;
+    line-height: 1rem;
+    padding: 0rem 0.3rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.cardholder_information_title_p{
+    font-size: 0.28rem;
+    color: #999999;
+    margin-right: 0.35rem;
+}
+.cardholder_information_title_tips{
+    color: #999999;
+    font-size: 0.24rem;
+}
+
+.cardholder_information_con{
+    width: 100%;
+    background: #fff;
+    padding: 0rem 0.3rem;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0px 1px 5px #bbb; 
+}
+.cardholder_information_list{
+    width: 100%;
+    height: 1rem;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.cardholder_information_list:last-child{
+    border: none;
+}
+.cardholder_information_p{
+    font-size: 0.3rem;
+    color: #333333;
+    width: 20%;
+}
+.cardholder_information_input{
+    width: 80%;
+    height: 80%;
+    outline: none;
+    font-size: 0.28rem;
+    color: #333333;
+    border: none;
+}
+
+/* 协议 */
+.bank_agreement_box{
+    width: 100%;
+    padding: 0rem 0.3rem;
+    box-sizing: border-box;
+    margin-top: 0.4rem;
+    margin-bottom: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.bank_agreement_checklist{
+    width: 0.25rem;
+    height: 0.25rem;
+    border: 1px solid #bbb;
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin-right: 0.2rem;
+}
+.bank_agreement_p{
+    font-size: 0.28rem;
+    color: #666666;
+}
+.bank_agreement_p span{
+    font-size: 0.28rem;
+    color: #88ad48;
+}
+
+
+/* 选中协议 */
+.select_agreement{
+    background: url(../images/icon/rectangle_select.png) no-repeat;
+    background-size: 100% 100%;
+    border: none;
+}

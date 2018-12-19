@@ -1,10 +1,5 @@
 .con{
     padding-bottom: 3rem;
-    position: absolute;
-    left: 0;
-    top: 0.9rem;
-    overflow: auto;
-    width: 100%;
     padding-top: 0.1rem;
     box-sizing: border-box;
 }

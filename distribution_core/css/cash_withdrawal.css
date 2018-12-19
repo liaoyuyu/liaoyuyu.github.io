@@ -79,14 +79,220 @@
     color: #445ea4;
 }
 
-
 .cash_withdrawal_but{
     width: 100%;
-    line-height: 1rem;
-    text-align: center;
-    font-size: 0.36rem;
-    color: #fffffe;
-    border-radius: 8px;
+    background: #89ad88;
+}
+.cash_withdrawal_but:active{
+    background: #89ad88;
+}
+.cash_withdrawal_but_input{
+    background:#88ad48;
+}
+
+
+
+/* 支付弹出层 */
+
+
+.payment_popup_box{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    top: 100%;
+    background: rgba(0, 0, 0, .5);
+    transition: all 0.3s;
+    visibility: hidden;
+    opacity: 0;
+}
+.payment_popup_box_anim{
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+}
+
+
+/* 金额 密码框 */
+.password_input_box{
+    width: 88%;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+    background: #fff;
+}
+.password_input_title{
+    width: 100%;
+    height: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 2px solid #88ad48;
+    box-sizing: border-box;
+}
+.password_input_close{
+    font-size: 0.5rem;
+    padding: 0.1rem;
+}
+.password_input_portrait{
+    width: 0.63rem;
+    height: 0.63rem;
     overflow: hidden;
-    background: #88ad48;
+    margin-right: 0.1rem;
+}
+.password_input_portrait img{
+    width: 100%;
+    height: 100%;
+}
+.password_input_title_p{
+    font-size: 0.36rem;
+    color: #333333;
+}
+/* 金额框 */
+.tx_money_box{
+    width: 100%;
+    padding: 0.6rem 0.3rem 0.4rem 0.3rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+.tx_money_p{
+    font-size: 0.3rem;
+    color: #333333;
+    margin-bottom: 0.1rem;
+}
+.tx_money_money_box{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+.tx_money_symbol{
+    font-size: 0.28rem;
+    color: #333;
+    margin-top: 0.05rem;
+}
+.tx_money_money{
+    font-size: 0.42rem;
+    color: #333333;
+}
+/* 支付密码框 */
+.payment_password_box{
+    width: 100%;
+    padding: 0rem 0.3rem;
+    box-sizing: border-box;
+}
+.payment_password_inner_box{
+    width: 100%;
+    padding: 0.2rem 0rem 0.4rem 0rem;
+    border-top: 1px solid #eee;
+    box-sizing: border-box;
+}
+.payment_password{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.payment_password_frame{
+    display: block;
+    width: 16.66%;
+    height: 1rem;
+    float: left;
+    border-top: 1px solid #bbb;
+    border-bottom: 1px solid #bbb;
+    border-left: 1px solid #bbb;
+    box-sizing: border-box;
+}
+.last_payment_password_frame{
+    border-right: 1px solid #bbb;
+}
+
+/* 密码圆点显示层 */
+.password_top_display{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.password_top_display_div{
+    width: 16.66%;
+    height: 1rem;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.password_top_display_span{
+    width: 0.3rem;
+    height: 0.3rem;
+    border-radius: 100%;
+    background: #000;
+}
+
+
+
+/* 数字键盘 */
+.keyboard_box{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    background: #fff;
+    transition: all 0.3s;
+}
+.keyboard_box_anim{
+    bottom: -50%;
+}
+.keyboard_title{
+    width: 100%;
+    height: 0.7rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.keyboard_title:active{
+    background: #eee;
+}
+.keyboard_title_img{
+    font-size: 0.5rem;
+    color: #bbb;
+}
+/* 数字 */
+.keyboard_number{
+    width: 100%;
+}
+.keyboard_number_ul{
+    width: 100%;
+    overflow: hidden;
+}
+.keyboard_number_li{
+    float: left;
+    width: 33.3%;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    text-align: center;
+    font-size: 0.64rem;
+    color: #333333;
+    border-top: 1px solid #ddd;
+    box-sizing: border-box;
+}
+.keyboard_number_li:active{
+    background: #bbb;
+}
+.border_left_right{
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+/* 退格键 */
+.keyboard_number_backspace{
+    font-size: 1.2rem;
+}
+.keyboard_back_gray{
+    background: #e0e0e0;
 }

@@ -11,6 +11,7 @@
     <script src="../js/jquery-3.2.1.min.js"></script>
     <script src="../js/rem.js"></script>
     <script src="../js/public.js"></script>
+    <script src="../js/cash_withdrawal.js"></script>
 </head>
 <body>
     <header class="relative_header">
@@ -33,14 +34,80 @@
         <div class="cash_withdrawal_money_box_box">
             <div class="cash_withdrawal_money_box">
                 <p class="money_symbol">￥</p>
-                <input class="cash_withdrawal_input" onkeyup="this.value=this.value.replace(/[^0-9-]+/,'');"  type="text">
+                <input id="cash_withdrawal_money" class="cash_withdrawal_input" onkeyup="this.value=this.value.replace(/[^0-9-]+/,'');"  type="text">
             </div>
 
-            <p class="all_cash_withdrawal">当前零钱余额543.45元，<span>全部提现</span></p>
+            <p class="all_cash_withdrawal">当前零钱余额543.45元，<span onclick="all_cash_withdrawal('543.45')">全部提现</span></p>
         </div>
 
-        <div class="cash_withdrawal_but">提现</div>
+        <div class="submission_but cash_withdrawal_but">提现</div>
         
+
+    </div>
+
+
+
+    <!-- 支付密码弹出层 -->
+    <div class="payment_popup_box">
+        <!-- 金额 密码 -->
+        <div class="password_input_box">
+            <div class="password_input_title">
+                <i class="iconfont password_input_close">&#xe605;</i>
+                <div class="password_input_portrait">
+                    <img src="../images/img/portrait.png" alt="">
+                </div>
+                <p class="password_input_title_p">请输入支付密码</p>
+            </div>
+            <div class="tx_money_box">
+                <p class="tx_money_p">零钱提现</p>
+                <div class="tx_money_money_box">
+                    <p class="tx_money_symbol">￥</p>
+                    <p class="tx_money_money">100.00</p>
+                </div>
+            </div>
+            <div class="payment_password_box">
+                <div class="payment_password_inner_box">
+                    <div class="payment_password">
+                        <span class="payment_password_frame"></span>
+                        <span class="payment_password_frame"></span>
+                        <span class="payment_password_frame"></span>
+                        <span class="payment_password_frame"></span>
+                        <span class="payment_password_frame"></span>
+                        <span class="payment_password_frame last_payment_password_frame"></span>
+                        <!-- 密码圆点显示层 -->
+                        <div class="password_top_display">
+                            <!-- 输入就生成一个div -->
+                            <!-- <div class="password_top_display_div">
+                                <span class="password_top_display_span"></span>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 键盘 -->
+        <div class="keyboard_box">
+            <div class="keyboard_title">
+                <i class="iconfont keyboard_title_img">&#xe698;</i>
+            </div>
+            <div class="keyboard_number">
+                <ul class="keyboard_number_ul">
+                    <li class="keyboard_number_li" onclick="input_payment_pas(1)">1</li>
+                    <li class="keyboard_number_li border_left_right" onclick="input_payment_pas(2)">2</li>
+                    <li class="keyboard_number_li" onclick="input_payment_pas(3)">3</li>
+                    <li class="keyboard_number_li" onclick="input_payment_pas(4)">4</li>
+                    <li class="keyboard_number_li border_left_right" onclick="input_payment_pas(5)">5</li>
+                    <li class="keyboard_number_li" onclick="input_payment_pas(6)">6</li>
+                    <li class="keyboard_number_li" onclick="input_payment_pas(7)">7</li>
+                    <li class="keyboard_number_li border_left_right" onclick="input_payment_pas(8)">8</li>
+                    <li class="keyboard_number_li" onclick="input_payment_pas(9)">9</li>
+                    <li class="keyboard_number_li keyboard_back_gray"></li>
+                    <li class="keyboard_number_li border_left_right" onclick="input_payment_pas(0)">0</li>
+                    <li class="keyboard_number_li keyboard_back_gray" onclick="input_payment_pas(-1)"><i class="iconfont keyboard_number_backspace">&#xe613;</i></li>
+                </ul>
+            </div>
+        </div>
 
     </div>
 
