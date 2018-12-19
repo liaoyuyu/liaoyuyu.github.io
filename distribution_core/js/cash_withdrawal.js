@@ -6,6 +6,7 @@ var payment_password = "<div class='password_top_display_div'>"+
 $(function(){
     // 禁止弹出自带弹出框
     $("#cash_withdrawal_money").focus(function(){
+        alert(1)
         document.activeElement.blur();
     });
     // 实时监听输入金额的情况
