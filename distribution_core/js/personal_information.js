@@ -22,4 +22,10 @@ $(function(){
     })
 
 
+    // 点击保存
+    $(".right_header_p").click(function(){
+        
+    })
+
+
 })

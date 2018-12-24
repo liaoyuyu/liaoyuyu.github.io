@@ -1,3 +1,13 @@
+.right_header_p{
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 0.3rem;
+    color: #88ad48;
+    padding: 0rem 0.3rem;
+}
+
+
 /* 内容 */
 .con{
     padding-top: 0.1rem;

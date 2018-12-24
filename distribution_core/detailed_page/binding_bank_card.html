@@ -34,7 +34,7 @@
                 </div>
                 <div class="cardholder_information_list">
                     <p class="cardholder_information_p">身份证</p>
-                    <input class="cardholder_information_input" type="text" onkeyup="this.value=this.value.replace(/[^0-9-]+/,'');" placeholder="请输入持卡人身份证号">
+                    <input class="cardholder_information_input" maxlength="18" type="text" placeholder="请输入持卡人身份证号">
                 </div>
             </div>
         </div>
@@ -44,13 +44,17 @@
                 <p class="cardholder_information_title_p">银行卡信息</p>
             </div>
             <div class="cardholder_information_con">
-                <div class="cardholder_information_list">
+                <!-- <div class="cardholder_information_list">
                     <p class="cardholder_information_p">所属银行</p>
-                    <input class="cardholder_information_input" type="text" placeholder="请选择银行名称">
-                </div>
+                    <input class="cardholder_information_input" onfocus="choice_bank()" type="text" placeholder="请选择银行名称">
+                </div> -->
                 <div class="cardholder_information_list">
                     <p class="cardholder_information_p">银行卡号</p>
                     <input class="cardholder_information_input" type="text" maxlength="19" placeholder="请输入银行卡卡号">
+                </div>
+                <div class="cardholder_information_list">
+                    <p class="cardholder_information_p">手机号</p>
+                    <input class="cardholder_information_input" type="tel" onkeyup="this.value=this.value.replace(/[^0-9-]+/,'');" maxlength="11" placeholder="请输入银行预留手机号">
                 </div>
             </div>
         </div>
@@ -64,6 +68,31 @@
 
     </div>
 
-    
+
+    <!-- <div class="subordinate_bank_box">
+        <div class="subordinate_bank">
+            <div class="subordinate_bank_title">
+                <p class="subordinate_bank_title_center">所属银行</p>
+                <p class="subordinate_bank_title_cancel">取消</p>
+            </div>
+            <div class="subordinate_bank_con">
+                <ul class="subordinate_bank__ul">
+                    <li class="subordinate_bank_li">农业银行</li>
+                    <li class="subordinate_bank_li">农业银行</li>
+                    <li class="subordinate_bank_li">农业银行</li>
+                    <li class="subordinate_bank_li">农业银行</li>
+                    <li class="subordinate_bank_li">农业银行</li>
+                    <li class="subordinate_bank_li">农业银行</li>
+                    <li class="subordinate_bank_li">农业银行</li>
+                </ul>
+            </div>
+        </div>
+    </div> -->
+
+
+
+
+
+
 </body>
 </html>

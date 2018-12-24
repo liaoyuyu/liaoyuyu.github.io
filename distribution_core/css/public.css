@@ -1,7 +1,7 @@
 *{margin: 0;padding: 0;font-size: 0;}
 a{text-decoration: none;display: block;width: 100%;height: 100%;}
 li{list-style: none;}
-body,html{width: 100%;height: 100%;background: #f5f4f7;}
+body,html{width: 100%;height: 100%;background: #f5f4f7; position: relative;}
 
 @font-face {font-family: "iconfont";
     src: url('iconfont.eot?t=1545201612231'); /* IE9*/
@@ -155,3 +155,31 @@ header{
 .submission_but:active{
     background: #88a548;
 }
+
+
+
+
+/* 轮播 */
+.swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }

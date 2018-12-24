@@ -296,3 +296,103 @@
 .keyboard_back_gray{
     background: #e0e0e0;
 }
+
+
+
+/* 选择提现银行 */
+.cash_withdrawal_bank_box{
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    transition: all 0.2s;
+    opacity: 0;
+    top: 100%;
+}
+.cash_withdrawal_bank_box_anim{
+    opacity: 1;
+    top: 0;
+}
+.cash_withdrawal_bank{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+}
+.cash_withdrawal_bank_title{
+    width: 100%;
+    padding: 0.2rem 0.3rem;
+    box-sizing: border-box;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+}
+.cash_withdrawal_bank_title_p{
+    font-size: 0.32rem;
+    color: #333;
+    margin-bottom: 0.1rem;
+}
+.cash_withdrawal_bank_title_tisp{
+    font-size: 0.26rem;
+    color: #666666;
+}
+.cash_withdrawal_bank_con{
+    width: 100%;
+}
+
+.cash_withdrawal_bank_list{
+    width: 100%;
+    height: 1.2rem;
+    padding: 0rem 0.3rem;
+    box-sizing: border-box;
+}
+.cash_withdrawal_bank_list:active{
+    background: #eee;
+}
+.cash_withdrawal_bank_list_inner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+}
+.cash_withdrawal_bank_list_left{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;   
+}
+.cash_list_left_img{
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-right: 0.3rem;
+}
+.cash_list_left_img img{
+    width: 100%;
+    height: 100%;
+}
+.cash_list_left_bank{
+    font-size: 0.28rem;
+    color: #333;
+    margin-bottom: 0.1rem;
+}
+.cash_list_left_time{
+    font-size: 0.24rem;
+    color: #999;
+}
+
+.cash_withdrawal_bank_list_right{
+    width: 0.25rem;
+    height: 0.25rem;
+    border-radius: 100%;
+    border: 1px solid #999;
+}
+.arrive_bank{
+    background: url(../images/icon/select_sex.png) no-repeat;
+    background-size: 100% 100%;
+}

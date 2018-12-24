@@ -1,4 +1,3 @@
-
 // 手机号中间设置星号
 function set_center_asterisk(obj){
     var tel = obj;
