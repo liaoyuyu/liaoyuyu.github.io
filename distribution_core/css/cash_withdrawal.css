@@ -78,6 +78,13 @@
     font-size: 0.24rem;
     color: #445ea4;
 }
+/* 超过金额 */
+.error_cash_withdrawal{
+    font-size: 0.24rem;
+    color: red;
+    margin-bottom: 0.4rem;
+    display: none;
+}
 
 .cash_withdrawal_but{
     width: 100%;

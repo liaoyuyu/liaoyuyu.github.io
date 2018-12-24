@@ -2,6 +2,8 @@ var payment_password = "<div class='password_top_display_div'>"+
 "<span class='password_top_display_span'></span>"+
 "</div>"
 
+var decimal_val_position;//第一个小数点出现的位置
+
 
 $(function(){
     // 弹出选择到账银行弹出层
@@ -45,19 +47,7 @@ $(function(){
                 $(this).val(value.slice(0, value.length - 1))
             }
             value = $(this).val()
-            console.log(value)
-
-            // 判断输入是否正确//并判断只能输入小数点后两位,就不能在输入了
-            // for(var i = 0;i<value.length;i++){
-            //     let n = value[i]
-            //     if(n<=0||n>=9||n!="."){
-            //         $(".cash_withdrawal_but").removeClass("cash_withdrawal_but_input")
-            //         $(".cash_withdrawal_but").removeAttr("onclick")
-            //     }
-            // }
-            
-            // 如果第一次输入小数点，直接变成 0.  ，如果输入了小数点，后面只能两位
-
+                     
 
             if(value != ""){
                 $(".cash_withdrawal_but").addClass("cash_withdrawal_but_input")
@@ -67,8 +57,30 @@ $(function(){
                 $(".cash_withdrawal_but").removeAttr("onclick")
             }
 
-            // 判断输入的金额是否大于可提现金额
+            //并判断只能输入小数点后两位,就不能在输入了
+            for(var i = 0;i<value.length;i++){
+                if(value[i]=="."){
+                    $(this).val(value.slice(0,i+3))
+                }
+            }
 
+            // 如果第一次输入小数点，直接变成 0.  ，如果输入了小数点，后面只能两位
+            if(value[0]=="."){
+                $(this).val(0+value)
+            }
+
+            // 判断输入的金额是否大于可提现金额
+            if(value>543.45){
+                $(".all_cash_withdrawal").css("display","none")
+                $(".error_cash_withdrawal").css("display","block")
+                $(".cash_withdrawal_but").removeClass("cash_withdrawal_but_input")
+                $(".cash_withdrawal_but").removeAttr("onclick")
+            }else{
+                $(".all_cash_withdrawal").css("display","block")
+                $(".error_cash_withdrawal").css("display","none")
+            }
+
+            // console.log($(this).val())
         });
     })
 
