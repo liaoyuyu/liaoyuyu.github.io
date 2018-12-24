@@ -13,12 +13,13 @@
     position: relative;
 }
 .qr_code{
-    width: 3.46rem;
-    height: 3.46rem;
+    width: 1.9rem;
+    /* height: 1.9rem; */
+    height: 100%;
     position: absolute;
     top: 0;
     left: 50%;
-    margin-left: -1.73rem;
+    margin-left: -0.95rem;
 }
 .qr_code img{
     width: 100%;
@@ -26,19 +27,28 @@
 }
 
 /* 招商电话 */
-.attract_investment_phone{
+.attract_investment_phone_box{
     position: absolute;
-    bottom: 0.3rem;
-    right: 0.3rem;
+    bottom: 0;
+    left: 0;
+    width: 100%;  
+    text-align: center; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.attract_investment_phone{
     font-size: 0.28rem;
-    color: #fafbfc;
+    color: #e4db9a;
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-bottom: 0.2rem;
 }
 .attract_investment_phone a{
     width: auto;
     font-size: 0.28rem;
-    color: #fafbfc;
+    color: #e4db9a;
     margin-left: 0.1rem;
 }
