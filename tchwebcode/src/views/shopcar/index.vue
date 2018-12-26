@@ -1,0 +1,425 @@
+<template>
+    <div>
+         <header class="shop_car_header">
+            <p class="header_cen">购物车</p>
+        </header>
+
+        <div class="con shop_car_con">
+            <!-- 目的地 -->
+            <!-- <div class="Destination">配送至：重庆市江北区建新南路西普大厦</div> -->
+
+            <!-- 加入购物车的商品 -->
+        <div class="shop_car_box">
+
+            <!-- 每件商品 -->
+            <div class="car_list" v-for="(shop_car_data,index) in shop_car_data" :key="shop_car_data.index" @touchstart.stop='down($event,index)' @touchmove.stop="move($event,index)" @touchend.stop="end($event,index)">
+                <!-- 内容 -->
+                <div class="car_circular" @click="setlect_shop(index)">
+                    <span class="Choice_shop"></span>
+                </div>
+                <div class="car_box">
+                    <router-link class="car_box_a" :to="{path:'/detail/product_detailed',query:{product_id:shop_car_data.Product_ID}}">
+                        <!-- 图片 -->
+                        <div class="car_img">
+                            <img :src="middle_img+shop_car_data.Image_Url" alt="">
+                        </div>
+                        <!-- 内容 -->
+                        <div class="car_con">
+                            <p class="car_con_name">{{shop_car_data.Product_Name}}</p>
+                            <div class="car_con_p">
+                                <!-- <p>北碚高山猕猴桃树基地</p> -->
+                            </div>
+                            <p class="car_money">￥{{shop_car_data.ProductSku_PriceCash}}</p>
+                        </div>
+                    </router-link>
+                    <!-- 数量 -->
+                    <div class="plus_reduce">
+                        <img class="reduce" @click="reduce_shop_car(index)" src="../../assets/images/icon/plus.png" alt="">
+                        <input class="shop_number" type="text" @blur="shop_number_modify($event,index)" name="" id="" v-model="shop_car_data.Car_Amount" maxlength="3" onkeyup="this.value=this.value.replace(/[^0-9-]+/,'');">
+                        <img class="plus" @click="plus_shop_car(index)" src="../../assets/images/icon/reduce.png" alt="">
+                    </div>
+                </div>
+                <!-- 删除 -->
+                <div class="car_delete" @click="delete_shop(index)">
+                   <img src="../../assets/images/icon/car_delete.png" alt="">
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        <!-- 间隔 -->
+        <div class="interval"></div>
+        <div class="interval"></div>
+
+        <!-- 好物推荐 -->
+        <div class="good_recommend">
+            <!-- 标题 -->
+            <p class="good_recommend_title">好物推荐</p>
+            <div class="good_recommend_con">
+
+                <!-- 每个推荐 -->
+                <div class="good_recommend_list" v-for="(good_recommend,index) in good_recommend" :key="good_recommend.index" v-if="index<4">
+                    <router-link class="good_recommend_list_a" to="">
+                        <div class="good_recommend_img">
+                            <img :src="big_img+good_recommend.Product_ImgUrl" alt="">
+                        </div>
+                        <div class="good_recommend_bot">
+                            <div class="good_recommend_name">
+                                <p>{{good_recommend.Product_Name}}</p>
+                            </div>
+                            <p class="good_recommend_money">￥{{good_recommend.Product_PriceCash}}</p>
+                        </div>
+                     </router-link>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+         <!-- 底线 -->
+         <div class="baseline">
+            <p>没有更多了~</p>
+        </div>
+
+
+        </div>
+
+         <!-- 底部结算 -->
+    <div class="Settlement">
+        <div class="all_choose" @click="all_setlect_shop()">
+            <span class="all_choose_circular" :class="{'selcet_choice_shop':all_setlect_state}"></span>
+            <p class="all_choose_p">全选</p>
+        </div>
+        <div class="cen_money">
+            <p class="Total">合计:<span>￥{{all_shop_money}}</span></p>
+            <!-- <p class="Discount">已优惠￥5.8</p> -->
+        </div>
+        <!-- <router-link class="Settlement_bot" id="Settlement_bot" to="/shopcar/shopcar_html/purchase_order" @click="settlement_operation">结算</router-link> -->
+        <div class="Settlement_bot" id="Settlement_bot" @click="settlement_operation">结算</div>
+    </div>
+    
+
+         <!-- 弹出框 -->
+        <vuepopup ref="popup"></vuepopup>
+
+    </div>
+</template>
+
+<style>
+    @import '../../assets/css/shopcar.css';
+    .shop_car_con{
+        bottom: 1.95rem;
+    }
+</style>
+
+<script>
+import axios from 'axios';
+// import $ from 'jquery'
+import bus from '../../assets/js/bus.js'    //非组件传值
+
+import vuepopup from '@/components/popup.vue'	//引入弹出框组件
+
+ export default {
+    components:{
+        vuepopup,
+    },
+    data(){
+        return{
+            shop_car_data:'',//购物车数据
+            all_shop_money:"0.00",//总价
+            all_setlect_state:false,//全部按钮  选中状态  false为没选中  true为选中
+
+            good_recommend:'',//好物推荐
+
+             //图片接口
+            big_img:localStorage.big_img,//大
+            middle_img:localStorage.middle_img,//中
+            small_img:localStorage.small_img, //小
+        }
+    },
+    created() {
+        // 到这个页面就把 Tabbar 组件 的 page 传过去，改变底部导航的选择状态，不然返回时，选择状态一直带首页
+        this.change_bottom_selection()
+
+        // 获取购物车数据
+        this.get_shopcar_data()
+        
+        // 获取好物推荐数据
+        this.get_good_recommend()
+        // console.log(localStorage.user_id)
+
+    },
+    mounted(){
+        
+    },
+    methods:{
+        // 到这个页面就把 Tabbar 组件 的 page 传过去，改变底部导航的选择状态，不然返回时，选择状态一直带首页
+        change_bottom_selection:function(){
+            bus.$emit('change_selection', 3)
+        },
+        // 获取购物车数据
+        get_shopcar_data(){
+            var _this =this
+            axios.get(localStorage.weburl+'/WorkCar/GetCar?MembersID='+localStorage.user_id).then(res => {
+                _this.shop_car_data = res.data.Return_Data
+                console.log(res.data.Return_Data)
+            }).catch(error => { console.log(error) });   //查询失败返回的值
+        },
+
+        // 单选
+        setlect_shop(index){
+            $(".car_list").eq(index).find(".car_circular").find(".Choice_shop").toggleClass("selcet_choice_shop")
+
+            if($(".car_list").find(".car_circular").find(".selcet_choice_shop").length == this.shop_car_data.length){
+               this.all_setlect_state = true
+            }else{
+               this.all_setlect_state = false
+            }
+            // 计算价格方法，并判断是否全部选中
+            this.get_shop_all_money()
+        },
+        // 全选
+        all_setlect_shop(){
+            this.all_setlect_state = !this.all_setlect_state
+            // 为true表示全选，false表示不全选
+            if(this.all_setlect_state == true){
+                $(".Choice_shop").addClass("selcet_choice_shop")
+            }else{
+                $(".Choice_shop").removeClass("selcet_choice_shop")
+            }
+
+            // 计算价格方法
+            this.get_shop_all_money()
+        },
+
+        // 计算价格方法，并判断是否全部选中
+        get_shop_all_money(){
+            var money = 0
+            for(var i = 0;i<$(".car_list").length;i++){
+                var thisobj = $(".car_list").eq(i).find(".car_circular").find(".Choice_shop")
+                thisobj = thisobj[0]
+                if(thisobj.className == "Choice_shop selcet_choice_shop"){
+                    // console.log(this.shop_car_data[i].ProductSku_PriceCash)
+                    // console.log(this.shop_car_data[i].Car_Amount)
+                    money = money+(parseFloat(this.shop_car_data[i].ProductSku_PriceCash)*parseFloat(this.shop_car_data[i].Car_Amount))
+                }
+            }
+            this.all_shop_money = (money).toFixed(2)
+        },
+
+        // 商品数量减
+        reduce_shop_car(index){
+            var number = $(".car_list").eq(index).find(".plus_reduce").find(".shop_number").val();
+            if(number == 1){
+                let popup = this.$refs.popup
+                popup.open({
+                    type:3,
+                    popup_information:'商品数量不能低于1件!',
+                    whether_show:true,
+                    long:true,
+                })
+            }else{
+                number = parseInt(number)-1;
+                $(".car_list").eq(index).find(".plus_reduce").find(".shop_number").val(number);
+
+                this.modify_car_number(number,index)
+            }
+        },
+        // 商品数量加
+        plus_shop_car(index){
+            var number = $(".car_list").eq(index).find(".plus_reduce").find(".shop_number").val();
+            number = parseInt(number)+1;
+            $(".car_list").eq(index).find(".plus_reduce").find(".shop_number").val(number);
+            this.modify_car_number(number,index)
+        },
+        // 数量 input 修改
+        shop_number_modify(e,index){
+            var el = e.target
+            var number = el.value
+            this.modify_car_number(number,index)
+        },
+
+        // 商品数量操作 
+        modify_car_number(number,index){
+            var _this = this
+            // console.log(this.shop_car_data[index].Car_ID)
+            var modify_car = new URLSearchParams();
+            modify_car.append('MembersID', localStorage.user_id);
+            modify_car.append('CarID',this.shop_car_data[index].Car_ID)
+            modify_car.append('Amount',number)
+            modify_car.append('BuyType',this.shop_car_data[index].Product_BuyType)
+            
+            axios.post(localStorage.weburl+'/WorkCar/EditCar', modify_car).then(function (res) {
+                _this.shop_car_data[index].Car_Amount = number
+                _this.get_shop_all_money()
+                console.log(res)
+            }).catch(function (err) {
+            　　console.log(err)
+            });
+        },
+
+
+        // 获取好物推荐数据
+        get_good_recommend(){
+            var _this = this;
+            axios.get(localStorage.weburl+'/WorkStore/GetCommandList',{
+                params: {
+                    page: 1,
+                    type:2,
+                }
+            }).then(res => {
+                //将接口返回的数据输出
+                _this.good_recommend = res.data.PageData
+                // console.log(res.data.PageData);
+            }).catch(error => { console.log(error) });
+        },
+
+
+        // 滑动
+        down(e,index){
+            this.flags = true;
+            var touch;
+            if(event.touches){
+                touch = event.touches[0];
+            }else {
+                touch = event;
+            }
+            this.position = touch.clientX
+        },
+        move(e,index){
+            if(this.flags){
+                var touch ;
+                if(event.touches){
+                    touch = event.touches[0];
+                }else {
+                    touch = event;
+                }
+            
+                var move_distance = touch.clientX - this.position
+                var obj = document.getElementsByClassName("car_list")[index]
+                // console.log(obj)
+                // obj.classList.add("collection_box_anim")
+                
+                // console.log(Math.abs(move_distance))
+                if (move_distance <= -0.3 * 100) {
+                    obj.classList.add("car_list_anim")
+                    obj.style.left = -1+"rem";
+                }
+                if (move_distance >= 0.3 * 100) {
+                    obj.classList.add("car_list_anim")
+                    obj.style.left = 0+"rem";
+                }
+
+                //阻止页面的滑动默认事件；如果碰到滑动问题，1.2 请注意是否获取到 touchmove
+                // document.addEventListener("touchmove",function(){
+                //     event.preventDefault();
+                // },false);
+            }
+        },
+        end(e,index){
+            this.flags = false;
+            var obj = document.getElementsByClassName("car_list")[index]
+            obj.classList.remove("car_list_anim")
+        },
+
+        // 删除商品
+        delete_shop(index){
+            var _this = this
+            // console.log(localStorage.user_id)
+            // console.log(this.shop_car_data[index].Car_ID)
+            var delete_shop = new URLSearchParams();
+            delete_shop.append('MembersID', localStorage.user_id);
+            delete_shop.append('CarID_Array',this.shop_car_data[index].Car_ID+"|")
+            
+            axios.post(localStorage.weburl+'/WorkCar/DeleteCar', delete_shop).then(function (res) {
+                // console.log(res)
+                if(res.data.Return_ID == 0){
+                    $(".car_list").css("left","0")
+                    let popup = _this.$refs.popup
+                    popup.open({
+                        type:3,
+                        popup_information:"删除成功!",
+                        whether_show:true,
+                        long:false,
+                    })
+                    _this.get_shopcar_data()
+                }else{
+                    let popup = _this.$refs.popup
+                    popup.open({
+                        type:3,
+                        popup_information:res.data.Return_Mess,
+                        whether_show:true,
+                        long:true,
+                    })
+                }
+
+            }).catch(function (err) {
+            　　console.log(err)
+            });
+        },
+
+
+        // 结算
+        settlement_operation(){
+            var _this = this
+            var productid_array = '';//产品ID 数组
+            var skuid_array ='';//产品规格 数组
+            var amount_array = '';//产品数量 数组
+            var len = $(".car_list").find(".selcet_choice_shop").length
+            if(len!=0){
+                var settlement_shop = new URLSearchParams();
+                settlement_shop.append('MembersID', localStorage.user_id);
+
+                for(var i = 0;i<$(".car_list").length;i++){
+                    if($(".car_list").eq(i).find(".Choice_shop").hasClass("selcet_choice_shop")){
+                        productid_array += this.shop_car_data[i].Product_ID+"|";
+                        skuid_array += this.shop_car_data[i].ProductSku_ID + "|";
+                        amount_array += this.shop_car_data[i].Car_Amount + "|";
+                    }
+                }
+                // console.log(productid_array)
+                // console.log(skuid_array)
+                // console.log(amount_array)
+                settlement_shop.append('ProductID_Array',productid_array)
+                settlement_shop.append('BuyType_Array',"0")
+                settlement_shop.append('SkuID_Array',skuid_array)
+                settlement_shop.append('Amount_Array',amount_array)
+                settlement_shop.append('Remark',"")
+                
+                axios.post(localStorage.weburl+'/WorkOrder/CreateOrder', settlement_shop).then(function (res) {
+                    if(res.data.Return_ID==0){
+                        console.log(res.data.Return_Data)
+                        _this.$router.push({path: '/shopcar/shopcar_html/purchase_order', query: {order_id: res.data.Return_Data}});
+                    }else{
+                        let popup = _this.$refs.popup
+                        popup.open({
+                            type:3,
+                            popup_information:res.data.Return_Mess,
+                            whether_show:true,
+                            long:true,
+                        })
+                    }
+                }).catch(function (err) {
+                　　console.log(err)
+                });
+            }else{
+                let popup = this.$refs.popup
+                popup.open({
+                    type:3,
+                    popup_information:"请选择商品！",
+                    whether_show:true,
+                    long:false,
+                })
+            }
+        },
+    },
+}
+
+
+
+</script>

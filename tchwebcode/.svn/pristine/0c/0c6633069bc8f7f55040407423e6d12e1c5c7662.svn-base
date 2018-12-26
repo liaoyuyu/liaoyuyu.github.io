@@ -1,0 +1,230 @@
+body,html{width: 100%;height: 100%;overflow: hidden;}
+.classify_header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+}
+#classify_con{
+    width: 100%;
+    height: 100%;
+}
+
+.classify_city_p{
+    font-size: 0.24rem;
+    color: #333333;
+}
+
+.search{
+    width: 70%;
+    height: 0.6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    /* margin-left: 0.7rem; */
+    background: #eee;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 0;
+}
+.search_img{
+   width: 15%;
+   height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 0;
+    position: relative;
+}
+.search_img img{
+    width: 0.32rem;
+    height: 0.33rem;
+}
+.search_input{
+    width: 85%;
+    height: 100%;
+    outline: none;
+    border: none;
+    background: #eee;
+    font-size: 0.24rem;
+    position: relative;
+    padding-left: 0.1rem;
+}
+.search_img::after{
+    content: "";
+    position: absolute;
+    width: 0.03rem;
+    height: 0.3rem;
+    top: 0.15rem;
+    right: 0;
+    background: #84a539;
+}
+
+
+.classify_news{
+    display: block;
+    width: auto;
+    height: 100%;
+    font-size: 0;
+    padding: 0rem 0.1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.news_box{
+    width: 0.39rem;
+    height: 0.44rem;
+    position: relative;
+}
+.news_box img{
+    width: 100%;
+    height: 100%;
+}
+/* 消息提示 */
+.classify_news_Tips{
+    display: block;
+    width: 0.1rem;
+    height: 0.1rem;
+    background: #e60012;
+    border-radius: 100%;
+    position: absolute;
+    right: 0.03rem;
+    top: 0.05rem;
+}
+
+
+/* 内容 */
+
+
+/* 左边 */
+.left_con{
+    width: 23%;
+    height: 100%;
+    background: #f7f3f7;
+    float: left;
+    overflow: auto;
+}
+.left_con_ul{
+    width: 100%;
+    padding-top: 0.2rem;
+    box-sizing: border-box;
+}
+.left_con_li{
+    width: 100%;
+    line-height: 0.9rem;
+    text-align: center;
+    color: #333333;
+    font-size: 0.28rem;
+}
+.left_con_li_select{
+    background: #fff;
+}
+.right_con{
+    width: 77%;
+    height: 100%;
+    float: right;
+    overflow: auto;
+    background: #fff;
+    /* background: url(../images/img/base_video.png);
+    background-size: 100% 100%; */
+}
+
+/* 每块区域 */
+.classify_list{
+    width: 100%;
+    padding: 0.3rem;
+    box-sizing: border-box;
+}
+.classify_list_title{
+    width: 100%;
+    line-height: 0.6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.classify_list_title_p{
+    color: #333333;
+    font-size: 0.32rem;
+}
+
+.all_a{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.all_p{
+    color: #333333;
+    font-size: 0.24rem;
+}
+.all_img{
+    width: 0.1rem;
+    height: 0.22rem;
+    margin-left: 0.08rem;
+}
+.classify_list_img{
+    width: 100%;
+    height: 2.3rem;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 0.1rem;
+}
+.classify_list_img img{
+    width: 100%;
+    height: 100%;
+}
+
+/* 选择商品 */
+.classify_list_con{
+    width: 100%;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap:wrap; */
+    overflow: hidden;
+    padding-top: 0.2rem;
+}
+
+/* 商品盒子 */
+.classify_shop_box{
+    width: 25%;
+    margin: 4%;
+    /* margin-bottom: 0.2rem; */
+    float: left;
+   
+}
+
+.classify_shop_box_a{
+    display: block;
+}
+.classify_shop_img{
+    width: 100%;
+    height: 1.25rem;
+    font-size: 0;
+    margin-bottom: 0.1rem;
+}
+.classify_shop_img img{
+    width: 100%;
+    height: 100%;
+}
+.classify_shop_p{
+    color: #333333;
+    font-size: 0.24rem;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+/* 暂无数据 */
+.classify_baseline{
+    background: #fff;
+}

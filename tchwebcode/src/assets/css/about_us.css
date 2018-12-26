@@ -1,0 +1,67 @@
+.about_us_icon_box{
+    width: 100%;
+    height: 4.95rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.about_us_logo_box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.company_logo{
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 0.3rem;
+}
+
+.company_name{
+    margin-bottom: 0.15rem;
+}
+.company_name,.software_edition{
+    color: #999999;
+    font-size: 0.24rem;
+}
+
+.about_us_list{
+    width: 100%;
+    line-height: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 0rem 0.45rem;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+}
+
+.about_us_list_p_left{
+    color: #333333;
+    font-size: 0.28rem;
+}
+.about_us_list_p_right{
+    color: #666666;
+    font-size: 0.24rem;
+}
+
+
+
+/* 底部 */
+.about_us_bottom{
+    width: 100%;
+    position: fixed;
+    bottom: 0.3rem;
+    left: 0;
+    text-align: center;
+}
+
+.about_us_bottom_p{
+    color: #999999;
+    font-size: 0.22rem;
+    margin-bottom: 0.1rem;
+}

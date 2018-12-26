@@ -1,0 +1,60 @@
+/* body,html{background: #f5f5f7} */
+
+.screen_function{
+    border-top: 1px solid #eee;
+    box-sizing: border-box;
+    position: relative;
+    top: 0;
+    z-index: 1;
+}
+
+
+
+/* header 上品 预告 */
+.popularity_recommendation_header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.center_box{
+    border-radius: 5px;
+    border: 1px solid #82a541;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+}
+.new_fresh,.preview{
+    width: 1.3rem;
+    line-height: 0.45rem;
+    text-align: center;
+    border-radius: 4px;
+    color: #82a541;
+    font-size: 0.32rem;
+}
+.fresh_preview_switch{
+    background: #82a541;
+    color: #fff;
+}
+
+
+/* 新品 */
+.new_product_new,.new_product_soon{
+    width: 0.5rem;
+    height: 0.65rem;
+    position: absolute;
+    top: 0;
+    left: 0.2rem;
+}
+.new_product_new{
+    background: url(../../assets/images/icon/new_product.png) no-repeat;
+    background-size: 100% 100%;
+}
+.new_product_soon{
+    background: url(../../assets/images/icon/new_product_soon.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+
+
+

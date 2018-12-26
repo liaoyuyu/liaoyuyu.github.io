@@ -1,0 +1,8 @@
+.purchase_order_list_con{
+    padding-top: 0.2rem;
+}
+.Recommend_shop{
+    padding: 0rem 0.3rem;
+    box-sizing: border-box;
+    background: #fff;
+}

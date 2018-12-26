@@ -1,0 +1,34 @@
+
+/* 今日特惠 */
+.today_preferential{
+    width: 100%;
+    padding: 0rem 0.3rem;
+    box-sizing: border-box;
+    background: #fff;
+}
+.today_preferential_title{
+    width: 100%;
+    line-height: 1rem;
+    text-align: center;
+    color: #666666;
+    font-size: 0.32rem;
+}
+/* 间隔 */
+/* .interval{
+    margin: 0rem -0.3rem;
+    padding: 0rem 0.3rem;
+} */
+.today_preferential_con{
+    width: 100%;
+}
+.preferential_money{
+    color: #e10707;
+    font-size: 0.32rem;
+}
+
+
+/* 间隔 */
+.preferential_recommendation_interval{
+    margin: 0rem -0.3rem;
+    padding: 0rem 0.3rem;
+}

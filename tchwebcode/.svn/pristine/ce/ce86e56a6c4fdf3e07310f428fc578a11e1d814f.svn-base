@@ -1,0 +1,189 @@
+<template>
+  <!-- 个人中心    个人信息 -->
+  <div>
+    <header class="account_security_header">
+      <div class="back" @click="back()">
+        <img src="../../../assets/images/icon/back.png" alt>
+      </div>
+      <p class="header_cen">个人信息</p>
+    </header>
+
+    <!-- 内容 -->
+    <div class="con account_security_con nobottom">
+      <ul class="account_ul">
+        <li class="account_li portrait_li">
+          <p class="li_left">头像</p>
+          <div class="portraitbox" style="font-size:0.3rem">
+            <input
+              id="upload"
+              class="account_upload"
+              type="file"
+              accept="image/*"
+              onchange="uploadobj()"
+            >
+            <!-- 头像  -->
+            <!-- <img class="upload_img" v-if="data.headpicfrom==1" :src="data.UserHeadPic" alt="" v-cloak> -->
+            <!-- <img class="upload_img" v-if="data.headpicfrom==2" v-if="data.UserInfoImgList[0].PictureUrl !=''" :src="data.UserInfoImgList[0].PictureUrl" alt="" v-cloak> -->
+            <!-- 默认头像 -->
+            <img class="upload_img" :src="this.UserLogoImgUrl" alt v-cloak>
+          </div>
+        </li>
+        <li class="account_li phone_li">
+          <a class="li_a" href="javascript:void(0);">
+            <p class="li_left">手机号</p>
+            <div class="li_right">
+              <p class="right_p account_phone">{{this.UserInfo.Members_Phone}}</p>
+              <img class="right_img" src="../../../assets/images/icon/forward.png" alt>
+            </div>
+          </a>
+        </li>
+        <li class="account_li">
+          <p class="li_left">微信</p>
+          <div class="li_right">
+            <p class="right_p">{{this.IsHaveWeiXin}}</p>
+          </div>
+        </li>
+        <li class="account_li">
+          <p class="li_left">昵称</p>
+          <div class="li_right">
+            <input
+              id="dateSelectorOne"
+              class="right_p name"
+              type="text"
+              placeholder="请输入昵称"
+              :value="this.UserName"
+              maxlength="6"
+              v-cloak
+            >
+          </div>
+        </li>
+        <li class="account_li sex">
+          <p class="li_left">性别</p>
+          <div class="li_right">
+            <p class="right_p">{{this.UserInfo.Members_Sex}}</p>
+            <img class="right_img" src="../../../assets/images/icon/forward.png" alt>
+          </div>
+        </li>
+        <li id="birthday" class="account_li">
+          <p class="li_left">生日</p>
+          <div class="li_right">
+            <input type="text" class="right_p" id="birthday_p" :value="this.UserInfo.Members_Birthday"  v-cloak>
+            <p class="right_p" id="birthday_p" v-cloak></p>
+            <img class="right_img" src="../../../assets/images/icon/forward.png" alt>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</template>
+
+
+
+
+<style>
+@import "../../../assets/css/account_security.css";
+</style>
+
+
+<script>
+import axios from "axios";
+import $ from "jquery";
+import Vue from "vue";
+// formatDate
+import { html_encode, get_code} from "../../../assets/js/public.js";
+
+
+export default {
+  data() {
+    return {
+      UserInfo: "", //用户基本信息
+      IsHaveWeiXin: "", //是否绑定微信号
+      UserName:"", //用户昵称
+      UserLogoImgUrl:"", //用户头像
+      Sex:"" //用户性别
+    };
+  },
+  created: function() {
+    this.get_UserInfo();
+  },
+  methods: {
+    get_UserInfo() {  
+      var _this = this;
+      axios
+        .get(
+          localStorage.weburl +
+            "/WorkMembers/GetMembersByID?MembersID=" +
+            localStorage.user_id
+        )
+        .then(res => {
+          var ReservationInfo = res.data.Return_Data;
+          console.log(ReservationInfo);
+          ReservationInfo.Members_Sex = ReservationInfo.Members_Sex == 1 ? "男" : "女";
+//           if(eservationInfo.Members_Sex == 0){
+// _this.Sex = "保密"
+//           }
+          if (
+            ReservationInfo.WeiXin_OpenID == "" ||
+            ReservationInfo.WeiXin_OpenID == null
+          ) {
+              _this.IsHaveWeiXin = "未绑定";
+          } else {
+              _this.IsHaveWeiXin = "已绑定";
+          }
+          if (
+            ReservationInfo.Members_NikeName == "" ||
+            ReservationInfo.Members_NikeName == null
+          ) {
+            if (
+              ReservationInfo.WeiXin_Name == "" ||
+              ReservationInfo.WeiXin_Name == null
+            ) {
+              _this.UserName = "昵称";
+            } else {
+              _this.UserName = ReservationInfo.WeiXin_Name;
+            }
+          } else {
+            _this.UserName = ReservationInfo.Members_NikeName;
+          }
+          // if(ReservationInfo.Members_Birthday =="" || 
+          //    ReservationInfo.Members_Birthday == null){
+          //       ReservationInfo.Members_Birthday = formatDate(ReservationInfo.Members_Birthday,'yyyy-MM-dd');
+          //    }
+          if (
+            ReservationInfo.Members_Birthday == "" ||
+            ReservationInfo.Members_Birthday == null
+          ) {
+            ReservationInfo.Members_Birthday = formatDate(
+              ReservationInfo.Members_Birthday,
+              "yyyy-MM-dd"
+            );
+          }
+          if (
+            ReservationInfo.Members_HeadPhoto == "" ||
+            ReservationInfo.Members_HeadPhoto == null
+          ) {
+            if (
+              ReservationInfo.Members_OtherHead == "" ||
+              ReservationInfo.Members_OtherHead == null
+            ) {
+              _this.UserLogoImgUrl = _this.small_img + "/../user/userhad.png";
+            } else {
+              _this.UserLogoImgUrl = ReservationInfo.Members_OtherHead;
+            }
+          } else {
+            _this.UserLogoImgUrl =
+              _this.small_img + ReservationInfo.Members_HeadPhoto;
+          }
+          _this.UserInfo = ReservationInfo;
+        })
+        .catch(error => {
+          console.log(error);
+        }); //查询失败返回的值
+    },
+    // 返回上一页
+    back() {
+      this.$router.go(-1);
+    }
+  }
+};
+</script>
