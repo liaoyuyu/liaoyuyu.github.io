@@ -37,7 +37,7 @@ export default class Snake {
         if (pos.left < 0) {
             pos.left = w - 20;
         }
-        if (pos.right >= w) {
+        if (pos.left >= w) {
             pos.left = 0;
         }
         if (pos.top < 0) {
