@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body,html{
+    width: 100%;
+}
+#app{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+li{
+    list-style: none;
+}
+input{
+    border: none;
+    background: transparent;
+    outline: none;
+}
