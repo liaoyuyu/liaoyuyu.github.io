@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抽奖</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="rem.js"></script>
+</head>
+
+<body>
+    <!-- 选人 -->
+    <div class="select_pick">
+        <p>选人</p>
+        <ul>
+            <li>廖鱼余</li>
+            <li>鲜杨</li>
+            <li>张杰</li>
+            <li>张文树</li>
+            <li>郎青松</li>
+            <li>欧阳</li>
+        </ul>
+        <div class="init_btn">初始化抽奖</div>
+    </div>
+
+    <div class="lucky_box">
+        <div id="my-lucky"></div>
+        <div class="btn" onclick="myLuckyPlay()">开始</div>
+    </div>
+</body>
+
+</html>
+
+<script src="jquery.min.js"></script>
+<script src="https://unpkg.com/lucky-canvas@1.7.25"></script>
+<script>
+
+    let prizesText = [];
+    $(".select_pick li").click(function () {
+        let text = this.innerText;
+        let i = prizesText.indexOf(text);
+        if (i >= 0) {
+            prizesText.splice(i, 1);
+            $(this).removeClass("select")
+        } else {
+            prizesText.push(text);
+            $(this).addClass("select")
+        }
+        $(".lucky_box").hide();
+    })
+    $(".init_btn").click(function () {
+        // 判断 是否选人
+        if (prizesText.length == 0) return alert('选人')
+        $(".lucky_box").show();
+        // 初始化
+        init();
+    })
+
+
+    let myLucky = null;
+    function init() {
+        let order = prizesText.map((v, i) => i)
+        let prizes = prizesText.map((v) => { return { fonts: [{ text: v }] } })
+
+        if (myLucky) {
+            myLucky.prizes = prizes;
+            myLucky.slots.forEach(v => {
+                v.order = order;
+            });
+            myLucky.init();
+            return;
+        }
+        myLucky = new LuckyCanvas.SlotMachine('#my-lucky', {
+            width: '2.5rem',
+            height: '2.5rem',
+            blocks: [
+                { padding: '10px', background: '#869cfa', borderRadius: 10 },
+                { padding: '10px', background: '#e9e8fe', borderRadius: 10 },
+            ],
+            slots: [
+                { order: order, speed: 20 },
+                { order: order, speed: 25, direction: -1 },
+                { order: order, speed: 30 },
+            ],
+            prizes: prizes,
+            defaultConfig: {
+                rowSpacing: 10,
+                colSpacing: 10
+            },
+            defaultStyle: {
+                borderRadius: 10,
+                background: '#b8c5f2',
+                fontSize: '0.15rem',
+                lineHeight: '0.35rem'
+            },
+        })
+    }
+
+    let timer = null, isFlg = true;
+    function myLuckyPlay() {
+        if (isFlg) {
+            isFlg = false;
+            myLucky.play();
+            clearTimeout(timer);
+            timer = setTimeout(() => {
+                let max = prizesText.length - 1;
+                let index = Math.floor(Math.random() * (max + 1));
+                console.log(index);
+                myLucky.stop(index);
+                isFlg = true;
+            }, 5000)
+        }
+    }
+
+</script>
